@@ -1,7 +1,0 @@
-#### This is gitignore for testrepo
-/**/libs
-/**/.png
-/.quarto/
-/_freeze/
-/**/ABIDE/
-/**/REPLICATION_PACKAGE
