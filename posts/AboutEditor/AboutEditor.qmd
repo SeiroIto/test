@@ -19,7 +19,7 @@ format:
   docx: default
 callout-appearance: simple
 callout-icon: false
-bibliography: ../../../../seiro.bib
+bibliography: ../seiro.bib
 link-citations: true
 reference-location: margin
 citation-location: margin
