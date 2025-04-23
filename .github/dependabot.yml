@@ -6,3 +6,7 @@ updates:
     schedule:
       interval: "weekly" # check for action update every week
     open-pull-requests-limit: 10
+    groups:
+      actions-deps:
+        patterns:
+          - "*"
