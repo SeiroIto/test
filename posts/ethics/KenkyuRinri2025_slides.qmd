@@ -826,9 +826,7 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 
 :::: {.fragment}
- <White>
 時間がない
- </White>
 ::::
 :::::::::: {.columns}
 ::::: {.column width = "50%"}
