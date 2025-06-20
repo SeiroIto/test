@@ -16,7 +16,7 @@ format:
     height: 900
     preview-links: auto
     logo: images/quarto.png
-    footer: <http://seiroito.github.io/QuartoFiles/ethics/KenkyuRinri2025_slides.html>
+    footer: <http://seiroito.github.io/test/ethics/KenkyuRinri2025_slides.html>
     theme: sky
 lightbox: auto
 include-in-header:
@@ -244,7 +244,7 @@ blockquote {
 ## {background-color="#010638"}
 
 ::: {.center2}
-[https://seiroito.github.io/Miscellaneous/ethics/KenkyuRinri2025_slides.html](https://seiroito.github.io/Miscellaneous/ethics/KenkyuRinri2025_slides.html)
+[http://seiroito.github.io/test/ethics/KenkyuRinri2025_slides.html](http://seiroito.github.io/test/ethics/KenkyuRinri2025_slides.html)
 :::
 
 
