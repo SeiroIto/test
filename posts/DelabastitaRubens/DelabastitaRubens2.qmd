@@ -294,7 +294,7 @@ w_agri_t_minus_1	Agricultural wages in Belgium in year t-1 (instrument)
 ::: {#tbl-table1 html-table-processing="true"}
 
 ```{=html}
-{{< include "./Tab1.html" >}}
+{{< include "./TAB1.html" >}}
 ```
 
 :::
