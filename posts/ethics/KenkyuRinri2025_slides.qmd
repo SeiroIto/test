@@ -962,6 +962,41 @@ Fabrication, falsification、plagerism回避のルール
 
 ----
 
+##  大規模言語モデル(LLM)時代のリスク{background-color="#010638"}
+
+ある程度の理解があれば、データさえ与えると実証論文は書ける
+
+::: {.incremental}
+1. [OpenAI's DeepResearch](https://openai.com/ja-JP/index/introducing-deep-research/): 研究課題を与える&rarr;分析手法を書かせる&rarr;その手法をRで実施するための指示書を書かせる
+   * 使える出力を得るためには、研究をある程度は理解して課題を書かねばならない
+1. [Cursor](https://www.cursor.com/ja): 指示書を読み込ませてRで(サンプル・データ作成コードもしくはデータ整形コードと)推計コードを書かせる&rarr;結果をquartoで出力させる
+   * [その例](https://ai-biostat.com/2025/02/21/%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%82%92ai%e5%85%a8%e4%bb%bb%e3%81%9b%e3%81%97%e3%81%9f%e3%83%95%e3%83%ad%e3%83%bc%e3%81%be%e3%81%a8%e3%82%81%ef%bc%88%e8%a7%a3%e6%9e%90%e6%89%8b%e6%b3%95%e6%8f%90/#toc24)
+   * 間違えも少しはあるようです
+   * cursorを繰り返し使うことで、データに関する作業や推計コードをミニマルで直感的に理解しやすい内容に修正可能、という声も
+::::
+
+----
+
+##  大規模言語モデル(LLM)時代のリスク{background-color="#010638"}
+
+ある程度の理解があれば、データさえ与えると実証論文は書ける
+
+1. [DeepResearch](https://openai.com/ja-JP/index/introducing-deep-research/): 研究課題&rarr;分析手法&rarr;指示書
+1. [Cursor](https://www.cursor.com/ja): 指示書&rarr;推計コード&rarr;quartoで出力
+
+::: {.incremental}
+* 方法が適している理由を自分が理解する前に論文が書ける
+   * コメントや疑問が出ても答えられない
+   * 研究者同士のコミュニケーションは活発にならない
+   * しかし、(何をやったかの)透明性はあるので、結果の解釈はできる
+* 課題も機械に考えてもらい、こうした成果を量産するのが最適
+   * 新しい方法が出てきたら、既存の量産成果を批判し、量産成果修正
+* 人間研究者: 量産型研究成果を扱っているとAIに代替される
+   * Fill the gap in research...アルゴリズムで想定できるgapだと危うい
+::::
+
+----
+
 ## {background-color="#010638"  background-image="./JAXASumimasen.jpg" background-size="100%"}
 
 ::: {.center2}
