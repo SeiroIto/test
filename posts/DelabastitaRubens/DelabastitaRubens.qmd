@@ -9,6 +9,7 @@ date: last-modified
 date-format: "MMMM DD, YYYY, HH:MM ZZ"
 execute:
   echo: false
+  freeze: auto  # re-render only when source changes
 engine: knitr
 pdf-engine: lualatex
 format:

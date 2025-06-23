@@ -18,6 +18,8 @@ format:
     logo: images/quarto.png
     footer: <http://seiroito.github.io/test/ethics/KenkyuRinri2025_slides.html>
     theme: sky
+execute:
+  freeze: auto  # re-render only when source changes
 lightbox: auto
 include-in-header:
   - text: |
