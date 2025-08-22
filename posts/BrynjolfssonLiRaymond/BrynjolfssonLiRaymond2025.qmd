@@ -325,7 +325,7 @@ Pathways
 
 ## Conclusion
 
-* Early empirical evidence on theeffects of a generative AI tool in a real-world workplace
+* Early empirical evidence on the effects of a generative AI tool in a real-world workplace
 * AI-generated recommendations:
    * Increases overall worker productivity by 15%
    * Larger effects for lower-skill and novice agents
@@ -357,4 +357,10 @@ Pathways
      * AI=自動でアドバイスをくれる過保護な上司的存在
      * AI利用=包括的マニュアルを作成する費用、検索する費用、表現調整する費用を劇的に下げていると理解可能
    * AIへの入力(データ)と作業指示を(問題とその解決方法に応じて)人間が決めるunstructured tasksでの影響とは違う
+     * 非テキスト・ベースのタスク=uncodifiable
+     
+         > manage employees, raise capital, pilot new initiatives, run advertising strategies, price their services, react to competitors, and decide which of these and myriad other tasks to focus their efforts on (Chandler, 1977, quoted from Otis et al. 2023)
+     
+     * [Otis et al. (2023)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4671369)では優秀な経営者のみAIの利潤効果が正、それ以外は負
+
 
