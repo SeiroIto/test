@@ -1,0 +1,43 @@
+Summarize the pdf by sections. 
+
+1. Provide the context, motivation, and what previous literature has shown, and clearly state the contribution of the paper. 
+Comparing before and after reading the paper, what are the new things we know?
+1. Provide the background that is understandable to non technical audience.
+1. Provide to what extent the finding/results of this study is generalisable.
+1. Describe the data used: sample size, sampling, treatment assignment, duration and frequency of observation, outcome variables, covariates.
+1. State the empirical strategy and provide the identification assumption, and plausibility of the identification assumption to hold in reality. Cite the previous work that uses the same strategy.
+1. Provide summary of results, refer specifically to the estimates if it enhances understanding.
+1. Show the heterogeneity of results by subgroups and how authors interpret them on what ground.
+1. Summarize mechanisms, interpretations, why these mechanisms and interpretations hold, and potential confounders and alternative mechanisms/interpretation that make current interpretation wrong. Summarize robustness of results.
+1. Summarise what are found, how they are found, credibility of results and interpretations, pros and cons of this paper, and assessment on external validity
+
+
+Do:
+
+1. Respond in quarto format.
+
+1. Refer to tables and figures explicitly. 
+
+1. Use numbers as much as possible for objecivity.
+
+1. Number my queries and your responses for easy reference.
+
+
+
+Do not: 
+
+1. Be wordy. For example, empirical strategy section can be:
+
+Robust difference-in-differences (RDID)Å©staggered rollout 
+(estimated equation)
+Sun and Abrahams estimator
+
+1. Use bold (**this**) too much, do not use it in the lists
+
+1. Separate sections by using "---" or "----"
+
+1. Use subjective terms such as "large" or "very large
+
+1. Use capital letters only for the first word in each table cells, not "Field Study", but "Field study"
+
+
