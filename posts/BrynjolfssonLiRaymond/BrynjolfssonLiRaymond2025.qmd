@@ -364,3 +364,131 @@ Pathways
      * [Otis et al. (2023)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4671369)では優秀な経営者のみAIの利潤効果が正、それ以外は負
 
 
+### Derivation of the Occupation-Level Production Function
+
+This document explains why "linear aggregation ensures that the Cobb–Douglas form reemerges at the occupation level" by deriving the occupation-level production function from the worker-level function, step by step.
+
+
+#### **The Building Blocks (Equations and Assumptions)**
+
+1.  **Worker-level output (Equation 5):** This is the output produced by a single worker $i$ who is given $k_i$ units of capital.
+    $$
+    y_i(\phi) = \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{k_i \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+    $$
+
+2.  **Aggregation Rule:** The total output of the occupation, $Y(\phi)$, is the linear sum (integral) of the outputs of all $L(\phi)$ individual workers employed in that occupation.
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} y_i(\phi) d\mu
+    $$
+
+3.  **Optimal Capital Allocation:** To maximize total output, the total capital for the occupation, $K(\phi)$, is distributed uniformly among all $L(\phi)$ workers.
+    $$
+    k_i = \frac{K(\phi)}{L(\phi)}
+    $$
+
+#### **Step-by-Step Derivation**
+
+1.  **Start with the aggregation rule.**
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} y_i(\phi) d\mu
+    $$
+
+2.  **Substitute the worker-level production function into the integral.**
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{k_i \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] d\mu
+    $$
+
+3.  **Substitute the optimal capital per worker, $k_i$.**
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\frac{K(\phi)}{L(\phi)} \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] d\mu
+    $$
+
+4.  **Pull the constant term (the entire bracketed expression) out of the integral.**
+    $$
+    Y(\phi) = \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\frac{K(\phi)}{L(\phi)} \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] \cdot \int_{i \in o^{-1}(\phi)} 1 d\mu
+    $$
+
+5.  **Evaluate the remaining integral, which is simply the total number of workers, $L(\phi)$.**
+    $$
+    \int_{i \in o^{-1}(\phi)} 1 d\mu = L(\phi)
+    $$
+
+6.  **Substitute this result back into the main equation.**
+    $$
+    Y(\phi) = \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\frac{K(\phi)}{L(\phi)} \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] \cdot L(\phi)
+    $$
+
+7.  **Rearrange the terms using algebra to group labor ($L(\phi)$) and capital ($K(\phi)$) terms.** This combines several small algebraic steps for clarity.
+    $$
+    Y(\phi) = \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot L(\phi)^{1-\alpha(\phi)} \cdot \frac{(K(\phi)\eta)^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}}
+    $$
+
+8.  **Combine the terms that share the same exponent to achieve the final form.**
+    $$
+    Y(\phi) = \left(\frac{L(\phi)}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{K(\phi)\eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+    $$
+
+
+This derivation continues from the previous result and shows how to rearrange it into the compact Cobb-Douglas form with a Total Factor Productivity (TFP) term, `A(φ)`.
+
+
+#### **Starting Point**
+
+From the previous derivation, we established the occupation-level production function as:
+$$
+Y(\phi) = \left(\frac{L(\phi)}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{K(\phi)\eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+$$
+
+#### **Target Equation**
+
+Our goal is to show that this is equivalent to the standard form:
+$$
+Y(\phi) = A(\phi) L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+$$
+where `A(φ)` is the occupation-specific TFP term.
+
+#### **Step-by-Step Algebraic Rearrangement**
+
+1.  **Distribute the exponents.**
+    We apply the exponent on the outside of each parenthesis to both the numerator and the denominator inside, using the rule $(\frac{x}{y})^n = \frac{x^n}{y^n}$.
+
+    $$
+    Y(\phi) = \frac{L(\phi)^{1-\alpha(\phi)}}{(1-\alpha(\phi))^{1-\alpha(\phi)}} \cdot \frac{(K(\phi)\eta)^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}}
+    $$
+
+2.  **Separate the input factors `L(φ)` and `K(φ)`.**
+    In the second term, we can expand $(K(\phi)\eta)^{\alpha(\phi)}$ to $K(\phi)^{\alpha(\phi)} \cdot \eta^{\alpha(\phi)}$.
+
+    $$
+    Y(\phi) = \frac{L(\phi)^{1-\alpha(\phi)}}{(1-\alpha(\phi))^{1-\alpha(\phi)}} \cdot \frac{K(\phi)^{\alpha(\phi)} \eta^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}}
+    $$
+
+3.  **Group the non-input terms together.**
+    Let's rearrange the equation to group all terms that are *not* $L(\phi)$ or $K(\phi)$ at the beginning. These terms constitute the productivity parameter.
+
+    $$
+    Y(\phi) = \left[ \frac{1}{(1-\alpha(\phi))^{1-\alpha(\phi)}} \cdot \frac{\eta^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}} \right] \cdot L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+    $$
+
+4.  **Re-combine the grouped terms to match the paper's definition of A(φ).**
+    The term in the brackets can be written more cleanly by grouping the bases that share the same exponent. This makes the structure clearer.
+
+    $$
+    Y(\phi) = \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] \cdot L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+    $$
+
+5.  **Define the Total Factor Productivity (TFP) term, `A(φ)`.**
+    We can now see that the entire expression inside the large brackets is the occupation-specific TFP, `A(φ)`. It captures the efficiency of production for a given occupation `φ`, which depends on the capital share `α(φ)` and the productivity of capital `η`.
+
+    $$
+    A(\phi) := \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+    $$
+
+6.  **Substitute `A(φ)` back into the main equation.**
+    By replacing the complex bracketed term with the simpler `A(φ)`, we arrive at the final, compact Cobb-Douglas form.
+
+    $$
+    Y(\phi) = A(\phi) L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+    $$
+
+This completes the derivation. We have successfully shown that the linear aggregation of worker-level outputs, under the model's assumptions, results in a standard Cobb-Douglas production function at the occupation level.
