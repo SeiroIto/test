@@ -1,0 +1,232 @@
+::: {.hidden}
+%  Math Symbols
+%  if we use amsthm we don't need this.  \newcommand{\qed}{$\Box $} % Follwing is for blacking the box: {\rule[-2pt]{3pt}{6pt}}
+\newcommand{\iid}{{\stackrel{\mbox{\tiny i.i.d.}}{\mbox{\mdseries\LARGE $\sim}}}}
+\newcommand{\dist}{{\stackrel{d}{\mbox{\LARGE $\sim}}}}
+\newcommand{\defeq}{{\stackrel{\mbox{\tiny def}}{=}}}
+\renewcommand{\st}{\mbox{s.t.}}
+\newcommand{\po}{\mbox{\tiny PO}}
+\newcommand{\plim}{\mbox{plim }}
+\newcommand{\asym}{{\stackrel{a}{\longrightarrow}}}
+\newcommand{\asymdist}{{\stackrel{a}{\mbox{\LARGE $\sim}}}}
+\newcommand{\asymeq}{{\stackrel{a}{=}}}
+\newcommand{\cnvd}{{\stackrel{d}{\longrightarrow}}}
+\newcommand{\cnvp}{{\stackrel{p}{\longrightarrow}}}
+\newcommand{\cnvas}{{\stackrel{a.s.}{\longrightarrow}}}
+\newcommand{\cnvms}{{\stackrel{m.s.}{\longrightarrow}}}
+\newcommand{\trans}{{^{\mbox{\tiny $\intercal}}}}
+\newcommand{\tran}{{\reset@font\rm \kern.05em\raise1.3ex\hbox{\tiny $\intercal}}}
+\newcommand{\Forall}{\mbox{for all }}
+\newcommand{\forAll}{\mbox{for }\mbox{{\forall} }}
+\newcommand{\tr}{\mbox{tr }}
+\newcommand{\e}{\mbox{\large{e}}}
+\newcommand{\qedd}{{\mbox{\scriptsize $\blacksquare}}}
+\newcommand{\atmost}{{\mbox{$ \preccurlyeq}}}
+\newcommand{\atleast}{{\mbox{$ \succcurlyeq}}}
+%  Romans
+\newcommand{\integer}{\mbox{int}}
+\newcommand{\sign}{\mbox{sign}}
+\newcommand{\med}{\mbox{med}}
+\newcommand{\avg}{\mbox{avg}}
+\newcommand{\cov}{\mbox{cov}}
+\newcommand{\corr}{\mbox{corr}}
+\newcommand{\vectorize}{\mbox{vec}}
+\newcommand{\diag}{\mbox{diag}}
+\newcommand{\vech}{\mbox{vech}}
+\newcommand{\bdiag}{\mbox{bdiag}}
+%	Latins (?)
+\newcommand{\apriori}{\mbox{\it a~priori\/}}
+\newcommand{\exante}{\mbox{\it ex~ante\/}}
+\newcommand{\expost}{\mbox{\it ex~post\/}}
+\newcommand{\perse}{\mbox{\it per~se\/}}
+\newcommand{\cetrisparibus}{\mbox{\it cetris~paribus\/}}
+%  Greeks
+\newcommand{\bfalpha}{{\boldsymbol{\alpha}}}
+\newcommand{\bfalphahat}{{\boldsymbol{\hat{\alpha}}}}
+\newcommand{\bfbeta}{{\boldsymbol{\beta}}}
+\newcommand{\bfbetahat}{{\boldsymbol{\hat{\beta}}}}
+\newcommand{\bfdelta}{{\boldsymbol{\delta}}}
+\newcommand{\bfDelta}{{\boldsymbol{\Delta}}}
+\newcommand{\bfeta}{{\boldsymbol{\eta}}}
+\newcommand{\VarepsiloN}{\mbox{\Large $\varepsilon$}}
+\newcommand{\E}{\mbox{$\mathcal E$}}
+\newcommand{\bfmu}{{\boldsymbol{\mu}}}
+\newcommand{\bfnu}{{\boldsymbol{\nu}}}
+\newcommand{\NU}{\mbox{$\mathcal V$}}
+\newcommand{\bfiota}{{\boldsymbol{\iota}}}
+\newcommand{\bfgamma}{{\boldsymbol{\gamma}}}
+\newcommand{\bfgammahat}{{\boldsymbol{\hat{\gamma}}}}
+\newcommand{\bfGamma}{{\boldsymbol{\Gamma}}}
+\newcommand{\bfGammahat}{{\boldsymbol{\hat{\Gamma}}}}
+\newcommand{\bfkappa}{{\boldsymbol{\kappa}}}
+\newcommand{\bfsigma}{{\boldsymbol{\sigma}}}
+\newcommand{\bfSigma}{{\boldsymbol{\Sigma}}}
+\newcommand{\bfSigmahat}{{\boldsymbol{\hat{\Sigma}}}}
+\newcommand{\bflambda}{\boldsymbol{\lambda}}
+\newcommand{\bfLambda}{{\boldsymbol{\Lambda}}}
+\newcommand{\bfphi}{{\boldsymbol{\phi}}}
+\newcommand{\bfvarphi}{{\boldsymbol{\varphi}}}
+\newcommand{\bfPhi}{{\boldsymbol{\Phi}}}
+\newcommand{\bfPhihat}{{\boldsymbol{\hat{\Phi}}}}
+\newcommand{\bfpsi}{{\boldsymbol{\psi}}}
+\newcommand{\bfPsi}{{\boldsymbol{\Psi}}}
+\newcommand{\bfPsihat}{{\boldsymbol{\hat{\Psi}}}}
+\newcommand{\bfpi}{{\boldsymbol{\pi}}}
+\newcommand{\bfPi}{\boldsymbol{\Pi}}
+\newcommand{\bfpihat}{{\boldsymbol{\hat{\pi}}}}
+\newcommand{\bfPihat}{{\boldsymbol{\hat{\Pi}}}}
+\newcommand{\bfrho}{{\boldsymbol{\rho}}}
+\newcommand{\bfepsilon}{{\boldsymbol{\epsilon}}}
+\newcommand{\bfEpsilon}{{\boldsymbol{\Epsilon}}}
+\newcommand{\bfepsilonhat}{{\boldsymbol{\hat{\epsilon}}}}
+\newcommand{\bftheta}{{\boldsymbol{\theta}}}
+\newcommand{\bfthetahat}{{\boldsymbol{\hat{\theta}}}}
+\newcommand{\bfTheta}{{\boldsymbol{\Theta}}}
+\newcommand{\bfzeta}{{\boldsymbol{\zeta}}}
+\newcommand{\bfvarepsilon}{{\boldsymbol{\varepsilon}}}
+\newcommand{\bftau}{{\boldsymbol{\tau}}}
+\newcommand{\bfxi}{{\boldsymbol{\xi}}}
+\newcommand{\bfXi}{{\boldsymbol{\Xi}}}
+\newcommand{\bfvarUpsilon}{{\boldsymbol{\varUpsilon}}}
+\newcommand{\bfomega}{{\boldsymbol{\omega}}}
+\newcommand{\omegA}{{\mbox{\large $\omega}}}
+\newcommand{\bfOmega}{{\boldsymbol{\Omega}}}
+\newcommand{\bfOmegahat}{{\boldsymbol{\hat{\Omega}}}}
+\newcommand{\bfaleph}{{\boldsymbol{\aleph}}}
+%  alphabets
+\newcommand{\bfA}{{\mathbf{A}}}
+\newcommand{\bfa}{{\mathbf{a}}}
+\newcommand{\bfai}{{\mathbf{ a}}}
+\newcommand{\tA}{{\mbox{\tiny A}}}
+\newcommand{\bfB}{{\mathbf{B}}}
+\newcommand{\bfb}{{\mathbf{b}}}
+\newcommand{\bfbee}{{\mathbf{ b}}}
+\newcommand{\bfBhat}{{\mathbf{\hat{B}}}}
+\newcommand{\tB}{{\mbox{\tiny B}}}
+\newcommand{\bfc}{{\mathbf{c}}}
+\newcommand{\bfcee}{{\mathbf{c}}}
+\newcommand{\bfC}{{\mathbf{C}}}
+\newcommand{\tC}{{\mbox{\tiny C}}}
+\newcommand{\bfd}{{\mathbf{d}}}
+\newcommand{\bfdee}{{\mathbf{d}}}
+\newcommand{\bfD}{{\mathbf{D}}}
+\newcommand{\tD}{{\mbox{\tiny D}}}
+\newcommand{\bfe}{{\mathbf{e}}}
+\newcommand{\bfee}{{\mathbf{e}}}
+\newcommand{\bfehat}{{\mbox{$\hat{\mbox{\boldmath e}}}}}
+\newcommand{\bfE}{{\mathbf{E}}}
+\newcommand{\tE}{{\mbox{\tiny E}}}
+\newcommand{\bff}{{\mathbf{f}}}
+\newcommand{\bfef}{{\mathbf{f}}}
+\newcommand{\bfF}{{\mathbf{F}}}
+\newcommand{\tF}{{\mbox{\tiny F}}}
+\newcommand{\bfg}{{\mathbf{g}}}
+\newcommand{\bfgee}{{\mathbf{g}}}
+\newcommand{\bfG}{{\mathbf{G}}}
+\newcommand{\tG}{{\mbox{\tiny G}}}
+\newcommand{\bfaich}{{\mathbf{ h}}}
+\newcommand{\bfh}{{\mbox{\boldmath  $h}}}
+\newcommand{\bfH}{{\mathbf{H}}}
+\newcommand{\tH}{{\mbox{\tiny H}}}
+\newcommand{\bfi}{{\mathbf{i}}}
+\newcommand{\bfeye}{{\mathbf{ i}}}
+\newcommand{\I}{{\mathbf{I}}}
+\newcommand{\tI}{{\mbox{\tiny I}}}
+\newcommand{\bfj}{{\mathbf{j}}}
+\newcommand{\bfJ}{{\mathbf{J}}}
+\newcommand{\tJ}{{\mbox{\tiny J}}}
+\newcommand{\bfk}{{\mathbf{k}}}
+\newcommand{\bfkay}{{\mathbf{k}}}
+\newcommand{\bfK}{{\mathbf{K}}}
+\newcommand{\tK}{{\mbox{\tiny K}}}
+\newcommand{\bfl}{{\mathbf{l}}}
+\newcommand{\bfL}{{\mathbf{L}}}
+\newcommand{\bfLhat}{{\mathbf{\hat{L}}}}
+\newcommand{\tL}{{\mbox{\tiny L}}}
+\newcommand{\bfm}{{\mathbf{m}}}
+\newcommand{\bfem}{{\mathbf{m}}}
+\newcommand{\bfM}{{\mathbf{M}}}
+\newcommand{\bfMhat}{{\mathbf{\hat{M}}}}
+\newcommand{\tM}{{\mbox{\tiny M}}}
+\newcommand{\bfn}{{\mathbf{n}}}
+\newcommand{\bfen}{{\mathbf{n}}}
+\newcommand{\bfN}{{\mathbf{N}}}
+\newcommand{\tN}{{\mbox{\tiny N}}}
+\newcommand{\tNi}{{\mbox{\tiny $N}}}
+\newcommand{\bfNhat}{{\mathbf{\hat{N}}}}
+\newcommand{\tO}{{\mbox{\tiny O}}}
+\newcommand{\bfO}{{\mathbf{O}}}
+\newcommand{\bfp}{{\mathbf{p}}}
+\newcommand{\bfpee}{{\mathbf{p}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\tP}{{\mbox{\tiny P}}}
+\newcommand{\bfQ}{{\mathbf{Q}}}
+\newcommand{\bfq}{{\mathbf{q}}}
+\newcommand{\bfque}{{\mathbf{q}}}
+\newcommand{\tQ}{{\mbox{\tiny Q}}}
+\newcommand{\bfr}{{\mathbf{r}}}
+\newcommand{\bfR}{{\mathbf{R}}}
+\newcommand{\bfRhat}{{\mathbf{\hat{R}}}}
+\newcommand{\tR}{{\mbox{\tiny R}}}
+\newcommand{\bfs}{{\mathbf{s}}}
+\newcommand{\bfes}{{\mathbf{s}}}
+\newcommand{\bfS}{{\mathbf{S}}}
+\newcommand{\bfShat}{{\mathbf{\hat{S}}}}
+\newcommand{\tS}{{\mbox{\tiny S}}}
+\newcommand{\bft}{{\mathbf{t}}}
+\newcommand{\bfT}{{\mathbf{T}}}
+\newcommand{\tT}{{\mbox{\tiny T}}}
+\newcommand{\bfThat}{{\mathbf{\hat{T}}}}
+\newcommand{\bfu}{{\mathbf{u}}}
+\newcommand{\bfyu}{{\mathbf{u}}}
+\newcommand{\bfuhat}{\hat{\bfu}}
+\newcommand{\bfyuhat}{{\mbox{$\hat{\mbox{\boldmath u}}}}}
+\newcommand{\bfU}{{\mbox{\boldmath U}}}
+\newcommand{\tU}{{\mbox{\tiny U}}}
+\newcommand{\bfv}{{\mathbf{v}}}
+\newcommand{\bfvee}{{\mathbf{v}}}
+\newcommand{\bfV}{{\mathbf{V}}}
+\newcommand{\bfVhat}{{\mathbf{\hat{V}}}}
+\newcommand{\tV}{{\mbox{\tiny V}}}
+\newcommand{\bfw}{{\mathbf{w}}}
+\newcommand{\w}{{\mbox{w}}}
+\newcommand{\bfW}{{\mathbf{W}}}
+\newcommand{\tW}{{\mbox{\tiny W}}}
+\newcommand{\bfx}{{\mathbf{x}}}
+\newcommand{\bfX}{{\mathbf{X}}}
+\newcommand{\bftX}{{\boldsymbol{\tilde{X}}}}
+\newcommand{\bftx}{{\boldsymbol{\tilde{\mbox{\boldmath x}}}}}
+\newcommand{\tX}{{\mbox{\tiny X}}}
+\newcommand{\tx}{{\mbox{\tiny x}}}
+\newcommand{\tbfx}{{\mbox{\tiny\bfx}}}
+\newcommand{\x}{{\mbox{x}}}
+\newcommand{\y}{{\mbox{y}}}
+\newcommand{\bfy}{{\mbox{\bf y}}}
+\newcommand{\bfwye}{{\boldsymbol{y}}}
+\newcommand{\wye}{{\mbox{y}}}
+\newcommand{\bfY}{{\boldsymbol{Y}}}
+\newcommand{\tY}{{\mbox{\tiny Y}}}
+\newcommand{\ty}{{\mbox{\tiny y}}}
+\newcommand{\tbfy}{{\mbox{\tiny\bfy}}}
+\newcommand{\bfty}{{\boldsymbol{\tilde{\mbox{\boldmath y}}}}}
+\newcommand{\bfz}{{\mbox{\bf z}}}
+\newcommand{\bfzed}{{\boldsymbol{z}}}
+\newcommand{\z}{{\mbox{z}}}
+\newcommand{\bfZ}{{\boldsymbol{Z}}}
+\newcommand{\tZ}{{\mbox{\tiny Z}}}
+\newcommand{\bftz}{{\boldsymbol{\tilde{\mbox{\boldmath z}}}}}
+\newcommand{\calY}{{\mbox{$\cal Y}}}
+\newcommand{\calbfY}{{\boldsymbol{\cal Y}}}
+\newcommand{\0}{{\boldsymbol{0}}}
+\newcommand{\1}{{\boldsymbol{1}}}
+\newcommand{\vecop}{{\mbox{vec}}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%  New Operators
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%  Convenience definitions
+\newcommand{\MonthDY}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\space\number\day ,\space\number\year}
+\newcommand{\JMonthDY}{\number\year ”N\ifcase\month\or 1ŒŽ\or 2ŒŽ\or 3ŒŽ\or 4ŒŽ\or 5ŒŽ\or 6ŒŽ\or 7ŒŽ\or 8ŒŽ\or 9ŒŽ\or 10ŒŽ\or 11ŒŽ\or 12ŒŽ\fi\number\day “ú}
+\newcommand{\bysame}{\leavevmode\hbox to 3em{\hrulefill}\ }
+$$
+:::
