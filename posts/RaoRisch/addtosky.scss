@@ -1,0 +1,31 @@
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #858E79;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #64605f;
+$purple: #9158A2;
+$orange: #ad7237;
+$LightCream: #fffcf2;
+
+
+// body
+$body-bg: $LightCream;  // page background 
+
+/*-- scss:defaults --*/
+// 1. Define your custom SCSS variable here using $ and :
+$my-banner-link-color: #FFC107;
+/*-- scss:rules --*/
+// 2. Apply your variable to Quarto's HTML ID selector (#)
+// The # here is required because it targets the HTML tag <header id="title-block-header">
+#title-block-header .quarto-title-banner a {
+  color: $my-banner-link-color !important;
+}
+#title-block-header .quarto-title-banner a:hover {
+  color: lighten($my-banner-link-color, 15%) !important; // SCSS lets you do cool things like lighten()!
+}
+
+
+// fonts
+$font-family-sans-serif: system-ui, -apple-system, "Hiragino Maru Gothic W4", "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;

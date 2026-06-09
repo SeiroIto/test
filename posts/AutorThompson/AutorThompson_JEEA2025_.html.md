@@ -1,0 +1,1055 @@
+---
+title: |
+  Expertise\
+  \
+  *Journal of European Economics Association* \
+  2025 (Volume 23), August (Issue 4), 1203–1271
+author: "David Autor and Neil Thompson"
+date: last-modified
+date-format: "MMMM DD, YYYY, HH:MM ZZ"
+execute:
+  echo: false
+  freeze: auto  # re-render only when source changes
+engine: knitr
+pdf-engine: lualatex
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-location: left
+    grid:
+      margin-width: 350px
+    linkcolor: "green"
+    urlcolor: "#009900"
+####    html-math-method: 
+####      method: mathjax
+#### url: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    keep-md: true
+    keep-tex: true
+####  pdf: default
+  docx: default
+  epub: default
+lightbox: auto
+theme: 
+  light: ../../../../../addtosky.scss
+  ####light: [sky, ./sky-add]
+  dark: darkly
+backgroundcolor: "#fffcf2"
+title-block-banner: "#f0f3f5"
+title-block-banner-color: "black"
+doi-title: "doi.org/10.1086/734780"
+callout-appearance: simple
+callout-icon: false
+bibliography: ../seiro.bib
+link-citations: true
+reference-location: margin
+citation-location: margin
+#### # quarto render AutorThompson.qmd
+#### c:\seiro\languages\R\R-4.4.1\bin\x64\Rscript.exe -e "path <- 'c:/seiro/docs/personal/Miscelleneous/QuartoFiles/posts/AutorThompson/'; rmarkdown::render(paste0(path, 'AutorThompson.Rmd'), output_format = 'all')"
+---
+
+::: {.cell}
+<style type="text/css">
+.SeiroBenign {
+  background-color: #FFEBCD;
+  padding: 0.5em; /*文字まわり（上下左右）の余白*/
+  /* border: 1px solid yellow; */
+  /* font-weight: bold; */
+}
+.SeiroLightWreen {
+  background-color: #D0F0C0; /* Tea green */
+  padding: 0.5em; /*文字まわり（上下左右）の余白*/
+  font-family: Noto S	ans;
+  /* border: 1px solid yellow; */
+  /* font-weight: bold; */
+}
+/* Define a margin before hX (header level X) element */
+h1  {
+  margin-top: 3ex;
+  margin-bottom: 3ex;
+  /* background: #c2edff; */ /*背景色*/
+  padding: 0.5em;/*文字まわり（上下左右）の余白*/
+}
+h2  {
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+  padding: 0.5em;/*文字周りの余白*/
+  ####color: #010101;/*文字色*/
+  color: #87a5f2;
+  /* background: #eaf3ff; */ /*背景色*/
+  /* border-bottom: solid 3px #516ab6; */ /*下線*/
+}
+DBlue {
+  color: dodgerblue;
+}
+Blue {
+  color: blue;
+}
+Red {
+  color: red;
+}
+Per60 {
+  font-size: 60%;
+}
+Per70 {
+  font-size: 70%;
+}
+Per80 {
+  font-size: 80%;
+}
+</style>
+:::
+
+
+<style type="text/css">
+  body, td{
+  font-size: 16pt;
+}
+</style>
+
+::: {.flushright data-latex=""}
+[doi.org/10.1093/jeea/jvaf023](https://doi.org/10.1093/jeea/jvaf023)
+:::
+
+$$
+a=b
+$$
+
+
+## TL; DR
+
+::: {.column-margin}
+![](FigAIV.jpg)
+
+![](FigAVII.jpg)
+:::
+* Context: Software customer service chat agents&larr;AI assistance
+* Estimation: Staggered rollout DID
+* GPT-3 based assistance &rArr; resolutions per hour&uarr;
+* Resolutions per hour&uarr; is largest among the least skilled workers
+   * Productivity distribution dispersion&darr;
+* Adherence rate&uarr; &rArr; productivity&uarr;
+* Mechanism:
+   * Agents learn usefulness of AI &rArr; adherence &rArr; durable learning
+   * Fewer turnovers (quits) of relatively new agents
+   * Larger impacts on lower skilled&larr;AI suggestions&larr;high productivity worker data
+* External validity: 
+   * A text-based, stable set of tasks
+   * Skill-augmenting/replacing role of AI
+
+
+# Theory
+
+### Derivation of the Occupation-Level Production Function
+
+This document explains why "linear aggregation ensures that the Cobb–Douglas form reemerges at the occupation level" by deriving the occupation-level production function from the worker-level function, step by step [@AutorThompson2025]
+
+$$a=b$$
+
+#### **The Building Blocks (Equations and Assumptions)**
+
+1.  **Worker-level output (Equation 5):** This is the output produced by a single worker $i$ who is given $k_i$ units of capital.
+    $$
+    y_i(\phi) = \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{k_i \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+    $$
+
+2.  **Aggregation Rule:** The total output of the occupation, $Y(\phi)$, is the linear sum (integral) of the outputs of all $L(\phi)$ individual workers employed in that occupation.
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} y_i(\phi) d\mu
+    $$
+
+3.  **Optimal Capital Allocation:** To maximize total output, the total capital for the occupation, $K(\phi)$, is distributed uniformly among all $L(\phi)$ workers.
+    $$
+    k_i = \frac{K(\phi)}{L(\phi)}
+    $$
+
+#### **Step-by-Step Derivation**
+
+1.  **Start with the aggregation rule.**
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} y_i(\phi) d\mu
+    $$
+
+2.  **Substitute the worker-level production function into the integral.**
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{k_i \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] d\mu
+    $$
+
+3.  **Substitute the optimal capital per worker, $k_i$.**
+    $$
+    Y(\phi) = \int_{i \in o^{-1}(\phi)} \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\frac{K(\phi)}{L(\phi)} \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] d\mu
+    $$
+
+4.  **Pull the constant term (the entire bracketed expression) out of the integral.**
+    $$
+    Y(\phi) = \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\frac{K(\phi)}{L(\phi)} \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] \cdot \int_{i \in o^{-1}(\phi)} 1 d\mu
+    $$
+
+5.  **Evaluate the remaining integral, which is simply the total number of workers, $L(\phi)$.**
+    $$
+    \int_{i \in o^{-1}(\phi)} 1 d\mu = L(\phi)
+    $$
+
+6.  **Substitute this result back into the main equation.**
+    $$
+    Y(\phi) = \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\frac{K(\phi)}{L(\phi)} \cdot \eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] \cdot L(\phi)
+    $$
+
+7.  **Rearrange the terms using algebra to group labor ($L(\phi)$) and capital ($K(\phi)$) terms.** This combines several small algebraic steps for clarity.
+    $$
+    Y(\phi) = \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot L(\phi)^{1-\alpha(\phi)} \cdot \frac{(K(\phi)\eta)^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}}
+    $$
+
+8.  **Combine the terms that share the same exponent to achieve the final form.**
+    $$
+    Y(\phi) = \left(\frac{L(\phi)}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{K(\phi)\eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+    $$
+
+
+This derivation continues from the previous result and shows how to rearrange it into the compact Cobb-Douglas form with a Total Factor Productivity (TFP) term, `A(φ)`.
+
+
+#### **Starting Point**
+
+From the previous derivation, we established the occupation-level production function as:
+$$
+Y(\phi) = \left(\frac{L(\phi)}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{K(\phi)\eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+$$
+
+#### **Target Equation**
+
+Our goal is to show that this is equivalent to the standard form:
+$$
+Y(\phi) = A(\phi) L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+$$
+where `A(φ)` is the occupation-specific TFP term.
+
+#### **Step-by-Step Algebraic Rearrangement**
+
+1.  **Distribute the exponents.**
+    We apply the exponent on the outside of each parenthesis to both the numerator and the denominator inside, using the rule $(\frac{x}{y})^n = \frac{x^n}{y^n}$.
+
+    $$
+    Y(\phi) = \frac{L(\phi)^{1-\alpha(\phi)}}{(1-\alpha(\phi))^{1-\alpha(\phi)}} \cdot \frac{(K(\phi)\eta)^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}}
+    $$
+
+2.  **Separate the input factors `L(φ)` and `K(φ)`.**
+    In the second term, we can expand $(K(\phi)\eta)^{\alpha(\phi)}$ to $K(\phi)^{\alpha(\phi)} \cdot \eta^{\alpha(\phi)}$.
+
+    $$
+    Y(\phi) = \frac{L(\phi)^{1-\alpha(\phi)}}{(1-\alpha(\phi))^{1-\alpha(\phi)}} \cdot \frac{K(\phi)^{\alpha(\phi)} \eta^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}}
+    $$
+
+3.  **Group the non-input terms together.**
+    Let's rearrange the equation to group all terms that are *not* $L(\phi)$ or $K(\phi)$ at the beginning. These terms constitute the productivity parameter.
+
+    $$
+    Y(\phi) = \left[ \frac{1}{(1-\alpha(\phi))^{1-\alpha(\phi)}} \cdot \frac{\eta^{\alpha(\phi)}}{\alpha(\phi)^{\alpha(\phi)}} \right] \cdot L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+    $$
+
+4.  **Re-combine the grouped terms to match the paper's definition of A(φ).**
+    The term in the brackets can be written more cleanly by grouping the bases that share the same exponent. This makes the structure clearer.
+
+    $$
+    Y(\phi) = \left[ \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\eta}{\alpha(\phi)}\right)^{\alpha(\phi)} \right] \cdot L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+    $$
+
+5.  **Define the Total Factor Productivity (TFP) term, `A(φ)`.**
+    We can now see that the entire expression inside the large brackets is the occupation-specific TFP, `A(φ)`. It captures the efficiency of production for a given occupation `φ`, which depends on the capital share `α(φ)` and the productivity of capital `η`.
+
+    $$
+    A(\phi) := \left(\frac{1}{1-\alpha(\phi)}\right)^{1-\alpha(\phi)} \cdot \left(\frac{\eta}{\alpha(\phi)}\right)^{\alpha(\phi)}
+    $$
+
+6.  **Substitute `A(φ)` back into the main equation.**
+    By replacing the complex bracketed term with the simpler `A(φ)`, we arrive at the final, compact Cobb-Douglas form.
+
+    $$
+    Y(\phi) = A(\phi) L(\phi)^{1-\alpha(\phi)} K(\phi)^{\alpha(\phi)}
+    $$
+
+This completes the derivation. We have successfully shown that the linear aggregation of worker-level outputs, under the model's assumptions, results in a standard Cobb-Douglas production function at the occupation level.
+
+
+### Mathematical Proof for Assumption 5: Gross-Substitutes
+
+**The Goal:** We want to prove that an increase in the productivity of a single occupation, say occupation `j`, leads to an increase in that occupation's value share of the total economy.
+
+Mathematically, we want to show that:
+$$
+\frac{\partial s(j)}{\partial A(j)} > 0
+$$
+where:
+- $s(j)$ is the value share of occupation `j`.
+- $A(j)$ is the Total Factor Productivity (TFP) of occupation `j`. An increase in $A(j)$ represents an increase in productivity.
+
+#### Step 1: Define the Occupation's Share in Total Output
+
+The value share of an occupation, $s(j)$, is the total revenue generated by that occupation divided by the total revenue of the entire economy (the value of the final good, Y).
+$$
+s(j) = \frac{p(j) \cdot Y(j)}{P \cdot Y}
+$$
+The paper sets the price of the final good, $P$, to 1 (it's the numeraire). So, the share simplifies to:
+$$
+s(j) = \frac{p(j) \cdot Y(j)}{Y}
+$$
+
+#### Step 2: Use the Demand-Side Price Equation
+
+The final good `Y` is produced by combining the outputs of all occupations `Y(φ)` using a CES production function (Equation 10). A standard result from CES demand theory is that the price of any individual input `Y(j)` is related to its quantity relative to the aggregate. The paper provides this as:
+$$
+p(j) = \left(\frac{Y(j)}{Y}\right)^{-\frac{1}{\lambda}}
+$$
+where $\lambda$ is the elasticity of substitution between the outputs of different occupations.
+
+#### Step 3: Substitute the Price into the Share Equation and Simplify
+
+Now we substitute this expression for $p(j)$ back into our equation for the share, $s(j)$. This is the crucial step that introduces $\lambda$ into our analysis.
+$$
+s(j) = \frac{\left(\frac{Y(j)}{Y}\right)^{-\frac{1}{\lambda}} \cdot Y(j)}{Y}
+$$
+Let's use the rules of exponents to simplify this expression:
+$$
+s(j) = \frac{Y(j)^{-\frac{1}{\lambda}} \cdot Y(j)^1}{Y^{-\frac{1}{\lambda}} \cdot Y^1}
+$$
+Combine the exponents in the numerator and the denominator (since $x^a \cdot x^b = x^{a+b}$):
+$$
+s(j) = \frac{Y(j)^{1 - \frac{1}{\lambda}}}{Y^{1 - \frac{1}{\lambda}}}
+$$
+This simplifies to a very elegant relationship between the value share and the quantity share:
+$$
+s(j) = \left(\frac{Y(j)}{Y}\right)^{\frac{\lambda-1}{\lambda}}
+$$
+
+#### Step 4: Analyze the Relationship between Share and Quantity
+
+From the final equation in Step 3, we can see how the share $s(j)$ changes when the quantity of that occupation's output $Y(j)$ changes. To do this, we can take the partial derivative of $s(j)$ with respect to $Y(j)$:
+$$
+\frac{\partial s(j)}{\partial Y(j)} = \frac{\partial}{\partial Y(j)} \left[ \left(\frac{Y(j)}{Y}\right)^{\frac{\lambda-1}{\lambda}} \right]
+$$
+Using the power rule for differentiation, we get:
+$$
+\frac{\partial s(j)}{\partial Y(j)} = \left(\frac{\lambda-1}{\lambda}\right) \left(\frac{Y(j)}{Y}\right)^{\frac{\lambda-1}{\lambda} - 1} \cdot \left(\frac{1}{Y}\right)
+$$
+
+Now, let's analyze the sign of this derivative.
+- The term $\left(\frac{Y(j)}{Y}\right)^{\dots}$ is positive.
+- The term $\left(\frac{1}{Y}\right)$ is positive.
+- The sign of the whole expression therefore depends entirely on the sign of the leading term: $\left(\frac{\lambda-1}{\lambda}\right)$.
+
+**This is where Assumption 5, $\lambda > 1$, becomes critical.**
+
+If $\lambda > 1$, then $(\lambda-1)$ is positive, and the entire term $\left(\frac{\lambda-1}{\lambda}\right)$ is positive.
+Therefore, if $\lambda > 1$, we have:
+$$
+\frac{\partial s(j)}{\partial Y(j)} > 0
+$$
+This means that an increase in the *quantity* of an occupation's output, $Y(j)$, leads to an increase in its *value share*, $s(j)$.
+
+#### Step 5: Connect Productivity to Quantity and Finalize the Proof
+
+An increase in productivity, $A(j)$, allows occupation `j` to produce more output, $Y(j)$, for any given amount of labor and capital. Therefore, $\frac{\partial Y(j)}{\partial A(j)} > 0$.
+
+We can now use the chain rule to find the relationship between the share and productivity:
+$$
+\frac{\partial s(j)}{\partial A(j)} = \underbrace{\frac{\partial s(j)}{\partial Y(j)}}_{\text{Positive, if } \lambda > 1} \cdot \underbrace{\frac{\partial Y(j)}{\partial A(j)}}_{\text{Positive by definition}}
+$$
+Since both terms on the right-hand side are positive, their product must also be positive.
+
+$$
+\frac{\partial s(j)}{\partial A(j)} > 0
+$$
+
+**Conclusion:** We have mathematically shown that if the elasticity of substitution between occupations ($\lambda$) is greater than 1, an increase in the productivity of one occupation raises its share in total output. This is the definition of "Gross-Substitutes" in this context: the increase in demand (due to the lower effective price from higher productivity) is so strong that it outweighs the price drop, leading to higher total spending (share) on that occupation's output.
+
+
+### Derivation of CES Demand Function via Lagrangian
+
+**The Goal:** We want to find the cost-minimizing demand for an input `Y(j)` for a firm producing a fixed amount of the final good, `Y`. From this demand function, we will derive the inverse demand (price) function.
+
+#### 1. The Optimization Problem
+
+A representative firm produces the final good `Y` by combining intermediate inputs `Y(φ)`. The firm's problem is to **minimize its total cost** subject to a production quota.
+
+*   **Objective Function (Cost):** $C = \int_0^1 p(\phi) Y(\phi) d\phi$
+*   **Constraint (Production):** $Y_0 = \left( \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi \right)^{\frac{\lambda}{\lambda-1}}$
+
+The firm chooses the level of each $Y(\phi)$ to minimize $C$ for a given output level $Y_0$.
+
+#### 2. Setting up the Lagrangian
+
+We combine the objective and the constraint into a single Lagrangian equation, $\mathcal{L}$, using a Lagrange multiplier, which we'll call $\mu$.
+
+$$
+\mathcal{L} = \underbrace{\int_0^1 p(\phi) Y(\phi) d\phi}_{\text{Total Cost}} - \mu \left[ \underbrace{\left( \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi \right)^{\frac{\lambda}{\lambda-1}} - Y_0}_{\text{Production Constraint set to zero}} \right]
+$$
+
+To find the optimal level of input for a specific occupation `j`, we take the derivative of the Lagrangian with respect to $Y(j)$ and set it to zero.
+
+#### 3. The First-Order Condition
+
+The first-order condition (FOC) for an arbitrary input $Y(j)$ is:
+$$
+\frac{\partial \mathcal{L}}{\partial Y(j)} = p(j) - \mu \left[ \left( \frac{Y}{Y(j)} \right)^{\frac{1}{\lambda}} \right] = 0
+$$
+
+Of course. You are right to point out that the derivation of the First-Order Condition is the most complex step, and it's often glossed over. Let's derive it line by line, showing exactly how each part of the Lagrangian is differentiated to arrive at the final FOC.
+
+### **Query #15**
+
+[Image provided showing the final FOC equation]
+"a tricky part is deriving FOC. can you derive line by line to get"
+
+
+**Starting Point: The Lagrangian**
+
+We begin with the full Lagrangian equation that we need to differentiate with respect to a single input, $Y(j)$.
+
+$$
+\mathcal{L} = \int_0^1 p(\phi) Y(\phi) d\phi - \mu \left[ \left( \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi \right)^{\frac{\lambda}{\lambda-1}} - Y_0 \right]
+$$
+
+Our goal is to compute $\frac{\partial \mathcal{L}}{\partial Y(j)}$. We can break this down into three parts based on the terms in the Lagrangian.
+
+
+**Part 1: Derivative of the Cost Term**
+
+First, let's find the derivative of the total cost with respect to the input $Y(j)$.
+$$
+\frac{\partial}{\partial Y(j)} \left( \int_0^1 p(\phi) Y(\phi) d\phi \right)
+$$
+This is a standard result in calculus of variations. Since the integral is a sum over all inputs $\phi$, taking the derivative with respect to one specific input $Y(j)$ isolates the coefficient of that input, which is its price, $p(j)$.
+$$
+\frac{\partial}{\partial Y(j)} \left( \int_0^1 p(\phi) Y(\phi) d\phi \right) = p(j)
+$$
+
+
+**Part 2: Derivative of the Production Constraint Term (The Tricky Part)**
+
+Next, we differentiate the production constraint term. We can ignore the constant $-Y_0$ for now, as its derivative is zero. The term we need to differentiate is:
+$$
+\frac{\partial}{\partial Y(j)} \left[ \mu \left( \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi \right)^{\frac{\lambda}{\lambda-1}} \right]
+$$
+This requires the **Chain Rule**. Let's define the inner and outer functions:
+*   **Inner function, $g$:** $g = \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi$
+*   **Outer function, $f(g)$:** $f(g) = \mu \cdot g^{\frac{\lambda}{\lambda-1}}$
+
+The chain rule states that the derivative is $\frac{df}{dg} \cdot \frac{dg}{dY(j)}$.
+
+**Step 2a: Differentiate the outer function ($f(g)$) with respect to the inner function ($g$).**
+Using the power rule:
+$$
+\frac{df}{dg} = \mu \cdot \left(\frac{\lambda}{\lambda-1}\right) g^{\left(\frac{\lambda}{\lambda-1} - 1\right)} = \mu \cdot \left(\frac{\lambda}{\lambda-1}\right) g^{\left(\frac{1}{\lambda-1}\right)}
+$$
+
+**Step 2b: Differentiate the inner function ($g$) with respect to $Y(j)$.**
+$$
+\frac{dg}{dY(j)} = \frac{\partial}{\partial Y(j)} \left( \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi \right)
+$$
+Similar to Part 1, the derivative of the integral with respect to $Y(j)$ is just the derivative of the term inside the integral that contains $Y(j)$.
+$$
+\frac{dg}{dY(j)} = \frac{\partial}{\partial Y(j)} \left( Y(j)^{\frac{\lambda-1}{\lambda}} \right) = \left(\frac{\lambda-1}{\lambda}\right) Y(j)^{\left(\frac{\lambda-1}{\lambda} - 1\right)} = \left(\frac{\lambda-1}{\lambda}\right) Y(j)^{\left(-\frac{1}{\lambda}\right)}
+$$
+
+**Step 2c: Combine the parts using the Chain Rule.**
+Now we multiply the results from 2a and 2b:
+$$
+\frac{df}{dg} \cdot \frac{dg}{dY(j)} = \left[ \mu \cdot \left(\frac{\lambda}{\lambda-1}\right) g^{\frac{1}{\lambda-1}} \right] \cdot \left[ \left(\frac{\lambda-1}{\lambda}\right) Y(j)^{-\frac{1}{\lambda}} \right]
+$$
+The terms $\left(\frac{\lambda}{\lambda-1}\right)$ and $\left(\frac{\lambda-1}{\lambda}\right)$ cancel each other out, simplifying this greatly:
+$$
+= \mu \cdot g^{\frac{1}{\lambda-1}} \cdot Y(j)^{-\frac{1}{\lambda}}
+$$
+
+**Step 2d: Substitute back for $g$ and simplify.**
+Now we replace $g$ with its definition, $g = \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi$. And we also know from the production constraint that $Y = (g)^{\frac{\lambda}{\lambda-1}}$, which means $g = Y^{\frac{\lambda-1}{\lambda}}$. Let's substitute this simpler form of $g$ in:
+$$
+= \mu \cdot \left(Y^{\frac{\lambda-1}{\lambda}}\right)^{\frac{1}{\lambda-1}} \cdot Y(j)^{-\frac{1}{\lambda}}
+$$
+The exponents multiply, $(\frac{\lambda-1}{\lambda}) \cdot (\frac{1}{\lambda-1}) = \frac{1}{\lambda}$, leaving us with:
+$$
+= \mu \cdot Y^{\frac{1}{\lambda}} \cdot Y(j)^{-\frac{1}{\lambda}} = \mu \left[ \left( \frac{Y}{Y(j)} \right)^{\frac{1}{\lambda}} \right]
+$$
+
+
+**Part 3: Assemble the Final FOC**
+
+Now we combine the results. The full derivative of the Lagrangian is:
+$$
+\frac{\partial \mathcal{L}}{\partial Y(j)} = \underbrace{p(j)}_{\text{from Part 1}} - \underbrace{\mu \left[ \left( \frac{Y}{Y(j)} \right)^{\frac{1}{\lambda}} \right]}_{\text{from Part 2}}
+$$
+The first-order condition for minimization requires setting this derivative to zero. While the FOC is technically the derivative *set to zero*, the expression for the derivative itself is what was requested:
+$$
+\frac{\partial \mathcal{L}}{\partial Y(j)} = p(j) - \mu \left[ \left( \frac{Y}{Y(j)} \right)^{\frac{1}{\lambda}} \right]
+$$
+
+Rearranging this gives us a relationship between the input price and the Lagrange multiplier:
+$$
+p(j) = \mu \left( \frac{Y}{Y(j)} \right)^{\frac{1}{\lambda}}
+$$
+
+#### 4. Interpreting the Lagrange Multiplier ($\mu$)
+
+In a cost-minimization problem, the Lagrange multiplier $\mu$ represents the **marginal cost** of production. In a perfectly competitive market for the final good, price equals marginal cost. Since the final good `Y` is the numeraire, its price is 1. Therefore:
+$$
+\mu = \text{Marginal Cost} = P_Y = 1
+$$
+
+#### 5. Finding the Final Inverse Demand Function
+
+Substituting $\mu=1$ back into our first-order condition from Step 3:
+$$
+p(j) = 1 \cdot \left( \frac{Y}{Y(j)} \right)^{\frac{1}{\lambda}}
+$$
+
+This can be rewritten in the final form used in the paper:
+$$
+p(j) = \left( \frac{Y(j)}{Y} \right)^{-\frac{1}{\lambda}}
+$$
+
+Excellent question. You're asking for the core microeconomic justification for one of the key steps in the derivation. Let's break down exactly why spreading labor evenly is the optimal income-maximizing strategy for the worker, referring directly to the Cobb-Douglas specification.
+
+#### **Part 2: Why Spreading Labor Evenly Maximizes Income**
+
+This is the crucial part of the question. A worker's income is her wage, which in a competitive market equals her marginal revenue product. To maximize her wage, she must maximize her physical output, $y_i(\phi)$. Let's look at the part of her output that depends on her labor allocation.
+
+From Equation (3), the worker's output $y_i(\phi)$ is a monotonic function of:
+$$
+\exp \left\{ \int_{\text{non-automated}} \frac{\ln(l_i(t))}{T(\phi)} dt \right\}
+$$
+Maximizing her output is therefore equivalent to maximizing the term inside the exponential:
+$$
+\underset{l_i(t)}{\max} \int_{\text{non-automated}} \ln(l_i(t)) dt
+$$
+The worker must perform this maximization subject to her **labor constraint**: she has a total of 1 unit of labor to supply, which must be spread across all non-automated tasks.
+$$
+\text{Constraint:} \int_{\text{non-automated}} l_i(t) dt = 1
+$$
+
+**The Cobb-Douglas Connection (via Jensen's Inequality)**
+
+The function we are maximizing is an integral (a continuous sum) of a **concave function**, $\ln(l_i(t))$. The constraint is linear. This is a classic optimization problem with a well-known result, often proven using Jensen's Inequality.
+
+*   **Jensen's Inequality** states that for any concave function $f$ (like the natural logarithm), the mean of the function is less than or equal to the function of the average. In integral form:
+    $$
+    \frac{1}{b-a} \int_a^b f(x(t)) dt \le f\left(\frac{1}{b-a} \int_a^b x(t) dt\right)
+    $$
+    Equality holds if and only if $x(t)$ is a constant.
+
+Let's apply this to our problem.
+
+* Our function is $f(\cdot) = \ln(\cdot)$.
+* Our variable is the labor allocation, $l_i(t)$.
+* The interval of integration is the set of non-automated tasks, which has a total "length" or measure of $T(\phi) - I(\phi)$.
+
+Applying Jensen's Inequality:
+$$
+\frac{1}{T(\phi) - I(\phi)} \int_{\text{non-automated}} \ln(l_i(t)) dt \le \ln\left( \frac{1}{T(\phi) - I(\phi)} \int_{\text{non-automated}} l_i(t) dt \right)
+$$
+Now, look at the right-hand side. We know from the worker's labor constraint that the integral $\int_{\text{non-automated}} l_i(t) dt$ is equal to 1.
+$$
+\frac{1}{T(\phi) - I(\phi)} \int_{\text{non-automated}} \ln(l_i(t)) dt \le \ln\left( \frac{1}{T(\phi) - I(\phi)} \cdot 1 \right)
+$$
+Multiplying both sides by the constant $(T(\phi) - I(\phi))$ gives us:
+$$
+\int_{\text{non-automated}} \ln(l_i(t)) dt \le (T(\phi) - I(\phi)) \ln\left( \frac{1}{T(\phi) - I(\phi)} \right)
+$$
+This inequality shows us the **maximum possible value** for our objective function. According to Jensen's Inequality, this maximum is achieved **if and only if the input to the concave function is constant**.
+
+In our case, this means the maximum is achieved if and only if $l_i(t)$ is constant for all non-automated tasks `t`.
+
+**Conclusion**
+
+To maximize her output (and thus her income), the worker must make her labor allocation, $l_i(t)$, constant across all the tasks she performs. Since she has 1 unit of labor to spread across $T(\phi) - I(\phi)$ tasks, the constant value for each task must be:
+$$
+l_i(t) = \frac{\text{Total Labor}}{\text{Number of Non-Automated Tasks}} = \frac{1}{T(\phi) - I(\phi)}
+$$
+This is the unique labor allocation that maximizes the worker's production, which is a direct result of the symmetric and concave (logarithmic) nature of the Cobb-Douglas specification over its inputs.
+
+----
+
+Of course. Let's walk through the proof of Proposition 1, taking Lemma 1 and the unstated Lemma 2 (which I assume is Lemma B.1 from the appendix) as given.
+
+### Prop 1 {#sec-prop1}
+
+A separating equilibrium exists
+
+* Expert workers ($e_i > I$) choose the occupation that perfectly matches her expertise level
+$$
+o(i) = e_i
+$$
+* Non-expert workers ($e_i \leqslant I$) find employment in the "generic" occupations ($\phi \leqslant I$), uniform wage $w_{g}$ across all generic jobs.
+* $w(e_{i})>w_{g}$ for $e_i > I$^[Wage is decreasing in $L$. Note the labour demand
+$$
+L(\phi, w) = Y \frac{1-\alpha(\phi)}{w} \left( w^{1-\alpha(\phi)} \left(\frac{r}{\eta}\right)^{\alpha(\phi)} \right)^{1-\lambda}
+$$
+can be written as 
+$$
+\begin{aligned}
+w(\phi, L) &= \left( \frac{Y (1-\alpha(\phi)) (r/\eta)^{\alpha(\phi)(1-\lambda)}}{L} \right)^{\frac{1}{\lambda(1-\alpha(\phi)) + \alpha(\phi)}},\\
+&=  C_\phi^{\frac{1}{E_\phi}} \cdot L^{-\frac{1}{E_\phi}}
+\end{aligned}
+$$
+where $C_\phi=Y (1-\alpha(\phi)) (r/\eta)^{\alpha(\phi)(1-\lambda)}$ and $E_\phi = \lambda(1-\alpha(\phi)) + \alpha(\phi)$. Then:
+$$
+\frac{\partial w(\phi, L)}{\partial L} = C_\phi^{\frac{1}{E_\phi}}E_{\phi}L^{-\frac{1}{E_\phi} - 1}<0
+$$ ]
+
+
+<details><summary>
+Click here to see the proof.
+</summary>
+This holds because the expert wage of $e_{i}>I$ is strictly greater
+$$
+w\left(e_i, \bar{L}\right)> w_g 
+$$
+where $\bar{L}$ is the number (measure) of employees at $\phi_{i}=e_{i}$
+
+The proof uses lemmas and decreasing slope of wage
+
+* Lemma 1: Wages is weakly increasing in expertise: For $\phi_2 > \phi_1$, $w(\phi_2) \geqslant w(\phi_1)$. All generic occupations ($\phi \leqslant I$) pay the same wage $w_g$.
+* [Lemma B.1](#sec-propLemmaB1): Wage function $w(\phi, \bar{L})$, is strictly increasing in $\phi$ at $L=\bar{L}$.
+
+**Step 1: Generic wage $w_g$**
+
+There must be at least one generic occupation $\phi^*$, with $\phi^* \leqslant I$, where the equilibrium amount of labor is exactly the standard amount, $L(\phi^*) = \bar{L}$. By second part of Lemma 1, the following holds:
+$$
+w\left(\phi^*, \bar{L}\right)= w\left\{\phi^*, L(\phi^*)\right\} = w_g 
+$$
+
+**Step 2: The Expert worker's decision**
+
+There must be some $\phi'\leqslant I$ such that $L\left(\phi'\right)\geqslant \bar{L}$, a relatively productive occupation that hires more labour (than mean $\bar{L}$) to be employed at the common wage $w_{g}$, because:
+
+* The number of generic jobs must be no smaller than the number of all non-expert workers 
+    $$
+I\bar{L}\leqslant \int_{0}^{I}L(\phi)d\phi
+    $$
+* Continuity of labour demand function&rarr;intermediate value theorem
+    $$
+L(\phi) = Y \frac{1-\alpha(\phi)}{w_{g}} \left( w^{1-\alpha(\phi)_{g}} \left(\frac{r}{\eta}\right)^{\alpha(\phi)} \right)^{1-\lambda}
+    $$
+    implies there is some $\phi'\leqslant I$ such that $\bar{L}\leqslant L(\phi')$ for $I\bar{L}\leqslant \int_{0}^{I}L(\phi)d\phi$ to hold.
+
+Way 1 (in paper):
+
+Then, because wage function is decreasing in labour, 
+$$
+w(\phi', \bar{L})\geqslant w\left(\phi', L(\phi')\right)=w_g 
+$$
+
+Because wage is strictly increasing in $\phi$, for any $\phi'<e_{i}$ (or $\phi'\leqslant I$ and $e_{i}>I$), we have
+$$
+w(e_i, \bar{L})>w(\phi', \bar{L})
+$$
+So
+$$
+w(e_i, \bar{L})>w(\phi', \bar{L})\geqslant w\left(\phi', L(\phi')\right)=w_g 
+$$
+
+
+Way 2 (simpler):
+
+Then, from Lemma 1, for any $\phi'\leqslant I$,
+$$
+w(\phi', \bar{L})= w\left(\phi', L(\phi')\right)=w_g 
+$$
+Because wage is strictly increasing in $\phi$, for any $\phi'<e_{i}$ (or $\phi'\leqslant I$ and $e_{i}>I$), we have
+$$
+w(e_i, \bar{L})>w(\phi', \bar{L})
+$$
+So
+$$
+w(e_i, \bar{L})>w(\phi', \bar{L})=w\left(\phi', L(\phi')\right)=w_g 
+$$
+
+::: {.flushright data-latex=""}
+∎
+:::
+</details>
+
+### Corollary 1 {#sec-Corollary1}
+
+The separating equilibrium is unique ^[Up to reallocation of workers $i$ with $e_{i}\leqslant I$ across occupations $\phi\leqslant I$ = unique for how many specific expertise will work in each occupations, but not the individual identity of k-th person in the group of people with expertise $e_{i}$ ]
+
+
+### Prop 3 {#sec-prop3}
+
+$$
+w'(I)>0 \quad \mbox{on }[0, \bar{I}]
+$$
+but a discrete drop in wages when automation catches up (at $\phi=I$)
+
+::: {.column-margin}
+![](Fig2.jpg)
+:::
+
+<details><summary>
+Click here to see the proof.
+</summary>
+
+Case 1: An expert occupation ($\phi>I$)
+
+1.  Corollary 1: Equilibrium wage is $w(\phi, \bar{L}, I)$.
+2.  Proof of Lemma B.1 shows
+    * $I$&uarr; &rArr; $\alpha(\phi, I)$&uarr; &larr; $\alpha(\phi)=\frac{\min\{I, \phi\}}{T}=\frac{I}{T}$
+    * $\frac{\partial \ln(w)}{\partial \alpha} > 0$ if $\eta > r \left(\frac{L(1-\alpha)}{Y}\right)^{-\frac{1}{2}} e^{\frac{\lambda-\alpha(\lambda-1)}{\lambda(\lambda-1)(1-\alpha)}}$ &larr; "Productive automation" (Assumption 6)
+
+Case 2: A generic occupation ($\phi\leqslant I$)
+
+1.  Generic wage, $w_g(I)$, determined by the system in Corollary 1
+2.  The CES aggregator ensures that all inputs are $q$ compliments, so increase in productivity in other inputs increases the demand for other inputs.
+    $$
+    Y = \left( \int_0^1 Y(\phi)^{\frac{\lambda-1}{\lambda}} d\phi \right)^{\frac{\lambda}{\lambda-1}}
+    $$
+3.  Why scale effect dominates substitution effect when $\lambda>1$:
+    *   Total revenue for `j`:
+        $$
+        R_j = p_j \cdot Y_j = p_j \cdot (Y p_j^{-\lambda}) = Y \cdot p_j^{1-\lambda}
+        $$
+    *   $A_k \uparrow$ &rArr; $Y$&uarr;
+    *   $A_k \uparrow$ &rArr; $p_{j}$&darr; &rArr; $p^{1-\lambda}_{j}$&uarr;
+
+A discrete jump
+
+For any $\phi\in(I^{*}, I^{*}+\epsilon]$ with $I^{*}\epsilon<I^{*}+\delta<\bar{I}$, 
+
+* $w_{\phi}\left(I^{*}\right)>w_{g}\left(I^{*}\right)$&larr; automation $I^{*}$ has not caught up with $\phi$
+* $w_{\phi}\left(I^{*}+\delta\right)=w_{g}\left(I^{*}+\delta\right)$&larr; automation $I^{*}+\delta$ has caught up with $\phi$
+
+So
+$$
+\begin{aligned}
+w_{\phi}\left(I^{*}\right)-w_{g}\left(I^{*}\right)
+&=
+w_{\phi}\left(I^{*}\right)-w_{g}\left(I^{*}\right)+w_{\phi}\left(I^{*}+\delta\right)-w_{g}\left(I^{*}+\delta\right)\\
+&=
+w_{\phi}\left(I^{*}\right)-w_{\phi}\left(I^{*}+\delta\right)-w_{g}\left(I^{*}\right)+w_{g}\left(I^{*}+\delta\right)
+\end{aligned}
+$$
+Taking limits $\delta\rightarrow 0$,
+$$
+\lim_{\delta\rightarrow 0}w_{\phi}\left(I^{*}\right)-w_{\phi}\left(I^{*}+\delta\right)>0, \quad 
+\lim_{\delta\rightarrow 0}w_{g}\left(I^{*}\right)-w_{g}\left(I^{*}+\delta\right)=0
+$$
+so there is a discrete jump when automation catches up and wage becomes $w_{g}$.
+
+::: {.flushright data-latex=""}
+∎
+:::
+</details>
+
+
+### Lemma B1. {#sec-propLemmaB1}
+
+$$
+\frac{\partial w\left(\phi, \bar{L}\right)}{\partial \phi}>0
+$$
+
+<details><summary>
+Click here to see the proof.
+</summary>
+Sketch of proof: Need to prove
+$$
+\eta > r \left( \frac{1-\alpha}{\bar{L}/Y} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - \alpha(\lambda-1)}{\lambda(1-\alpha)(\lambda-1)}}
+$$
+Given that partial of $\frac{\lambda - \alpha(\lambda-1)}{\lambda(1-\alpha)(\lambda-1)}$ wrt $\alpha$ is positive and $\alpha(\phi)\leqslant I$ or $(1-\alpha)^{-\frac{1}{\lambda}}\leqslant (1-I)^{-\frac{1}{\lambda}}$, if we can prove the inequality after subsituting $\alpha$ with $I\geqslant\alpha$ (bracketed term and exponential term are both larger, hence RHS is greater), the proof is done. So need to prove
+$$
+\eta > r \left( \frac{1-I}{\bar{L}/Y} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}
+$$
+
+**Step 1:**
+
+The proof first shows 
+$$
+\eta^{\frac{\lambda-1}{\lambda}} \left( \frac{\bar{L}}{\bar{K}} \frac{I}{1-I} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}
+>
+r \left( \frac{1-I}{\bar{L}/Y} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}
+\tag{b1}\label{b1}
+$$
+
+**Step 2:**
+
+Then further using ass 6, 
+$$
+\eta
+>
+\eta^{\frac{\lambda-1}{\lambda}} \left( \frac{\bar{L}}{\bar{K}} \frac{I}{1-I} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}
+\tag{b2}\label{b2}
+$$
+so the claim is shown. 
+
+----
+
+To show \eqref{b1}, we show
+$$
+Y \frac{I}{\bar{K}} \left( \frac{1-I}{\bar{L}/Y} \right)^{\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}\geqslant
+r \left( \frac{1-I}{\bar{L}/Y} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}
+$$
+which uses $r\leqslant \frac{IY}{\bar{K}}$. Rearranging LHS gives
+
+$$
+\begin{aligned}
+Y \frac{I}{\bar{K}} \left( \frac{1-I}{\bar{L}/Y} \right)^{\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}
+&<
+\left( \frac{\eta\bar{K}}{I} \right)^{\frac{\lambda-1}{\lambda}} \frac{I}{\bar{K}} \left( \frac{1-I}{\bar{L}} \right)^{-\frac{1}{\lambda}}e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}\\
+&=
+\eta^{\frac{\lambda-1}{\lambda}} \bar{K}^{-\frac{1}{\lambda}} I^{\frac{1}{\lambda}}\left(\frac{\bar{L}}{1-I} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}\\
+&= 
+\eta^{\frac{\lambda-1}{\lambda}} \left( \frac{\bar{L}}{\bar{K}} \frac{I}{1-I} \right)^{-\frac{1}{\lambda}} e^{\frac{\lambda - I(\lambda-1)}{\lambda(1-I)(\lambda-1)}}
+\end{aligned}
+$$
+where we used (28). 
+
+
+To show \eqref{b2}, we use Ass 6 which says
+$$
+\eta>\bar{\eta}\equiv \frac{\bar{L}}{\bar{K}}\frac{\bar{I}}{1-\bar{I}}e^{\frac{\rho^{-1}-\bar{I}}{1-\bar{I}}}
+$$
+so, 
+$$
+\begin{aligned}
+\eta
+&>
+\frac{\bar{L}}{\bar{K}}\frac{I}{1-I}e^{\frac{\rho^{-1}-I}{1-I}}
+=
+\frac{\bar{L}}{\bar{K}}\frac{I}{1-I}e^{\frac{\frac{\lambda}{\lambda-1}-I}{1-I}}\\
+&=
+\frac{\bar{L}}{\bar{K}}\frac{I}{1-I}e^{\frac{\lambda-(\lambda-1)I}{(1-I)(\lambda-1)}}
+\end{aligned}
+$$
+where the first inequality holds by $\bar{I}\geqslant I$. Exponentiating,
+$$
+\eta^{\frac{1}{\lambda}} > \left( \frac{\bar{L}}{\bar{K}} \frac{\bar{I}}{1-\bar{I}} \right)^{-\frac{1}{\lambda}} e^{ \frac{\lambda-\bar{I}(\lambda-1)}{\lambda(1-\bar{I})(\lambda-1)} } 
+$$
+Note
+$$
+\eta^{\frac{1}{\lambda}} >  A
+$$ implies
+$$
+\eta>\eta^{\frac{\lambda-1}{\lambda}}A
+$$
+because
+$$
+\eta^{\frac{1}{\lambda}}=\eta^{1-\frac{\lambda-1}{\lambda}}>A
+$$
+So
+$$
+\eta^{\frac{1}{\lambda}} > \left( \frac{\bar{L}}{\bar{K}} \frac{\bar{I}}{1-\bar{I}} \right)^{-\frac{1}{\lambda}} e^{ \frac{\lambda-\bar{I}(\lambda-1)}{\lambda(1-\bar{I})(\lambda-1)} } 
+$$
+implies
+$$
+\eta > \eta^{\frac{\lambda-1}{\lambda}} \left( \frac{\bar{L}}{\bar{K}} \frac{\bar{I}}{1-\bar{I}} \right)^{-\frac{1}{\lambda}} e^{ \frac{\lambda-\bar{I}(\lambda-1)}{\lambda(1-\bar{I})(\lambda-1)} } 
+$$
+
+::: {.flushright data-latex=""}
+∎
+:::
+</details>
+
+# Empirics
+
+
+
+Correlations, not strictly causal relationships 
+
+
+
+:::: {.callout-important title='Variable definitions' collapse='true'}
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<!-- preamble start -->
+
+    <!-- tinytable mathjax start -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <!-- tinytable mathjax end -->
+
+    <script>
+
+      function styleCell_aynjruf53x20pdaw6tre(i, j, css_id) {
+          var table = document.getElementById("tinytable_aynjruf53x20pdaw6tre");
+          var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_aynjruf53x20pdaw6tre');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_aynjruf53x20pdaw6tre(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_aynjruf53x20pdaw6tre");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: 7, j: 0 },  ], css_id: 'tinytable_css_tyqkemrz92s5v0th3owx',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 },  ], css_id: 'tinytable_css_m563s4rb99kjfwdpa5n4',}, 
+          { positions: [ { i: 7, j: 1 },  ], css_id: 'tinytable_css_iu7qrx2ocjronvabipds',}, 
+          { positions: [ { i: 0, j: 1 },  ], css_id: 'tinytable_css_ajth926cedm3uoab7sie',}, 
+          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_6dfpzwiupiexl9d4ltpp',}, 
+          { positions: [ { i: 1, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 5, j: 1 }, { i: 6, j: 1 },  ], css_id: 'tinytable_css_2k90dbhnx24qdv10micf',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_aynjruf53x20pdaw6tre(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_tyqkemrz92s5v0th3owx, .table th.tinytable_css_tyqkemrz92s5v0th3owx { text-align: right; border-bottom: solid #d3d8dc 0.1em; width: 65%; }
+      .table td.tinytable_css_m563s4rb99kjfwdpa5n4, .table th.tinytable_css_m563s4rb99kjfwdpa5n4 { text-align: right; width: 65%; }
+      .table td.tinytable_css_iu7qrx2ocjronvabipds, .table th.tinytable_css_iu7qrx2ocjronvabipds { text-align: left; border-bottom: solid #d3d8dc 0.1em; width: 35%; }
+      .table td.tinytable_css_ajth926cedm3uoab7sie, .table th.tinytable_css_ajth926cedm3uoab7sie { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; width: 35%; }
+      .table td.tinytable_css_6dfpzwiupiexl9d4ltpp, .table th.tinytable_css_6dfpzwiupiexl9d4ltpp { text-align: right; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; width: 65%; }
+      .table td.tinytable_css_2k90dbhnx24qdv10micf, .table th.tinytable_css_2k90dbhnx24qdv10micf { text-align: left; width: 35%; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_aynjruf53x20pdaw6tre" style="table-layout: fixed; width: 100% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <thead>
+        
+              <tr>
+                <th scope="col">Definition</th>
+                <th scope="col">Expression</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>Occupation $j$'s mean expertise level</td>
+                  <td>$\textrm{XPT}_{j}$</td>
+                </tr>
+                <tr>
+                  <td>Occupation $j$'s mean expertise level of non-routine tasks</td>
+                  <td>$\textrm{XPT}^{nr}_{j}$</td>
+                </tr>
+                <tr>
+                  <td>Occupation $j$'s total number of tasks</td>
+                  <td>$\textrm{Task}_{j}$</td>
+                </tr>
+                <tr>
+                  <td>Occupation $j$'s total number of non-routine tasks</td>
+                  <td>$\textrm{Task}^{nr}_{j}$</td>
+                </tr>
+                <tr>
+                  <td>Expertise exposure (to automation): $\Delta\widetilde{\textrm{XPT}}_{j}$</td>
+                  <td>$\textrm{XPT}^{nr}_{j, 1977}-\textrm{XPT}_{j, 1977}$</td>
+                </tr>
+                <tr>
+                  <td>Task exposure (to automation): $\Delta\widetilde{\textrm{Task}}_{j}$</td>
+                  <td>$1-\frac{\textrm{Task}^{nr}_{j, 1977}}{\textrm{Task}_{j, 1977}}$</td>
+                </tr>
+                <tr>
+                  <td>Occupation $j$'s mean wage level</td>
+                  <td>$W_{j}$</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+```
+
+:::
+:::
+
+
+
+* <Per80>$\textrm{XPT}_{j}$</Per80> $\equiv$ Occupation $j$'s mean expertise level
+* <Per80>$\textrm{Task}_{j}$</Per80> $\equiv$ Occupation $j$'s total number of tasks
+* Expertise exposure (to automation): <Per80>$\Delta\widetilde{\textrm{XPT}}_{j}$ $\equiv \textrm{XPT}^{nr}_{j, 1977}-\textrm{XPT}_{j, 1977}$</Per80>, % change in <Per80>$\textrm{XPT}_{j}$</Per80> when all routine tasks were removed
+* Task exposure (to automation): <Per80>$\Delta\widetilde{\textrm{Task}}_{j}$ $\equiv 1-\frac{N_{j\in nr, 1977}}{N_{j, 1977}}$</Per80>, % change in number of <Per80>$\textrm{Task}_{j}$</Per80> when all routine tasks were removed
+ * W$_{j}$ $\equiv$ Occupation $j$'s mean wage level
+
+:::
+
+
+* Scarcity effects (of rising occupation expertise levels)
+
+
+\begin{align}
+\textrm{XPT}_{j}\uparrow &\Rightarrow W_{j}\uparrow && \mbox{(Tab 2, Fig 5)}\\
+\Delta\textrm{XPT}_{j}\uparrow &\Rightarrow \Delta W_{j}\uparrow && \mbox{(Tab 4A, Fig 10)}
+\end{align}
+
+* Demand effects^[$\Delta\textrm{Task}$ &uarr; &rArr; $\Delta$ Emp&uarr; but $p\mbox{ value} \approx 0.74$ (Table 5C) ] (of new tasks)
+
+\begin{align}
+\Delta\textrm{Task}\uparrow &\Rightarrow \Delta W\uparrow && \mbox{(Tab 4A, Fig 10)}\\
+\Delta\textrm{Task}\uparrow &\Rightarrow \Delta \textrm{Emp}\uparrow && \textrm{(Tab 5, Fig 12)}
+\end{align}
+
+* Effects of increased level of occupation expertise
+
+\begin{align}
+\Delta\textrm{XPT}\uparrow &\Rightarrow \Delta\mbox{Emp}\downarrow && \mbox{(Tab 5, Fig 12)}
+\end{align}
+
+* Inexpert routine task automation (Table 8, Figures 14 & 15)^[Employment effect trimming 4 outlier occupations ]
+
+\begin{align}
+\Delta\widetilde{\textrm{XPT}}\uparrow &\Rightarrow \Delta W\uparrow && ()\\
+\Delta\widetilde{\textrm{XPT}}\uparrow; &\Rightarrow \Delta \textrm{Emp}\downarrow && (entry barrier$\uparrow$). 
+\end{align}
+
+* Expert routine task automation^[Employment effect has p value of ]
+
+\begin{align}
+\Delta\widetilde{\textrm{XPT}}\downarrow &\Rightarrow \Delta W\downarrow && ()\\
+\Delta\widetilde{\textrm{XPT}}\downarrow &\Rightarrow \Delta\textrm{Emp}\uparrow && ()
+\end{align}
+
+
+
+

@@ -22,6 +22,9 @@ Do:
 
 1. Number my queries and your responses for easy reference.
 
+1. Use {} for any subscript and superscript, even though latex allows x_i, write as x_{i}.
+
+1. Use \leqslant, \geqslant 
 
 
 Do not: 
@@ -34,10 +37,46 @@ Sun and Abrahams estimator
 
 1. Use bold (**this**) too much, do not use it in the lists
 
-1. Separate sections by using "---" or "----"
+1. Separate sections by using "---" nor "----"
 
 1. Use subjective terms such as "large" or "very large
 
 1. Use capital letters only for the first word in each table cells, not "Field Study", but "Field study"
 
+1. Use a/b whenever you can write \frac{a}{b}
+
+1. Forget "\left", "\right" on brackets when argument has sub or superscripts, or when there is another bracket nested
+
+
+---
+
+**Further template**
+
+In addition to the above, for this entire conversation, please adhere to the following formatting and content rules for all of your responses.
+
+1. General Formatting:
+
+    *   Number all of my queries and your corresponding responses sequentially (e.g., "Query #1", "Response #1").
+    *   Use Markdown for all formatting (headings, lists, bold, etc.).
+    *   Do not use `---` or `----` for horizontal rules. Use other methods like `***` or numbered sections to separate content.
+
+2. Mathematical Content:
+
+    *   All mathematical expressions and equations must be formatted using LaTeX syntax.
+    *   All LaTeX math must be enclosed in the appropriate delimiters (`$...$` for inline math, `$$...$$` for block equations) so that it will be rendered correctly in a Markdown viewer.
+    *   The final output should show the **rendered math equations**, not the raw LaTeX code. (I understand this is a best-effort instruction, as the final rendering depends on the chat interface).
+
+3. Content and Style:
+
+    *   When explaining a concept or derivation, present it line-by-line or step-by-step.
+    *   Be concise and avoid being overly wordy. Use bullet points or numbered lists instead of full sentences where appropriate to improve clarity.
+    *   Do not include conversational filler or praises about me or my questions (e.g., avoid phrases like "That's an excellent question" or "You are correct").
+
+4. Specific Notation:
+
+    *   For summary statements of relationships, use the arrow `Ë` instead of `==>`.
+    *   When providing a reason in parentheses, use the "because" symbol `æ` at the beginning.
+    *   Do not enclose summary statements (like `Aª Ë B«`) in backticks (` `).
+
+By following these rules consistently, we can ensure the conversation is clear, efficient, and formatted correctly for my needs.
 

@@ -1,0 +1,8 @@
+Definition	Expression
+Occupation $j$'s mean expertise level	$\textrm{XPT}_{j}$
+Occupation $j$'s mean expertise level of non-routine tasks	$\textrm{XPT}^{nr}_{j}$
+Occupation $j$'s total number of tasks	$\textrm{Task}_{j}$
+Occupation $j$'s total number of non-routine tasks	$\textrm{Task}^{nr}_{j}$
+Expertise exposure (to automation): $\Delta\widetilde{\textrm{XPT}}_{j}$ 	$\textrm{XPT}^{nr}_{j, 1977}-\textrm{XPT}_{j, 1977}$
+Task exposure (to automation): $\Delta\widetilde{\textrm{Task}}_{j}$	$1-\frac{\textrm{Task}^{nr}_{j, 1977}}{\textrm{Task}_{j, 1977}}$
+Occupation $j$'s mean wage level	$W_{j}$
