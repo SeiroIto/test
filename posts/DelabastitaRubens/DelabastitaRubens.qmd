@@ -22,6 +22,8 @@ format:
       margin-width: 350px
     linkcolor: "green"
     urlcolor: "#009900"
+#### this does not work
+####    include-in-header: ../MathShorthand.html 
 ####  pdf: default
   docx: default
   epub: default
@@ -89,6 +91,7 @@ Red {
 }
 </style>
 
+
 ::: {.flushright}
 
 [doi.org/10.1086/734780](https://doi.org/10.1086/734780)
@@ -113,6 +116,29 @@ Red {
 * Claim: Collusion&uarr; &rArr; markdown&uarr;
 * Literature: Friction, factor market power &rArr; wage markdown
 * New: Downstream/employer collusion &rArr; upstream wage markdown
+
+## Research design
+
+
+* The turn of 20th century Belgium where output price cartel was legal
+* Derived a mapping: degree of wage collusion &rarr; parameter estimates
+  * OLS: Estimated wage markdown on estimated labor supply elasticity
+* Production approach to wage markdown using revenue and factor quantity data
+   * Data: Digitised from historical firm records
+* Production parameters
+   * AR(1) in productivity $\omega_{t}=\rho\omega_{t-1}+\nu_{t}$ so productivity shock $\nu_{t}$ is orthogonal to $k_{r}, k_{r-1}, l_{r-1}, m_{r-1}$ for $r=2, ..., t$, which gives parameters $\boldsymbol{\beta}$
+      * Entry and exits need to be exogenous to $\omega_{t}$: Endogenous entries/exits &rArr; 
+         * Lower $\omega_{t}$ exits and does not enter &rArr; positive sample selection
+         * Conditional on being in the data, firms with greater capital may not exit so easily even when $\omega_{t}$ is low, so negative correlations
+      * The use of unbalanced panel mitigates biases, so argued...
+   * GMM $E[\omega_{t}(\boldsymbol{\beta})-\rho\omega_{t-1}(\boldsymbol{\beta})|l_{t-1}, k_{t-1}, k_{t}, m_{t-1}, w_{t-1}]$ ($r=t$ case)
+      * $l_{t-1}$: log of mean workers
+      * $m_{t-1}$: log of "ordinary expenses"
+      * $k_{t-1}$: perpetual inventory method on "extraordinary expenses"
+      * $w_{t-1}$: log of agricultural wage rate in the same region (labor supply shifter but does not affect productivity shocks)
+* Labor supply elasticity
+   * IV=agricultural wages
+
 
 ## Why the wage markdown matters
 
@@ -500,6 +526,7 @@ $$
 \end{aligned}
 $$
  ] ^[The challenge is in estimating revenue elasticity $\theta^{L}_{R,it}$. Treuren (2022) assumes the inverse output demand to be multiplicably separable in quantity and shocks to use Olley-Pakes inversion. ]
+
 <!--
  * Simultaneous input and output market wedges [@DobbelaereWiersma2024]
  * Simultaneous input and output market wedges under non-Hicks neutrality with log-linear approximation [@AzzamJaumandreuLopez2025]
@@ -586,7 +613,7 @@ E[
 1. Other: Opening dates of railroad and tramway stations, agricultural wages
 
 
-## Research design
+## Research design2
 
 * $\mu^{\ell}_{ft}$ using the production approach under material market competition
 * Uses financial statement data from historical records when cartel was legal

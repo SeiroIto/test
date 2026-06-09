@@ -1,0 +1,186 @@
+---
+title: The hitchhiker's guide to markup estimation, summary
+author: "Google AI studio"
+date: last-modified
+date-format: "MMMM DD, YYYY, HH:MM ZZ"
+format:
+  html:
+    toc: true
+    number-sections: true
+    html-math-method: mathjax
+  pdf:
+    toc: true
+    number-sections: true
+theme: 
+  light: ../../addtosky.scss
+  dark: darkly
+lightbox: auto
+title-block-banner: "#f0f3f5"
+title-block-banner-color: "black"
+---
+
+# Introduction
+
+This document provides step-by-step derivations and conceptual explanations for the analytical framework in [De Ridder, Grassi, and Morzenti (2026)](https://doi.org/10.3982/ECTA22733). It explores the conditions under which markups can be estimated using financial statement (revenue) data rather than quantity data, a methodology heavily influenced by [De Loecker and Warzynski (2012)](https://doi.org/10.1257/aer.102.6.2437) and recently critiqued by [Bond et al. (2021)](https://doi.org/10.1016/j.jmoneco.2021.03.005).
+
+# Mathematical Derivations
+
+## From Markups to Production Functions
+
+**Assumptions:**
+* Firms minimize variable costs $W_t V_{it}$ taking the variable input price $W_t$ as given.
+* Production function $Y_{it} = Y(V_{it}, K_{it}, \Omega_{it})$ is differentiable and monotonic in $V_{it}$.
+* No adjustment costs for $V_{it}$.
+
+From cost minimization, the firm sets the marginal cost of production, $\eta_{it}$, equal to the factor price divided by the marginal product of the input:
+$$ \eta_{it} = \frac{W_t}{\frac{\partial Y_{it}}{\partial V_{it}}} \implies W_t = \eta_{it} \frac{\partial Y_{it}}{\partial V_{it}} $$
+Define the markup as the ratio of price to marginal cost: $\mu_{it} \equiv P_{it}/\eta_{it} \implies \eta_{it} = P_{it}/\mu_{it}$. Substituting this into the first-order condition (FOC) gives:
+$$ W_t = \frac{P_{it}}{\mu_{it}} \frac{\partial Y_{it}}{\partial V_{it}} $$
+Multiply both sides by $V_{it}/(P_{it}Y_{it})$ and rearrange to isolate $\mu_{it}$:
+$$ \mu_{it} = \left( \frac{\partial Y_{it}}{\partial V_{it}} \frac{V_{it}}{Y_{it}} \right) \frac{P_{it}Y_{it}}{W_t V_{it}} = \alpha_{it} \frac{P_{it}Y_{it}}{W_tV_{it}} \tag{1} $$
+
+## Revenue Elasticities and Estimated Markups
+
+**Assumptions:** 
+* Demand curve where $\log$ deviation $y_{it}$ responds to $p_{it}$ with elasticity $-1/\varepsilon_{it}$. 
+* Firms are static profit maximizers.
+
+The derivative of output with respect to price gives the inverse elasticity:
+$$ \frac{dy_{it}}{dp_{it}} = -\frac{1}{\varepsilon_{it}} \implies \text{Inverse elasticity is } -\varepsilon_{it} $$
+By the standard static optimal pricing rule (Lerner index), the true markup is:
+$$ \mu_{it} = \frac{1}{1 - \varepsilon_{it}} $$
+Log revenue is $r_{it} = p_{it} + y_{it}$. The revenue elasticity with respect to the variable input $v_{it}$ (in logs) is:
+$$ \frac{dr_{it}}{dv_{it}} = \frac{dp_{it}}{dv_{it}} + \frac{dy_{it}}{dv_{it}} = \left(\frac{dp_{it}}{dy_{it}}\right)\left(\frac{dy_{it}}{dv_{it}}\right) + \frac{dy_{it}}{dv_{it}} = (-\varepsilon_{it})\alpha_{it} + \alpha_{it} = \alpha_{it}(1 - \varepsilon_{it}) $$
+
+Let $\widehat{\alpha}_{it}$ be the *estimated* output elasticity. The estimated revenue markup is defined via (1):
+$$ \widehat{\mu}^R_{it} \equiv \widehat{\alpha}_{it} \frac{P_{it}Y_{it}}{W_t V_{it}} $$
+Multiply and divide by the true output elasticity $\alpha_{it}$:
+$$ \widehat{\mu}^R_{it} = \frac{\widehat{\alpha}_{it}}{\alpha_{it}} \left( \alpha_{it} \frac{P_{it}Y_{it}}{W_tV_{it}} \right) = \frac{\widehat{\alpha}_{it}}{\alpha_{it}} \mu_{it} \tag{2} $$
+
+If the estimated elasticity perfectly matches the true revenue elasticity $\alpha_{it}(1 - \varepsilon_{it})$, then:
+$$ \widehat{\mu}^{RE}_{it} \equiv \alpha_{it}(1-\varepsilon_{it}) \frac{P_{it}Y_{it}}{W_tV_{it}} = (1-\varepsilon_{it})\mu_{it} = (1-\varepsilon_{it})\left(\frac{1}{1-\varepsilon_{it}}\right) = 1 $$
+
+## Cobb-Douglas IV-GMM Estimator
+
+**Assumptions:** 
+* Cobb-Douglas production: $y_{it} = \alpha v_{it} + \omega_{it}$.
+* $\omega_{it}$ is i.i.d productivity. 
+* $v_{it-1}$ is a valid instrument ($\mathbb{E}[\omega_{it}v_{it-1}]=0$).
+
+$$ y_{it} = \alpha v_{it} + \omega_{it} \tag{3} $$
+The econometrician observes revenue $r_{it} = y_{it} + p_{it}$ instead of $y_{it}$. Substituting (3):
+$$ r_{it} = \alpha v_{it} + p_{it} + \omega_{it} $$
+The IV-GMM estimator $\widehat{\alpha}$ uses the moment condition that the instrument $v_{it-1}$ is orthogonal to the residual $\text{tfpr}_{it} = r_{it} - \widehat{\alpha}v_{it}$:
+$$ \mathbb{E}\left[ (r_{it} - \widehat{\alpha}v_{it}) v_{it-1} \right] = 0 $$
+Substitute $r_{it}$:
+$$ \mathbb{E}\left[ (\alpha v_{it} + p_{it} + \omega_{it} - \widehat{\alpha}v_{it}) v_{it-1} \right] = 0 $$
+$$ (\alpha - \widehat{\alpha})\mathbb{E}[v_{it}v_{it-1}] + \mathbb{E}[p_{it}v_{it-1}] + \mathbb{E}[\omega_{it}v_{it-1}] = 0 $$
+Since $\mathbb{E}[\omega_{it}v_{it-1}] = 0$, solving for $\widehat{\alpha}$ gives:
+$$ \widehat{\alpha} = \alpha + \frac{\mathbb{E}[p_{it}v_{it-1}]}{\mathbb{E}[v_{it}v_{it-1}]} \tag{4} $$
+
+## Incorporating the Demand System
+
+**Assumptions:** 
+* General invertible demand system $p_{it} = -\sum_j \varepsilon_{ijt}y_{jt}$.
+
+Substitute $y_{jt} = \alpha v_{jt} + \omega_{jt}$ into the demand system:
+$$ p_{it} = -\sum_j \varepsilon_{ijt} (\alpha v_{jt} + \omega_{jt}) = -\alpha \sum_j \varepsilon_{ijt} \left( v_{jt} + \frac{\omega_{jt}}{\alpha} \right) \tag{5} $$
+Substitute $p_{it}$ into (4) to get the expected value of $\widehat{\alpha}$:
+$$ \widehat{\alpha} = \alpha - \alpha \frac{\mathbb{E}\left[ \sum_j \varepsilon_{ijt}\left(v_{jt} + \frac{\omega_{jt}}{\alpha}\right)v_{it-1} \right]}{\mathbb{E}[v_{it}v_{it-1}]} = \alpha \left( 1 - \sum_j \frac{\mathbb{E}\left[\varepsilon_{ijt}\left(v_{jt} + \frac{\omega_{jt}}{\alpha}\right)v_{it-1}\right]}{\mathbb{E}[v_{it}v_{it-1}]} \right) $$
+
+**Case I: Heterogeneous Demand Elasticities.** 
+Assume $\varepsilon_{ijt} = 0$ for $i \neq j$ and define $\varepsilon_{it} \equiv \varepsilon_{iit}$. Assume $\mathbb{E}[\varepsilon_{it}\omega_{it}v_{it-1}] = 0$. The sum collapses to $j=i$:
+$$ \widehat{\alpha} = \alpha - \alpha \frac{\mathbb{E}[\varepsilon_{it}v_{it}v_{it-1}]}{\mathbb{E}[v_{it}v_{it-1}]} = \mathbb{E}\left[ \alpha(1-\varepsilon_{it}) \frac{v_{it}v_{it-1}}{\mathbb{E}[v_{it}v_{it-1}]} \right] \tag{6} $$
+Since $\mu_{it} = (1-\varepsilon_{it})^{-1} \implies 1-\varepsilon_{it} = \mu_{it}^{-1}$. By Equation (2), $\widehat{\mu}^R_{it} = (\widehat{\alpha}/\alpha)\mu_{it}$. Substituting $\widehat{\alpha}/\alpha$:
+$$ \widehat{\mu}^R_{it} = \mathbb{E}\left[ \mu_{it}^{-1} \frac{v_{it}v_{it-1}}{\mathbb{E}[v_{it}v_{it-1}]} \right] \mu_{it} \tag{7} $$
+
+## Translog Extension
+
+**Assumptions:** 
+* Translog production $y_{it} = \alpha v_{it} + \beta v_{it}^2 + \omega_{it}$. 
+* Instruments are $Z_{it} =[v_{it-1}, v_{it-1}^2]^T$.
+
+The true variable output elasticity is:
+$$ \alpha_{it} \equiv \frac{\partial y_{it}}{\partial v_{it}} = \alpha + 2\beta v_{it} \tag{8} $$
+Using revenue $r_{it} = \alpha v_{it} + \beta v_{it}^2 + p_{it} + \omega_{it}$, the IV-GMM estimator sets moments for parameters $\widehat{\alpha}$ and $\widehat{\beta}$:
+$$ \mathbb{E} \begin{pmatrix} v_{it-1} (r_{it} - \widehat{\alpha}v_{it} - \widehat{\beta}v_{it}^2) \\ v_{it-1}^2 (r_{it} - \widehat{\alpha}v_{it} - \widehat{\beta}v_{it}^2) \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} $$
+Substitute $r_{it}$:
+$$ \mathbb{E} \begin{pmatrix} v_{it-1} \left( (\alpha - \widehat{\alpha})v_{it} + (\beta - \widehat{\beta})v_{it}^2 + p_{it} + \omega_{it} \right) \\ v_{it-1}^2 \left( (\alpha - \widehat{\alpha})v_{it} + (\beta - \widehat{\beta})v_{it}^2 + p_{it} + \omega_{it} \right) \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} $$
+Using $\mathbb{E}[Z_{it}\omega_{it}]=\mathbf{0}$, we extract the parameters into a matrix format. **Note that cross-moments like $\mathbb{E}[v_{it}^2 v_{it-1}]$ are generally non-zero and play a critical role in the system.**
+$$ \underbrace{\begin{pmatrix} \mathbb{E}[v_{it}v_{it-1}] & \mathbb{E}[v_{it}^2 v_{it-1}] \\ \mathbb{E}[v_{it} v_{it-1}^2] & \mathbb{E}[v_{it}^2 v_{it-1}^2] \end{pmatrix}}_{V} \begin{pmatrix} \alpha - \widehat{\alpha} \\ \beta - \widehat{\beta} \end{pmatrix} + \begin{pmatrix} \mathbb{E}[p_{it}v_{it-1}] \\ \mathbb{E}[p_{it}v_{it-1}^2] \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} $$
+Solving for the estimates:
+$$ \begin{pmatrix} \widehat{\alpha} \\ \widehat{\beta} \end{pmatrix} = \begin{pmatrix} \alpha \\ \beta \end{pmatrix} + V^{-1} \begin{pmatrix} \mathbb{E}[p_{it}v_{it-1}] \\ \mathbb{E}[p_{it}v_{it-1}^2] \end{pmatrix} $$
+The estimated elasticity is $\widehat{\alpha}_{it} = \widehat{\alpha} + 2\widehat{\beta}v_{it}$. Substituting this into the markup Equation (2):
+$$ \widehat{\mu}^R_{it} = \frac{\widehat{\alpha} + 2\widehat{\beta}v_{it}}{\alpha + 2\beta v_{it}} \mu_{it} = \left( 1 + \frac{(\widehat{\alpha} - \alpha) + 2(\widehat{\beta} - \beta)v_{it}}{\alpha + 2\beta v_{it}} \right)\mu_{it} \equiv (1 + f(v_{it}))\mu_{it} $$
+
+## Measurement Error and Wedges
+
+**Measurement Error:**
+If output is measured with error $\eta_{it}$, such that $\tilde{y}_{it} = \alpha v_{it} + \omega_{it} + \eta_{it}$, we can use the firm's FOC to back out true output. Rearranging Equation (1):
+$$ \frac{\alpha P_{it} Y_{it}}{W_t V_{it}} = \mu_{it} \implies Y_{it} = \frac{\mu_{it} W_t V_{it}}{\alpha P_{it}} $$
+Taking log-deviations (where constants are absorbed):
+$$ y_{it} = v_{it} - p_{it} + \log \mu_{it} + w_t $$
+Substitute the observed output definition $\tilde{y}_{it} = y_{it} + \eta_{it}$:
+$$ \tilde{y}_{it} = v_{it} - p_{it} + \log \mu_{it} + w_t + \eta_{it} \tag{9} $$
+
+**Input Wedges:**
+If an input wedge $\lambda_{it}$ distorts optimization, the firm equates marginal cost to $W_t \lambda_{it} / \frac{\partial Y_{it}}{\partial V_{it}}$. Substituting $P_{it}/\mu_{it}$ for marginal cost:
+$$ W_t \lambda_{it} = \frac{P_{it}}{\mu_{it}} \frac{\partial Y_{it}}{\partial V_{it}} \implies \mu_{it} \lambda_{it} = \left( \frac{\partial Y_{it}}{\partial V_{it}}\frac{V_{it}}{Y_{it}} \right) \frac{P_{it}Y_{it}}{W_t V_{it}} = \alpha_{it} \frac{P_{it}Y_{it}}{W_tV_{it}} \tag{10} $$
+
+**Quality Differences:**
+If quality $q_{it}$ raises production costs: $y_{it} = \omega_{it} - q_{it} + \alpha v_{it}$. The moment condition $\mathbb{E}[(\text{residual})v_{it-1}]=0$ gives $\mathbb{E}[(\omega_{it} - q_{it} - (\widehat{\alpha} - \alpha)v_{it})v_{it-1}] = 0$. Assuming $\mathbb{E}[\omega_{it}v_{it-1}] = 0$:
+$$ - \mathbb{E}[q_{it}v_{it-1}] = (\widehat{\alpha} - \alpha)\mathbb{E}[v_{it}v_{it-1}] \implies \widehat{\alpha} = \alpha - \frac{\mathbb{E}[q_{it}v_{it-1}]}{\mathbb{E}[v_{it}v_{it-1}]} $$
+
+---
+
+# Conceptual Explanations and Context
+
+## How Bond et al. (2021) is a Special Case
+
+[Bond et al. (2021)](https://doi.org/10.1016/j.jmoneco.2021.03.005) famously proved that revenue-based markups identically equal 1 and contain no useful information. However, this proof relies strictly on **homogeneous demand elasticities** (Case II in the derivations).
+
+If firms compete monopolistically under standard CES preferences and are atomistic, every firm faces the exact same price elasticity of demand ($\varepsilon_{it} = \gamma$). Thus, every firm charges the exact same true markup: $\mu = (1-\gamma)^{-1}$. In this setting, the revenue elasticity of an input is exactly $\alpha(1-\gamma)$. Standard production function methods (e.g.,[Ackerberg, Caves, and Frazer (2015)](https://doi.org/10.3982/ECTA13408)) acting on revenue data perfectly identify this revenue elasticity. Plugging this into the markup formula mechanically yields:
+$$ \widehat{\mu}^R = \alpha(1-\gamma) \frac{PY}{WV} = (1-\gamma)\mu = (1-\gamma)(1-\gamma)^{-1} = 1 $$
+
+De Ridder et al.'s framework generalizes this by introducing **heterogeneous demand elasticities** (Case I), common in [Atkeson and Burstein (2008)](https://doi.org/10.1257/aer.98.5.1998) models. When firms face different $\varepsilon_{it}$, the estimated $\widehat{\alpha}$ is a complex market-weighted *average* of individual elasticities. Because $\widehat{\alpha}$ does not equal any specific firm's revenue elasticity, the resulting markup estimates are not equal to 1, and the variation in true markups drives measurable variation in the estimated revenue markups.
+
+## Cobb-Douglas vs. General Functional Forms
+
+A major finding of the paper is that the "perfect" preservation of markup variance depends heavily on the restrictive **Cobb-Douglas** assumption, while more flexible functional forms (like Translog) introduce distortions.
+
+*   **The Restrictive Edge Case (Cobb-Douglas)**: The output elasticity $\alpha$ is identical for all firms. Consequently, the bias induced by using revenue data is a global constant scalar ($C$). Because $\widehat{\mu}^R_{it} = C \times \mu_{it}$, taking logs yields $\ln \widehat{\mu}^R_{it} = \ln C + \ln \mu_{it}$. The constant $C$ shifts the mean but does not affect the variance: $\text{Var}(\ln \widehat{\mu}^R) = \text{Var}(\ln \mu)$. Rankings and correlation ($\rho = 1$) are mathematically perfectly preserved.
+*   **The General Case (Translog)**: The output elasticity depends on firm-specific input usage ($\alpha_{it} = \alpha + 2\beta v_{it}$). The bias induced by revenue data becomes a **firm-specific error term**: $\widehat{\mu}^R_{it} = (1 + f(v_{it}))\mu_{it}$. Because $f(v_{it})$ interacts with input size $v_{it}$, variance is distorted, rank-ordering can shuffle, and the theoretical correlation drops below 1.
+
+**Why Generalizing Doesn't Destroy the Estimator in Practice:**
+Although Translog breaks the mathematical perfection of the Cobb-Douglas results, the authors demonstrate quantitatively that the breakdown is negligible. The magnitude of the firm-specific error $f(v_{it})$ depends on the bias terms $\widehat{\alpha}-\alpha$ and $\widehat{\beta}-\beta$. These biases are driven by the covariance between the firm's price and lagged instruments ($\mathbb{E}[p_{it}v_{it-1}]$). Because competing forces (downward-sloping demand vs. diminishing returns/aggregate shocks) essentially cancel each other out in the data, price is virtually orthogonal to lagged inputs. Thus, $f(v_{it}) \approx 0$, and revenue markups remain highly correlated with true markups even under flexible production functions.
+
+## Expected Value "Up to a Jensen's Inequality"
+
+Taking the unconditional expectation of Equation (7) yields:
+$$ \mathbb{E}[\widehat{\mu}^R_{it}] = \mathbb{E}\left[ \mu_{it}^{-1} \times \text{weights} \right] \mathbb{E}[\mu_{it}] $$
+Ignoring the weighting fraction for intuition, this resembles $\mathbb{E}[1/\mu_{it}] \times \mathbb{E}[\mu_{it}]$. Because the function $f(x) = 1/x$ is strictly convex for $x > 0$, Jensen's inequality guarantees that $\mathbb{E}[1/\mu_{it}] > 1 / \mathbb{E}[\mu_{it}]$. Therefore, their product is strictly greater than 1. The mean of the estimated revenue markups is an upward-biased constant that yields no mathematically identifiable information about the true average macroeconomic level of markups ($\mathbb{E}[\mu_{it}]$).
+
+## Heterogeneous Demand and Correlation Below 1
+
+In models with heterogeneous demand, the correlation between estimated and true markups is driven below 1 if $p_{it}$ correlates with $v_{it-1}$. Several factors affect this covariance:
+
+1.  **Returns to scale**: Diminishing returns mean expanding firms (higher lagged inputs) face rising marginal costs, inducing a positive correlation between price and inputs.
+2.  **Downward-Sloping Demand**: To sell more output, firms must lower prices, inducing a negative correlation.
+3.  **Aggregate Shocks**: Positive market demand shocks increase both optimal input usage and marginal costs simultaneously.
+
+Whether these forces cancel out is a quantitative question. The paper's simulations confirm that they largely offset, keeping $\mathbb{E}[p_{it}Z_{it}] \approx 0$ and the markup correlation very high (e.g., 0.94).
+
+## The Infeasibility of Size Controls
+
+Some researchers bypass production function estimation entirely by regressing the observable revenue share ($\ln PY/WV$) directly on covariates, adding input usage controls ($h_{it}$) to absorb the unobserved output elasticity $\alpha_{it}$. 
+This strategy fails if the covariate of interest *is* input usage (i.e., firm size). If a researcher wants to estimate $\beta$ to test whether larger firms charge higher markups, they must include size ($X_{it}$) as the independent variable. However, size must also be included in $h_{it}$ to proxy for the changing output elasticity (e.g., under Translog, $\alpha_{it}$ depends directly on $v_{it}$). This causes perfect collinearity, making it impossible to disentangle the effect of size on markups from the mechanical effect of size on the output elasticity itself.
+
+## Purging Measurement Error in the First Stage
+
+Measurement error ($\eta_{it}$) pollutes the observed output quantity $\tilde{y}_{it}$. To consistently estimate the production function, it must be purged using a two-stage approach:
+
+1.  **Invert Input Demand**: Firms observe their true productivity $\omega_{it}$ *before* choosing variable input $v_{it}$. Cost minimization makes $v_{it}$ a monotonic function of $\omega_{it}$, allowing inversion: $\omega_{it} = f(v_{it}, \text{controls})$.
+2.  **Identify Controls from FOC**: From the firm's FOC (Equation 9), $\omega_{it}$ relies on input usage $v_{it}$, price $p_{it}$, aggregate factor prices $w_t$, and markups $\mu_{it}$. Markups are often proxied with market share.
+3.  **Non-Parametric Regression**: Regress observed output $\tilde{y}_{it}$ on a polynomial of these controls ($v_{it}, p_{it}, \text{market share}$) and time fixed effects (to capture $w_t$).
+4.  **Extract the Error**: Because $\eta_{it}$ is a white noise error realized *after* the firm makes its choices, it is orthogonal to the controls. The residual of this first-stage regression is a consistent estimate of $\eta_{it}$. Subtracting it from $\tilde{y}_{it}$ yields the "purged" output necessary for the second-stage IV-GMM estimator.
+

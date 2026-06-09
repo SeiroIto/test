@@ -1,0 +1,448 @@
+---
+title: "Colluding Against Workers: Full Mathematical Derivations"
+subtitle: "Vincent Delabastita and Michael Rubens (JPE 2025)"
+author: "Antigravity, pair-programming with Seiro"
+date: "`r Sys.Date()`"
+output:
+  litedown::html_format:
+    options:
+      toc: true
+      number_sections: true
+    meta:
+      css: ["styles.css"]
+---
+
+```{css, echo=FALSE}
+body {
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+  color: #1e293b;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color: #fafaf9;
+}
+
+h1, h2, h3, h4 {
+  color: #0f172a;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #2563eb;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: #475569;
+}
+
+.derivation-step {
+  background-color: #ffffff;
+  border-left: 4px solid #3b82f6;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+.step-explanation {
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.math-block {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #334155;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+```
+
+# Introduction
+
+This document provides a rigorous, line-by-line mathematical derivation of all equations presented in Vincent Delabastita and Michael Rubens (2025), *"Colluding against workers"* published in the *Journal of Political Economy* (Volume 133, No. 6). 
+
+The paper derives a novel framework mapping downstream product-market cartel behavior to upstream labor-market wage markdown behavior, identifying labor collusion indices through production function elasticities and labor supply elasticities.
+
+---
+
+# Core Variables and Parameter Definitions
+
+Before deriving the equations, we define the primary variables and parameters:
+
+| Variable / Parameter | Definition | Economic Meaning |
+|:---|:---|:---|
+| $Q_{ft}$ | Log-level: $q_{ft}$ | Total coal output extracted by firm $f$ in year $t$. |
+| $L_{ft}$ | Log-level: $l_{ft}$ | Total effective labor employed by firm $f$ in year $t$. |
+| $M_{ft}$ | Log-level: $m_{ft}$ | Intermediate material inputs purchased by firm $f$ in year $t$. |
+| $K_{ft}$ | Log-level: $k_{ft}$ | Capital stock (steam engines) used by firm $f$ in year $t$. |
+| $\beta_l, \beta_m, \beta_k$ | Output Elasticities | Cobb-Douglas production parameters for labor, materials, and capital. |
+| $\omega_{ft}$ | Log total factor productivity (TFP) | Total factor productivity (unobserved by the econometrician). |
+| $u_{ft}$ | Productivity shock | Unexpected shock to firm-level productivity at time $t$. |
+| $W^l_{it}$ | Market wage | Wage rate in regional labor market $i$ in year $t$. |
+| $W^m_{ft}$ | Material price | Price of materials paid by firm $f$ in year $t$. |
+| $L_{it}$ | Total market employment | Total employment across all firms in market $i$ ($\sum_{g \in F_{it}} L_{gt}$). |
+| $\Psi^l$ | Inverse labor supply elasticity | Elasticity of wages with respect to market employment ($\partial \ln W^l_{it} / \partial \ln L_{it}$). |
+| $s^l_{ft}$ | Labor market share | Firm $f$'s share of regional employment ($L_{ft} / L_{it}$). |
+| $\lambda_{fgt}$ | Bilateral conduct weight | Collusion weight that firm $f$ places on firm $g$'s input costs. |
+| $\widetilde{\lambda}_{ft}$ | Conduct parameter | Aggregated labor market conduct parameter. |
+| $\widehat{\lambda}_{ft}$ | Normalized conduct | Collusion index normalized to range between $0$ (Cournot) and $1$ (Collusion). |
+| $MC_{ft}$ | Marginal cost | The marginal cost of output $Q_{ft}$ for firm $f$ in year $t$. |
+| $P_{ft}$ | Coal price | Downstream market price of output coal for firm $f$ in year $t$. |
+| $\mu_{ft}$ | Price markup | Downstream price markup: $\mu_{ft} \equiv P_{ft} / MC_{ft}$. |
+| $m^l_{ft}$ | Wage markdown | Upstream wage markdown: $m^l_{ft} \equiv MRPL_{ft} / W^l_{it}$. |
+| $\alpha^l_{ft}$ | Labor revenue share | Labor expenditure relative to revenue: $W^l_{it} L_{ft} / P_{ft} Q_{ft}$. |
+| $\alpha^m_{ft}$ | Material revenue share | Materials expenditure relative to revenue: $W^m_{ft} M_{ft} / P_{ft} Q_{ft}$. |
+
+---
+
+# Production Function & TFP Dynamics
+
+### Equation (1): Cobb-Douglas Production Function
+The paper assumes a Cobb-Douglas production function in levels:
+$$Q_{ft} = e^{\omega_{ft}} L_{ft}^{\beta_l} M_{ft}^{\beta_m} K_{ft}^{\beta_k}$$
+
+Taking the natural logarithm of both sides:
+$$\ln(Q_{ft}) = \ln(e^{\omega_{ft}}) + \beta_l \ln(L_{ft}) + \beta_m \ln(M_{ft}) + \beta_k \ln(K_{ft})$$
+
+Using log notation ($q = \ln Q$, $l = \ln L$, $m = \ln M$, $k = \ln K$):
+$$\boxed{q_{ft} = \beta_{l} l_{ft} + \beta_{m} m_{ft} + \beta_{k} k_{ft} + \omega_{ft} \tag{1}}$$
+
+### Equation (2): TFP Transition Process
+Firm-level log productivity $\omega_{ft}$ is assumed to follow a first-order Markov process (AR(1)) with serial correlation parameter $\rho$:
+$$\boxed{\omega_{ft} = \rho \omega_{ft-1} + u_{ft} \tag{2}}$$
+where $u_{ft}$ is an unexpected, mean-zero productivity shock orthogonal to past information.
+
+---
+
+# Labor Market and Cost Minimization
+
+### Equation (3): Inverse Regional Labor Supply Function
+Firms face an upward-sloping regional labor supply curve in labor market $i$ at time $t$:
+$$\boxed{W^{l}_{it} = L_{it}^{\Psi^{l}} \eta_{it} \tag{3}}$$
+Taking logs on both sides:
+$$\ln(W^l_{it}) = \Psi^l \ln(L_{it}) + \ln(\eta_{it})$$
+Differentiating with respect to $\ln(L_{it})$ yields the inverse market-level labor supply elasticity:
+$$\frac{\partial \ln W^l_{it}}{\partial \ln L_{it}} = \Psi^l$$
+
+---
+
+## Derivation of the General Cost-Minimization FOC
+
+The generalized Lagrangian representing a firm $f$ that potentially colludes with other firms in the local market $i$ by assigning weights $\lambda_{fgt} \in [0,1]$ to their input costs is:
+
+$$\mathcal{L} = \sum_{g \in F_{i(f)t}} \lambda_{fgt} \left( L_{gt} W^{l}_{gt} + M_{gt} W^{m}_{gt} \right) - MC_{ft} \left( Q(L_{ft}, M_{ft}, K_{ft}, \Omega_{ft}; \beta) - Q_{ft} \right) \tag{4}$$
+
+Let us derive the FOC with respect to labor $L_{ft}$ step-by-step.
+
+<div class="derivation-step">
+<div class="step-explanation">Step 1: Set up the partial derivative with respect to $L_{ft}$</div>
+$$\frac{\partial \mathcal{L}}{\partial L_{ft}} = \sum_{g \in F_{i(f)t}} \lambda_{fgt} \frac{\partial (L_{gt} W^{l}_{gt})}{\partial L_{ft}} - MC_{ft} \frac{\partial Q_{ft}}{\partial L_{ft}} = 0$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 2: Partition the summation into the own-firm term ($g=f$) and competitor terms ($g \neq f$)</div>
+Recall that all firms in market $i$ face the same market wage $W^l_{gt} = W^l_{it}$, which depends on total market employment $L_{it} = \sum_{h \in F_{it}} L_{ht}$.
+$$\sum_{g \in F_{i(f)t}} \lambda_{fgt} \frac{\partial (L_{gt} W^{l}_{it})}{\partial L_{ft}} = \lambda_{fft} \frac{\partial (L_{ft} W^{l}_{it})}{\partial L_{ft}} + \sum_{g \neq f} \lambda_{fgt} \frac{\partial (L_{gt} W^{l}_{it})}{\partial L_{ft}}$$
+By definition, a firm places full weight on its own costs: $\lambda_{fft} = 1$.
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 3: Differentiate the own-firm term ($g=f$) using the product rule</div>
+$$\frac{\partial (L_{ft} W^{l}_{it})}{\partial L_{ft}} = W^l_{it} \cdot \frac{\partial L_{ft}}{\partial L_{ft}} + L_{ft} \cdot \frac{\partial W^l_{it}}{\partial L_{ft}} = W^l_{it} + L_{ft} \frac{\partial W^l_{it}}{\partial L_{it}} \frac{\partial L_{it}}{\partial L_{ft}}$$
+Since $L_{it} = L_{ft} + \sum_{h \neq f} L_{ht}$, we have $\frac{\partial L_{it}}{\partial L_{ft}} = 1$. Therefore:
+$$\frac{\partial (L_{ft} W^{l}_{it})}{\partial L_{ft}} = W^l_{it} + L_{ft} \frac{\partial W^l_{it}}{\partial L_{it}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 4: Differentiate the competitor terms ($g \neq f$)</div>
+Since $L_{gt}$ for $g \neq f$ is held constant with respect to $L_{ft}$:
+$$\frac{\partial (L_{gt} W^{l}_{it})}{\partial L_{ft}} = L_{gt} \frac{\partial W^l_{it}}{\partial L_{ft}} = L_{gt} \frac{\partial W^l_{it}}{\partial L_{it}} \frac{\partial L_{it}}{\partial L_{ft}} = L_{gt} \frac{\partial W^l_{it}}{\partial L_{it}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 5: Assemble the components back into the own-labor FOC</div>
+$$\left( W^l_{it} + L_{ft} \frac{\partial W^l_{it}}{\partial L_{it}} \right) + \sum_{g \neq f} \lambda_{fgt} L_{gt} \frac{\partial W^l_{it}}{\partial L_{it}} = MC_{ft} \frac{\partial Q_{ft}}{\partial L_{ft}}$$
+Factor out the common term $\frac{\partial W^l_{it}}{\partial L_{it}}$:
+$$W^l_{it} + \frac{\partial W^l_{it}}{\partial L_{it}} \left( L_{ft} + \sum_{g \neq f} \lambda_{fgt} L_{gt} \right) = MC_{ft} \frac{\partial Q_{ft}}{\partial L_{ft}}$$
+</div>
+
+---
+
+# Regimes of Labor Market Collusion
+
+## Regime 1: No Collusion (Cournot Oligopsony)
+
+Under no collusion, firm $f$ ignores the impact of its hiring decisions on competitors' costs: $\lambda_{fgt} = 0$ for all $g \neq f$.
+
+### Equation (5): Cost Minimization under No Collusion
+$$\boxed{\min_{L_{ft}, M_{ft}} \left( L_{ft} W^{l}_{ft} + M_{ft} W^{m}_{ft} \right) - MC_{ft} \left( Q_{ft} - Q(L_{ft}, M_{ft}, K_{ft}, \Omega_{ft}; \beta) \right) \tag{5}}$$
+
+### Equation (6): First-Order Condition for Labor (No Collusion)
+Setting $\lambda_{fgt} = 0$ in our generalized derivative yields:
+$$\boxed{L_{ft} \frac{\partial W^{l}_{it}}{\partial L_{it}} + W^{l}_{it} = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}} \tag{6}}$$
+*(Note: We substituted $MC_{ft} = P_{ft} / \mu_{ft}$ into the right-hand side).*
+
+### Equation (7): Markdown under No Collusion
+To derive the Cournot markdown $\widetilde{m}^l_{ft}$:
+
+<div class="derivation-step">
+<div class="step-explanation">Step 1: Start with FOC (Equation 6) and factor out $W^l_{it}$</div>
+$$W^l_{it} \left( 1 + \frac{L_{ft}}{W^l_{it}} \frac{\partial W^l_{it}}{\partial L_{it}} \right) = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 2: Multiply and divide the second term in brackets by total regional labor $L_{it}$</div>
+$$W^l_{it} \left( 1 + \left(\frac{L_{ft}}{L_{it}}\right) \left( \frac{L_{it}}{W^l_{it}} \frac{\partial W^l_{it}}{\partial L_{it}} \right) \right) = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 3: Substitute market share $s^l_{ft} \equiv \frac{L_{ft}}{L_{it}}$ and inverse labor supply elasticity $\Psi^l \equiv \frac{L_{it}}{W^l_{it}} \frac{\partial W^l_{it}}{\partial L_{it}}$</div>
+$$W^l_{it} (1 + s^l_{ft} \Psi^l) = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 4: Express as the wage markdown ratio $m^l_{ft} \equiv \frac{MRPL_{ft}}{W^l_{it}}$</div>
+Since marginal revenue product of labor is $MRPL_{ft} = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}}$:
+$$\widetilde{m}^{l}_{ft} = \frac{MRPL_{ft}}{W^l_{it}} = \boxed{1 + s^{l}_{ft} \Psi^{l} \tag{7}}$$
+</div>
+
+---
+
+## Regime 2: Perfect Wage Collusion
+
+Under perfect collusion, firms maximize joint profits / minimize joint costs: $\lambda_{fgt} = 1$ for all $g \in F_{it}$.
+
+### Equation (8): Cost Minimization under Perfect Collusion
+$$\boxed{\min_{L_{ft}, M_{ft}} \left\{ \sum_{g \in F_{i(f)t}} \left( L_{gt} W^{l}_{gt} + M_{gt} W^{m}_{gt} \right) - MC_{ft} \left( Q_{ft} - Q(L_{ft}, M_{ft}, K_{ft}, \Omega_{ft}; \beta) \right) \right\} \tag{8}}$$
+
+### Equation (9): First-Order Condition for Labor (Perfect Collusion)
+Setting $\lambda_{fgt} = 1$ in the generalized derivative:
+$$W^l_{it} + \frac{\partial W^l_{it}}{\partial L_{it}} \left( L_{ft} + \sum_{g \neq f} L_{gt} \right) = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}}$$
+Since $L_{ft} + \sum_{g \neq f} L_{gt} = \sum_{g \in F_{it}} L_{gt} = L_{it}$ (total regional employment):
+$$\boxed{L_{it} \frac{\partial W^{l}_{it}}{\partial L_{it}} + W^{l}_{it} = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}} \tag{9}}$$
+
+### Equation (10): Markdown under Perfect Collusion
+To derive the collusive markdown $\overline{m}^l_{ft}$:
+
+<div class="derivation-step">
+<div class="step-explanation">Step 1: Factor out $W^l_{it}$ from the left side of FOC (Equation 9)</div>
+$$W^l_{it} \left( 1 + \frac{L_{it}}{W^l_{it}} \frac{\partial W^l_{it}}{\partial L_{it}} \right) = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 2: Substitute inverse labor supply elasticity $\Psi^l \equiv \frac{L_{it}}{W^l_{it}} \frac{\partial W^l_{it}}{\partial L_{it}}$</div>
+$$W^l_{it} (1 + \Psi^l) = MRPL_{ft}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 3: Define the wage markdown ratio</div>
+$$\overline{m}^{l}_{ft} = \frac{MRPL_{ft}}{W^l_{it}} = \boxed{1 + \Psi^{l} \tag{10}}$$
+</div>
+
+---
+
+## Regime 3: Intermediate Case (Partial Collusion)
+
+To model varying degrees of collusion, the paper nests the Cournot and Collusive cases using a firm-level conduct parameter $\widetilde{\lambda}_{ft} \in [s^l_{ft}, 1]$:
+
+$$\widetilde{\lambda}_{ft} \equiv \sum_{g \in F_{i(f)t}} \lambda_{fgt} \frac{L_{gt}}{L_{it}} = s^l_{ft} + \sum_{g \neq f} \lambda_{fgt} \frac{L_{gt}}{L_{it}}$$
+
+### Equation (11): General First-Order Condition
+Let's verify that this parameter correctly nests the FOCs. Differentiate total wage cost of all firms with respect to $L_{ft}$:
+$$\frac{\partial}{\partial L_{ft}} \sum_{g} \lambda_{fgt} L_{gt} W^l_{it} = W^l_{it} + \frac{\partial W^l_{it}}{\partial L_{it}} \left( L_{ft} + \sum_{g \neq f} \lambda_{fgt} L_{gt} \right)$$
+Rewrite the term in parentheses using the definition of $\widetilde{\lambda}_{ft}$:
+$$L_{ft} + \sum_{g \neq f} \lambda_{fgt} L_{gt} = L_{it} \left( \frac{L_{ft}}{L_{it}} + \sum_{g \neq f} \lambda_{fgt} \frac{L_{gt}}{L_{it}} \right) = L_{it} \widetilde{\lambda}_{ft}$$
+Substitute this back:
+$$\boxed{W^{l}_{it} + \widetilde{\lambda}_{ft} \frac{\partial W^{l}_{it}}{\partial L_{it}} L_{it} = \frac{\partial Q_{ft}}{\partial L_{ft}} \frac{P_{ft}}{\mu_{ft}} \tag{11}}$$
+
+### Equation (12): General Markdown Expression
+Dividing Equation (11) by $W^l_{it}$:
+$$1 + \widetilde{\lambda}_{ft} \left( \frac{L_{it}}{W^l_{it}} \frac{\partial W^l_{it}}{\partial L_{it}} \right) = \frac{MRPL_{ft}}{W^l_{it}}$$
+$$\boxed{m^{l}_{ft} = 1 + \widetilde{\lambda}_{ft} \Psi^{l} \tag{12}}$$
+
+---
+
+# Downstream Markups & Upstream Identification
+
+## Equation (13): Downstream Price Markup from Materials
+
+Firms are assumed to be competitive price-takers in the materials input market (i.e. zero oligopsony power on materials).
+
+<div class="derivation-step">
+<div class="step-explanation">Step 1: Set up the cost-minimization FOC for materials $M_{ft}$</div>
+$$\frac{\partial \mathcal{L}}{\partial M_{ft}} = W^m_{ft} - MC_{ft} \frac{\partial Q_{ft}}{\partial M_{ft}} = 0 \implies W^m_{ft} = MC_{ft} \frac{\partial Q_{ft}}{\partial M_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 2: Differentiate the Cobb-Douglas production function with respect to $M_{ft}$</div>
+$$\frac{\partial Q_{ft}}{\partial M_{ft}} = \frac{\partial e^{\omega_{ft}} L_{ft}^{\beta_l} M_{ft}^{\beta_m} K_{ft}^{\beta_k}}{\partial M_{ft}} = \beta_m e^{\omega_{ft}} L_{ft}^{\beta_l} M_{ft}^{\beta_m - 1} K_{ft}^{\beta_k} = \beta_m \frac{Q_{ft}}{M_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 3: Substitute the derivative into FOC and solve for $MC_{ft}$</div>
+$$W^m_{ft} = MC_{ft} \left( \beta_m \frac{Q_{ft}}{M_{ft}} \right) \implies MC_{ft} = \frac{W^m_{ft} M_{ft}}{\beta_m Q_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 4: Express in terms of the downstream price markup $\mu_{ft} \equiv \frac{P_{ft}}{MC_{ft}}$</div>
+$$\mu_{ft} = \frac{P_{ft}}{MC_{ft}} = \frac{P_{ft}}{\left( \frac{W^m_{ft} M_{ft}}{\beta_m Q_{ft}} \right)} = \beta_m \left( \frac{P_{ft} Q_{ft}}{W^m_{ft} M_{ft}} \right)$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 5: Substitute the materials revenue share $\alpha^m_{ft} \equiv \frac{W^m_{ft} M_{ft}}{P_{ft} Q_{ft}}$</div>
+$$\boxed{\mu_{ft} = \frac{\beta_{m}}{\alpha^{m}_{ft}} \tag{13}}$$
+</div>
+
+---
+
+## Equation (14): Core Identification Equation
+
+We now derive the core equation identifying the wage markdown $m^l_{ft}$ using the production approach.
+
+<div class="derivation-step">
+<div class="step-explanation">Step 1: Differentiate the Cobb-Douglas production function with respect to $L_{ft}$</div>
+$$\frac{\partial Q_{ft}}{\partial L_{ft}} = \beta_l \frac{Q_{ft}}{L_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 2: Substitute this derivative into the general FOC (Equation 11)</div>
+$$W^l_{it} (1 + \widetilde{\lambda}_{ft} \Psi^l) = \left( \beta_l \frac{Q_{ft}}{L_{ft}} \right) \frac{P_{ft}}{\mu_{ft}}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 3: Rearrange to isolate the markup $\mu_{ft}$</div>
+$$\mu_{ft} = \frac{\beta_l P_{ft} Q_{ft}}{W^l_{it} L_{ft} (1 + \widetilde{\lambda}_{ft} \Psi^l)}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 4: Substitute the labor revenue share definition $\alpha^l_{ft} \equiv \frac{W^l_{it} L_{ft}}{P_{ft} Q_{ft}}$</div>
+$$\mu_{ft} = \frac{\beta_l}{\alpha^l_{ft} (1 + \widetilde{\lambda}_{ft} \Psi^l)}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 5: Equate the labor-derived markup and materials-derived markup (Equation 13)</div>
+Since the firm's overall markup $\mu_{ft}$ must be consistent across all inputs:
+$$\frac{\beta_{m}}{\alpha^{m}_{ft}} = \frac{\beta_l}{\alpha^l_{ft} (1 + \widetilde{\lambda}_{ft} \Psi^l)}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 6: Solve for the markdown $m^l_{ft} = 1 + \widetilde{\lambda}_{ft} \Psi^l$</div>
+$$1 + \widetilde{\lambda}_{ft} \Psi^l = \frac{\beta_l}{\beta_m} \frac{\alpha^m_{ft}}{\alpha^l_{ft}}$$
+Thus:
+$$\boxed{m^{l}_{ft} = 1 + \widetilde{\lambda}_{ft} \Psi^{l} = \frac{\beta_{l} \alpha^{m}_{ft}}{\beta_{m} \alpha^{l}_{ft}} \tag{14}}$$
+</div>
+
+---
+
+## Equation (15): Normalized Conduct Parameter Index
+
+We construct a normalized collusion index $\widehat{\lambda}_{ft}$ that maps a firm's labor market power between pure Cournot competition ($\widehat{\lambda}_{ft} = 0$) and perfect collusion ($\widehat{\lambda}_{ft} = 1$).
+
+### Mathematical Definition
+$$\boxed{\widehat{\lambda}_{ft} = \frac{m^{l}_{ft} - \widetilde{m}^{l}_{ft}}{\overline{m}^{l}_{ft} - \widetilde{m}^{l}_{ft}} \tag{15}}$$
+
+### Step-by-Step Simplification
+Let's show that this definition simplifies to a size-weighted index of conduct:
+
+<div class="derivation-step">
+<div class="step-explanation">Step 1: Substitute $m^l_{ft}$, $\widetilde{m}^l_{ft}$, and $\overline{m}^l_{ft}$ into Equation (15)</div>
+$$\widehat{\lambda}_{ft} = \frac{(1 + \widetilde{\lambda}_{ft} \Psi^l) - (1 + s^l_{ft} \Psi^l)}{(1 + \Psi^l) - (1 + s^l_{ft} \Psi^l)}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 2: Cancel the constant $1$ in both the numerator and the denominator</div>
+$$\widehat{\lambda}_{ft} = \frac{\widetilde{\lambda}_{ft} \Psi^l - s^l_{ft} \Psi^l}{\Psi^l - s^l_{ft} \Psi^l}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 3: Factor out and cancel the inverse labor supply elasticity $\Psi^l$</div>
+$$\widehat{\lambda}_{ft} = \frac{\Psi^l (\widetilde{\lambda}_{ft} - s^l_{ft})}{\Psi^l (1 - s^l_{ft})} = \boxed{\frac{\widetilde{\lambda}_{ft} - s^l_{ft}}{1 - s^l_{ft}}}$$
+</div>
+
+---
+
+# GMM Estimation and Moment Conditions
+
+To estimate the production function parameters $\boldsymbol{\beta} = (\beta_l, \beta_m, \beta_k)$ without endogeneity bias, the paper applies the Blundell and Bond (1998) GMM approach.
+
+### Equation (16): Moment Conditions
+The unexpected productivity shock $u_{ft}$ is assumed to be orthogonal to lagged inputs and regional shifters:
+$$\boxed{E[u_{ft} | (l_{fr-1}, m_{fr-1}, k_{fr}, w^{agri}_{r-1})_{r \in \{2,...,t\}}] = 0 \tag{16}}$$
+
+### Equation (17): GMM Moment Conditions
+Let's derive the detailed expression inside the GMM moment condition:
+
+<div class="derivation-step">
+<div class="step-explanation">Step 1: Write TFP at times $t$ and $t-1$ using Equation (1)</div>
+$$\omega_{ft} = q_{ft} - \beta_l l_{ft} - \beta_m m_{ft} - \beta_k k_{ft} - \beta_0$$
+$$\omega_{ft-1} = q_{ft-1} - \beta_l l_{ft-1} - \beta_m m_{ft-1} - \beta_k k_{ft-1} - \beta_0$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 2: Substitute these into the AR(1) transition law: $\omega_{ft} = \rho \omega_{ft-1} + u_{ft}$</div>
+$$q_{ft} - \beta_l l_{ft} - \beta_m m_{ft} - \beta_k k_{ft} - \beta_0 = \rho \left( q_{ft-1} - \beta_l l_{ft-1} - \beta_m m_{ft-1} - \beta_k k_{ft-1} - \beta_0 \right) + u_{ft}$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 3: Rearrange to isolate the shock $u_{ft}$</div>
+$$u_{ft} = q_{ft} - \rho q_{ft-1} - \beta_0(1-\rho) - \beta_l (l_{ft} - \rho l_{ft-1}) - \beta_m (m_{ft} - \rho m_{ft-1}) - \beta_k (k_{ft} - \rho k_{ft-1})$$
+</div>
+
+<div class="derivation-step">
+<div class="step-explanation">Step 4: Substitute into the orthogonality condition to get the final GMM moment equation</div>
+$$\boxed{E\left[ q_{ft} - \rho q_{ft-1} - \beta_{0}(1-\rho) - \beta_{l}(l_{ft} - \rho l_{ft-1}) - \beta_{m}(m_{ft} - \rho m_{ft-1}) - \beta_{k}(k_{ft} - \rho k_{ft-1}) \;\middle|\; \mathbf{Z}_{ft} \right] = 0 \tag{17}}$$
+where $\mathbf{Z}_{ft} = (l_{ft-1}, m_{ft-1}, k_{ft}, k_{ft-1}, w^{agri}_{t-1})$ is the vector of instruments.
+</div>

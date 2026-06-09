@@ -1,0 +1,199 @@
+/* Modern Academic Design System for MathJax Derivations */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.75;
+  color: #334155;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #fbfbfa;
+}
+
+/* Typography styling */
+h1, h2, h3, h4 {
+  font-family: 'Outfit', sans-serif;
+  color: #0f172a;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: #2563eb;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  color: #475569;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+/* Beautiful blocks for step-by-step derivations */
+.derivation-step {
+  background-color: #ffffff;
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid #f1f5f9;
+  border-right: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.derivation-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+  border-left-color: #1d4ed8;
+}
+
+.step-explanation {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.step-explanation::before {
+  content: "→";
+  margin-right: 0.5rem;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.math-block {
+  overflow-x: auto;
+  padding: 0.75rem 0;
+}
+
+/* Variable table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+th, td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #334155;
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* MathJax enhancements */
+.MathJax_Display {
+  margin: 1.25rem 0 !important;
+}
+
+.boxed {
+  border: 1.5px solid #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: #eff6ff;
+  display: inline-block;
+}
+
+/* Left Sidebar Table of Contents (TOC) */
+@media (min-width: 1200px) {
+  #TOC {
+    position: fixed;
+    top: 3rem;
+    left: 2rem;
+    width: 260px;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+  }
+  
+  body {
+    margin-left: 320px;
+    max-width: 850px;
+  }
+}
+
+#TOC h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+#TOC ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#TOC ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+#TOC ul li a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+#TOC ul li a:hover {
+  color: #2563eb;
+}
+

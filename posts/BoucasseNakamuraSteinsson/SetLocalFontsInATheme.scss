@@ -1,0 +1,52 @@
+// Source - https://stackoverflow.com/a/75470197
+// Posted by Shafee, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-05-29, License - CC BY-SA 4.0
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Lato";
+$font-family-monospace: "Lato";
+$bs-body-font-family: "Lato";
+$web-font-path: "No";
+
+/*-- scss:rules --*/
+
+/* lato-regular - latin-ext_latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/lato-v23-latin-ext_latin-regular.woff2") format("woff2"),
+      url("./fonts/lato-v23-latin-ext_latin-regular.woff") format("woff");
+}
+
+/* lato-italic - latin-ext_latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/lato-v23-latin-ext_latin-italic.woff2") format("woff2"),
+      url("./fonts/lato-v23-latin-ext_latin-italic.woff") format("woff");
+}
+
+/* lato-700 - latin-ext_latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/lato-v23-latin-ext_latin-700.woff2") format("woff2"),
+      url("./fonts/lato-v23-latin-ext_latin-700.woff") format("woff");
+}
+
+/* lato-700italic - latin-ext_latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./fonts/lato-v23-latin-ext_latin-700italic.woff2") format("woff2"),
+      url("./fonts/lato-v23-latin-ext_latin-700italic.woff") format("woff");
+}

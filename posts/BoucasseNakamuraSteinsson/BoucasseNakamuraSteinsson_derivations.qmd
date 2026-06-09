@@ -1,0 +1,397 @@
+---
+title: "When Did Growth Begin? Full Mathematical Derivations"
+subtitle: "Paul Bouscasse, Emi Nakamura, and Jón Steinsson (QJE 2025)"
+author: "Antigravity, pair-programming with Seiro"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+    css: styles.css
+    theme: cosmo
+    embed-resources: true
+---
+
+# Introduction
+
+This document provides a rigorous, line-by-line mathematical derivation of all equations presented in Paul Bouscasse, Emi Nakamura, and Jón Steinsson (2025), *"When Did Growth Begin? New Estimates of Productivity Growth in England from 1250 to 1870"*, published in the *Quarterly Journal of Economics* (Volume 140, Issue 2, Pages 835–888). 
+
+The paper estimates the long-run evolution of total factor productivity (TFP) in England by identifying shifts in the labor demand curve. It formally models Malthusian population feedbacks, capital accumulation, endogenous labor supply, and the transition from a land-constrained preindustrial economy to a fossil-fuel-powered industrial economy via structural changes in factor output elasticities.
+
+---
+
+# Core Variables and Parameter Definitions
+
+Before deriving the equations, we define the primary variables and parameters:
+
+| Variable / Parameter | Definition | Economic Meaning |
+|:---|:---|:---|
+| $Y_t$ | Output | Aggregate real GDP in decade $t$. |
+| $L_t$ | Log-level: $l_t$ | Aggregate labor input (effective workdays) in decade $t$. |
+| $K_t$ | Log-level: $k_t$ | Aggregate capital stock used in decade $t$. |
+| $Z$ | Fixed Land | Fixed quantity of agricultural land in England. |
+| $W_t$ | Log-level: $w_t$ | Real daily wage rate in decade $t$. |
+| $A_t$ | Log-level: $a_t$ | Unobserved productivity (Total Factor Productivity, TFP) at time $t$. |
+| $M_t$ | Log-level: $m_t$ | Malmquist productivity index at time $t$. |
+| $N_t$ | Log-level: $n_t$ | Population of England in decade $t$. |
+| $D_t$ | Log-level: $d_t$ | Days worked per worker per year in decade $t$. |
+| $r_t$ | Real Interest Rate | Rental rate for capital (yields on perpetual nominal debt/land). |
+| $\delta$ | Capital Depreciation | Depreciation rate of capital stock. |
+| $\alpha$ | Land Elasticity | Output elasticity of land in the preindustrial era. |
+| $\beta$ | Capital Elasticity | Output elasticity of capital in the preindustrial era. |
+| $\gamma$ | Population Elasticity | Elasticity of population growth with respect to per capita income. |
+| $\mu$ | Productivity Drift | Average growth rate of TFP (subject to regime shifts). |
+| $S_t$ | Log-level: $s_t$ | Rental price of land (land rents) in decade $t$. |
+| $\lambda$ | Proportionality Factor | Log factor of proportionality between labor force and population. |
+
+---
+
+# The Preindustrial Economy: Simple Model (Section II)
+
+### Equation (1): Simple Log Labor Demand Curve
+In Section II, the authors present a simplified model where output is produced using only land $Z$ and labor $L_t$ under a Cobb-Douglas technology:
+$$Y_t = A_t Z^\alpha L_t^{1-\alpha}$$
+
+Producers hire workers in a competitive labor market, taking the daily wage $W_t$ as given. Optimization yields the first-order condition where the real wage equals the marginal product of labor:
+$$W_t = \frac{\partial Y_t}{\partial L_t} = (1 - \alpha) A_t Z^\alpha L_t^{-\alpha}$$
+
+Taking the natural logarithm of both sides:
+$$\ln W_t = \ln(1 - \alpha) + \ln A_t + \alpha \ln Z - \alpha \ln L_t$$
+
+Using log notation ($w_t = \ln W_t$, $a_t = \ln A_t$, $l_t = \ln L_t$) and grouping the constant terms:
+$$\boxed{w_t = \phi + a_t - \alpha l_t \tag{1}}$$
+where $\phi = \log(1 - \alpha) + \alpha \log Z$.
+
+### Equation (2): TFP Drift with Regime Shifts
+Productivity growth is modeled as a random walk with drift:
+$$\boxed{\widetilde{a}_t = \mu + \widetilde{a}_{t-1} + \epsilon_{1t} \tag{2}}$$
+where $\mu$ is the drift parameter capturing the average growth rate of productivity, and $\epsilon_{1t} \sim N(0, \sigma_1^2)$ is a permanent productivity shock. The drift $\mu$ is subject to two structural breaks (dated to 1600 and 1810).
+
+---
+
+# The Full Malthusian Model (Section III.A)
+
+## Factor Demands and Eliminating Capital
+
+In the full preindustrial model (Section III.A), output is produced with land $Z$, capital $K_t$, and labor $L_t$:
+$$Y_t = F_t(Z, K_t, L_t) = A_t Z^\alpha K_t^\beta L_t^{1-\alpha-\beta}$$
+
+### Equation (3): General Log Labor Demand
+Under perfect competition, the wage rate $W_t$ equals the marginal product of labor:
+$$W_t = (1 - \alpha - \beta) A_t Z^\alpha K_t^\beta L_t^{-\alpha-\beta}$$
+
+Taking logs:
+$$\boxed{w_t = \widetilde{\phi} + a_t + \beta k_t - (\alpha + \beta) l_t \tag{3}}$$
+where $\widetilde{\phi} = \log(1 - \alpha - \beta) + \alpha \log Z$.
+
+### Equation (4): Log Capital Demand
+Producers accumulate capital until the marginal product of capital equals its user cost (real interest rate $r_t$ + depreciation $\delta$):
+$$\boxed{r_t + \delta = \beta A_t Z^\alpha K_t^\beta-1 L_t^{1-\alpha-\beta} \tag{4}}$$
+
+---
+
+## Detailed Step-by-Step Derivation of Equation (5)
+Since historical capital stock data $K_t$ is unobserved for the preindustrial period, we use the capital demand relation (Equation 4) to eliminate $k_t$ from the labor demand curve (Equation 3).
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 1: Isolate capital stock $K_t$ from the capital demand relation
+:::
+From Equation (4):
+$$K_t^{\beta-1} = \frac{r_t + \delta}{\beta A_t Z^\alpha L_t^{1-\alpha-\beta}}$$
+Taking natural logarithms of both sides:
+$$(\beta - 1) k_t = \log(r_t + \delta) - \log\beta - a_t - \alpha \log Z - (1 - \alpha - \beta) l_t$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 2: Solve for log capital $k_t$
+:::
+Multiply both sides of the equation by $-1$:
+$$(1 - \beta) k_t = -\log(r_t + \delta) + \log\beta + a_t + \alpha \log Z + (1 - \alpha - \beta) l_t$$
+Divide by $(1 - \beta)$:
+$$k_t = \frac{1}{1-\beta} a_t + \frac{1}{1-\beta} \log\beta + \frac{\alpha}{1-\beta} \log Z + \frac{1-\alpha-\beta}{1-\beta} l_t - \frac{1}{1-\beta} \log(r_t + \delta)$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 3: Substitute $k_t$ back into the labor demand Equation (3)
+:::
+Substitute the expression for $k_t$ into $w_t = \log(1 - \alpha - \beta) + \alpha \log Z + a_t + \beta k_t - (\alpha + \beta) l_t$:
+$$
+\begin{aligned}
+w_t ={}& \log(1 - \alpha - \beta) + \alpha \log Z + a_t \\
+& + \beta \left[ \frac{1}{1-\beta} a_t + \frac{\log\beta}{1-\beta} + \frac{\alpha \log Z}{1-\beta} + \frac{1-\alpha-\beta}{1-\beta} l_t - \frac{\log(r_t + \delta)}{1-\beta} \right] - (\alpha + \beta) l_t
+\end{aligned}
+$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 4: Group the terms by variables
+:::
+- **Productivity term ($a_t$)**:
+  $$a_t + \frac{\beta}{1-\beta} a_t = \left(1 + \frac{\beta}{1-\beta}\right) a_t = \frac{1}{1-\beta} a_t$$
+
+- **Labor term ($l_t$)**:
+  $$
+  \begin{aligned}
+  \left[ \frac{\beta(1-\alpha-\beta)}{1-\beta} - (\alpha + \beta) \right] l_t &= \left[ \frac{\beta - \alpha\beta - \beta^2 - (\alpha + \beta)(1-\beta)}{1-\beta} \right] l_t \\
+  &= \left[ \frac{\beta - \alpha\beta - \beta^2 - (\alpha + \beta - \alpha\beta - \beta^2)}{1-\beta} \right] l_t \\
+  &= -\frac{\alpha}{1-\beta} l_t
+  \end{aligned}
+  $$
+
+- **Interest rate term ($\log(r_t + \delta)$)**:
+  $$-\frac{\beta}{1-\beta} \log(r_t + \delta)$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 5: Group and define the constant $\widetilde{\phi}^*$
+:::
+Gather all constant terms:
+$$\widetilde{\phi}^* = \log(1 - \alpha - \beta) + \alpha \log Z + \frac{\beta}{1-\beta} \log\beta + \frac{\alpha\beta}{1-\beta} \log Z$$
+$$\widetilde{\phi}^* = \frac{\beta}{1-\beta} \log\beta + \log(1 - \alpha - \beta) + \frac{\alpha}{1-\beta} \log Z$$
+Combine everything into the final expression:
+$$\boxed{w_t = \widetilde{\phi}^* + \frac{1}{1-\beta} a_t - \frac{\alpha}{1-\beta} l_t - \frac{\beta}{1-\beta} \log (r_t + \delta) \tag{5}}$$
+:::
+
+---
+
+## Productivity Decompositions (Equations 6 & 7)
+Log productivity $a_t$ is decomposed into permanent and transitory components:
+$$\boxed{a_t = \widetilde{a}_t + \epsilon_{2t} \tag{6}}$$
+where $\epsilon_{2t} \sim N(0, \sigma_2^2)$ represents transitory TFP shocks.
+The permanent component follows a random walk with drift:
+$$\boxed{\widetilde{a}_t = \mu + \widetilde{a}_{t-1} + \epsilon_{1t} \tag{7}}$$
+
+---
+
+## Step-by-Step Derivation of Equation (8)
+We define labor supply $L_t$ as proportional to the population $N_t$ and days worked per worker $D_t$:
+$$L_t = \lambda D_t N_t$$
+Taking natural logarithms:
+$$l_t = \log\lambda + d_t + n_t$$
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 1: Substitute the log labor supply expression into Equation (5)
+:::
+$$w_t = \widetilde{\phi}^* + \frac{1}{1-\beta} a_t - \frac{\alpha}{1-\beta} (\log\lambda + d_t + n_t) - \frac{\beta}{1-\beta} \log (r_t + \delta)$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 2: Isolate the constants and define $\phi$
+:::
+Group the constants:
+$$\phi = \widetilde{\phi}^* - \frac{\alpha}{1-\beta} \log\lambda$$
+This yields the final labor demand equation expressed in terms of population and days worked:
+$$\boxed{w_t = \phi + \frac{1}{1-\beta} a_t - \frac{\alpha}{1-\beta} (d_t + n_t) - \frac{\beta}{1-\beta} \log (r_t + \delta) \tag{8}}$$
+:::
+
+---
+
+## Malthusian Population Dynamics (Equations 9-11)
+
+### Equation (9): Log Population Law of Motion
+Following Malthus, gross population growth $\frac{N_t}{N_{t-1}}$ increases in real income:
+$$\frac{N_t}{N_{t-1}} = \Theta (W_{t-1} D_{t-1})^\gamma E_t$$
+Taking logs:
+$$\boxed{n_t - n_{t-1} = \omega + \gamma (w_{t-1} + d_{t-1}) + \xi_t \tag{9}}$$
+where $\omega = \log \Theta$ and $\xi_t = \log E_t$ is the exogenous population shock.
+
+### Equations (10) & (11): Plague Shock Process
+The population shock consists of structural plague shocks $\xi_{1t}$ and standard demographic shocks $\xi_{2t}$:
+$$\boxed{\xi_t = \xi_{1t} + \xi_{2t} \tag{10}}$$
+The plague shock is modeled as:
+$$\boxed{\exp(\xi_{1t}) \sim \begin{cases} \beta(\beta_1, \beta_2) & \text{with probability } \pi \\ 1 & \text{with probability } 1 - \pi \end{cases} \tag{11}}$$
+
+---
+
+# The Early Industrial Economy (Section III.B)
+
+In the industrial era (post-1760), the production function coefficients become time-varying to reflect the structural shift away from land constraints:
+$$Y_t = A_t Z^{\alpha_t} K_t^{\beta_t} L_t^{1-\alpha_t-\beta_t} \tag{12}$$
+
+### Equation (13): Industrial Log Labor Demand
+The labor demand curve is updated as:
+$$\boxed{w_t = \phi_t + \frac{1}{1-\beta_t} a_t - \frac{\alpha_t}{1-\beta_t} (d_t + n_t) - \frac{\beta_t}{1-\beta_t} \log (r_t + \delta) \tag{13}}$$
+where
+$$\phi_t = \frac{\beta_t}{1-\beta_t} \log\beta_t + \log(1 - \alpha_t - \beta_t) + \frac{\alpha_t}{1-\beta_t} \log Z - \frac{\alpha_t + \beta_t}{1-\beta_t} \log\lambda$$
+
+---
+
+## Detailed Step-by-Step Derivation of Equations (15) and (16)
+To identify the time-varying elasticities $\alpha_t$ and $\beta_t$, the authors incorporate land rents $S_t$ (Equation 14) and the capital stock $K_t$ after 1760.
+$$S_t = \alpha_t A_t Z^{\alpha_t-1} K_t^{\beta_t} L_t^{1-\alpha_t-\beta_t} \tag{14}$$
+
+::: {.derivation-step}
+::: {.step-explanation}
+Derivation of Equation (15): Log Land Rent Relation
+:::
+Start by taking logs of the land rent Equation (14):
+$$s_t = \log\alpha_t + a_t + (\alpha_t - 1) \log Z + \beta_t k_t + (1 - \alpha_t - \beta_t) l_t$$
+Recall the log wage relation from competitive pricing:
+$$w_t = \log(1 - \alpha_t - \beta_t) + a_t + \alpha_t \log Z + \beta_t k_t - (\alpha_t + \beta_t) l_t$$
+Subtract $w_t$ from $s_t$ to eliminate unobserved TFP $a_t$ and capital $k_t$:
+$$s_t - w_t = \log\alpha_t - \log(1 - \alpha_t - \beta_t) - \log Z + l_t$$
+Substitute $l_t = \log\lambda + d_t + n_t$ (writing $\log\lambda$ as $\lambda$):
+$$
+\begin{aligned}
+s_t ={}& w_t + n_t + d_t - \log Z \\
+& + \log\alpha_t - \log(1 - \alpha_t - \beta_t) + \lambda
+\end{aligned}
+$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Derivation of Equation (16): Log Capital Cost Relation
+:::
+Start with the capital demand condition in logs:
+$$\log(r_t + \delta) = \log\beta_t + a_t + \alpha_t \log Z + (\beta_t - 1) k_t + (1 - \alpha_t - \beta_t) l_t$$
+Subtract the competitive wage relation:
+$$\log(r_t + \delta) - w_t = \log\beta_t - \log(1 - \alpha_t - \beta_t) - k_t + l_t$$
+Rearrange and substitute $l_t = n_t + d_t + \lambda$:
+$$
+\begin{aligned}
+\log (r_t + \delta) ={}& w_t + n_t + d_t - k_t \\
+& + \log\beta_t - \log (1 - \alpha_t - \beta_t) + \lambda
+\end{aligned}
+$$
+:::
+
+---
+
+# Measuring Productivity under Structural Transformation (Section III.C)
+
+### Equation (17): Malmquist Productivity Index
+Since factor elasticities change after 1760, TFP $A_t$ is no longer a consistent measure of productivity. The authors utilize the Malmquist index $M_t$:
+$$\boxed{\frac{M_t}{M_{t-1}} = \left[ \frac{F_t(Z, K_t, L_t) \cdot F_t(Z, K_{t-1}, L_{t-1})}{F_{t-1}(Z, K_t, L_t) \cdot F_{t-1}(Z, K_{t-1}, L_{t-1})} \right]^{1/2} \tag{17}}$$
+
+---
+
+## Detailed Step-by-Step Derivation of Equation (18)
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 1: Write the production function at $t$ and $t-1$ evaluated at input vector $X$
+:::
+$$\log F_t(Z, K, L) = a_t + \alpha_t \log Z + \beta_t \log K + (1 - \alpha_t - \beta_t) \log L$$
+$$\log F_{t-1}(Z, K, L) = a_{t-1} + \alpha_{t-1} \log Z + \beta_{t-1} \log K + (1 - \alpha_{t-1} - \beta_{t-1}) \log L$$
+Subtract the two equations:
+$$\log\left(\frac{F_t(Z, K, L)}{F_{t-1}(Z, K, L)}\right) = \widehat{a}_t + \widehat{\alpha}_t \log Z + \widehat{\beta}_t \log K - (\widehat{\alpha}_t + \widehat{\beta}_t) \log L$$
+where hats denote differences: $\widehat{x}_t = x_t - x_{t-1}$.
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 2: Express the Malmquist growth in logs
+:::
+Take the natural logarithm of Equation (17):
+$$\log\left(\frac{M_t}{M_{t-1}}\right) = \frac{1}{2} \log\left(\frac{F_t(Z, K_t, L_t)}{F_{t-1}(Z, K_t, L_t)}\right) + \frac{1}{2} \log\left(\frac{F_t(Z, K_{t-1}, L_{t-1})}{F_{t-1}(Z, K_{t-1}, L_{t-1})}\right)$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 3: Substitute the log-ratio expressions from Step 1
+:::
+$$
+\begin{aligned}
+\log\left(\frac{M_t}{M_{t-1}}\right) ={}& \frac{1}{2} \left[ \widehat{a}_t + \widehat{\alpha}_t \log Z + \widehat{\beta}_t k_t - (\widehat{\alpha}_t + \widehat{\beta}_t) l_t \right] \\
+& + \frac{1}{2} \left[ \widehat{a}_t + \widehat{\alpha}_t \log Z + \widehat{\beta}_t k_{t-1} - (\widehat{\alpha}_t + \widehat{\beta}_t) l_{t-1} \right]
+\end{aligned}
+$$
+Combine terms:
+$$\log\left(\frac{M_t}{M_{t-1}}\right) = \widehat{a}_t + \widehat{\alpha}_t \log Z + \widehat{\beta}_t \left( \frac{k_t + k_{t-1}}{2} \right) - (\widehat{\alpha}_t + \widehat{\beta}_t) \left( \frac{l_t + l_{t-1}}{2} \right)$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 4: Express in terms of means and substitute log labor supply
+:::
+Define the decade-to-decade means as $\overline{x}_t = \frac{x_t + x_{t-1}}{2}$.
+$$\widehat{m}_t = \widehat{a}_t + \widehat{\alpha}_t \log Z + \widehat{\beta}_t \overline{k}_t - (\widehat{\alpha}_t + \widehat{\beta}_t) \overline{l}_t$$
+Since $l_t = d_t + n_t + \lambda$, we have $\overline{l}_t = \overline{d}_t + \overline{n}_t + \lambda$. Substitute this in:
+$$
+\begin{aligned}
+\widehat{m}_t ={}& \widehat{a}_t + \widehat{\alpha}_t \log Z + \widehat{\beta}_t \overline{k}_t \\
+& - (\widehat{\alpha}_t + \widehat{\beta}_t) (\overline{d}_t + \overline{n}_t + \lambda)
+\end{aligned}
+$$
+:::
+
+---
+
+# Malthusian Steady States & Dynamics (Section V)
+
+## Detailed Step-by-Step Derivation of Equation (21)
+We derive the long-run Malthusian steady-state real wage $\overline{w}$ corresponding to a constant productivity growth rate $\mu$.
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 1: Set up the long-run population growth rate
+:::
+From Equation (9), in steady state when wages are at their long-run mean $\overline{w}$ and days worked are constant at $d^*$, and population shocks are zero:
+$$g_n \equiv n_t - n_{t-1} = \omega + \gamma (\overline{w} + d^*)$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 2: Obtain population growth from the labor demand FOC
+:::
+Differentiate the preindustrial log labor demand curve (Equation 8) over time:
+$$w_t - w_{t-1} = \frac{1}{1-\beta}(a_t - a_{t-1}) - \frac{\alpha}{1-\beta}(n_t - n_{t-1})$$
+In steady state, the real wage must be constant ($w_t - w_{t-1} = 0$), and TFP grows at rate $\mu$ ($a_t - a_{t-1} = \mu$):
+$$0 = \frac{1}{1-\beta}\mu - \frac{\alpha}{1-\beta} g_n \implies g_n = \frac{\mu}{\alpha}$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 3: Equate the two steady-state growth expressions and solve for $\overline{w}$
+:::
+$$\omega + \gamma (\overline{w} + d*) = \frac{\mu}{\alpha}$$
+$$\overline{w} + d^* = \frac{\mu}{\alpha\gamma} - \frac{\omega}{\gamma}$$
+$$\overline{w} = \frac{\mu}{\alpha\gamma} - d^* - \frac{\omega}{\gamma}$$
+Grouping the constants:
+$$\boxed{\overline{w} = \frac{\mu}{\alpha\gamma} + \text{constant} \tag{21}}$$
+where the constant is $-d^* - \frac{\omega}{\gamma}$.
+:::
+
+---
+
+## Detailed Step-by-Step Derivation of Equation (22)
+We derive the AR(1) dynamics of the population following an exogenous population shock (e.g., a plague), under the assumption of zero TFP growth ($\mu=0$) and constant days worked ($d_t = d^*$).
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 2: Substitute the log wage from the labor demand curve (Equation 8)
+:::
+Substitute $w_t = \phi + \frac{1}{1-\beta} a - \frac{\alpha}{1-\beta}(d^* + n_t) - \frac{\beta}{1-\beta}\log(r + \delta)$:
+$$
+\begin{aligned}
+n_{t+1} - n_t ={}& \omega + \gamma d^* \\
+& + \gamma \left[ \phi + \frac{1}{1-\beta} a - \frac{\alpha}{1-\beta} (d^* + n_t) - \frac{\beta}{1-\beta} \log (r + \delta) \right]
+\end{aligned}
+$$
+:::
+
+::: {.derivation-step}
+::: {.step-explanation}
+Step 3: Isolate the term containing $n_t$
+:::
+$$
+\begin{aligned}
+n_{t+1} ={}& n_t - \frac{\gamma\alpha}{1-\beta} n_t + \omega + \gamma d^* \\
+& + \gamma \left[ \phi + \frac{1}{1-\beta} a - \frac{\alpha}{1-\beta} d^* - \frac{\beta}{1-\beta} \log (r + \delta) \right]
+\end{aligned}
+$$
+Combine the $n_t$ terms:
+$$\boxed{n_{t+1} = \left( 1 - \frac{\gamma\alpha}{1-\beta} \right) n_t + \text{constant} \tag{22}}$$
+where the autoregressive coefficient is:
+$$\rho = 1 - \frac{\gamma\alpha}{1-\beta}$$
+This coefficient determines the speed of recovery. The half-life is given by $\frac{\log(0.5)}{\log(\rho)}$.
+:::

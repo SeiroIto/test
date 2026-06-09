@@ -1,0 +1,2584 @@
+                                       THE
+
+
+
+
+                                                                                           Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+     QUARTERLY JOURNAL
+       OF ECONOMICS
+Vol. 140                                2025                              Issue 2
+
+     WHEN DID GROWTH BEGIN? NEW ESTIMATES OF
+     PRODUCTIVITY GROWTH IN ENGLAND FROM 1250
+                     TO 1870∗
+
+                                PAUL BOUSCASSE
+                                 EMI NAKAMURA
+                                 JÓN STEINSSON
+
+    We estimate productivity growth in England from 1250 to 1870. Real wages
+over this period were heavily influenced by plague-induced swings in the popula-
+tion. Our estimates account for these Malthusian dynamics. We find that produc-
+tivity growth was zero before 1600. Productivity growth began in 1600—almost
+a century before the Glorious Revolution. Thus, the onset of productivity growth
+preceded the bourgeois institutional reforms of seventeenth-century England. We
+estimate productivity growth of 2% per decade between 1600 and 1800, increas-
+ing to 5% per decade between 1810 and 1860. Much of the increase in output
+growth during the Industrial Revolution is explained by structural change—the
+falling importance of land in production—rather than faster productivity growth.
+Stagnant real wages in the eighteenth and early nineteenth centuries—Engels’
+Pause—is explained by rapid population growth putting downward pressure on
+real wages. Yet feedback from population growth to real wages is sufficiently weak
+to permit sustained deviations from the “iron law of wages” prior to the Industrial
+Revolution. JEL codes: N13, O40, J10.
+
+
+
+
+     ∗ We thank Venance Riblier and Caleb Wroblewski for excellent research as-
+
+sistance. We thank Bernard Beaudreau, Gillian Brunet, Gregory Clark, Ernesto
+Dal Bó, Brad DeLong, Edward Nelson, James Robinson, Jean-Laurent Rosenthal,
+Jan De Vries, Jonathan Vogel, David Weinstein, Jacob Weisdorf, and seminar par-
+ticipants at various institutions for valuable comments and discussions. We thank
+the Alfred P. Sloan Foundation, the Smith Richardson Foundation, and the Pro-
+gram for Economic Research at Columbia University for financial support.
+
+C The Author(s) 2024. Published by Oxford University Press on behalf of President
+and Fellows of Harvard College. All rights reserved. For Permissions, please email:
+journals.permissions@oup.com
+The Quarterly Journal of Economics (2025), 835–888. https://doi.org/10.1093/qje/qjae046.
+Advance Access publication on December 26, 2024.
+
+                                         835
+
+836            THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+                             I. INTRODUCTION
+
+
+
+
+                                                                                     Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+     When did economic growth begin? A traditional view holds
+that economic growth began with the Industrial Revolution
+around 1800. Recent work has challenged this view, pushing
+back the date of the onset of growth. Crafts (1983, 1985) and
+Harley (1982) revised downward previous estimates of growth
+in Britain during the Industrial Revolution. These new esti-
+mates indicate that British output per capita was larger by the
+mid-eighteenth century than was previously thought, imply-
+ing that substantial growth must have occurred at an earlier
+date (see also Crafts and Harley 1992). Acemoglu, Johnson, and
+Robinson (2005) argue that a first Great Divergence occurred
+starting around 1500 with Western Europe growing apart from
+other areas of the world after the discovery of the Americas and
+the sea route to India. They support this view with data on urban-
+ization rates. Broadberry et al. (2015) argue that growth began
+even earlier than this. They present new estimates of GDP per
+person for Britain back to 1270. These data show slow but steady
+growth in GDP per person from the beginning of their sample.
+Finally, Kremer (1993) uses world population estimates to argue
+for positive but glacially slow growth for hundreds of thousands
+of years.
+     An important facet of the debate about when growth began
+is when productivity growth began. We contribute to this debate
+by constructing a new series for productivity growth (total fac-
+tor productivity, TFP) in England back to 1250. Figure I plots
+our new productivity series (solid black line). Our main finding
+is that productivity growth in England began in 1600. Between
+1250 and 1590, we estimate that productivity growth was zero.1
+We estimate productivity growth of about 2% per decade between
+1600 and 1800. Productivity growth then increased to 5% per
+decade between 1810 and 1860. We attribute much of the increase
+in output growth during the Industrial Revolution to structural
+change—a fall in the importance of land in production—rather
+than to an increase in productivity growth.
+     Our results help distinguish between different theories of
+why growth began. They suggest that researchers should focus
+
+
+     1. The positive but glacially slow productivity growth rate implied by
+Kremer’s (1993) population data for the period 1200 to 1500 lies within our credi-
+ble set.
+
+                        WHEN DID GROWTH BEGIN?                               837
+
+
+
+
+                                                                                     Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                     FIGURE I
+                      Estimates of Productivity in England
+  Each series is the natural log of productivity. The series denoted by “Clark
+(2016)∗ ” is the series from Clark (2016) extended to 1860. We received this se-
+ries from Clark in private correspondence. Clark’s series estimates TFP for the
+entire economy based on a dual approach. Allen’s (2005) estimates are for TFP in
+the agricultural sector using a primal approach. Our preferred productivity series
+is normalized to zero in 1250. The other two series are normalized to match our
+preferred series in 1300.
+
+
+
+on developments proximate to the sixteenth and seventeenth cen-
+turies. An important debate regarding the onset of growth cen-
+ters on the role of institutional change. Our results help sharpen
+this debate. We find that productivity growth began almost a
+century before the Glorious Revolution and well before the En-
+glish Civil War. While the institutional changes associated with
+these events may have been important for subsequent growth,
+researchers must look to earlier events for the seeds of modern
+growth. Plausible candidates include the Reformation, the decline
+of feudalism, the rise of the yeoman, movable type printing and
+the associated increase in literacy, and expansion of international
+trade. We discuss these in more detail below.
+     The most comprehensive existing productivity series for Eng-
+land was constructed by Clark (2010, 2016). Clark estimated
+changes in TFP for the entire English economy from 1209 on-
+ward using the “dual approach”—that is, as a weighted average
+of changes in real factor prices (e.g., Hsieh 2002). Figure I plots
+
+838             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+Clark’s series over our sample period (broken black line).2 A strik-
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+ing feature of this series is that it implies that productivity in
+England was no higher in the mid-nineteenth century than in the
+fifteenth century. This result does not line up well with other ex-
+isting (less comprehensive) measures of productivity in England
+or with less formal assessments of the English economy. For ex-
+ample, Allen (2005) estimates that TFP in agriculture was 162%
+higher in 1850 than in 1500 (gray diamonds in Figure I).3 Clark
+himself commented that if the fluctuations in his series are not
+measurement error “they imply quite inexplicable fluctuations in
+the performance of the preindustrial economy.”
+     Our conclusions about productivity in England are quite dif-
+ferent from those of Clark (2010, 2016). According to our esti-
+mates, productivity in England was 95% higher in 1850 than in
+1500 rather than being essentially unchanged. We also estimate
+smaller fluctuations in productivity prior to 1600. In particular,
+our productivity series falls much less between 1450 and 1600.
+These substantial differences arise from differences in the data
+and methodology we use. We take the labor demand curve as our
+starting point and estimate changes in productivity as shifts in
+the labor demand curve. This means that the key data series that
+inform our estimates are real wages and population. These are
+arguably among the best measured series of all economic time
+series over our long sample period.
+     Our approach is best understood by considering Figure II.
+This figure presents a scatter plot of the log of real wages in
+England (y-axis) against the log of the population in England (x-
+axis). From 1250 to 1300, the population of England increased
+and real wages decreased. The period from 1300 to 1450 was a pe-
+riod of frequent plagues—the most famous being the Black Death
+of 1348. Over this period, the population of England fell by a fac-
+tor of two and real wages rose substantially. From 1450 to 1600,
+the population recovered and real wages fell. In 1630, the English
+
+     2. Clark (2016) published an update of his better-known 2010 series for the
+shorter time period 1250–1600. The series we plot in Figure I is Clark’s 2016
+series extended to 1860. We received this series from Clark by private correspon-
+dence. The 2016 series differs from the 2010 series prior to 1600 due to a new land
+rent series and because Clark corrected an important error in the 2010 series. We
+discuss this in more detail in Online Appendix H.
+     3. Allen (2005) employs the familiar “primal approach” of Solow (1957), that
+is, subtracts a weighted average of growth in factor inputs from output growth,
+but is only able to do this for agriculture and for a few years.
+
+                        WHEN DID GROWTH BEGIN?                             839
+
+
+
+
+                                                                                   Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                   FIGURE II
+                          Real Wages and Population
+  The figure presents a scatter plot of the log of real wages in England against
+the log of the population in England over the period 1250–1860. The data on real
+wages are from Clark (2010). Estimates of the population are based on our calcu-
+lations (baseline case).
+
+
+economy was back to almost exactly the same point it was at in
+1300.
+     One way to explain these dynamics between 1300 and 1630 is
+as movements along a stable labor demand curve with no change
+in productivity. Had productivity grown between 1300 and 1630,
+the economy could not have returned to essentially the same point
+in 1630 as it was in 1300 since the labor demand curve would have
+shifted up and to the right over the intervening period. Then in
+the seventeenth century, something important seems to change.
+The points start moving off the prior labor demand curve. Specif-
+ically, they start moving up and to the right relative to the earlier
+curve. This suggests that productivity started growing in the sev-
+enteenth century in England.
+     The basic idea behind our approach is to estimate a labor
+demand curve for England and then back out productivity growth
+as shifts in this labor demand curve. To get a better sense for how
+this approach works, consider the following simple labor demand
+curve for a premodern economy:
+                                       α
+                                        Z
+                       Wt = (1 − α)At       ,
+                                       Lt
+
+840           THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+where Wt denotes real wages, At denotes productivity (TFP), Z
+
+
+
+
+                                                                              Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+denotes land (which is fixed), and Lt denotes labor. We consider
+more general models later in the article, but the basic challenge
+we face can be grasped using this simple model. If we take logs,
+this equation becomes
+                          wt = φ − αlt + at ,
+where lowercase letters denote logs of uppercase letters. Armed
+with data on real wages, the population, and an estimate of the
+slope of the labor demand curve α, one can back out estimates of
+productivity at .
+     We consider two approaches to estimating the slope of the
+labor demand curve α. The first is to use the Black Death as a
+large exogenous shock to the population. In this case, we estimate
+α simply from data on real wages and population before and after
+the Black Death. Our second method is to structurally estimate a
+Malthusian model. In this case, we are modeling the endogenous
+response of the population to changes in the real wage. These two
+methods yield similar results.
+     Because our analysis extends into the early industrial era,
+we must confront the fact that the importance of land as a factor
+of production fell rapidly with the spread of steam power, which
+meant that the production of energy was no longer land intensive
+(Wrigley 2010). To capture this crucial development, we allow the
+output elasticity of land, capital, and labor to change over time
+after the onset of the Industrial Revolution. We use data on land
+rents after 1760 to pin down how rapidly the importance of land
+in production fell. The modest increase in land rents that we ob-
+serve in the face of explosive growth in labor and capital after
+1760 leads us to estimate a rapidly falling importance of land in
+production.
+     The fact that we allow for this structural transformation im-
+plies that the standard way of measuring productivity (a multi-
+plicative At in front of a function F (Lt , Kt , ... )) is no longer valid.
+Following Caves, Christensen, and Diewert (1982) we derive a
+Malmquist productivity index (Malmquist 1953) for our setting.
+The Malmquist index reduces to At in the familiar setting of con-
+stant factor elasticities, but remains valid even when the struc-
+ture of the production function is changing.
+     Allowing the importance of land in production to fall after the
+start of the Industrial Revolution has important implications for
+our estimates of productivity. If we don’t allow for this change, we
+
+                    WHEN DID GROWTH BEGIN?                      841
+
+estimate a much larger break in productivity in 1810. Productiv-
+
+
+
+
+                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+ity growth is, of course, just a measure of our ignorance. Model-
+ing the shift of production away from land-intensive technology
+allows us to explain a larger part of growth during the Industrial
+Revolution, leaving less for the residual.
+     Our estimates shed light on the lack of real wage growth dur-
+ing the latter part of the eighteenth century, sometimes referred
+to as Engels’ Pause (Engels 1845; Allen 2009b). Our Malthusian
+model implies that during this period real wages were held back
+by very rapid increases in the population, which in a Malthusian
+world put downward pressure on the marginal product of labor.
+This explanation contrasts with the common idea that the ab-
+sence of real wage growth during this period resulted from the
+lion’s share of the fruits of technical change going to capital as
+opposed to labor. This idea has received attention in the modern
+context in relation to the development of automation and artificial
+intelligence (Acemoglu and Restrepo 2019a).
+     In addition to estimates of productivity, our methodology
+yields estimates of the speed of Malthusian population dynam-
+ics in premodern England. Our estimates imply that these pop-
+ulation dynamics were very slow: a doubling of real incomes led
+to an increase in population growth that was only about 3 to 6
+percentage points per decade. Together with our other estimates,
+this implies that the half-life of a plague-induced drop in the pop-
+ulation was more than 100 years before the onset of the Indus-
+trial Revolution. As the importance of land in production fell after
+1760, the Malthusian population dynamics became even slower
+and weaker. By 1860, our estimate of the half-life of a population
+shock have risen to several hundred years. Earlier estimates of
+the speed of Malthusian population dynamics in England also in-
+dicate that they were slow. For example, Lee and Anderson (2002)
+find a half-life of 107 years, while Crafts and Mills (2009) find
+a half-life of 431 years. Chaney and Hornbeck (2016) document
+very slow population dynamics in Valencia after the expulsion of
+the Moriscos in 1609.
+     The weakness of the Malthusian population dynamics we es-
+timate imply that our model is consistent with sustained devia-
+tions from “the iron law of wages” (i.e., that wages in a Malthusian
+economy are stuck at subsistence). Modest productivity growth
+over a few centuries can temporarily overwhelm the Malthusian
+population dynamics in our model and result in sustained periods
+of real wages several times higher than at other times. Our model
+
+842          THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+can therefore make sense of episodes that historians sometimes
+
+
+
+
+                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+refer to as “golden ages” or “effloresences” (Goldstone 2002). Once
+productivity growth falters, real wages will slowly fall back to a
+lower level. But this will take several centuries.
+     We are not the first to plot a figure like Figure II and ar-
+gue that it has implications about the evolution of productivity
+in England. We formalize this intuitive idea and assess what ex-
+actly it implies about productivity. Clark (2005, 2007a) discusses
+informally how shifts in the labor demand curve of a Malthusian
+model can be informative about the timing of the onset of eco-
+nomic growth. The existing papers most closely related to ours
+from a methodological point of view are Lee and Anderson (2002)
+and Crafts and Mills (2009). These papers structurally estimate
+a Malthusian model of the English economy, as we do. Relative to
+these publications, we extend the sample period back in time con-
+siderably (theirs starts in 1540, while ours start in 1250). This
+allows us to assess when growth began. We also estimate α dif-
+ferently, incorporate capital, and allow the importance of land to
+change after the onset of the Industrial Revolution, among other
+differences.
+     The timing of the onset of productivity growth that we es-
+timate lines up well with recent estimates of the onset of struc-
+tural transformation in Wallis, Colson, and Chilosi (2018). They
+estimate that the share of workers in agriculture began a long
+and large fall around 1600 after having been stable in the six-
+teenth century. Making use of data on GDP and population from
+Broadberry et al. (2015), they also estimate that labor produc-
+tivity in agriculture, industry, and services began to rise around
+1600.
+     This article is also related to the literature in macroeco-
+nomics on the transition from preindustrial stagnation to mod-
+ern growth—often referred to as the transition “from Malthus to
+Solow.” Important papers in this literature include Galor and Weil
+(2000), Jones (2001), and Hansen and Prescott (2002). Relative to
+these works, our study is more empirical. We contribute detailed
+estimates of the evolution of productivity, while the other pa-
+pers propose theories of how productivity growth rose. Our work
+is also related to recent work by Hansen, Ohanian, and Ozturk
+ (2020).
+     The article proceeds as follows. Section II presents a simple
+estimate of productivity growth in England with α estimates from
+the Black Death. Section III presents our full Malthusian model
+
+                        WHEN DID GROWTH BEGIN?                             843
+
+of the economy. Section IV presents our results on productivity
+
+
+
+
+                                                                                   Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+based on the full model. Section V presents our results on the
+strength of the Malthusian population force. Section VI presents
+our estimates of the population. Section VII concludes.
+
+
+II. A SIMPLE ESTIMATE OF PRODUCTIVITY GROWTH IN ENGLAND
+    We begin by presenting a very simple estimate of productivity
+growth in England. Later sections develop a number of extensions
+and refinements to the basic approach adopted here. We model
+time as discrete and denote it by a subscript t. Because we use
+decadal data throughout the article, each time period in the model
+is meant to represent a decade. Our sample period is from 1250 to
+1860. All the data we use are decadal averages. In our figures, a
+data point listed as 1640 refers to the decadal average from 1640
+to 1649. We sometimes refer to a variable at a point in time (say,
+1640) when we mean the decadal average for that decade. In other
+words, we use 1640 and “the 1640s” interchangeably.
+    Consider an economy where output is produced with land and
+labor according to the following production function:
+                             Yt = At Zα Lt1−α ,
+where Yt denotes output, Z denotes land, Lt denotes labor, and
+At denotes productivity (TFP). We model the quantity of land
+as being fixed. Literally speaking, the stock of land in England
+has always been fixed. However, the way land has been used has
+changed over time. The sharp fall in population after the Black
+Death led land to be converted to pastoral farming (which is land
+intensive). Growth in the population later in our sample period
+resulted in more land being used for arable farming (less land
+intensive). A growing population implied that people were forced
+to use lower and lower quality land to grow crops and farm each
+hectare of land more intensively. This meant that for a given level
+of productivity, the marginal product of labor was decreasing in
+the size of the population. Our production function with Z being
+fixed captures this fact.4
+     Land use also changed due to improvements such as drain-
+ing swamps, clearing fields, and cutting down forests. Later we
+
+    4. This is entirely analogous to the standard way the use of capital in pro-
+duction is usually modeled. Consider an ice cream maker who has one ice cream
+machine and one worker. If they hire more workers, the machine will be used more
+intensively and the marginal product of labor will fall.
+
+844             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+consider a model with capital. Investments in land improve-
+
+
+
+
+                                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+ment are captured as additions to the capital stock. Finally, in-
+stitutional change resulted in changes in land use. Two impor-
+tant examples are the confiscation and sale of monastic land by
+Henry VIII (Heldring, Robinson, and Vollmer 2021) and enclo-
+sures (Allen 1992). The effects of these institutional changes will
+show up as changes in productivity in our analysis.
+     We assume that producers hire workers in a competitive la-
+bor market taking wages as given. Producer optimization then
+gives rise to the following labor demand curve:
+                           Wt = (1 − α)At Zα Lt−α ,
+where Wt denotes the real daily wage. Taking logs of this equa-
+tion yields
+(1)                           wt = φ + at − αlt ,
+where lowercase letters denote logs of uppercase letters and
+φ = log(1 − α) + α log Z. Assuming that labor is paid its marginal
+product in preindustrial England is a strong assumption that we
+discuss in greater detail below.
+    To estimate changes in productivity using equation (1), we
+need data on real wages, data on labor supply, and an estimate of
+the slope of the labor demand curve α. We discuss these in turn.
+
+II.A. Data on Real Wages and the Population
+     Our baseline measure of real wages in England is Clark’s
+(2010) series for unskilled building workers. Figure III plots this
+series. The main features of the series are a large and sustained
+rise between 1300 and 1450, a large and sustained fall between
+1450 and 1600, some recovery over the seventeenth century, stag-
+nation during the eighteenth century, and finally a sharp increase
+after 1800. Online Appendix Figure A.1 compares this series with
+several other series for real wages in England. This comparison
+shows that the real wage series we use is quite similar to Clark’s
+real wage series for farmers and for craftsmen. We have redone
+our analysis with these series and discuss this analysis in Section
+IV.C.5
+
+    5. Much controversy has centered on the behavior of real wages in England
+between 1770 and 1850. This debate revolves around the extent to which laborers
+shared in the benefits of early industrialization (Feinstein 1998; Clark 2005; Allen
+2007, 2009b). In Online Appendix Figure A.1, we also plot Allen’s (2007) wage se-
+
+                         WHEN DID GROWTH BEGIN?                               845
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                    FIGURE III
+                       Real Wages in England, 1250–1860
+ The figure presents estimates of the real wages of unskilled building workers in
+England from Clark (2010).
+
+     Our baseline assumption is that labor supply is proportional
+to the population of England. Figure IV presents the population
+data we use. For the period from 1540 onward, we use population
+estimates from Wrigley et al. (1997), which in turn build on the
+seminal work of Wrigley and Schofield (1981). Sources for pop-
+ulation data before 1540 are less extensive. Clark (2007b) uses
+unbalanced panel data on the population of villages and manors
+from manorial records and penny tithing payments to construct
+estimates of the population prior to 1540. We build on Clark’s
+work to construct an estimate of the population before 1540.
+     We cannot directly use Clark’s pre-1540 population series
+because the method for constructing his series involves making
+assumptions about the evolution of productivity.6 Since we aim
+to use the population series to make inference about the evolu-
+tion of productivity in England, we cannot use a population se-
+ries that already embeds assumptions about productivity growth.
+However, as an intermediate input into constructing his pre-1540
+
+
+ries (which starts in 1770). The figure shows that the differences discussed in the
+prior literature are modest from our perspective and therefore do not materially
+affect our analysis.
+     6. Online Appendix B discusses Clark’s method in more detail.
+
+846             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                    FIGURE IV
+                    Population Data for England, 1250–1860
+  The figure presents population estimates for England for 1540–1860 from
+Wrigley et al. (1997) (gray line) and the population trend estimates by Clark
+(2007b) for the period 1250–1520 (black line). The black line is normalized for
+visual convenience such that its last point is equal to the first point of the gray
+line.
+
+
+population series, Clark estimates a regression of his village- and
+manor-level population data on time and village/manor fixed ef-
+fects. Clark refers to the time effects from this regression as a
+population trend. We plot this population trend in Figure IV (nor-
+malized for visual convenience). We base our estimates of the pop-
+ulation of England before 1540 on this population trend series. In
+Section IV.C, we discuss how this series compares with (lower fre-
+quency) population data reported in Broadberry et al. (2015).
+      We assume that the true population is measured with er-
+ror. Specifically, we assume that nt = ψ + n˜ t + ιtn , where nt de-
+notes the true unobserved population, n˜ t denotes our observed
+population series (Clark’s population trend series prior to 1530
+and the population series from Wrigley et al. 1997 after 1530),
+ιtn ∼ tνn (0, σn2 ) denotes measurement error, and ψ denotes a nor-
+malization constant. We normalize ψ to zero after 1530 and esti-
+mate its value for the pre-1530 Clark series. We allow for a struc-
+tural break in the variance of the measurement error σn2 in 1540.
+Finally, population data are missing for 1530. We view it as unob-
+served and estimate its value.
+
+                       WHEN DID GROWTH BEGIN?                           847
+
+II.B. Identification and Estimation
+
+
+
+
+                                                                                Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+     We estimate the slope of the labor demand curve—α in
+equation (1)—under the assumption that the Black Death is an
+exogenous shock to the population. Specifically, we estimate α as
+the ratio of the change in real wages and the change in the popu-
+lation between 1340 and 1360. This is the slope between the point
+for 1340 and the point for 1360 in Figure II.7 The identifying as-
+sumption is that the Black Death dominates the change in wages
+and population between 1340 and 1360. We choose 1360 as op-
+posed to 1350 as our post–Black Death point due to attempts by
+the lords in England to keep wages low in the immediate after-
+math of the Black Death. In 1351, the Statute of Laborers was
+passed, which set a maximum wage equal to the prevailing wage
+prior to the Black Death. These attempts may have had some ef-
+fect on wages during the 1350s, but wages responded strongly in
+the 1360s.
+     This procedure yields a value of α = 0.70, which lines up well
+with the overall slope of the points in Figure II before the sev-
+enteenth century. This suggests that much of the variation in
+the population and real wages of England before the seventeenth
+century was driven by labor supply shocks such as plagues and
+other disease. With a Cobb-Douglas production function, α is also
+the land share of production. However, in Online Appendix C, we
+show that the relationship between the land share of production
+and the slope of the labor demand curve is sensitive to the elastic-
+ity of substitution between land and labor. A constant elasticity
+of substitution production function implies that the land share is
+σ α, where σ is the elasticity of substitution between land and la-
+bor. Assuming an elasticity of substitution of 0.66 (Boppart et al.
+2023) implies a land share of 0.66 × 0.70 = 0.46. More generally,
+additional parameters are needed to go from the slope of the labor
+demand curve to factor shares.
+     Armed with data on wt and lt and an estimate of α, we can
+“back out” values for log productivity, at , from equation (1) (up
+to a constant). Because we are primarily interested in persistent
+changes in productivity, we filter out high-frequency variation in
+at by assuming that at is made up of a permanent and transi-
+
+
+    7. Figure II adjusts for measurement error. To estimate α, we use the raw
+data for 1340 and 1360. Our estimate of α is therefore only approximately the
+slope between the point for 1340 and the point for 1360 in Figure II.
+
+848            THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+tory component. We assume the permanent component follows a
+
+
+
+
+                                                                                  Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+random walk process with drift μ:
+(2)                        a˜ t = μ + a˜ t−1 + 1t .
+     The average growth rate of productivity is given by the pa-
+rameter μ. To capture changes in long-run growth, we allow for
+structural breaks in μ. Recall that changes in productivity corre-
+spond to shifts in the labor demand curve. We allow for a break
+in 1810 associated with the Industrial Revolution. But Figure II
+suggests that the labor demand curve began shifting out earlier.
+As a consequence, we allow for one additional break earlier in
+the sample. This allows for the possibility that there may have
+been a break in average growth before the Industrial Revolution.
+We consider a range of possible dates for the first break between
+1550 and 1800.8 The method we use to pin down the timing of
+this earlier break and to estimate the model more generally is
+described in detail in Section III.
+
+II.C. When Did Growth Begin?
+     Figure V plots our estimates of the probability that a pre–
+Industrial Revolution break in productivity growth occurred at
+different dates between 1550 and 1800. The probability of a
+break spikes in 1600. It stays high in 1610 and 1620 and then
+falls off. The probability is very low prior to 1590 and also low
+after 1650. The probability of a break occurring before 1640—
+that is, before the English Civil War—is estimated to be 59%.
+The probability of a break occurring before 1680—that is, before
+the Glorious Revolution—is 73%. For expositional simplicity, we
+date the break in 1600. Results from our more complex models
+in Sections III and IV yield 1600 as the most likely break date
+(see Online Appendix Figure A.2).
+     Table I presents our estimates of the average growth rate
+of productivity μ for the three regimes over our sample. We es-
+timate that average productivity growth prior to 1600 was zero.
+Kremer (1993) used data on the growth rate of the world popu-
+lation to argue that growth has been nonzero and increasing for
+
+     8. The fact that we allow for permanent breaks in productivity growth im-
+plies that productivity growth has a unit root component. This allows our model
+to match the fact that the population is integrated of order two in our sample,
+which has been emphasized in prior work on this topic (Bailey and Chambers
+1993; Crafts and Mills 2009).
+
+                                 WHEN DID GROWTH BEGIN?                                               849
+
+
+
+
+                                                                                                                Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                                 FIGURE V
+               Probability of Different Productivity Growth Break Dates
+  The figure plots our estimate of the probability that a structural break occurred
+in the parameters μ, σ1 , and σ2 in different decades between 1550 and 1800.
+
+
+                                                TABLE I
+                                      PRODUCTIVITY GROWTH
+
+                           Mean                Std. dev.                 2.5%                97.5%
+
+μa,1                        0.00                  0.01                − 0.01                   0.02
+μa,2                        0.04                  0.02                  0.02                   0.10
+μa,3                        0.19                  0.01                  0.17                   0.22
+
+   Notes. The table presents the mean, standard deviation, 2.5% quantile, and 97.5% quantile of the posterior
+distribution we estimate for average productivity growth μ in the three regimes, using the simple procedure
+described in Section II. See Online Appendix Table A.1 for the posterior distribution of σ1,t and σ2,t .
+
+
+many millennia. The world population estimates he used indi-
+cate that world population growth from 1200 to 1500 was 0.6%
+per decade. In our Malthusian model (as well as Kremer’s model),
+steady-state productivity growth is α times steady-state popula-
+tion growth. Using our estimate of α discussed above, this sug-
+gests that growth in productivity was 0.4% per decade over the
+period 1200 to 1500, that is, positive but glacial. This slow growth
+rate is well within the credible set of our pre-1600 estimate
+of μ.
+
+850             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+
+
+                                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                     FIGURE VI
+                      Permanent Component of Productivity
+  The figure plots our estimates of the evolution of the permanent component of
+productivity a˜t over our sample period (natural log relative to its value in 1250).
+The black line is the mean of the posterior for each period, and the gray shaded
+area is the 90% central posterior interval.
+
+
+
+     Our results indicate that sustained productivity growth be-
+gan in 1600 (or around that time). We estimate average produc-
+tivity growth of 4% per decade over the period 1600 to 1810. In the
+early nineteenth century, productivity growth accelerated sharply
+to 19% per decade. We conclude from these estimates that the pe-
+riod from 1600 to 1810 was a time of transition in England from
+an era of total stagnation to an era of modern economic growth.
+We refine these estimates in Sections III and IV.
+     Figure VI presents our initial estimate of the time series evo-
+lution of the permanent component of productivity. These esti-
+mates indicate that the level of productivity in England was very
+similar in 1600 to what it had been in the late thirteenth century.
+In the intervening period, productivity fluctuated a slight bit. Af-
+ter 1600, productivity began a sustained increase, which acceler-
+ated sharply in 1810. As in most models in macroeconomics, pro-
+ductivity growth is a residual. In later sections, we consider more
+complex models with capital and in which we allow the elastic-
+ity parameters in the production function to change over time. In
+these cases, we attribute a substantial fraction of the post-1800
+
+                         WHEN DID GROWTH BEGIN?                               851
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                    FIGURE VII
+                          Productivity and Real Wages
+  The figure plots our estimates of the evolution of the permanent component of
+productivity a˜t along with the real wage series we use.
+
+
+productivity growth in Figure VI to capital deepening and the
+falling importance of land in production.9
+
+II.D. Real Wages, Productivity, and Engels’ Pause
+     Figure VII compares our estimate of productivity with the
+data we use on real wages. This figure illustrates well the impor-
+tance of accounting for Malthusian population forces when esti-
+mating productivity in the preindustrial era. Our analysis implies
+that the large changes in real wages before 1600 are explained
+almost entirely by changes in the population and almost not at
+all by changes in productivity. During this period, the economy
+moved up and down a relatively stable labor demand curve as
+suggested by Figure II. First, plagues reduced the population and
+this increased wages. Then, the population recovered from these
+
+
+     9. Online Appendix Table A.1 presents estimates of the standard deviation of
+the permanent and transitory productivity shocks. These vary very little across
+the three regimes. The standard deviation of the permanent productivity shocks
+is 0.03 prior to 1600 and 0.02 after 1600. The standard deviation of the transitory
+productivity shocks is 0.05 prior to 1600 and 0.04 after 1600.
+
+852             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+plagues and real wages fell. As a result, changes in productivity
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+were very substantially muted relative to changes in real wages.
+     Real wages are also a poor guide to changes in productivity
+for the period from 1600 to 1860. Over this period, however, the
+pattern is reversed: productivity moved substantially more than
+real wages. Productivity started to grow after 1600. But this in-
+duced rapid growth in the population. Since the labor demand
+curve was downward sloping due to land being a fixed factor,
+growth in the population put downward pressure on wages. Over
+this period, real wages, therefore, lagged behind growth in pro-
+ductivity.
+     Our analysis provides a simple explanation for Engels’ Pause,
+the fact that real wages did not rise appreciably during the early
+decades of industrialization in England. We see in Figure VII
+that over 1730 and 1800, real wages in England fell slightly de-
+spite substantial productivity growth. (The real wage series of
+Feinstein (1998) and Allen (2007)—which differ somewhat from
+Clark’s real wage series—extend the pause a few decades into
+the nineteenth century.) One explanation for this fact—famously
+articulated by Engels (1845)—is that the gains from capitalism
+overwhelmingly accrue to capitalists as opposed to laborers. Our
+analysis suggests an alternative Malthusian explanation: rapid
+growth in the population put downward pressure on the marginal
+product of labor and thus reduced the growth in wages relative to
+productivity.10
+     One reason we chose to use the wage series for unskilled
+building workers in our analysis is to capture a part of the la-
+bor market that involved relatively voluntary labor and therefore
+a better measure of the marginal product of labor than, say, the
+
+
+     10. Allen (2009b) comes to a similar conclusion using quite different data and
+methods. He also concludes that population growth was a crucial contributor to
+stagnant real wages in England during Engels’ Pause: “population growth was a
+necessary condition for stationary real wages: Engels’ pause looks like Malthus’
+dismal science come true” (430). Allen’s model is more complex than the simple
+model we analyze in this section. In his model, slow accumulation of capital and
+a low elasticity of substitution between capital and labor also contribute to low
+growth in real wages during Engels’ Pause. We extend our model to include cap-
+ital in Section III. In Allen’s model, growth in capital eventually catches up to
+growth in the population leading real wage growth to pick up. Our later analysis
+places a greater emphasis on reductions in the importance of land in production in
+eliminating the Malthusian character of growth over the course of the nineteenth
+century.
+
+                    WHEN DID GROWTH BEGIN?                     853
+
+work of the villein in the countryside. Nevertheless, our assump-
+
+
+
+
+                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+tion of a competitive labor demand curve is clearly a simplifica-
+tion, and it is important to consider how our results might change
+were we to weaken this assumption. A constant wage markdown
+due to monopsony power or coercion by employers would not af-
+fect our results. It would only affect the estimate of the constant
+φ in equation (1). A wage markdown that was getting smaller
+over time as the labor market became more free and competitive
+would show up as an increase in productivity in our analysis. So
+long as this process was slow—which seems likely—the bias in
+our results arising from this issue would also be small.
+
+
+II.E. From When to Why
+     By dating the onset of productivity growth, our results help
+discriminate between competing explanations for why growth be-
+gan. We estimate that sustained productivity growth began in
+England substantially before the Glorious Revolution of 1688.
+According to our estimates, productivity in England rose by
+34% from 1600 to 1680. North and Weingast (1989) argue that
+the political regime that emerged in England after the Glori-
+ous Revolution—characterized by a power-sharing arrangement
+between Parliament, the Crown, and the common law courts—
+resulted in secure property rights and rule of law and thereby laid
+the foundation for economic growth. The institutional changes as-
+sociated with the Glorious Revolution may well have been impor-
+tant for growth, but our results indicate that the seeds of growth
+were sown earlier.
+     Our results support explanations of the onset of growth
+that focus attention on developments that occurred in the pe-
+riod around 1600. The Reformation is an obvious candidate. In
+particular, Henry VIII’s confiscation of monastic lands was a big
+shock to land-ownership patterns and the land market in Eng-
+land (Heldring, Robinson, and Vollmer 2021). England also be-
+came a favored destination for skilled immigrants fleeing reli-
+gious persecution on the continent. This was also a period of
+rapidly increasing urbanization in England. London experienced
+an explosion of its population around this time—from 55,000 in
+1520 to 475,000 in 1670 (Wrigley 2010)—likely due to a rapid in-
+crease in international trade. English woolen exports expanded
+rapidly over this period (new draperies) as did intercontinen-
+tal trade, colonization, and privateering. The British East India
+
+854          THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+Company was founded in 1600, and the Virginia Company
+
+
+
+
+                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+founded its first permanent settlement in North America in 1607.
+     Our finding that the onset of growth preceded both the Glori-
+ous Revolution and the English Civil War (1642–1651) lends sup-
+port to the Marxist view that economic change propelled history
+forward and drove political and ideological change. Marx (1867)
+stressed the transition from feudalism to capitalism. He argued
+that after the disappearance of serfdom in the fourteenth cen-
+tury, English peasants were expelled from their land through the
+enclosure movement. That spoliation inaugurated a new mode of
+production: one where workers did not own the means of produc-
+tion and could only subsist on wage labor. This proletariat was
+ripe for exploitation by a new class of capitalist farmers and in-
+dustrialists. In that process, political revolutions were a decisive
+step in securing the rise of the bourgeoisie. To triumph, capital-
+ism needed to break the remaining shackles of feudalism. As the
+Communist Manifesto puts it, “they had to be burst asunder; they
+were burst asunder” (Marx and Engels 1848, 40–41). Hill (1940,
+1961) offers more recent treatments of the political revolutions in
+England in the seventeenth century that stress class conflict and
+their economic origins.
+     Acemoglu, Johnson, and Robinson (2005) synthesize the
+Marxist and institutionalist views. They argue that Atlantic trade
+enriched a merchant class that then demanded secure property
+rights and secured these rights through the Civil War and Glori-
+ous Revolution. This last narrative lines up well with our result
+that steady growth—perhaps driven by the Atlantic trade—began
+about half a century before the Civil War. However, we do not de-
+tect a radical increase of growth in the immediate aftermath of ei-
+ther the Civil War or the Glorious Revolution: 3.2% (1600–1640),
+4.2% (1640–1680), and 4.5% (1680–1810).
+     Allen (1992) argues that a long and gradual process of in-
+stitutional change in England over the 600-year period from the
+Norman Conquest to the Glorious Revolution resulted in a situ-
+ation in the sixteenth century where the yeoman class had ac-
+quired a substantial proprietary interest in the land, and thus
+an incentive to innovate. The timing of Allen’s “rise of the yeo-
+man” lines up reasonably well with our estimate of the onset
+of growth. According to Allen, property rights, rule of law, and
+personal freedom gradually expanded, and the social order was
+gradually transformed from a feudal to a capitalist order. From
+the twelfth century, royal courts helped freeholders gain full
+
+                    WHEN DID GROWTH BEGIN?                     855
+
+ownership over their land. After the Black Death, serfdom col-
+
+
+
+
+                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+lapsed as landlords competed for scarce labor. Early enclosures
+(fifteenth and early sixteenth centuries) involved brutal evictions
+and depopulation of manors. The Crown reacted to this by in-
+creasing protection of tenant farmers.
+      The spread of movable-type printing across Europe after
+1450 led to a large increase in literacy in England in the six-
+teenth and seventeenth centuries (Cressy 1980; Houston 1982)
+and a huge drop in the price of books (Clark and Levin 2011).
+Dittmar (2011) argues that cities exposed to printing grew sub-
+stantially faster than otherwise similar cities. More generally,
+Rosenberg and Birdzell (1986) argue for the emergence of institu-
+tions favorable to commerce in the early modern period in West-
+ern Europe, especially in England and Holland. These included
+impartial commercial courts, bills of exchange, marine insurance,
+and double-entry bookkeeping in addition to several of the insti-
+tutions discussed above.
+      Printing and literacy likely had wide ranging effects on cul-
+ture. Mokyr (2009, 2016) and McCloskey (2006, 2010, 2016) have
+argued that the crucial change that caused growth to begin was
+the emergence of a culture of progress based on the idea that
+humanity can improve its condition through science and ratio-
+nal thought. Others have stressed a Protestant ethic (Weber
+1904, 1905) and Puritanism (Tawney 1926). The timing of these
+changes lines up reasonably well with our estimates, although it
+is not straightforward to pinpoint precisely what these theories
+imply about the timing of the onset of growth.
+      Bogart and Richardson (2011) stress the importance of the
+post–Glorious Revolution regime’s push to reorganize and ratio-
+nalize property rights through enclosures, statutory authority
+acts, and estate acts. While our results contradict the notion that
+growth began with the Glorious Revolution, the fact that Eng-
+land underwent massive institutional change in the seventeenth
+and eighteenth centuries may have played an important role in
+sustaining growth during this period.
+      Allen (2009a) argues that the Industrial Revolution occurred
+in Britain around 1800 because innovation was uniquely prof-
+itable then and there. His theory relies on growth in the sev-
+enteenth century leading to high real wages in England in the
+eighteenth century as well as the development of a large coal
+industry. High wages and cheap coal made it profitable to in-
+vent labor-saving technologies in textiles, such as the spinning
+
+856          THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+jenny, water frame, and mule, as well as coal-burning technolo-
+
+
+
+
+                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+gies such as the steam engine and coke smelting furnace. While
+our theory does not point to the Industrial Revolution as the gen-
+esis of economic growth, Allen’s theory helps explain how growth
+was sustained and the particular direction it took that led to the
+huge fall in the importance of land in production that we estimate
+later.
+
+
+          III. A MALTHUSIAN MODEL OF THE ECONOMY
+     The simple analysis in Section II makes a number of strong
+assumptions. In the remainder of the article, we explore a richer
+framework that allows us to relax some of these. Most important,
+we model the evolution of the population. Thus, we can present
+novel estimates of the strength of Malthusian population forces
+in preindustrial England. We explicitly incorporate plague shocks
+into this part of the model, which helps the model distinguish be-
+tween measurement error and true variation in the population.
+We also incorporate capital accumulation into the model, explore
+alternatives to the assumption that labor supply was proportional
+to the population, allow for a falling importance of land in produc-
+tion after the onset of industrialization, and estimate the slope of
+the labor demand curve using the entire data set as opposed to
+identifying it from the Black Death. This richer framework al-
+lows us to explore the robustness of our conclusions from Section
+II and present a number of additional interesting results.
+     While our focus is on the preindustrial period, our data ex-
+tends well into the early industrial period. It is therefore impor-
+tant for our model to capture the character of the preindustrial
+economy and of the early industrial economy. The role of land
+in production is particularly important in this regard. Before the
+Industrial Revolution, land was a hugely important factor of pro-
+duction. The advent of steam power led to a sharp fall in the role
+of land in production as fossil fuels substituted for human and
+animal power in the production of energy (and the role of food
+production in the economy shrank). To capture this change, we
+distinguish between the pre-industrial period and the early in-
+dustrial period and allow the importance of land in production to
+change after the onset of the Industrial Revolution. Section III.A
+presents our model of the preindustrial economy, and Section
+III.B presents our model of the early industrial economy.
+
+                         WHEN DID GROWTH BEGIN?                           857
+
+III.A. A Model of the Preindustrial Economy
+
+
+
+
+                                                                                  Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+    Output is produced with land, capital, and labor according to
+the production function:
+                   Yt = Ft (Z, Kt , Lt ) = At Zα Ktβ Lt1−α−β ,
+where Kt denotes capital.11 Producer optimization gives rise to
+the labor demand curve:
+                     Wt = (1 − α − β )At Zα Ktβ Lt−α−β .
+Taking logs of this equation yields
+(3)               wt = φ˜ + at + βkt − (α + β )lt ,
+where φ˜ = log(1 − α − β ) + α log Z.
+     Producers accumulate capital to the point where the
+marginal product of capital is equal to its user cost. This gives
+rise to a capital demand equation:
+(4)                    rt + δ = βAt Zα Ktβ−1 Lt1−α−β ,
+where rt is the rental rate for capital and δ is the rate of de-
+preciation of capital. Because we do not have data on capital
+for the preindustrial period, we use the capital demand equation
+(equation (4)) to eliminate Kt from the labor demand equation
+(equation (3)). Taking logs of the resulting equation yields
+                      1         α         β
+(5)      wt = φ˜  +     at −       lt −      log (rt + δ ) ,
+                     1−β      1−β        1−β
+where
+                    β                              α
+          φ˜  =       log β + log (1 − α − β ) +     log Z.
+                   1−β                            1−β
+     The log of productivity at is the sum of a permanent and tran-
+sitory component:
+(6)                             at = a˜ t + 2t ,
+where 2t ∼ N (0, σ22 ) is the transitory component and a˜ t
+                                                       is the
+permanent component of productivity, which follows a random
+walk with drift
+(7)                         a˜ t = μ + a˜ t−1 + 1t ,
+with 1t ∼ N (0, σ21 ). Both 1t and 2t are independently distributed
+over time. The transitory component of productivity may reflect
+
+     11. Online Appendix D presents results for a more general production func-
+tion.
+
+858             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+both measurement error and true transitory variation in pro-
+
+
+
+
+                                                                                         Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+ductivity (e.g., due to transitory variation in weather). As in
+most macroeconomic models, productivity is a catch-all variable
+capturing the influence of all variables that are not explicitly
+modeled in the production function. Relative to the model in
+Section II, we now incorporate capital accumulation. Our mea-
+sure of productivity is narrower as a consequence. Productivity
+in this model nonetheless captures a number of features of real-
+ity in addition to technology, including institutions, the effects of
+international trade, and colonial exploitation.
+     The average growth rate of productivity is given by the pa-
+rameter μ. As in Section II, we allow for two breaks in μ, that
+is, two changes in the average growth rate of productivity. (We
+allow the variances of the transitory and permanent productivity
+shocks—σ21 and σ22 —to break at the same times.) We fix one of
+these breaks in 1810. This break captures the Industrial Revolu-
+tion. We allow for another break earlier in the sample between
+1550 and 1800.
+     To pin down the timing of the first break, we estimate a
+mixture model. Since μ, σ21 , and σ22 break twice, they take on
+three values, one for each regime. We denote these as μ(i ) with
+i ∈ {1, 2, 3} (with analogous notation for σ21 and σ22 ). From the
+beginning of our sample until 1540, μ = μ(1). From 1550 un-
+til 1800, μ = (1 − I)μ(1) + I μ(2), where I is an indicator variable
+that switches from zero to one at the time of the first break. Fi-
+nally, from 1810 until 1860, μ = μ(3). The indicator variable I has
+a multinomial distribution with probabilities of switching from
+zero to one at each date between 1550 and 1800. We estimate the
+probabilities of the multinomial distribution for I. The prior for
+these probabilities is a Dirichlet distribution with concentration
+vector cb × (1, ..., 1). We choose a small value for cb . This ensures
+that each draw from the distribution is close to a corner of the
+distribution, that is, chooses a specific break date. In particular,
+we set cb = 0.001.12 The output from our estimation of these prob-
+abilities is a posterior probability distribution over break dates.
+     We assume that the labor force in the economy is proportional
+to the population and that each worker works Dt days per year.
+
+
+
+    12. For a simple exposition of the Dirichlet distribution and the role of the con-
+centration parameter, see Stan Function Reference, section 23: https://mc-stan.
+org/docs/functions- reference/dirichlet- distribution.html.
+
+                       WHEN DID GROWTH BEGIN?                     859
+
+This implies that
+
+
+
+
+                                                                        Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                              Lt =    Dt Nt ,
+where Nt denotes the population and is a constant. Taking logs
+of this equation and using the resulting equation to eliminate lt
+in equation (5) yields
+                   1        α                β
+(8)    wt = φ +       at −     (dt + nt ) −     log (rt + δ ) ,
+                  1−β      1−β              1−β
+                  α
+where φ = φ˜  − 1−β λ with λ = log .
+    A central aspect of our model is the law of motion for the
+population. Following Malthus (1798), we assume that population
+growth is increasing in real income:
+                         Nt
+                             =    (Wt−1 Dt−1 )γ t ,
+                        Nt−1
+where    is a constant, γ is the elasticity of (gross) population
+growth with respect to real income, and t denotes other (ex-
+ogenous) factors affecting population growth. Taking logs of this
+equation yields
+(9)               nt − nt−1 = ω + γ (wt−1 + dt−1 ) + ξt .
+     Malthus argued that the birth rate and the death rate var-
+ied with real income. He described “preventive checks” on pop-
+ulation growth that lowered birth rates. These included contra-
+ception, delayed marriage, and regulation of sexual activity dur-
+ing marriage. Malthus also described “positive checks” on popu-
+lation growth that raised death rates. These include disease, war,
+severe labor, and extreme poverty. Modern research on fertility
+emphasizes a quantity-quality trade-off where parents invest in
+child quality rather than child quantity when their income rises
+(Becker and Lewis 1973; Becker and Barro 1988). In our model,
+the parameter γ captures the combined effect of all these effects.
+     We allow for two types of exogenous population shocks:
+(10)                          ξt = ξ1t + ξ2t .
+First, we allow for “plague” shocks:
+                      
+                        β(β1 , β2 ), with probability π
+(11)      exp(ξ1t ) ∼
+                        1,           with probability 1 − π .
+These plague shocks occur infrequently (with probability π ) but
+when they occur, they kill a (potentially sizable) fraction of the
+population. The fraction of the population that survives follows
+
+860                 THE QUARTERLY JOURNAL OF ECONOMICS
+
+                                TABLE II
+
+
+
+
+                                                                                                          Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+           ENERGY CONSUMPTION (PETAJOULES) IN ENGLAND AND WALES
+
+                               1560           1700           1750          1800            1850
+
+Draught animals                 21.1          32.8          33.6           34.3             50.1
+People                          14.9          27.3          29.7           41.8             67.8
+Firewood                        21.5          22.5          22.6           18.5             2.2
+Wind                             0.2           1.4           2.8           12.7             24.4
+Water                            0.6           1.0           1.3            1.1             1.7
+Coal                             6.9          84.0          140.8          408.7          1,689.1
+Total                           65.1          168.9         230.9          517.1          1,835.3
+Total less coal                 58.2          84.9          90.1           108.4           146.2
+
+  Notes. The table shows energy consumption in England and Wales from various sources in petajoules. It
+reproduces a portion of Table 2.1 in Wrigley (2010).
+
+
+
+a beta distribution β(β1 , β2 ). We also allow for a second type
+of population shock: ξ2t ∼ N (0, σξ22 ). Both population shocks are
+independently distributed over time. Together, these population
+shocks are meant to capture a host of potential influences on pop-
+ulation growth, in addition to plagues.
+
+III.B. A Model of the Early Industrial Economy
+     The last century of our data covers the early industrial pe-
+riod in England. A crucial development over this time was the
+rapid fall in the importance of land as a factor of production. The
+primary driving force in this development was the introduction
+of the steam engine, powered by fossil fuels. This technological
+advance meant that the production of energy was no longer land
+intensive (Wrigley 2010). Table II presents data on energy con-
+sumption from various sources over our sample period. Prior to
+the introduction of steam power, the vast majority of energy was
+derived from draught animals, human power, and firewood. These
+energy sources were extremely land intensive. Both draught an-
+imals and human power rely on the production of food (feed in
+the case of animals), and firewood requires vast forests. In this
+environment, the fixed nature of land created a severe bottleneck
+for economic expansion. Our preindustrial model captures this by
+explicitly modeling the reliance of production on land.
+     With the introduction of the steam engine, energy produc-
+tion was gradually decoupled from land use. This dramatically re-
+duced the importance of land in production. The last two columns
+in Table II show just how enormous the increase in energy
+consumption was during even the relatively early phase of the
+
+                        WHEN DID GROWTH BEGIN?                           861
+
+industrial era. By 1850, total energy consumption had risen by
+
+
+
+
+                                                                               Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+over a factor of 10 relative to 1700, with virtually all of this in-
+crease coming from coal. It is clear that nothing remotely like
+this would have been possible without steam power or some other
+dramatically less land-intensive energy source.
+     To capture this change parsimoniously, we allow the expo-
+nents in the production function to change after the onset of
+the Industrial Revolution. Acemoglu and Restrepo (2018, 2019b)
+show how a production function that is explicit about how inter-
+mediate inputs (such as energy) produced by completing various
+tasks and new technologies (such as the steam engine) can change
+the factor content of production is equivalent to a traditional pro-
+duction function written in terms of primary factors only as long
+as the exponents on the factors are allowed to vary with technical
+progress. We take this approach and assume for the early indus-
+trial period that
+(12)            Yt = Ft (Z, Kt , Lt ) = At Zαt K βt Lt1−αt −βt ,
+which is the same as before except that the exponents αt and βt
+are now time varying. A fall in αt will then capture the fall in
+the importance of land as a factor of production, and the evolu-
+tion of βt will determine to what extent it is capital or labor that
+increases in importance. We do not model the use of fossil fuels ex-
+plicitly. Their use is reflected in the changing output elasticities
+and in higher productivity.
+     In this case, the labor demand curve (equation (8)) becomes:
+                      1           αt                  βt
+(13)    wt = φt +          at −        (dt + nt ) −        log (rt + δ ) ,
+                    1 − βt      1 − βt              1 − βt
+where
+          βt                                   αt
+ φt =          log βt + log (1 − αt − βt ) +        log Z − (αt + βt )λ.
+        1 − βt                               1 − βt
+      The fact that αt and βt can change implies that more data
+is needed to identify the model: an increase in wages for a given
+level of labor supply could be due to an increase in at or a fall in
+αt . To address this issue, we make use of the demand curves for
+land and capital and data on the quantity of capital and the price
+of land after 1760. We assume that potential renters and owners
+of land will trade until the rental price of land equals its marginal
+product:
+(14)                   St = αt At Zαt −1 K βt Lt1−αt −βt ,
+
+862             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+where St denotes the rental price of land. Capital demand is the
+
+
+
+
+                                                                                            Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+same as before (equation (4)) except that αt and βt are time vary-
+ing. Taking logs and manipulating the land, capital, and labor
+demand curves yields:
+(15) st = wt + nt + dt − log Z + log αt − log(1 − αt − βt ) + λ
+
+                  log(rt + δ) = wt + nt + dt − kt + log βt
+(16)                               − log(1 − αt − βt ) + λ.
+These two extra equations pin down αt and βt . Simple manipu-
+lation of the demand curves for labor, land, and capital—which
+we spell out in detail in Online Appendix E—establishes three in-
+tuitive results. First, an increase in st (land rents) holding other
+variables constant implies an increase in αt and a decrease in βt
+and 1 − αt − βt . Second, an increase in rt (the return on capital)
+holding other variables constant implies an increase in βt and
+a decrease in αt and 1 − αt − βt . Third, an increase in wt (wages)
+holding other variables constant implies an increase in 1 − αt − βt
+and a decrease in αt and βt . At a mechanical level, we are adding
+two equations per time period—equations (15) and (16)—and two
+observable variables per time period—st and kt .
+
+III.C. Measuring Productivity with Structural Transformation
+     Allowing the exponents in the production function to change
+raises an important complication. In this case, At is no longer a
+natural measure of productivity.13 Productivity is meant to cap-
+ture the rate at which inputs can be converted into outputs. In set-
+tings with multiple inputs (or outputs), how to operationalize this
+concept is ambiguous. In some cases, such as Yt = At F (Xt ) where
+Xt denotes a vector of inputs, all reasonable measures of produc-
+tivity agree (in this case At ). But in the more general case of
+Yt = Ft (Xt ), this is not the case. Caves, Christensen, and Diewert
+(1982) introduce the notion of a Malmquist productivity index for
+a quite general case of production technologies, based on ideas in
+
+     13. One simple way to see this is to consider a change in the units
+that we use to express labor. Suppose L̈t ≡ ψLt , then Yt = At Zαt Ktβt Lt1−αt −βt =
+    At      αt βt 1−αt −βt . With the new units for labor, it is   At
+ψ 1−αt −βt Z Kt L̈t                                            ψ 1−αt −βt rather than
+                                                                                   At
+At that multiplies the factors of production. If αt and βt change over time,
+                                                                               ψ 1−αt −βt
+will behave differently from At . Clearly, a more general concept of productivity
+is needed. See Online Appendix F for a discussion of how the Malmquist index
+(introduced below) avoids this issue.
+
+                          WHEN DID GROWTH BEGIN?                                  863
+
+Malmquist (1953). This index uses the notion of the distance be-
+
+
+
+
+                                                                                          Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+tween the input-output vector chosen at one point in time and the
+technological frontier at another point in time. For example, the
+distance of the input-output vector that is chosen in period t + 1
+from the time t technological frontier is Dt (Xt+1 , Yt+1 ) = FFt+1    (Xt+1 )
+                                                                    t (Xt+1 )
+                                                                               —
+that is, actual output at time t + 1 divided by counterfactual out-
+put using the input vector of time t + 1 but the time t production
+function. Analogously, the distance of the input-output vector that
+is chosen at time t from the time t + 1 technological frontier is
+Dt+1 (Xt , Yt ) = FFt+1
+                     t (Xt )
+                        (Xt )
+                              .
+     Caves, Christensen, and Diewert (1982) recommend using
+a geometric average of Dt (Xt+1 , Yt+1 ) and Dt+1 (Xt , Yt )−1 as a
+Malmquist index of productivity:
+                 
+       Mt               Ft (Z, Kt , Lt )Ft (Z, Kt−1 , Lt−1 )
+(17)          =                                              , M0 = 1.
+      Mt−1         Ft−1 (Z, Kt , Lt )Ft−1 (Z, Kt−1 , Lt−1 )
+We adopt this recommendation. With constant exponents α and
+β, the growth rates of Mt and At are the same (i.e., MMt−1                 t
+                                                                             = AAt−1
+                                                                                  t
+                                                                                     ).
+More generally, the growth rate of Mt will differ from the growth
+rate of At in important ways. See Online Appendix F for a more
+detailed discussion of the Malmquist index.
+     With production function (12), the log of the Malmquist index
+is
+(18)     ˆ t = aˆ t + αˆ t log Z + βˆt k̄t − (αˆ t + βˆt )(d¯t + n̄t + λ),
+         m
+where hats denote deviations from the previous period, xˆt = xt −
+xt−1 , and bars denote the average of period t − 1 and period t,
+x̄t = xt−12+xt . Once again, if αt and βt are constant, this expression
+collapses to m    ˆ t = aˆ t .
+      As in the preindustrial era, we assume that the log of pro-
+ductivity (mt ) is subject to permanent and transitory shocks in
+the early industrial era:
+(19)                                  ˜ t + 2t ,
+                                 mt = m
+where
+(20)                                ˜ t−1 + 1t ,
+                             ˜t = μ+m
+                             m
+1t ∼ N (0, σ21 ), 2t ∼ N (0, σ22 ), and 1t and 2t are independently
+distributed over time. Here, m         ˜ t is the permanent component of
+productivity, which follows a random walk with drift, while 2t is
+the transitory component of productivity.
+
+864            THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+
+
+                                                                                 Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                 FIGURE VIII
+                  Rates of Return on Land and Rent Charges
+ The figure plots the data we use on rates of return on land and rent charges.
+These data are from Clark (2002, 2010).
+
+
+
+III.D. Data on Interest Rates, Land Rents, Capital, and Days
+       Worked
+     For the preindustrial period, we use data on rates of return to
+estimate the evolution of the capital stock. Figure VIII plots our
+data on rates of return on agricultural land and “rent charges”
+compiled by Clark (2002, 2010). The rate of return on agricul-
+tural land is measured as RP , where R is the rent and P is the
+price of a piece of land. “Rent charges” should not be confused
+with land rents. Rent charges were yields on perpetual nominal
+debt obligations secured by land or buildings (i.e., a collateral-
+ized loan). These are also measured as RP , where R is the annual
+payment and P is the price of the obligation (which was usually
+much smaller than the value of the collateral). See Clark (2010)
+for more detail.
+     We view our series on rates of return of agricultural land and
+rent charges as two noisy measures of the rate of return on cap-
+ital in England over our sample period. In other words, we as-
+sume that rt = r˜it + ιrit , where rt denotes the true rate of return on
+capital at time t, r˜it denotes noisy measure i, and ιrit ∼ tνir (0, σ˜ ir2 )
+denotes measurement error. In periods when neither measure is
+
+                        WHEN DID GROWTH BEGIN?                             865
+
+
+
+
+                                                                                   Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                   FIGURE IX
+                      Land Rents and Capital after 1760
+  The figure plots the data we use on land rents from Clark (2002, 2010) and the
+net capital stock from Feinstein (1988, Table VIII).
+
+
+
+available, we assume that the interest rate follows a random walk
+with truncated normal innovations: rt ∼ N(0,.2) (rt−1 , 0.012 ).
+      We date the shift from the preindustrial period to the early
+industrial period to between 1760 and 1770. This is a tradi-
+tional date for the beginning of the Industrial Revolution. Also,
+estimating a changing production function—changes in αt and
+βt —requires systematic data on rents and the capital stock. The
+capital stock series we use is from Feinstein (1988) and is only
+available after 1760. Figure IX plots the data on land rents and
+the capital stock that we use. The land rents series we use is an
+index from Clark (2002, 2010). Feinstein’s series is for the net
+capital stock and is expressed in millions of pounds in 1851–1860
+prices. It reflects both industrial and agricultural investment. We
+assume that both variables are observed with measurement error
+st = s˜t + ιts and kt = k˜ t + ιtk , where st and kt denote the true land
+rent and capital stock, respectively; s˜t and k˜ t denote our noisy
+measures of land rents and the capital stock, respectively; and
+ιts ∼ tνs (0, σ˜ s2 ) and ιtk ∼ tνk (0, σ˜ k2 ) denote the measurement error in
+these variables.
+
+866               THE QUARTERLY JOURNAL OF ECONOMICS
+
+                                    TABLE III
+
+
+
+
+                                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                          PRIORS FOR MODEL PARAMETERS
+
+Parameter                    Prior           Parameter               Prior
+
+β                            U (0, 1)             γ                U (−2, 2)
+ϕx                         N (0, 1002 )           ψ            N (10.86, 0.072 )
+ω                            N (0, 1)             μ                 N (0, 1)
+μξ1                        U (0.5, 0.9)          νξ 1             PI (1, 1.5)
+π                           U (0, 0.5)             δ          N(0,0.2) (0.1, 0.052 )
+σ21                      I(3, 0.001)           σ22            I(3, 0.005)
+σξ22                      I(3, 0.005)           σn2             I(3, 0.005)
+σd2                       I(3, 0.005)           σri2            I(3, 0.005)
+σ˜ d2                     I(3, 0.005)           σ˜ s2           I(3, 0.005)
+σ˜ k2                     I(3, 0.005)           νn−1               U (0, 1)
+νd−1                         U (0, 1)            νs−1               U (0, 1)
+νk−1                         U (0, 1)              −1
+                                                 νir                U (0, 1)
+
+
+
+III.E. Priors and Estimation Details
+     We use Bayesian methods to estimate our model. In par-
+ticular, we use a Hamiltonian Monte Carlo sampling procedure
+(Gelman et al. 2013; Betancourt 2018).14 Table III lists the
+priors we assume for the model parameters. In all cases, we
+choose highly dispersed priors. Most of the priors are self-
+explanatory, but some comments are in order. Our baseline esti-
+mation for the slope of the labor demand curve is based on move-
+ments in real wages and the population between 1340 and 1360
+as discussed in Section II. With capital, the slope of the labor de-
+                              α
+mand curve becomes α˜ = 1−β     . We set a uniform prior for β be-
+tween zero and one and recover α from α = α(1   ˜ − β ). The prior
+listed for β in Table III is for this case. We also present results
+where (α, β ) are estimated structurally from our full model. We
+explain the prior for that case below.
+     The prior for ψ is set such that the peak population before
+the Black Death is between 4.5 and 6 million with 95% prob-
+ability. This range encompasses the estimates of Clark (2007b)
+and Broadberry et al. (2015). Rather than specifying priors for
+β1 and β2 , we specify priors for the mean of ξ1 which we denote
+μξ1 = β1β+1β2 and the pseudo sample size of ξ1 which we denote
+νξ1 = β1 + β2 . The priors we choose for these parameters follow
+the recommendations of Gelman et al. (2013, 110) for a flat prior
+
+        14. We implement this procedure using Stan (Stan Development Team 2017).
+
+                         WHEN DID GROWTH BEGIN?                               867
+
+for a beta distribution. Online Appendix Figure A.3 plots the prior
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+densities for the standard deviations of 1 , 2 , and ξ2 . In Section
+IV.C, we discuss how varying our priors affects our main results.
+      To discipline the behavior of αt and βt after 1760, we assume
+that the simplex (αt , βt , 1 − αt − βt ) follows a Dirichlet distri-
+bution with concentration vector cs × (αt−1 , βt−1 , 1 − αt−1 − βt−1 ),
+where cs = 3. For any value of cs , this implies that the mean of
+αt is αt−1 and the mean of βt is βt−1 . The choice cs = 3 implies
+that, with αt−1 = βt−1 = 13 , the distribution is uniform over sim-
+plexes. A smaller value of cs would concentrate the prior dis-
+tribution toward the corners of the simplex—draws where one
+of the coefficients is close to one and the others close to zero.
+A larger value, on the other hand, concentrates the prior to-
+ward the mean of the distribution—most draws would be close
+to (αt−1 , βt−1 , 1 − αt−1 − βt−1 ). Thus, our prior choice is a way to
+center the distribution around the previous value of the coeffi-
+cients, while allowing them to change if the likelihood dictates
+it. In the case where (α, β ) is estimated structurally before 1760,
+our prior distribution for (α, β, 1 − α − β ) is a Dirichlet distribu-
+tion with concentration vector (1, 1, 1) = 3 × ( 31 , 13 , 13 ) which, once
+again, corresponds to a uniform distribution over simplexes.
+      We allow for a structural break in the probability of a plague
+π in 1680. The timing of this break is chosen to immediately fol-
+low the Great London Plague of 1665.15 This break is meant to
+capture the fact that plagues are less frequent in the latter part
+of our sample. The exact timing of this break does not affect our
+main results in a material way.
+      Finally, we need to normalize some of the variables in our
+model. Labor demand (equation (13)) features log Z and λ, which
+we normalize to zero. The observed wage, land rents, and our cap-
+ital series are indices. They are thus not normalized in a the-
+oretically consistent fashion. For wages, for instance, we would
+want to observe the marginal product of an additional unit of la-
+bor expressed in units of aggregate output. What we observe is
+an index that is normalized to 100 in 1860. Our Bayesian frame-
+work allows us to handle this issue in a straightforward fashion.
+For wages we assume that wt = ϕ w + w                   ˜ t is the observed
+                                            ˜ t , where w
+
+
+     15. Notice that the change in the population between the 1660s and the 1670s
+is affected by the Great London Plague. So ξ1t for t = 1670 will be affected by the
+Great London Plague. This is why we assume that ξ1t for t ⩾ 1680 is governed by
+a different π than earlier values of ξ1t .
+
+868            THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+wage, wt is the true wage, and ϕ w ∼ N (0, 1002 ) is a normalization
+
+
+
+
+                                                                                   Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+constant. For land rents and the capital stock, we add the fol-
+lowing normalization constants to their measurement equations:
+ϕ s ∼ N (0, 1002 ) and ϕ k ∼ N (0, 1002 ), respectively. We reproduce
+the equations and distributional assumptions of our full model in
+Online Appendix G for convenience.
+
+
+IV. ESTIMATES OF PRODUCTIVITY FROM THE FULL MALTHUSIAN
+                        MODEL
+     We present results on the evolution of productivity in Eng-
+land for several variants of the model presented in Section III.
+We consider a case in which we maintain our earlier assump-
+tions that the importance of land in production (α) is constant,
+days worked are constant, and that the slope of the labor demand
+curve is pinned down by movements in wages and the population
+at the time of the Black Death. This case differs from the simple
+model presented in Section II in that we have added capital and
+the Malthusian model of population dynamics. We refer to this
+case as the constant α, β case.
+     Figure X presents results on the evolution of productivity
+over time for the constant α, β case (gray solid line). We also
+include results for the simple model from Section II for compar-
+ison (black solid line). While the overall pattern is similar, the
+constant α, β case of the full model implies slower productivity
+growth than the simple model. The reason for this is that the full
+model incorporates capital accumulation. As a result, a portion of
+the increase in labor demand over our sample period is attributed
+to capital accumulation as opposed to productivity and less is left
+in the residual to be attributed to productivity growth.16
+
+IV.A. Productivity and the Falling Importance of Land
+    The models we have discussed so far make the standard but
+highly unrealistic assumption that the elasticity of output with
+respect to land α is constant through the early industrial period
+up to 1870. We relax this assumption by allowing the production
+function parameters α and β to change over time after the onset
+
+    16. Online Appendix Figure A.2 presents our estimate of the timing of the
+preindustrial structural break in productivity growth in the constant α, β case,
+our baseline case discussed below, and several other variants of the model. All
+these cases strongly favor a break in 1600.
+
+                         WHEN DID GROWTH BEGIN?                               869
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                     FIGURE X
+                     Permanent Component of Productivity
+  The figure plots our estimates of the evolution of the permanent component of
+productivity a˜t over the sample period for several variants of our full Malthusian
+model (natural log relative to its value in 1250).
+
+
+of the Industrial Revolution. As described in Section III, we use
+data on the quantity of capital and the price of land after 1760
+to pin down the evolution of αt and βt during the early industrial
+period.
+     Figure XI plots our estimates of the evolution of αt and βt
+over time. Recall that αt corresponds to the elasticity of output
+with respect to land, and βt corresponds to the elasticity of out-
+put with respect to capital. We estimate a value for α before the
+Industrial Revolution of 0.54 (with a standard deviation of 0.05)
+and a value for β of 0.23 (with a standard deviation of 0.07).17
+After 1760, we estimate a sharp fall in αt . By 1860, αt had fallen
+by roughly half to a value of 0.29. This sharp fall in αt reflects the
+nature of technical change during the Industrial Revolution. As
+we discuss in Section III, the advent of the steam engine powered
+
+    17. As we discuss in Section II, the land share of production differs from α
+when the elasticity of substitution between land and labor differs from one. In
+particular, if land and labor are complements in production, the land share is
+lower than α. Explicitly, allowing for a production function that is more general
+than the Cobb-Douglas production function is complicated when the structure of
+the production function is changing as it is for us after 1760.
+
+870             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+
+
+                                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                     FIGURE XI
+                     Parameters of the Production Function
+  The figure plots our estimates of the evolution of the parameters αt and βt in our
+baseline case. They are constant until 1770 by assumption. The black line is the
+mean of the posterior for each period, and the gray shaded area is the 90% central
+posterior interval.
+
+
+by fossil fuels meant that the production of energy was no longer
+land intensive. This led to a large fall in the importance of land
+in production. As αt falls, both βt and 1 − αt − βt (the elasticity of
+output with respect to labor) rise. Between 1760 and 1860, βt in-
+creased from 0.23 to 0.35, and 1 − αt − βt increased from 0.23 to
+0.36.18
+     Allowing for a fall in the importance of land in production af-
+ter 1760 has a substantial effect on our estimate of productivity
+growth after that date. The dashed black line in Figure X plots
+our estimates of productivity growth in this case, which we refer
+to as our baseline case. Productivity growth up until 1760 is very
+similar to the constant α, β case, but after 1760 it is much slower.
+In the constant α, β case, our estimate of average productivity
+growth between 1800 and 1870 is 16% per decade (Table IV).
+When we allow αt and βt to change in the early industrial pe-
+riod, our estimate of average productivity growth falls to a more
+modest level of 5% per decade over this period. This baseline case
+
+   18. Estimates of μ and γ are discussed below. Estimates of other model pa-
+rameters are presented in Online Appendix Table A.1.
+
+                                 WHEN DID GROWTH BEGIN?                                               871
+
+                                           TABLE IV
+
+
+
+
+                                                                                                                Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                      PRODUCTIVITY GROWTH
+
+                           Mean                Std. dev.                 2.5%                97.5%
+
+                                                Simple
+μa,1                          0.00              0.01                  − 0.01                   0.02
+μa,2                          0.04              0.02                    0.02                   0.10
+μa,3                          0.19              0.01                    0.17                   0.22
+                                             Constant α, β
+μa,1                       − 0.00               0.01                  − 0.01                   0.01
+μa,2                         0.03               0.01                    0.01                   0.05
+μa,3                         0.16               0.02                    0.11                   0.20
+                                               Baseline
+μa,1                       − 0.00               0.01                  − 0.01                   0.01
+μa,2                         0.02               0.01                    0.01                   0.04
+μa,3                         0.05               0.01                    0.03                   0.08
+
+   Notes. The table presents the mean, standard deviation, 2.5% quantile, and 97.5% quantile of the posterior
+distribution we estimate for average productivity growth μ for three cases of our model. See Online Appendix
+Table A.1 for estimates of the posterior distribution of other model parameters.
+
+
+
+is the specification used in Figures I and II of the introduction.
+Also, the numerical estimates discussed in the abstract and in-
+troduction are for this case.
+     Intuitively, in the constant α, β case with a large α, the
+marginal product of labor is sharply downward sloping. After
+1760, England experienced explosive growth in its population
+(Figure IV). This led to strong downward pressure on real wages.
+Since real wages actually rose over this period, large increases
+in productivity are needed to fit the data. When α is allowed to
+fall after 1760, the labor demand curve becomes less downward
+sloping, which implies that the downward pressure on real wages
+from population growth is smaller, and therefore less productivity
+growth is needed to explain the increase in real wages.
+     The model with falling importance of land after 1760 at-
+tributes a substantial portion of the explosive economic growth of
+the early industrial period not to productivity growth but to struc-
+tural change. Before the Industrial Revolution, land was a severe
+bottleneck for economic growth. The advent of the coal-powered
+steam engine changed this dramatically, freeing the economy to
+grow more rapidly. Whether one wants to view this change as an
+increase in productivity (as we do in the constant α, β case) or as
+structural change is a matter of how detailed a model one consid-
+ers. Productivity captures both forces in the simple model. In the
+more detailed model here, we provide an explanation for a large
+
+872            THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+
+
+                                                                                 Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                  FIGURE XII
+               Days Worked per Worker in England, 1260–1840
+ The figure presents an estimate of the evolution of days worked per worker in
+England from Humphries and Weisdorf (2019).
+
+
+
+chunk of this variation in the early industrial period, through the
+lens of structural change.
+    The data we use on the capital stock and land rents starts in
+1760. We view these variables as being unobserved prior to that
+time. Online Appendix Figure A.4 plots what our model implies
+about their evolution over our full sample period. We infer that
+capital grew at a modest pace before 1600, with faster growth
+thereafter. We infer relatively stable land rents prior to 1600 with
+growth thereafter.
+
+
+IV.B. Days Worked and Structural Identification of the Slope of
+      Labor Demand
+    The results we have presented up to this point have made
+the assumption that labor supply was proportional to the pop-
+ulation of England over our sample. This is a common assump-
+tion in the literature. However, recent work by de Vries (2008)
+and Humphries and Weisdorf (2019) argues that days worked per
+worker fluctuated substantially over our sample. Figure XII plots
+Humphries and Weisdorf ’s series. It indicates that days worked
+dropped sharply after the Black Death and then recovered to its
+
+                         WHEN DID GROWTH BEGIN?                               873
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                    FIGURE XIII
+                     Permanent Component of Productivity
+  The figure plots our estimates of the evolution of the permanent component of
+productivity a˜t over our sample period for several variants of our full Malthusian
+model (natural log relative to its value in 1250).
+
+
+
+previous level by the early seventeenth century. After that, days
+worked kept increasing, rising far above their previous level.19
+    Figure XIII presents results on productivity for a case where
+we incorporate Humphries and Weisdorf’s (2019) estimates of
+days worked into our analysis. Here, we assume that days worked
+are exogenous and are measured with error dt = d˜t + ιtd , where dt
+denotes the true number of days worked per worker, which are
+unobserved; d˜t denotes Humphries and Weisdorf ’s estimates of
+
+
+    19. Other researchers have referred to the increase in worker industrious-
+ness over this period as an Industrious Revolution (de Vries 1994, 2008). How-
+ever, the degree to which days worked changed over time in England is contro-
+versial. Comparisons of direct estimates by Blanchard (1978) for 1400–1600 and
+Voth (2000, 2001) for 1760–1830 support the idea that days worked were low in
+the post–Black Death period and rose sharply in the seventeenth and eighteenth
+centuries. Earlier indirect estimates by Clark and Van Der Werf (1998), however,
+suggest modest changes in days worked over our sample. Humphries and Weisdorf
+(2019) argue that their new series on the income of workers on annual contracts
+represents an important improvement relative to the series used by Clark and
+Van Der Werf (1998).
+
+874           THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+days worked; and ιtd ∼ tνd (0, σ˜ d2 ) denotes the measurement error.20
+
+
+
+
+                                                                               Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+Allowing for changing days worked does not affect our conclusion
+about the timing of the onset of productivity growth. However,
+we estimate a somewhat larger increase in average productiv-
+ity growth after 1600 in this case. Intuitively, more productiv-
+ity is needed to compensate for the additional labor supply asso-
+ciated with increased days of work. With Humphries and Weis-
+dorf ’s estimates of variable work hours, we estimate that average
+productivity growth μ is 3% per decade for 1600–1800 and 6% per
+decade for 1810–1870.
+     We have used the Black Death as an exogenous shock to iden-
+tify the slope of the labor demand curve in the preindustrial era.
+We also consider the alternative approach of using the structure
+of the full model to identify this slope. In this case, we specify a
+relatively diffuse prior for both α and β and use Bayesian updat-
+ing to calculate a posterior mean for these and for the slope of the
+labor demand curve conditional on the entire sample, as we do for
+other parameters. We are then relying on the Malthusian model
+of population dynamics to account for the endogeneity of the pop-
+ulation. Figure XIII presents results on productivity for this case.
+The results are very similar to the baseline case.
+
+IV.C. Robustness
+     1. Alternative Real Wage Data. Our results up to this point
+use real wage data for unskilled builders from Clark (2010).
+Online Appendix Figure A.5 presents five alternative produc-
+tivity series where we instead use other wage series. First, we
+present estimates of productivity using the following day wage
+series: (i) Clark’s (2010) real wages series for farm laborers, (ii)
+Clark’s (2010) real wages series for building craftsmen, and (iii)
+Allen’s (2007) real wage series for the period 1770 onward (with
+our baseline wage series before that time). We present estimates
+of productivity based on the assumption that the builders, farm-
+ers, and craftsmen series from Clark (2010) are all noisy sig-
+nals of the underlying true wage. Finally, we use Humphries and
+Weisdorf’s (2019) annual income series and the assumption that
+days worked are constant. We do this robustness analysis for the
+structural-slope case. These alternative productivity series yield
+
+    20. Humphries and Weisdorf do not provide estimates for 1250, 1850, and
+1860. We extrapolate days worked on these dates assuming that dt = dt−1 + ηt
+where ηt ∼ N (0, σd2 ).
+
+                    WHEN DID GROWTH BEGIN?                      875
+
+similar results to the baseline productivity series, although there
+
+
+
+
+                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+is some divergence early in the sample period.
+
+     2. Population Data. Our results up to this point use pop-
+ulation data prior to 1540 from Clark (2010). Online Appendix
+Figure A.6 presents estimates of productivity using population
+data from Broadberry et al. (2015) for the period before 1540.
+Broadberry et al.’s (2015) estimates of the population are infre-
+quent and irregular in their frequency. There are quite a few
+decades for which Broadberry et al. (2015) have no estimate, for
+example, they present no estimate between 1450 and 1522. In this
+robustness analysis, we view the population as an unobserved
+variable in decades for which we do not have an estimate from
+Broadberry et al. (2015). Our results on the evolution of produc-
+tivity for this case are very similar to our baseline model.
+
+     3. Break Dates. Online Appendix Figure A.7 compares the
+evolution of the permanent component of productivity for four
+different assumptions about when the pre–Industrial Revolu-
+tion break to the productivity component occurred. Recall that
+Figure X presents the evolution of the permanent component
+of productivity integrating over the probability of breaks oc-
+curring at different dates as in Online Appendix Figure A.2.
+Online Appendix Figure A.7 compares these results with results
+when we condition on the break occurring at a specific date. We do
+this for the baseline case and present results for several different
+dates between 1550 and 1760. These alternative results are very
+similar.
+
+     4. Priors. Online Appendix Figure A.8 presents estimates
+of productivity using different prior distributions than we use in
+our main analysis. First, we present results for a case where we
+change the prior on σ1 —the variance of permanent productivity
+shocks—to be I(3, 0.005), that is, the same as the prior on the
+other productivity and population shocks. Second, we present re-
+sults for a case where we change the prior on ψ—the level of the
+population before 1540—to be N (10.86, 102 ), that is, much wider
+than in our main analysis. In both cases, the resulting productiv-
+ity series are very similar to our main results. Other priors are
+quite dispersed.
+
+876          THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+     5. Comparison with Clark (2010, 2016). Our estimates of
+
+
+
+
+                                                                        Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+productivity differ substantially from those of Clark (2010, 2016).
+Online Appendix H presents a detailed decomposition of the fac-
+tors leading to the differences. Several factors are important. One
+important contributor to the difference between our series and
+Clark’s (better known) 2010 series is an error in that series that
+leads to a spurious 25 log point drop between 1540 and 1550. Us-
+ing the average of factor output elasticities at time t and t − 1
+when calculating changes in productivity between time t and t − 1
+also explains an important part of the difference in our results rel-
+ative to Clark’s, especially for the period before 1600. Differences
+in the factor prices and factor output elasticities implied by our
+approach, relative to those used by Clark, explain the remaining
+differences.
+
+
+ V. LIBERATING THE ECONOMY FROM THE IRON LAW OF WAGES
+     In Section IV, we estimate a gradual increase in productivity
+growth μ and a sharp fall in the importance of land in production
+α after the onset of industrialization. Here we discuss how both of
+these developments—as well as our small estimate of the elastic-
+ity of population growth to real income γ (see later discussion)—
+contributed to liberating the economy from the Malthusian “iron
+law of wages,” that is, the notion that wages tend to a very low
+(subsistence) level. These estimates also reconcile the Malthu-
+sian model with episodes historians have identified prior to the
+Industrial Revolution when some parts of the world have expe-
+rienced substantial economic growth over a sustained period of
+time, sometimes several hundred years. Goldstone (2002) refers
+to these episodes as efflorescences. They include ancient Greece,
+ancient Rome, Song China, the Islamic golden age, and the golden
+age of Holland, to name a few. These episodes have often been
+used as evidence against the Malthusian model (e.g., Persson
+2008).
+     It is important to recognize that steady positive productiv-
+ity growth in a Malthusian model like ours results in a per-
+sistent force pushing wages higher. As wages rise, a counter-
+acting force comes into play pushing wages lower (population
+growth). The strength of the force pushing wages lower is increas-
+ing in the level of the real wage. This implies that as wages rise
+the downward force gets stronger and stronger and eventually
+chokes off further increases in wages. In other words, there is a
+
+                                 WHEN DID GROWTH BEGIN?                                               877
+
+                                             TABLE V
+
+
+
+
+                                                                                                                Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                           ESTIMATES OF γ
+
+                                                     Mean         Std. dev.        2.5%           97.5%
+
+    Baseline (constant days worked)                   0.03           0.05         −0.06            0.12
+    Variable days worked                              0.09           0.02         0.05             0.14
+
+   Notes. The table presents the mean, standard deviation, 2.5% quantile, and 97.5% quantile of the posterior
+distribution we estimate for the elasticity of population growth to income γ . The first row presents results
+assuming constant days worked (our baseline case), and the second row presents results assuming days
+worked vary as in Humphries and Weisdorf (2019).
+
+
+
+steady-state real wage for each level of average productivity
+growth in a Malthusian model. This steady state is not at subsis-
+tence. Rather, the steady-state real wage is increasing in average
+productivity growth.
+     In Online Appendix I, we show that the steady state wage in
+our Malthusian model is given by
+                            μ
+(21)                   w̄ =    + constant.
+                            αγ
+As we discussed already, faster productivity growth μ results in
+a stronger force pushing wages up and therefore a higher steady-
+state wage. The strength of the counteracting force—which we
+call the Malthusian population force—is governed by two param-
+eters in our model: the importance of land in production α and
+the elasticity of population growth with respect to per capita in-
+come γ . Intuitively, α determines the slope of the long-run labor
+demand curve, that is, how rapidly real wages fall as population
+rises, while γ determines how rapidly the population increases
+when real wages are high.
+     With zero productivity growth, the steady-state real wage is
+potentially very low. Its level depends on factors outside of the
+scope of our analysis, such as hygiene, the marriage rate, contra-
+ceptive technology, and the level of violence in society. With posi-
+tive productivity growth, the steady-state real wage can be much
+higher. Whether it is depends on the size of α and γ . We discussed
+our estimates of α in Section IV. We turn to our estimates of γ .
+
+V.A. The Responsiveness of Population Growth to Income
+    Table V presents our estimate of the elasticity of (gross) pop-
+ulation growth—that is, NNt+1
+                           t
+                              —with respect to real income γ for
+our baseline case and the case with variable days worked. In our
+baseline case, our estimate of γ is extremely small at 0.03. This
+
+878           THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+means that a 100 log point increase in real wages increases popu-
+
+
+
+
+                                                                              Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+lation growth per decade by only 3 log points. Between 1270 and
+1440, real wages in England rose by 161% (or 96 log points). This
+increase in real wages stimulated population growth by a mere 3
+log points per decade.
+     Table V also presents results on γ for our variable days
+worked case. In this case, we estimate a somewhat larger γ of
+0.09. The lower bound of the credible interval in this case ex-
+ceeds zero. While this estimate is somewhat larger, it remains
+very small. Allowing for changes in days worked, real incomes in
+England rose by 70% between 1270 and 1440. A γ of 0.09 implies
+that this stimulated population growth by 5 percentage points per
+decade, while a doubling of real income would stimulate popula-
+tion growth by 6 percentage points per decade.
+     Another way to gauge the quantitative magnitude of our es-
+timates of γ is to calculate the half-life of population dynamics
+after an exogenous shock to the level of the population, for exam-
+ple, due to a plague. Assuming for simplicity that days worked
+and the return on capital are constant, that all shocks are equal
+to their average value, and that there’s no productivity growth
+(μ = 0), we show in Online Appendix I that the dynamics of the
+population after an initial disturbance are given by the following
+AR(1) process:
+                                      
+                                  γα
+(22)            nt+1 = 1 −               nt + constant.
+                                 1−β
+The speed of population recovery after a plague-induced decrease
+is thus governed by 1 − 1γ−β  α
+                                 in this case. In particular, the half-life
+of the population dynamics (the time it takes for the population
+to recover half of the way back to steady state after a plague-
+                        0.5
+induced drop) is loglog
+                     (1− αγ )
+                              . (The half-life of real wage dynamics is
+                         1−β
+the same.)
+    Plugging our estimates of the parameters γ , α, and β into the
+formula, we find that the half-life of population and real wage dy-
+namics before the Industrial Revolution for our baseline case is
+356 years. For the variable-days case, the half-life is 115 years.
+Since α falls sharply after 1760 and β changed little, the Malthu-
+sian population force becomes even weaker after 1760. By 1860,
+the half-life of population and real wage dynamics have risen to
+560 years in the baseline case and 240 years with variable days.
+These long half-lives imply that the strength of the Malthusian
+population force was weak in England over our sample period—a
+
+                     WHEN DID GROWTH BEGIN?                       879
+
+result that is sometimes referred to as weak homeostasis. Prior
+
+
+
+
+                                                                         Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+work has also found weak homeostasis. Lee and Anderson (2002)
+find a half-life of 107 years, and Crafts and Mills (2009) find a
+half-life of 431 years.
+     One possible reason we estimate a small value for γ is that
+the strength of the positive and preventive checks emphasized
+by Malthus may not have been very sensitive to modest changes
+in real income. Another possible reason is the quantity-quality
+trade-off emphasized by modern scholars: higher income may
+have mostly increased child quality rather than child quantity.
+Though we estimate a positive γ for our sample, the relationship
+between real income and fertility switched to being negative in
+the late nineteenth century and twentieth centuries. This switch
+may have been due to increases in the value of education tilting
+behavior even more toward child quality and to increases in the
+bargaining power of women in marriages.
+
+
+
+V.B. Prosperity and the Slope of the Long-Run Labor Demand
+     Curve
+     We can now use equation (21) and our parameter estimates
+to assess how changes in the economy after the onset of growth
+in 1600 affected the long-run steady-state real wage the econ-
+omy was tending toward. Figure XIV plots the steady-state wage
+in our Malthusian economy for different values of productivity
+growth μ and the slope of the long-run labor demand curve α
+relative to the steady-state wage with zero productivity growth.
+Each line in the figure gives the steady-state wage for a particu-
+lar value of productivity growth as the value of α varies. We do
+this analysis for the variable-days case, that is, using γ = 0.09.
+     The figure illustrates clearly how important the fall in α is for
+liberating the economy from the iron law of wages. Consider first
+how steady-state real wages respond to productivity growth when
+α is equal to our preindustrial estimate of 0.49. In this case, pro-
+ductivity growth of 3% per decade raises the real wage by a factor
+of two in the long run, while 6% productivity growth raises the
+real wage by a factor of four. These results show that our Malthu-
+sian model is consistent with substantial, multi–hundred year ef-
+florescences of the kind discussed by Goldstone (2002) if we allow
+for modest productivity growth. The small value we estimate for
+γ and the associated weak homeostasis are key to this result.
+
+880             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                    FIGURE XIV
+                  Steady-State Wage with Productivity Growth
+  The figure plots the steady-state real wage for different average levels of pro-
+ductivity growth (μ) and output elasticity of land (α) relative to the steady-state
+real wage with zero productivity growth. The parameter α varies on the x-axis and
+each line plots real wages for a given level of average productivity growth. These
+impulse responses are calculated assuming that all other model parameters are
+at their posterior mean values. We do this for the variable-days case.
+
+
+     As α falls, the steady-state real wage for any given level of
+average productivity growth rises sharply. With our estimate of
+α for 1860 (α = 0.22), productivity growth of 6% per decade can
+raise the real wage by a factor of 18 in the long run. In other
+words, this level of productivity growth would have eventually
+led to a 18-fold increase in real wages even if the demographic
+transition had not occurred and the Malthusian population force
+had continued at its 1860 strength. Clearly, a flattening of the
+long-run labor demand curve is a powerful force for liberating the
+economy from the iron law of wages when productivity growth is
+positive.
+     Another way to visualize these effects is to plot the steady-
+state wage relative to the actual wage over time. We do this in
+Figure XV. Before 1600, the ratio of the steady-state wage to the
+actual wage is relatively stable around one. Once productivity
+growth begins, the steady-state wage jumps higher and the ac-
+tual wage only gradually catches up. After 1760, the steady-state
+wage begins to rise rapidly as the slope of the long-run labor
+
+                        WHEN DID GROWTH BEGIN?                               881
+
+
+
+
+                                                                                     Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                    FIGURE XV
+                  Steady-State Wage Relative to Actual Wage
+  The figure plots the ratio of the steady-state wage—given by equation (49) in
+the Online Appendix—and the actual wage over time. Note that the steady-state
+wage is a function of days worked. In the figure, we use the days worked at each
+date as the d∗ in equation (49). The black line is the median of the posterior for
+each period, and the gray shaded area is the 90% central posterior interval. We do
+this for the variable-days case.
+
+
+demand curve flattens. By 1860, the steady-state wage is more
+than five times higher than the actual wage.
+
+V.C. Post-1750 Population Explosion
+    The modest strength of the Malthusian population force in
+our model raises the question of whether our model can explain,
+with these parameter values, the large increase in the population
+of England that occurred after 1750 (see Figure IV). In 1740, the
+population of England was 6 million. By 1860, it had risen to al-
+most 20 million. The population grew at a compound rate of 10.4%
+per decade over this 120-year period.
+    Figure XVI compares the evolution of the population in Eng-
+land from 1750 to 1860 with the predicted evolution of the
+population from the variable-days version of our model. We con-
+struct the predicted evolution by taking the evolution of real
+wages and days worked in England as given and simulating the
+evolution of the population using equation (9) starting from its
+actual value in 1740 and assuming no population shocks. This
+analysis shows that in fact our model with variable days worked
+
+882            THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+
+
+                                                                                     Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                   FIGURE XVI
+             Actual and Predicted Population Dynamics after 1750
+  The dashed line is the evolution of the population in England. The solid line is
+the predicted evolution of the population in England from our Malthusian model.
+In calculating this line, we take the evolution of real wages and days worked in
+England as given and simulate the evolution of the population using equation (9)
+starting from its actual value in 1740. The gray shaded area is the 90% central
+predictive interval given our estimates of α and γ .
+
+
+can explain the vast majority of the rapid increase in the popula-
+tion between 1740 and 1860. This may seem surprising given the
+weak Malthusian population force and the somewhat modest in-
+crease in real wages over this period. However, allowing for vari-
+able days worked, per capita income in England over this period
+rose quite substantially (see Figure XII).
+
+
+                  VI. PLAGUES AND THE POPULATION
+    Figure XVII plots our baseline estimate of the evolution of
+the population of England from 1250 to 1550 along with prior es-
+timates from Clark (2007a), Clark (2010), and Broadberry et al.
+(2015). Our estimates are very similar to Clark’s. This implies
+that our estimation procedure largely validates the assumptions
+Clark makes regarding the evolution of productivity in construct-
+ing his population estimates. The estimates of Broadberry et al.
+(2015) are substantially lower early in the sample period, but
+then gradually converge.
+
+                       WHEN DID GROWTH BEGIN?                            883
+
+
+
+
+                                                                                 Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+                                 FIGURE XVII
+               Comparison of Population Estimates for England
+  The figure plots our estimates of the evolution of the population of England
+along with estimates from Clark (2007a), Clark (2010), and Broadberry et al.
+(2015).
+
+
+     The evolution of the population in England over our sample
+period is heavily affected by plagues. Our model captures plagues
+(and other influences on the population other than changes in
+real income) through the shocks ξ1t and ξ2t . Online Appendix
+Figure A.9 plots the evolution of the sum of these population
+shocks over the sample period. The largest population shock by
+far is the Black Death of 1348. We estimate that the popula-
+tion shocks associated with the Black Death led the population of
+England to shrink by 32%. But Online Appendix Figure A.9 also
+makes clear that England faced steady population headwinds—
+persistent negative population shocks—from the early fourteenth
+century until about 1500.
+
+
+                            VII. CONCLUSION
+     We estimate the evolution of productivity in England from
+1250 to 1870 as shifts in the labor demand curve. Our principal
+finding is that productivity growth began in 1600. Before 1600,
+productivity growth was zero. We estimate a growth rate of pro-
+ductivity of 2% per decade between 1600 and 1800 and an in-
+
+884            THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+crease to 5% per decade between 1810 and 1870. Our results in-
+
+
+
+
+                                                                                    Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+dicate that sustained growth in productivity began well before the
+Glorious Revolution and Industrial Revolution. We demonstrate
+that the early seventeenth century was a crucial turning point
+for productivity growth in England, a result that helps distin-
+guish between competing lines of thought regarding the ultimate
+causes of the emergence of growth.
+     We attribute the high output growth of the Industrial Revolu-
+tion only partly to productivity growth. A second important factor
+was the rapidly falling importance of land in production associ-
+ated with the transition to steam power fueled by coal. We lever-
+age our model to estimate the strength of the Malthusian popu-
+lation force in preindustrial England. This force was quite weak.
+The half-life of the response of real wages after a plague-induced
+decrease in the population was more than 100 years before the on-
+set of the Industrial Revolution and increased to several hundred
+years by 1860.
+
+SCIENCES PO, FRANCE
+UNIVERSITY OF CALIFORNIA, BERKELEY, UNITED ST A TES
+UNIVERSITY OF CALIFORNIA, BERKELEY, UNITED ST A TES
+
+                       SUPPLEMENT ARY MA TERIAL
+    An Online Appendix for this article can be found at
+The Quarterly Journal of Economics online.
+
+                            DA T A AVAILABILITY
+    The data underlying this article are available in the Harvard
+Dataverse, https://doi.org/10.7910/DVN/5EXFLU (Bouscasse,
+Nakamura, and Steinsson 2024).
+
+                                REFERENCES
+Acemoglu, Daron, and Pascual Restrepo, “The Race between Man and Machine:
+   Implications of Technology for Growth, Factor Shares, and Employment,”
+   American Economic Review, 108 (2018), 1488–1542. https://doi.org/10.1257/
+   aer.20160696
+———, “Artificial Intelligence, Automation, and Work,” in The Economics of Arti-
+   ficial Intelligence: An Agenda, Ajay Agrawal, Joshua Gans, and Avi Goldfarb,
+   eds. (Chicago: University of Chicago Press, 2019a), 197–236.
+———, “Automation and New Tasks: How Technology Displaces and Reinstates
+   Labor,” Journal of Economic Perspectives, 33 (2019b), 3–30. https://doi.org/10
+   .1257/jep.33.2.3.
+
+                         WHEN DID GROWTH BEGIN?                                885
+
+Acemoglu, Daron, Simon Johnson, and James Robinson, “The Rise of Europe: At-
+
+
+
+
+                                                                                       Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+    lantic Trade, Institutional Change, and Economic Growth,” American Eco-
+    nomic Review, 95 (2005), 546–579. https://doi.org/10.1257/0002828054201305
+Allen, Robert C., Enclosure and the Yeoman, (Oxford: Oxford University Press,
+    1992).
+———, “Engels’ Pause: Technical Change, Capital Accumulation, and Inequality
+    in the British Industrial Revolution,” Explorations in Economic History, 46
+    (2009b), 418–435. https://doi.org/10.1016/j.eeh.2009.04.004
+———, “English and Welsh Agriculture, 1300–1850: Output, Inputs, and Income,”
+    Working Paper, Oxford University, Oxford, 2005.
+———, “Pessimism Preserved: Real Wages in the British Industrial Revolution,”
+    Department of Economics Working Paper no. 314, Oxford University, Oxford,
+    2007.
+———, The British Industrial Revolution in Global Perspective, (Cambridge: Cam-
+    bridge University Press, 2009a).
+Bailey, R. E., and M. J. Chambers, “Long-Term Demographic Interactions in Pre-
+    census England,” Journal of the Royal Statistical Society, Series A, 156 (1993),
+    339–362. https://doi.org/10.2307/2983062
+Barro, Robert J., and Xavier Sala-i-Martin, Economic Growth, 2nd ed., (Cam-
+    bridge, MA: MIT Press, 2004).
+Becker, Gary S., and Robert J. Barro, “A Reformulation of the Economic Theory
+    of Fertility,” Quarterly Journal of Economics, 103 (1988), 1–25. https://doi.or
+    g/10.2307/1882640
+Becker, Gary S., and H. Gregg Lewis, “On the Interaction between the Quan-
+    tity and Quality of Children,” Journal of Political Economy, 81 (1973), S279–
+    S288. https://doi.org/10.1086/260166
+Betancourt, Michael,“A Conceptual Introduction to Hamiltonian Monte Carlo,”
+    arXiv working paper 1701.02434v2, 2018. https://doi.org/10.48550/arXiv.170
+    1.02434
+Blanchard, Ian, “Labor Productivity and Work Psychology in the English Mining
+    Industry, 1400–1600,” Economic History Review, 31 (1978), 1–24. https://doi.
+    org/10.2307/2595798
+Bogart, Dan, and Gary Richardson, “Property Rights and Parliament in In-
+    dustrializing Britain,” Journal of Law and Economics, 54 (2011), 241–274.
+    https://doi.org/10.1086/652901
+Boppart, Timo, Patrick Kiernan, Per Krusell, and Hannes Malmberg, “The
+    Macroeconomics of Intensive Agriculture,” NBER Working Paper no. 31101,
+    2023. https://doi.org/10.3386/w31101
+Bouscasse, Paul, Emi Nakamura, and Jón Steinsson, “Replication Data for: ‘When
+    Did Growth Begin? New Estimates of Productivity Growth in England from
+    1250 to 1870’,” 2024, Harvard Dataverse. https://doi.org/10.7910/DVN/5EXF
+    LU
+Broadberry, Stephen, Bruce M. S. Campbell, Alexander Klein, Mark Overton, and
+    Bas van Leeuwen, British Economic Growth, 1270–1870, (Cambridge: Cam-
+    bridge University Press, 2015).
+Caves, Douglas W., Laurits R. Christensen, and W. Erwin Diewert, “The Economic
+    Theory of Index Numbers and the Measurement of Input, Output, and Pro-
+    ductivity,” Econometrica, 50 (1982), 1393–1414. https://doi.org/10.2307/1913
+    388
+Chaney, Eric, and Richard Hornbeck, “Economic Dynamics in the Malthusian
+    Era: Evidence from the 1609 Spanish Expulsion of the Moriscos,” Economic
+    Journal, 126 (2016), 1404–1440. https://doi.org/10.1111/ecoj.12309
+Clark, Gregory, “Land Rental Values and the Agrarian Economy: England and
+    Wales, 1500–1914,” European Review of Economic History, 6 (2002), 281–308.
+    https://doi.org/10.1017/S136149160200014X
+———, “Microbes and Markets: Was the Black Death an Economic Revolution?,”
+    Journal of Demographic Economics, 82 (2016), 139–165. https://doi.org/10.1
+    017/dem.2016.6
+
+886             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+———, “The Condition of the Working Class in England, 1209–2004,” Journal of
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+    Political Economy, 113 (2005), 1307–1340. https://doi.org/10.1086/498123
+———, “The Long March of History: Farm Wages, Population, and Economic
+    Growth, England 1209–1869,” Economic History Review, 60 (2007b), 97–135.
+    https://doi.org/10.1111/j.1468-0289.2006.00358.x
+———, “The Macroeconomic Aggregates for England 1209–1869,” Research in
+    Economic History, 27 (2010), 51–140. https://doi.org/10.1108/S0363-3268(20
+    10)0000027004
+———, A Farewell to Alms, (Princeton, NJ: Princeton University Press, 2007a).
+Clark, Gregory, and Patricua A. Levin, “How Different Was the Industrial Revo-
+    lution? The Revolution in Printing, 1350–1835,” Unpublished paper, 2011.
+Clark, Gregory, and Ysbrand Van Der Werf, “Work in Progress? The Industrious
+    Revolution,” Journal of Economic History, 58 (1998), 830–843. https://doi.or
+    g/10.1017/S0022050700021197
+Crafts, Nicholas F. R., “British Economic Growth, 1700–1831: A Review of the
+    Evidence,” Economic History Review, 36 (1983), 177–199. https://doi.org/10.2
+    307/2595919
+———, British Economic Growth during the Industrial Revolution, (Oxford:
+    Clarendon Press, 1985).
+Crafts, Nicholas F. R., and C. Knick Harley, “Output Growth and the British
+    Industrial Revolution: A Restatement of the Crafts-Harley View,” Economic
+    History Review, 45 (1992), 703–730. https://doi.org/10.2307/2597415
+Crafts, Nicholas, and Terence C. Mills, “From Malthus to Solow: How Did the
+    Malthusian Economy Really Evolve?” Journal of Macroeconomics, 31 (2009),
+    68–93. https://doi.org/10.1016/j.jmacro.2007.08.007
+Cressy, David, Literacy and the Social Order, (Cambridge: Cambridge University
+    Press, 1980). https://doi.org/10.1017/CBO9780511560484
+De Moor, Tine, and Jan Luiten van Zanden, “Girl Power: The European Marriage
+    Pattern and Labor Markets in the North Sea Region in the Late Medieval
+    and Early Modern Period,” Economic History Review, 63 (2010), 1–33. https:
+    //doi.org/10.1111/j.1468-0289.2009.00483.x
+De Vries, Jan, “The Industrial Revolution and the Industrious Revolution,” Jour-
+    nal of Economic History, 54 (1994), 249–270. https://doi.org/10.1017/S00220
+    50700014467
+———, The Industrious Revolution: Consumer Behavior and the Household Econ-
+    omy, 1650 to the Present, (Cambridge: Cambridge University Press, 2008).
+Diewert, W. Erwin, and Alice O. Nakamura, “The Measurement of Productivity for
+    Nations,” in Handbook of Econometrics, Volume 6, Part A, James J. Heckman
+    and Edward E. Leamer, eds. (Amsterdam: Elsevier, 2007), 4501–4586. https:
+    //doi.org/10.1016/S1573- 4412(07)06066- 7
+Dittmar, Jeremiah E., “Information Technology and Economic Change: The Im-
+    pact of the Printing Press,” Quarterly Journal of Economics, 126 (2011),
+    1133–1172. https://doi.org/10.1093/qje/qjr035
+Engels, Frederick, The Condition of the Working Class in England, (Oxford: Ox-
+    ford University Press, 1845).
+Färe, Rolf, Shawna Grosskopf, Mary Norris, and Zhongyang Zhang, “Productivity
+    Growth, Technical Progress, and Efficiency Change in Industrialized Coun-
+    tries,” American Economic Review, 84 (1994), 66–83.
+Feinstein, Charles H., “National Statistics, 1760–1920,” in Studies in Capital For-
+    mation in the United Kingdom, 1750–1920, Charles H. Feinstein and S. Pol-
+    lard, eds. (Oxford: Clarendon Press, 1988), 259–471.
+———, “Pessimism Perpetuated: Real Wages and the Standard of Living in
+    Britain during and after the Industrial Revolution,” Journal of Economic His-
+    tory, 58 (1998), 625–658. https://doi.org/10.1017/S0022050700021100
+Galor, Oded, and David N. Weil, “Population, Technology, and Growth: From
+    Malthusian Stagnation to the Demographic Transition and Beyond,” Amer-
+    ican Economic Review, 90 (2000), 806–828. https://doi.org/10.1257/aer.90.4.8
+    06
+
+                        WHEN DID GROWTH BEGIN?                              887
+
+Gelman, Andrew, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari,
+
+
+
+
+                                                                                    Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+     and Donald B. Rubin, Bayesian Data Analysis, 3rd ed., (Boca Raton, FL: CRC
+     Press, 2013).
+Goldstone, Jack A., “Efflorescences and Economic Growth in World History: Re-
+     thinking the ‘Rise of the West’ and the Industrial Revolution,” Journal of
+     World History, 13 (2002), 323–389. https://doi.org/10.1353/jwh.2002.0034
+Hansen, Gary D., and Edward C. Prescott, “Malthus to Solow,” American Eco-
+     nomic Review, 92 (2002), 1205–1217. https://doi.org/10.1257/00028280260344
+     731.
+Hansen, Gary D., Lee E. Ohanian, and Fatih Ozturk, “Dynamic General Equilib-
+     rium Modelling of Long and Short-Run Historical Events,” NBER Working
+     Paper no. 28090, 2020. https://doi.org/10.3386/w28090
+Harley, C. Knick, “British Industrialization Before 1841: Evidence of Slower
+     Growth During the Industrial Revolution,” Journal of Economic History, 42
+     (1982), 267–289. https://doi.org/10.1017/S0022050700027431
+Heldring, Leander, James A. Robinson, and Sebastian Vollmer, “The Long-Run
+     Impact of the Dissolution of the English Monasteries,” Quarterly Journal of
+     Economics, 136 (2021), 2093–2145. https://doi.org/10.1093/qje/qjab030
+Hill, Christopher, The English Revolution 1640, (London: Lawrence and Wishart,
+     1940).
+———, The Century of Revolution, (New York: Van Nostrand Reinhold, 1961).
+Houston, R. A., “The Development of Literacy: Northern England, 1640–1750,”
+     Economic History Review, 35 (1982), 199–216. https://doi.org/10.1111/j.1468
+     -0289.1982.tb01193.x
+Hsieh, Chang-Tai, “What Explains the Industrial Revolution in East Asia? Evi-
+     dence from the Factor Markets,” American Economic Review, 92 (2002), 502–
+     526. https://doi.org/10.1257/00028280260136372
+Humphries, Jane, and Jacob Weisdorf, “Unreal Wages? Real Income and Eco-
+     nomic Growth in England, 1260–1850,” Economic Journal, 129 (2019), 2867–
+     2887. https://doi.org/10.1093/ej/uez017
+Jones, Charles I., “Was an Industrial Revolution Inevitable? Economic Growth
+     Over the Very Long Run,” B.E. Journal in Macroeconomics, 1 (2001), 1–43.
+     https://doi.org/10.2202/1534-6013.1028
+Kremer, Michael, “Population Growth and Technological Change: One Million
+     B.C. to 1990,” Quarterly Journal of Economics, 108 (1993), 681–716. https:
+     //doi.org/10.2307/2118405
+Lee, Ronald, and Michael Anderson, “Malthus in State Space: Macro Economic-
+     Demographic Relationships in English History, 1540–1870,” Journal of Popu-
+     lation Economics, 15 (2002), 195–220. https://doi.org/10.1007/s001480100091
+Malmquist, Sten, “Index Numbers and Indifference Surfaces,” Trabajos de es-
+     tadística, 4 (1953), 209–242. https://doi.org/10.1007/BF03006863
+Malthus, Thomas R., An Essay on the Principle of Population, (London: J. Johnson
+     in St. Paul’s Church-yard, 1798).
+Marx, Karl, and Friedrich Engels, The Communist Manifesto, (London: Workers’
+     Educational Association, 1848), English translation by Samuel Moore in co-
+     operation with Friedrich Engels 1888, (London: Pluto Press, 2008).
+Marx, Karl. Capital. A Critique of Political Economy, volume 1, (Hamburg: Verlag
+     von Otto Meissner, 1867). English translation by Samuel Moore and Edward
+     Aveling, (Chicago: Charles H. Kerr & Company, 1932).
+McCloskey, Deirdre, The Bourgeois Virtues: Ethics for an Age of Commerce,
+     (Chicago: University of Chicago Press, 2006). https://doi.org/10.7208/chicag
+     o/9780226556673.001.0001
+———, Bourgeois Dignity: Why Economics Can’t Explain the Modern World,
+     (Chicago: University of Chicago Press, 2010).
+———, Bourgeois Equality: How Ideas, Not Capital or Institutions, Enriched the
+     World, (Chicago: University of Chicago Press, 2016).
+Mokyr, Joel, The Enlightened Economy: The Economic History of Britain, 1700–
+     1850, (New Haven, CT: Yale University Press, 2009).
+
+888             THE QUARTERLY JOURNAL OF ECONOMICS
+
+
+———, A Culture of Growth: The Origins of the Modern Economy, (Princeton, NJ:
+
+
+
+
+                                                                                      Downloaded from https://academic.oup.com/qje/article/140/2/835/7933323 by Asia Keizai Kenkyusho, Library user on 29 May 2026
+    Princeton University Press, 2016).
+North, Douglass C., and Barry R. Weingast, “Constitutions and Commitment: The
+    Evolution of Institutions Governing Public Choice in Seventeenth Century
+    England,” Journal of Economic History, 49 (1989), 803–832. https://doi.org/
+    10.1017/S0022050700009451
+Persson, Karl Gunnar, “The Malthus Delusion,” European Review of Economic
+    History, 12 (2008), 165–173. https://doi.org/10.1017/S1361491608002219
+Rosenberg, Nathan, and L. E. Birdzell, How the West Grew Rich: The Economic
+    Transformation of the Industrial World, (New York: Basic Books, 1986).
+Solow, Robert M., “Technical Change and the Aggregate Production Function,”
+    Review of Economics and Statistics, 39 (1957), 312–330. https://doi.org/10.2
+    307/1926047
+Stan Development Team, “Stan Modeling Language Users Guide and Reference
+    Manual,” version 2.17.0, 2017. https://mc-stan.org.
+Tawney, R. H., Religion and the Rise of Capitalism, (New York: Routledge, 1926).
+Voigtländer, Nico, and Hans-Joachim Voth, “How the West ‘Invented’ Fertility
+    Restriction,” American Economic Review, 103 (2013), 2227–2264. https://doi.
+    org/10.1257/aer.103.6.2227
+Voth, Hans-Joachim, Time and Work in England, 1750–1830, (Oxford: Oxford
+    University Press, 2000).
+———, “The Longest Years: New Estimates of Labor Input in England, 1760–
+    1830,” Journal of Economic History, 61 (2001), 1065–1082. https://doi.org/10
+    .1017/S0022050701042085
+Wallis, Patrick, Justin Colson, and David Chilosi, “Structural Change and Eco-
+    nomic Growth in the British Economy before the Industrial Revolution, 1500–
+    1800,” Journal of Economic History, 78 (2018), 862–903. https://doi.org/10.1
+    017/S0022050718000396
+Weber, Max, “The Protestant Ethic and the ‘Spirit’ of Capitalism,” Archiv für
+    Sozialwissenschaft und Sozialpolitik, 20 (1904), 1–54, English translation by
+    Peter Baehr and Gordon C. Wells, (New York: Penguin Books, 2002).
+———, “Protestant Ethic and the Spirit of Capitalism: The Work Ethic of Ascetic
+    Protestantism,” Archiv für Sozialwissenschaft und Sozialpolitik, 21 (1905),
+    1–110, English translation by Peter Baehr and Gordon C. Wells, (New York:
+    Penguin Books, 2002).
+Wrigley, E. A., and R. S. Schofield, The Population History of England 1541–1871,
+    (Cambridge: Cambridge University Press, 1981).
+Wrigley, E. A., R. S. Davies, J. E. Oeppen, and R. S. Schofield, English Popula-
+    tion History from Family Reconstruction, 1580–1837, (Cambridge: Cambridge
+    University Press, 1997).
+Wrigley, E. Anthony, Energy and the English Industrial Revolution, (Cambridge:
+    Cambridge University Press, 2010).
+
+
+
+
+
+C The Author(s) 2024. Published by Oxford University Press on behalf of President
+and Fellows of Harvard College. All rights reserved. For Permissions, please email:
+journals.permissions@oup.com
+
+CALL FOR NOMINATIONS
+
+$300,000 Nemmers Prize in Economics
+
+Northwestern University invites nominations for the Erwin Plein Nemmers Prize in Economics, to be
+awarded during the 2026–27 academic year. The prize pays the recipient $300,000. Recipients of the
+Nemmers Prize present lectures, participate in department seminars, and engage with Northwestern faculty
+and students in other scholarly activities.
+
+Details about the prize and the nomination process can be found at nemmers.northwestern.edu. Candidacy
+for the Nemmers Prize is open to those with careers of outstanding achievement in their disciplines as
+demonstrated by major contributions to new knowledge or the development of significant new modes of
+analysis.Individuals of all nationalities and institutional affiliations are eligible except current or recent
+members of the Northwestern University faculty and past recipients of the Nemmers or Nobel Prize.
+Nominations will be accepted until January 14, 2026.
+
+The Nemmers prizes are made possible by a generous gift to Northwestern University by the late Erwin Esser
+Nemmers and the late Frederic Esser Nemmers.
+
+
+
+
+                                           Nemmers Prizes • Office of the Provost • Northwestern University • Evanston, Illinois 60208
+                                           nemmers.northwestern.edu
+

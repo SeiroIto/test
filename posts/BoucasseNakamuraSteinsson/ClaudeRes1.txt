@@ -1,0 +1,990 @@
+❯ create scratch file in \.scratch under C:\seiro\docs\personal\Miscelleneous\testrepo\posts\BoucasseNakamuraSteinsson\
+
+  go
+
+● Bash(mkdir -p "/mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/.scratch")
+  ⎿  Done
+
+● Write(/mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/.scratch/extract_pdf.R)
+  ⎿  Wrote 7 lines to
+     ../../mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/.scratch/extract_pdf.R
+      1 library(pdftools)
+      2 pdf_path <- "C:/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/BoucasseNakamu
+        raSteinsson_WhenGrowth_QJE2025_app.pdf"
+      3 pages <- pdf_text(pdf_path)
+      4 for (i in seq_along(pages)) {
+      5   cat(sprintf("\n\n===== PAGE %d =====\n\n", i))
+      6   cat(pages[[i]])
+      7 }
+
+● Bash(/mnt/c/seiro/languages/R/R-4.4.1/bin/Rscript.exe
+      'C:/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/.scratch/extract_pdf.R' 2>&1)
+  ⎿  '\\wsl.localhost\Ubuntu\home\sdude'
+     ��L�̌��݂̃f�B���N�g����  CMD.EXE ���J�n���܂����B
+     UNC �p�X�̓T�|�[�g����܂���BWindows �f�B���N�g��������Ŏg�p���܂��B
+     … +591 lines (ctrl+o to expand)
+
+● Good, it ran. Let me read the full output to find all equations.
+
+  Read 1 file (ctrl+o to expand)
+
+● Write(/mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/BoucasseNakamuraSteinsson_When
+       Growth_QJE2025_app_equations.txt)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Create file
+ …Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/BoucasseNakamuraSteinsson_WhenGrowth_QJE2025_app_equations.txt
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+    1 % ============================================================
+    2 % Equations from:
+    3 % Boucasse, Nakamura & Steinsson (2025)
+    4 % "When Did Growth Begin?" QJE — Online Appendix
+    5 % Sections C–I (equations 23–51 plus unnumbered displays)
+    6 % ============================================================
+    7 % Notation
+    8 %   w_t   log real wage W_t
+    9 %   n_t   log population N_t
+   10 %   d_t   log days worked;  \ell_t = n_t + d_t = log labor
+   11 %   a_t   log TFP A_t  (permanent component: \tilde{a}_t)
+   12 %   k_t   log capital K_t
+   13 %   s_t   log land rents S_t
+   14 %   z     log land endowment Z  (fixed)
+   15 %   r_t   net return to capital;  \delta = depreciation rate
+   16 %   \mu   mean productivity growth rate
+   17 %   \alpha_t  land output elasticity
+   18 %   \beta_t   capital output elasticity
+   19 %   \varepsilon_{1t}, \varepsilon_{2t}  permanent / transitory productivity shocks
+   20 %   \xi_{1t}, \xi_{2t}  plague / normal population shocks
+   21 %   Hat: \hat{x}_t = x_t - x_{t-1}  (first difference)
+   22 %   Bar: \bar{x}_t = (x_{t-1}+x_t)/2  (period average)
+   23 % ============================================================
+   24
+   25
+   26 %% ============================================================
+   27 %% Section C: CES Production Function
+   28 %% ============================================================
+   29
+   30 % CES production function (two factors: land Z, labor L)
+   31 $$
+   32 Y_t = A_t \!\left[
+   33   {\alpha'}^{1/\sigma} Z^{(\sigma-1)/\sigma}
+   34   + (1-\alpha')^{1/\sigma} L_t^{(\sigma-1)/\sigma}
+   35 \right]^{\!\sigma/(\sigma-1)}
+   36 $$
+   37
+   38 % Optimal labor demand (FOC w.r.t. L)
+   39 $$
+   40 W_t = (1-\alpha')^{1/\sigma} A_t
+   41   \!\left[
+   42     {\alpha'}^{1/\sigma}\!\left(\frac{Z}{L_t}\right)^{\!(\sigma-1)/\sigma}
+   43     + (1-\alpha')^{1/\sigma}
+   44   \right]^{\!1/(\sigma-1)}
+   45 $$
+   46
+   47 % Log-linear approximation of labor demand
+   48 $$
+   49 w_t = \varphi - \alpha\, \ell_t + a_t
+   50 $$
+   51
+   52 % alpha as function of sigma and L/Z (L = linearization point)
+   53 $$
+   54 \alpha = \sigma \!\left[
+   55   1 + \frac{1-\alpha'}{\alpha'}\!\left(\frac{L}{Z}\right)^{\!(\sigma-1)/\sigma}
+   56 \right]^{\!-1}
+   57 $$
+   58
+   59 % Labor share of output
+   60 $$
+   61 \overline{LS} = 1 - \!\left[
+   62   1 + \frac{1-\alpha'}{\alpha'}\!\left(\frac{L}{Z}\right)^{\!(\sigma-1)/\sigma}
+   63 \right]^{\!-1}
+   64 $$
+   65
+   66 % Relationship: alpha, labor share, sigma (land share = sigma*alpha)
+   67 $$
+   68 \alpha = \frac{1-\overline{LS}}{\sigma}
+   69 $$
+   70
+   71
+   72 %% ============================================================
+   73 %% Section D: More General Production Function
+   74 %% ============================================================
+   75
+   76 % (23)
+   77 $$
+   78 Y_t = A_t F(Z,L_t,K_t) \tag{23}
+   79 $$
+   80
+   81 % First-order conditions
+   82 \begin{align*}
+   83 W_t       &= A_t F_L(Z,L_t,K_t) \\
+   84 r_t+\delta &= A_t F_K(Z,L_t,K_t)
+   85 \end{align*}
+   86
+   87 % (24): log-linear approximation of wage FOC
+   88 $$
+   89 w_t = a_t + \log F_L(Z,L_t,K_t)
+   90     \approx \tilde{\varphi} + a_t
+   91       + \frac{LF_{LL}}{F_L}\,\ell_t
+   92       + \frac{KF_{LK}}{F_L}\,k_t
+   93 \tag{24}
+   94 $$
+   95
+   96 % (25): log-linear approximation of capital-return FOC
+   97 $$
+   98 \log(r_t+\delta) = a_t + \log F_K(Z,L_t,K_t)
+   99     \approx \tilde{\varphi}'' + a_t
+  100       + \frac{LF_{LK}}{F_K}\,\ell_t
+  101       + \frac{KF_{KK}}{F_K}\,k_t
+  102 \tag{25}
+  103 $$
+  104
+  105 % (26): solving (25) for k_t
+  106 $$
+  107 k_t = \tilde{\varphi}'''
+  108   + \frac{F_K}{KF_{KK}}\bigl(\log(r_t+\delta)-a_t\bigr)
+  109   - \frac{LF_{LK}}{KF_{KK}}\,\ell_t
+  110 \tag{26}
+  111 $$
+  112
+  113 % Substituting (26) into (24)
+  114 $$
+  115 w_t \approx \tilde{\varphi}
+  116   + \!\left(1-\frac{F_KF_{LK}}{F_LF_{KK}}\right)\!a_t
+  117   + \frac{L}{F_LF_{KK}}\!\left(F_{LL}F_{KK}-F_{LK}^2\right)\!\ell_t
+  118   + \frac{F_KF_{LK}}{F_LF_{KK}}\log(r_t+\delta)
+  119 $$
+  120
+  121 % (27): rewritten in terms of alpha-tilde and beta-tilde
+  122 $$
+  123 w_t \approx \tilde{\varphi} + (1+\tilde{\beta})\,a_t
+  124            - \tilde{\alpha}\,\ell_t
+  125            - \tilde{\beta}\log(r_t+\delta)
+  126 \tag{27}
+  127 $$
+  128
+  129 % Definitions of tilde parameters
+  130 \begin{align*}
+  131 \tilde{\alpha} &= -\frac{L}{F_LF_{KK}}\!\left(F_{LL}F_{KK}-F_{LK}^2\right) \\[4pt]
+  132 \tilde{\beta}  &= -\frac{F_KF_{LK}}{F_LF_{KK}}
+  133 \end{align*}
+  134
+  135
+  136 %% ============================================================
+  137 %% Section E: Identification of alpha_t and beta_t
+  138 %% ============================================================
+  139
+  140 % (28): labor demand (Cobb-Douglas Y = A Z^alpha K^beta L^{1-alpha-beta})
+  141 $$
+  142 W_t = (1-\alpha_t-\beta_t)\,A_t Z^{\alpha_t} K_t^{\beta_t} L_t^{-\alpha_t-\beta_t}
+  143 \tag{28}
+  144 $$
+  145
+  146 % (29): land rent demand
+  147 $$
+  148 S_t = \alpha_t A_t Z^{\alpha_t-1} K_t^{\beta_t} L_t^{1-\alpha_t-\beta_t}
+  149 \tag{29}
+  150 $$
+  151
+  152 % (30): capital return
+  153 $$
+  154 r_t+\delta = \beta_t A_t Z^{\alpha_t} K_t^{\beta_t-1} L_t^{1-\alpha_t-\beta_t}
+  155 \tag{30}
+  156 $$
+  157
+  158 % (31): ratio of land rents to wages
+  159 $$
+  160 \frac{S_t}{W_t} = \frac{\alpha_t}{1-\alpha_t-\beta_t}\,\frac{L_t}{Z}
+  161 \tag{31}
+  162 $$
+  163
+  164 % (32): ratio of capital return to wages
+  165 $$
+  166 \frac{r_t+\delta}{W_t} = \frac{\beta_t}{1-\alpha_t-\beta_t}\,\frac{L_t}{K_t}
+  167 \tag{32}
+  168 $$
+  169
+  170 % (33): alpha_t from (31); definition of X_t
+  171 $$
+  172 \alpha_t = X_t - X_t\beta_t, \qquad
+  173 X_t \equiv \frac{S_t/W_t}{(L_t/Z)+(S_t/W_t)}
+  174 \tag{33}
+  175 $$
+  176
+  177 % (34): alpha_t from (32); definition of Y_t
+  178 $$
+  179 \alpha_t = Y_t - Y_t\beta_t, \qquad
+  180 Y_t \equiv \frac{(r_t+\delta)/W_t}{(L_t/K_t)+((r_t+\delta)/W_t)}
+  181 \tag{34}
+  182 $$
+  183
+  184 % (35)-(37): closed-form solutions for factor shares
+  185 $$
+  186 \alpha_t = X_t\,\frac{1-Y_t}{1-X_tY_t}
+  187 \tag{35}
+  188 $$
+  189
+  190 $$
+  191 \beta_t = Y_t\,\frac{1-X_t}{1-X_tY_t}
+  192 \tag{36}
+  193 $$
+  194
+  195 $$
+  196 1-\alpha_t-\beta_t = \frac{(1-X_t)(1-Y_t)}{1-X_tY_t}
+  197 \tag{37}
+  198 $$
+  199
+  200
+  201 %% ============================================================
+  202 %% Section F: The Malmquist Productivity Index
+  203 %% ============================================================
+  204
+  205 % Distance function: minimum scale-down for feasibility under technology S_t
+  206 $$
+  207 D_t(X_s,Y_s) = \inf\!\bigl\{\theta:(X_s,\,Y_s/\theta)\in\mathcal{S}_t\bigr\}
+  208              = \frac{Y_s}{F_t(X_s)}
+  209 $$
+  210
+  211 % Distance of (t+1) input-output vector from t-frontier
+  212 $$
+  213 D_t(X_{t+1},Y_{t+1})
+  214   = \frac{Y_{t+1}}{F_t(X_{t+1})}
+  215   = \frac{F_{t+1}(X_{t+1})}{F_t(X_{t+1})}
+  216 $$
+  217
+  218 % Malmquist index using period-t reference technology
+  219 $$
+  220 M^t_{t,t+1} \equiv
+  221   \frac{D_t(X_{t+1},Y_{t+1})}{D_t(X_t,Y_t)}
+  222   = \frac{F_{t+1}(X_{t+1})}{F_t(X_{t+1})}
+  223 $$
+  224
+  225 % Distance of (t) input-output vector from (t+1)-frontier
+  226 $$
+  227 D_{t+1}(X_t,Y_t)
+  228   = \frac{Y_t}{F_{t+1}(X_t)}
+  229   = \frac{F_t(X_t)}{F_{t+1}(X_t)}
+  230 $$
+  231
+  232 % Malmquist index using period-(t+1) reference technology
+  233 $$
+  234 M^{t+1}_{t,t+1} \equiv
+  235   \frac{D_{t+1}(X_{t+1},Y_{t+1})}{D_{t+1}(X_t,Y_t)}
+  236   = \frac{F_{t+1}(X_t)}{F_t(X_t)}
+  237 $$
+  238
+  239 % Malmquist index: geometric average (Caves, Christensen, Diewert 1982)
+  240 $$
+  241 M_{t,t+1} \equiv
+  242   \left(
+  243     \frac{D_t(X_{t+1},Y_{t+1})}{D_t(X_t,Y_t)}
+  244     \cdot
+  245     \frac{D_{t+1}(X_{t+1},Y_{t+1})}{D_{t+1}(X_t,Y_t)}
+  246   \right)^{\!1/2}
+  247   =
+  248   \left(
+  249     \frac{F_{t+1}(X_{t+1})}{F_t(X_{t+1})}
+  250     \cdot
+  251     \frac{F_{t+1}(X_t)}{F_t(X_t)}
+  252   \right)^{\!1/2}
+  253 $$
+  254
+  255
+  256 %% ============================================================
+  257 %% Section F.1: Normalization and the Malmquist Index
+  258 %% ============================================================
+  259
+  260 % (38): relabeling labor units: L-ddot = psi L, so A-ddot = A / psi^{1-alpha-beta}
+  261 $$
+  262 F_t(Z,K_t,L_t)
+  263   \equiv A_t Z^{\alpha_t} K_t^{\beta_t} L_t^{1-\alpha_t-\beta_t}
+  264   = \ddot{A}_t Z^{\alpha_t} K_t^{\beta_t} \ddot{L}_t^{1-\alpha_t-\beta_t}
+  265   \equiv \ddot{F}_t(Z,K_t,\ddot{L}_t)
+  266 \tag{38}
+  267 $$
+  268
+  269 % where ddot{L}_t = psi L_t  and
+  270 $$
+  271 \ddot{A}_t \equiv \frac{A_t}{\psi^{1-\alpha_t-\beta_t}}
+  272 $$
+  273
+  274 % Normalization invariance of m-hat (four-line derivation)
+  275 \begin{align*}
+  276 \hat{m}_t
+  277   &= \hat{a}_t + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+  278      - (\hat{\alpha}_t+\hat{\beta}_t)\bar{\ell}_t \\
+  279   &= \hat{a}_t + (\hat{\alpha}_t+\hat{\beta}_t)\log\psi
+  280      + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+  281      - (\hat{\alpha}_t+\hat{\beta}_t)(\bar{\ell}_t+\log\psi) \\
+  282   &= \hat{\ddot{a}}_t + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+  283      - (\hat{\alpha}_t+\hat{\beta}_t)\bar{\ddot{\ell}}_t \\
+  284   &= \hat{\ddot{m}}_t
+  285 \end{align*}
+  286
+  287
+  288 %% ============================================================
+  289 %% Section G: Model Equations (full system)
+  290 %% ============================================================
+  291
+  292 % Structural equations
+  293 \begin{align*}
+  294 w_t       &= \varphi_t
+  295               + \frac{1}{1-\beta_t}\,a_t
+  296               - \frac{\alpha_t}{1-\beta_t}(d_t+n_t)
+  297               - \frac{\beta_t}{1-\beta_t}\log(r_t+\delta) \\[4pt]
+  298 \varphi_t &= \log\beta_t + \log(1-\alpha_t-\beta_t)
+  299               + \frac{\alpha_t}{1-\beta_t}\,z
+  300               - (\alpha_t+\beta_t)\lambda \\[4pt]
+  301 s_t       &= w_t + n_t + d_t - z
+  302               + \log\alpha_t - \log(1-\alpha_t-\beta_t) \\[4pt]
+  303 k_t       &= w_t + n_t + d_t - \log(r_t+\delta)
+  304               + \log\beta_t - \log(1-\alpha_t-\beta_t) \\[4pt]
+  305 n_t       &= n_{t-1} + \omega + \gamma(w_{t-1}+d_{t-1}) + \xi_{1t}+\xi_{2t} \\[4pt]
+  306 \hat{m}_t &= \hat{a}_t + \hat{\alpha}_t z + \hat{\beta}_t\bar{k}_t
+  307               - (\hat{\alpha}_t+\hat{\beta}_t)(\bar{d}_t+\bar{n}_t) \\[4pt]
+  308 m_t       &= \tilde{m}_t + \varepsilon_{2t} \\[4pt]
+  309 \tilde{m}_t &= \mu + \tilde{m}_{t-1} + \varepsilon_{1t}
+  310 \end{align*}
+  311
+  312 % Plague shock (Beta-mixture)
+  313 $$
+  314 \exp(\xi_{1t}) \sim
+  315 \begin{cases}
+  316   \mathrm{Beta}(\beta_1,\beta_2), & \text{with probability } \pi \\
+  317   1,                              & \text{with probability } 1-\pi
+  318 \end{cases}
+  319 $$
+  320
+  321 % Innovation distributions
+  322 $$
+  323 \varepsilon_{1t} \sim \mathcal{N}(0,\sigma_1^2), \qquad
+  324 \varepsilon_{2t} \sim \mathcal{N}(0,\sigma_2^2), \qquad
+  325 \xi_{2t}         \sim \mathcal{N}(0,\sigma_{\xi_2}^2)
+  326 $$
+  327
+  328 % Measurement equations (tildes = observed; untilded = true)
+  329 \begin{align*}
+  330 w_t &= \varphi_w + \tilde{w}_t \\
+  331 n_t &= \psi + \tilde{n}_t + \iota_t^n \\
+  332 d_t &= \tilde{d}_t + \iota_t^d \\
+  333 r_t &= \tilde{r}_{it} + \iota_t^{ri} \\
+  334 s_t &= \varphi_s + \tilde{s}_t + \iota_t^s \\
+  335 k_t &= \varphi_k + \tilde{k}_t + \iota_t^k
+  336 \end{align*}
+  337
+  338 % Normalization priors
+  339 $$
+  340 \varphi_w \sim \mathcal{N}(0,100^2), \qquad
+  341 \varphi_s \sim \mathcal{N}(0,100^2), \qquad
+  342 \varphi_k \sim \mathcal{N}(0,100^2)
+  343 $$
+  344
+  345 % Measurement error distributions (t_nu = Student-t with nu d.f.)
+  346 \begin{align*}
+  347 \iota_t^n    &\sim t_{\nu_n}(0,\sigma_n^2) \\
+  348 \iota_t^d    &\sim t_{\nu_d}(0,\tilde{\sigma}_d^2) \\
+  349 \iota_t^{ri} &\sim t_{\nu_{ir}}(0,\tilde{\sigma}_{ir}^2) \\
+  350 \iota_t^s    &\sim t_{\nu_s}(0,\tilde{\sigma}_s^2) \\
+  351 \iota_t^k    &\sim t_{\nu_k}(0,\tilde{\sigma}_k^2)
+  352 \end{align*}
+  353
+  354
+  355 %% ============================================================
+  356 %% Section H.1: Clark's Dual Approach
+  357 %% ============================================================
+  358
+  359 % (39): Clark's dual index (lagged factor shares)
+  360 %   E_t = dual productivity estimate
+  361 %   lambda = risk premium; tau_t = indirect tax share of national income
+  362 %   s_{Z,t}, s_{K,t}, s_{L,t} = output elasticities of land, capital, labor
+  363 $$
+  364 \frac{E_t}{E_{t-1}} =
+  365   \left(\frac{S_t}{S_{t-1}}\right)^{\!s_{Z,t-1}}
+  366   \left(\frac{r_t+\lambda}{r_{t-1}+\lambda}\right)^{\!s_{K,t-1}}
+  367   \left(\frac{W_t}{W_{t-1}}\right)^{\!s_{L,t-1}}
+  368   \frac{1-\tau_{t-1}}{1-\tau_t}
+  369 \tag{39}
+  370 $$
+  371
+  372 % (40): modified dual index (average factor shares, as recommended by Barro-Sala-i-Martin)
+  373 $$
+  374 \frac{E_t}{E_{t-1}} =
+  375   \left(\frac{S_t}{S_{t-1}}\right)^{\!\bar{s}_{Z,t}}
+  376   \left(\frac{r_t+\lambda}{r_{t-1}+\lambda}\right)^{\!\bar{s}_{K,t}}
+  377   \left(\frac{W_t}{W_{t-1}}\right)^{\!\bar{s}_{L,t}}
+  378   \frac{1-\tau_{t-1}}{1-\tau_t}
+  379 \tag{40}
+  380 $$
+  381
+  382 % where: bar = period average, e.g.
+  383 $$
+  384 \bar{s}_{Z,t} = \tfrac{1}{2}(s_{Z,t-1}+s_{Z,t}),\quad
+  385 \bar{s}_{K,t} = \tfrac{1}{2}(s_{K,t-1}+s_{K,t}),\quad
+  386 \bar{s}_{L,t} = \tfrac{1}{2}(s_{L,t-1}+s_{L,t})
+  387 $$
+  388
+  389
+  390 %% ============================================================
+  391 %% Section H.2: Dual Approach vs. Malmquist Approach
+  392 %% ============================================================
+  393
+  394 % Reproduction of eq (18) from main text
+  395 $$
+  396 \hat{m}_t = \hat{a}_t + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+  397            - (\hat{\alpha}_t+\hat{\beta}_t)\bar{\ell}_t
+  398 $$
+  399
+  400 % (41): primal form = Solow residual with average factor shares
+  401 $$
+  402 \hat{m}_t = \hat{y}_t - \bar{\beta}_t\hat{k}_t
+  403            - (1-\bar{\alpha}_t-\bar{\beta}_t)\hat{\ell}_t
+  404 \tag{41}
+  405 $$
+  406
+  407 % Log-linear approx. of income identity Y_t = S_t Z + (r_t+delta)K_t + W_t L_t
+  408 $$
+  409 \hat{y}_t = \bar{\alpha}_t\hat{s}_t
+  410   + \bar{\beta}_t\!\left[\log\frac{r_t+\delta}{r_{t-1}+\delta} + \hat{k}_t\right]
+  411   + (1-\bar{\alpha}_t-\bar{\beta}_t)(\hat{w}_t+\hat{\ell}_t)
+  412 $$
+  413
+  414 % (42): Malmquist = dual up to first order
+  415 $$
+  416 \hat{m}_t =
+  417   \bar{\alpha}_t\hat{s}_t
+  418   + \bar{\beta}_t\log\frac{r_t+\delta}{r_{t-1}+\delta}
+  419   + (1-\bar{\alpha}_t-\bar{\beta}_t)\hat{w}_t
+  420 \tag{42}
+  421 $$
+  422
+  423 % (43): log of Clark's eq (40); compare with (42)
+  424 $$
+  425 \hat{e}_t =
+  426   \bar{s}_{Z,t}\hat{s}_t
+  427   + \bar{s}_{K,t}\log\frac{r_t+\lambda}{r_{t-1}+\lambda}
+  428   + \bar{s}_{L,t}\hat{w}_t
+  429   - \log\frac{1-\tau_t}{1-\tau_{t-1}}
+  430 \tag{43}
+  431 $$
+  432
+  433 % Footnote 24: derivation of (41) from Malmquist formula
+  434 \begin{align*}
+  435 \hat{m}_t
+  436   &= a_t - a_{t-1}
+  437      + \tfrac{1}{2}\bigl[
+  438          \alpha_t\log Z + \beta_t k_t + (1-\alpha_t-\beta_t)\ell_t \\
+  439   &\phantom{{}= a_t-a_{t-1}+\tfrac{1}{2}\bigl[}
+  440          -\,\alpha_{t-1}\log Z - \beta_{t-1}k_{t-1} - (1-\alpha_{t-1}-\beta_{t-1})\ell_{t-1}
+  441        \bigr] \\
+  442   &\quad
+  443      - \tfrac{1}{2}\bigl[
+  444          \alpha_{t-1}\log Z + \beta_{t-1}k_t + (1-\alpha_{t-1}-\beta_{t-1})\ell_t \\
+  445   &\phantom{{}\quad-\tfrac{1}{2}\bigl[}
+  446          -\,\alpha_t\log Z - \beta_t k_{t-1} - (1-\alpha_t-\beta_t)\ell_{t-1}
+  447        \bigr] \\[4pt]
+  448   &= \bigl[a_t+\alpha_t\log Z+\beta_t k_t+(1-\alpha_t-\beta_t)\ell_t\bigr] \\
+  449   &\quad
+  450      -\bigl[a_{t-1}+\alpha_{t-1}\log Z+\beta_{t-1}k_{t-1}+(1-\alpha_{t-1}-\beta_{t-1})\ell_{t-1}\bigr] \\
+  451   &\quad
+  452      -\tfrac{1}{2}\bigl[
+  453          \alpha_t\log Z+\beta_t k_t+(1-\alpha_t-\beta_t)\ell_t
+  454         -\alpha_{t-1}\log Z-\beta_{t-1}k_{t-1}-(1-\alpha_{t-1}-\beta_{t-1})\ell_{t-1}
+  455        \bigr] \\
+  456   &\quad
+  457      -\tfrac{1}{2}\bigl[
+  458          \alpha_{t-1}\log Z+\beta_{t-1}k_t+(1-\alpha_{t-1}-\beta_{t-1})\ell_t
+  459         -\alpha_t\log Z-\beta_t k_{t-1}-(1-\alpha_t-\beta_t)\ell_{t-1}
+  460        \bigr] \\[4pt]
+  461   &= \hat{y}_t - \bar{\beta}_t\hat{k}_t - (1-\bar{\alpha}_t-\bar{\beta}_t)\hat{\ell}_t
+  462 \end{align*}
+  463
+  464
+  465 %% ============================================================
+  466 %% Section I.1: Dynamics After a Change in Productivity Growth
+  467 %% ============================================================
+  468
+  469 % Simplified model: all shocks set to their means, d_t = d*, r_t = r*
+  470
+  471 % (44): wage equation
+  472 $$
+  473 w_t = \varphi
+  474   + \frac{1}{1-\beta}\,\tilde{a}_t
+  475   - \frac{\alpha}{1-\beta}(n_t+d^*)
+  476   - \frac{\beta}{1-\beta}\log(r^*+\delta)
+  477 \tag{44}
+  478 $$
+  479
+  480 % (45): population dynamics
+  481 $$
+  482 n_t - n_{t-1} = \omega + \gamma(w_{t-1}+d^*) + \mathbb{E}[\xi_{1t}]
+  483 \tag{45}
+  484 $$
+  485
+  486 % (46): productivity growth (random walk)
+  487 $$
+  488 \tilde{a}_t = \mu + \tilde{a}_{t-1}
+  489 \tag{46}
+  490 $$
+  491
+  492 % Substituting (44) into (45) to eliminate w_t
+  493 $$
+  494 n_t - n_{t-1} = \omega + \gamma\varphi
+  495   + \frac{\gamma}{1-\beta}\,\tilde{a}_{t-1}
+  496   - \frac{\alpha\gamma}{1-\beta}\,n_{t-1}
+  497   - \frac{\beta\gamma}{1-\beta}\log(r^*+\delta)
+  498   + \gamma\frac{1-\alpha-\beta}{1-\beta}\,d^*
+  499   + \mathbb{E}[\xi_{1t}]
+  500 $$
+  501
+  502 % (47): AR(1) for population
+  503 $$
+  504 n_{t+1} = \!\left(1-\frac{\alpha\gamma}{1-\beta}\right)\!n_t
+  505   + \frac{\gamma}{1-\beta}\,\tilde{a}_{t-1}
+  506   + \mathrm{const}
+  507 \tag{47}
+  508 $$
+  509
+  510 % (48): AR(1) for (tilde{a}_t - alpha n_t); stable iff |(1-alpha*gamma-beta)/(1-beta)| < 1
+  511 $$
+  512 \tilde{a}_t - \alpha n_t
+  513   = \mu - \kappa
+  514   + \frac{1-\alpha\gamma-\beta}{1-\beta}\,(\tilde{a}_{t-1}-\alpha n_{t-1})
+  515 \tag{48}
+  516 $$
+  517
+  518 % where
+  519 $$
+  520 \kappa = \alpha\!\left[
+  521   \omega + \gamma\varphi
+  522   + \gamma\frac{1-\alpha-\beta}{1-\beta}\,d^*
+  523   - \frac{\beta\gamma}{1-\beta}\log(r^*+\delta)
+  524   + \mathbb{E}[\xi_{1t}]
+  525 \right]
+  526 $$
+  527
+  528 % (49): steady-state real wage (increasing in mu; Malthusian force summarized by alpha*gamma)
+  529 $$
+  530 w^* = \frac{\mu}{\alpha\gamma} - d^* - \frac{\omega}{\gamma} - \frac{\mathbb{E}[\xi_{1t}]}{\gamma}
+  531 \tag{49}
+  532 $$
+  533
+  534
+  535 %% ============================================================
+  536 %% Section I.2: Dynamics After a Change in alpha
+  537 %% ============================================================
+  538
+  539 % Experiment: alpha falls from alpha_H to alpha_L at t=0; beta constant; mu=0
+  540
+  541 % (50): productivity law of motion (same as tilde{m} equation in G)
+  542 $$
+  543 \tilde{m}_t = \mu + \tilde{m}_{t-1}
+  544 \tag{50}
+  545 $$
+  546
+  547 % Pre-change steady state (t < 0): wage
+  548 $$
+  ⎿  Done
+
+● Write(/mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/.scratch/extract_pdf.R)
+  ⎿  Wrote 7 lines to
+     ../../mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/.scratch/extract_pdf.R
+      1 library(pdftools)
+      2 pdf_path <- "C:/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/BoucasseNakamu
+        raSteinsson_WhenGrowth_QJE2025_app.pdf"
+      3 pages <- pdf_text(pdf_path)
+      4 for (i in seq_along(pages)) {
+      5   cat(sprintf("\n\n===== PAGE %d =====\n\n", i))
+      6   cat(pages[[i]])
+      7 }
+
+● Bash(/mnt/c/seiro/languages/R/R-4.4.1/bin/Rscript.exe
+      'C:/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/.scratch/extract_pdf.R' 2>&1)
+  ⎿  '\\wsl.localhost\Ubuntu\home\sdude'
+     ��L�̌��݂̃f�B���N�g����  CMD.EXE ���J�n���܂����B
+     UNC �p�X�̓T�|�[�g����܂���BWindows �f�B���N�g��������Ŏg�p���܂��B
+     … +591 lines (ctrl+o to expand)
+
+● Good, it ran. Let me read the full output to find all equations.
+
+  Read 1 file (ctrl+o to expand)
+
+● Write(/mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/BoucasseNakamuraSteinsson_When
+       Growth_QJE2025_app_equations.txt)
+  ⎿  Wrote 575 lines to ../../mnt/c/seiro/docs/personal/Miscelleneous/testrepo/posts/BoucasseNakamuraSteinsson/Bouc
+     asseNakamuraSteinsson_WhenGrowth_QJE2025_app_equations.txt
+       1 % ============================================================
+       2 % Equations from:
+       3 % Boucasse, Nakamura & Steinsson (2025)
+       4 % "When Did Growth Begin?" QJE — Online Appendix
+       5 % Sections C–I (equations 23–51 plus unnumbered displays)
+       6 % ============================================================
+       7 % Notation
+       8 %   w_t   log real wage W_t
+       9 %   n_t   log population N_t
+      10 %   d_t   log days worked;  \ell_t = n_t + d_t = log labor
+     … +565 lines (ctrl+o to expand)
+
+● Written to BoucasseNakamuraSteinsson_WhenGrowth_QJE2025_app_equations.txt in the same folder as the PDF.
+
+  What's included (all numbered + all unnumbered display equations):
+
+  ┌───────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────┐
+  │            Section            │                                    Equations                                    │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ C — CES Production Function   │ CES form, labor demand, log-linear approx, α, LS̄                                │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ D — General Production        │ (23)–(27), FOCs, substitution steps                                             │
+  │ Function                      │                                                                                 │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ E — Identification of αt, βt  │ (28)–(37), definitions of Xt and Yt                                             │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ F — Malmquist Index           │ distance function, Mt,t+1 components, geometric average                         │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ F.1 — Normalization           │ (38), Ät, 4-line invariance proof                                               │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ G — Model Equations           │ full structural system, Beta-mixture, N(0,σ²) distributions, 6 measurement      │
+  │                               │ equations                                                                       │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ H.1 — Clark's Dual            │ (39)–(40), s̄ definitions                                                        │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ H.2 — Dual vs Malmquist       │ (41)–(43), income identity approx, footnote 24 derivation                       │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ I.1 — Dynamics (μ change)     │ (44)–(49), κ definition                                                         │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+  │ I.2 — Dynamics (α change)     │ (50)–(51), pre/post steady states, footnote 25                                  │
+  └───────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────┘
+
+  Usage note: PDF text extraction garbles some Greek letters — 1t/2t in the raw text are
+  \varepsilon_{1t}/\varepsilon_{2t}; these are correctly rendered in the output file. The \ddot{} notation (Ät, L̈t)
+  follows the paper's dieresis convention.
+
+✻ Brewed for 10m 26s
+
+※ recap: Extracted all equations from the Boucasse-Nakamura-Steinsson QJE 2025 appendix into a paste-ready LaTeX file.
+  File is saved. Next: open it in your editor and paste equations into your Quarto doc. (disable recaps in /config)
+
+● I have enough to give a full answer. Here is what sections III.A and III.E say, and how the code implements it.
+
+  ---
+  The fixed α, β model in BNS (2025)
+
+  What "fixed" means in the paper
+
+  The model has a Cobb–Douglas production function with land (Z, fixed quantity), capital (K), and labour (L):
+
+  Yₜ = Aₜ Zᵅ Kₜᵝ Lₜ^(1−α−β)
+
+  "Fixed α, β" means the factor shares are constant over all time periods — they do not drift as the economy
+  industrialises. This contrasts with the "changing α/β" baseline (nt=105) where shares are allowed to vary from ~1760
+  onward.
+
+  ---
+  III.A — Identification of α and β
+
+  The paper offers two routes depending on the specification number (nt):
+
+  Route 1 — IV/reduced-form (nt < 200, e.g. nt=103 = fixed α/β IV)
+
+  - The combined slope α̃ = α / (1−β) is not estimated freely — it is pinned by an IV estimate using movements in real
+  wages and population 1340–1360 (Black Death shock):
+  delta_iv <- -(w[1360] − w[1340]) / (l[1360] − l[1340])
+  slope0 <- delta_iv   # passed to Stan as a data constant
+  - In Stan: include_slope = 1 → include_apar = 0 (α is not a free parameter).
+  - β is a free parameter with prior uniform(max(0, 1−1/slope0), 1).
+  - α is recovered deterministically: α[1] = slope0 × (1 − β).
+  - So the IV pinned slope disciplines both shares jointly; only β is sampled.
+
+  Route 2 — Structural (nt ≥ 200, e.g. nt=203 = fixed α/β structural)
+
+  - include_slope = 0 → include_apar = 1.
+  - The simplex (α, β, 1−α−β) is sampled from a Dirichlet(1,1,1) prior (uniform over the simplex).
+  - Both α and β are free parameters, disciplined jointly by the likelihood from wages, land rents, and capital data.
+
+  ---
+  Fixed vs. changing: the include_Z switch
+
+  In estimation.R lines 248–258:
+
+  include_Z <- 0                    # fixed α/β: nt=103, 203
+  if (nt %in% c(105, 205, ...)) {
+    include_Z <- 1                  # changing α/β: baseline
+    ii_alpha <- which(D < init)     # pre-1760 indices (α constant here)
+    ii_drft  <- which(D >= init)    # post-1760 indices (α can drift)
+  }
+
+  In the Stan file (malthus_model.stan lines 174–182):
+
+  alphat[ii_alpha] = rep_vector(alpha[1], T-T_drft);   // constant before init
+  if (T_drft > 0)
+    alphat[ii_drft] = append_row(alpha[1], drft[,1]);  // Dirichlet drift after init
+
+  betat[ii_alpha] = rep_vector(alpha[2], T-T_drft);
+  if (T_drft > 0)
+    betat[ii_drft] = append_row(alpha[2], drft[,2]);
+
+  For fixed α/β: T_drft = 0, so alphat[t] = α and betat[t] = β for all t — no drift block is sampled.
+
+  ---
+  III.E — Priors and estimation procedure
+
+  The section describes the following, which the code confirms:
+
+  - Estimator: Bayesian HMC via Stan (rstan), 10⁶ draws/chain × 24 chains, thinned to ~20,000 effective draws.
+  - α/β priors:
+    - IV route (fixed): β ~ uniform(max(0, 1−1/α̃), 1). The lower bound ensures α = α̃(1−β) ≥ 0.
+    - Structural route (fixed): (α, β, 1−α−β) ~ Dirichlet(1,1,1) (uniform over simplexes).
+    - Changing α/β: (αₜ, βₜ, 1−αₜ−βₜ) ~ Dirichlet(3 × (αₜ₋₁, βₜ₋₁, 1−αₜ₋₁−βₜ₋₁)) — centred on prior period's shares,
+  concentration cs = 3.
+  - No closed-form derivation of α/β is given beyond this: the paper says the IV estimate pins the slope, and β is
+  recovered from priors + likelihood. The section does not give further algebraic detail on identification of β
+  separately from α in the IV case — it notes only that the slope α̃ = α/(1−β) is calibrated from the Black Death
+  episode.
+
+  ---
+  Summary
+
+  ┌──────────────────┬──────────────┬───────────────────────┬───────────────────────────┬──────────────────────────┐
+  │       Spec       │      nt      │       α pinned?       │          β free?          │        Estimation        │
+  ├──────────────────┼──────────────┼───────────────────────┼───────────────────────────┼──────────────────────────┤
+  │ Fixed α/β, IV    │ 103          │ Yes (via Black Death  │ Yes (uniform prior)       │ HMC, α recovered from    │
+  │                  │              │ IV)                   │                           │ slope×(1−β)              │
+  ├──────────────────┼──────────────┼───────────────────────┼───────────────────────────┼──────────────────────────┤
+  │ Fixed α/β,       │ 203          │ No                    │ Yes (Dirichlet prior      │ HMC                      │
+  │ structural       │              │                       │ jointly with α)           │                          │
+  ├──────────────────┼──────────────┼───────────────────────┼───────────────────────────┼──────────────────────────┤
+  │ Changing α/β, IV │ 105          │ Pre-1760 yes;         │ Same                      │ HMC + Dirichlet          │
+  │                  │ (baseline)   │ post-1760 drift       │                           │ transition               │
+  └──────────────────┴──────────────┴───────────────────────┴───────────────────────────┴──────────────────────────┘
+
+  The paper gives the prior setup but no algebraic derivation of how α and β are separately identified in the IV route —
+  it relies on the Bayesian posterior to separate them given the slope constraint, the capital demand equation, and
+  data on interest rates and land rents.
+
+✻ Churned for 1m 36s
+
+※ recap: Reading BNS (2025) to explain how fixed α/β factor shares are estimated. Done — summary delivered. No next
+  action pending. (disable recaps in /config)
+
+❯ How are (8) and (9) used to estimate fixed alpha?
+
+● Let me read the Stan model's transformed parameters and model blocks where the likelihood is built from equations (8)
+  and (9).
+
+  Read 1 file (ctrl+o to expand)
+
+● Now I have the full picture. Here is a precise answer.
+
+  ---
+  How equations (8) and (9) identify fixed α
+
+  The two-step structure
+
+  Identification works in two stages: a pre-estimation IV step that pins the combined slope, then a Bayesian HMC step
+  that separates α from β.
+
+  ---
+  Step 1 — Equation (9) justifies the instrument; the slope is computed before Stan
+
+  Equation (9) is the Malthusian population law of motion:
+
+  nt − nt−1 = ω + γ(wt−1 + dt−1) + ξt
+
+  The plague shock ξ1t in equation (10)–(11) is explicitly modelled as exogenous (a mixture: with probability π, a
+  fraction of the population dies from a Beta-distributed shock, otherwise zero). This is what makes the Black Death
+  1340–1360 usable as an instrument: equation (9) asserts that the population drop was exogenous to productivity.
+
+  In estimation.R before Stan is called:
+
+  delta_iv <- -(w[D==1360] - w[D==1340]) / (l[D==1360] - l[D==1340])
+  slope0 <- delta_iv    # Wald estimator, passed to Stan as a data constant
+
+  This is a Wald estimator: exogenous Δn from the plague (equation 9) instruments for the endogenous labour supply in
+  equation (8), identifying the slope α̃ = α/(1−β). slope0 is fixed data, not a sampled parameter.
+
+  ---
+  Step 2 — Equation (8) is the likelihood; HMC recovers α and β
+
+  Equation (8) in logs (with capital demand substituted in) is:
+
+  wt = φ + (1/(1−β)) ãt − (α/(1−β))(dt+nt) − (β/(1−β)) log(rt+δ)
+
+  In Stan (malthus_model.stan line 223), the labor demand prediction lbdm is:
+
+  lbdm = log(1-alphat-betat)
+       + (betat.*log(betat) + atilde - (alphat).*(n+h) - betat.*log(r+delta)) ./ (1-betat);
+
+  The wage likelihood (line 314) is:
+
+  w ~ N(φ + lbdm, se2 ./ (1−betat))
+
+  Since slope0 = α/(1−β) is a data constant, Stan imposes (line 150):
+
+  alpha[1] = slope0 * (1 - beta0[1]);   // α = α̃(1−β)
+  alpha[2] = beta0[1];                   // β is the free parameter
+
+  So α is not sampled directly — only β is sampled, subject to:
+
+  beta0 ~ uniform(max(0, 1-1/slope0), 1)   // line 243
+
+  What separates α from β? The term (β/(1−β)) log(rt+δ) in equation (8). The interest rate rt varies over time and is
+  observed. Given slope0 is fixed, variation in rt identifies β through the wage likelihood: a larger β means interest
+  rate movements have a larger effect on wages. Once β is pinned, α = slope0 × (1−β).
+
+  ---
+  What the fixed α/β restriction adds
+
+  For fixed α/β (nt=103, include_Z = 0):
+
+  include_Z <- 0
+  ii_alpha <- 1:T        # ALL time periods
+  ii_drft  <- integer(0) # no drift periods
+
+  In Stan (lines 174, 181):
+  alphat[ii_alpha] = rep_vector(alpha[1], T);   // constant for all t
+  betat[ii_alpha]  = rep_vector(alpha[2], T);   // constant for all t
+
+  Crucially, the rent and capital demand likelihoods (lines 348–351) are only added when include_Z = 1. For fixed α/β,
+  they are absent from the likelihood. So the only discipline on β is:
+  - Its prior (uniform on admissible range)
+  - The time-series variation of rt in the wage equation (8)
+
+  The paper's main interest in this case is the slope α̃ = α/(1−β), not α and β individually. The fixed case serves as a
+  robustness check against the changing α/β baseline (nt=105) where rent and capital data post-1760 also enter the
+  likelihood and more sharply identify β.
+
+  ---
+  Summary
+
+  ┌────────────┬───────────────┬─────────────────────────────────────────────────────────────────────┐
+  │    Role    │   Equation    │                              Mechanism                              │
+  ├────────────┼───────────────┼─────────────────────────────────────────────────────────────────────┤
+  │ Justify IV │ (9)           │ Plague shock is exogenous → Black Death is a valid instrument       │
+  ├────────────┼───────────────┼─────────────────────────────────────────────────────────────────────┤
+  │ Pin slope  │ (8) pre-Stan  │ Wald: Δw/Δl over 1340–1360 = α/(1−β) = slope0                       │
+  ├────────────┼───────────────┼─────────────────────────────────────────────────────────────────────┤
+  │ Identify β │ (8) in Stan   │ Time variation in rt in the interest rate term of the wage equation │
+  ├────────────┼───────────────┼─────────────────────────────────────────────────────────────────────┤
+  │ Recover α  │ deterministic │ α = slope0 × (1−β) after β is sampled                               │
+  └────────────┴───────────────┴─────────────────────────────────────────────────────────────────────┘
+
+✻ Brewed for 1m 51s
+
+※ recap: Reading a QJE 2025 paper by Bouscasse, Nakamura, Steinsson on pre-industrial England productivity growth. Just
+  explained how their fixed alpha/beta factor share model is estimated via Bayesian HMC in Stan. No immediate next
+  action pending. (disable recaps in /config)
+
+❯ explain about lbdm and how the likelihood is formed
+
+● I have all I need from the files already read. Here is a self-contained explanation.
+
+  ---
+  lbdm and the likelihood
+
+  What lbdm is
+
+  lbdm is the model's predicted log wage given current parameter values, minus the normalisation constant phi[1]. It is
+  the right-hand side of equation (8) — the labour demand curve after capital demand has been substituted out —
+  evaluated at the sampled parameters.
+
+  No capital (include_K = 0, line 225):
+  lbdm = log(1-alphat) + atilde - alphat.*(n+h)
+  This matches equation (3): wt = φ̃ + ãt − α lt with lt = nt + dt = n + h.
+
+  log(1-alphat) is the part of φ̃ = log(1-α) + α log Z that is not absorbed into phi[1] (log Z is normalised to 0).
+
+  With capital (include_K = 1, line 223):
+  lbdm = log(1-alphat-betat)
+       + (betat.*log(betat) + atilde
+          - alphat.*(n+h) - betat.*log(r+delta)) ./ (1-betat)
+  This matches equation (5) — the version with capital demand substituted out:
+
+  wt = φ̃' + (1/(1-β)) ãt  −  (α/(1-β))(nt+dt)  −  (β/(1-β)) log(rt+δ)
+
+  where φ̃' = log(1-α-β) + β log β / (1-β) (log Z = 0).
+
+  Expanding the code confirms:
+  log(1-α-β)  +  [β log β + ãt − α(n+h) − β log(r+δ)] / (1-β)
+  = φ̃'  +  (1/(1-β)) ãt  −  (α/(1-β))(n+h)  −  (β/(1-β)) log(r+δ)
+
+  ---
+  atilde — the permanent productivity state
+
+  at = ãt + ε2t. The permanent component ãt is atilde in the code. For fixed α/β (include_Z = 0):
+
+  atilde[ii_alpha] = mlq[ii_alpha]   // all t
+
+  mlq (Malmquist log quantity index) is built from the sampled first-differences dmlq:
+
+  mlq[1] = 0;
+  mlq[t] = dmlq[t-1] + mlq[t-1];    // cumulative sum of dmlq
+
+  dmlq[t] = ãt − ãt−1 is a free parameter for every period (line 106 in the parameters block). So ãt is not a parametric
+  function — it is a full vector of latent states sampled by HMC.
+
+  ---
+  How the likelihood is formed
+
+  The model has three likelihood blocks (equations (7), (8), (9)):
+
+  Block 1 — Permanent productivity state, equation (7) (lines 309–310)
+
+  The random walk with drift for ãt:
+
+  mlq[t] ~ N(mu_a[i] + mlq[t-1], se1[i])
+
+  mu_a[i] is the drift μ in regime i. This is the state equation in the state-space structure.
+
+  Block 2 — Wage measurement equation, equation (8) (lines 312–314)
+
+  // no capital:
+  w[...] ~ N(phi[1] + lbdm[...], se2[i])
+
+  // with capital:
+  w[...] ~ N(phi[1] + lbdm[...], se2[i] ./ (1-betat[...]))
+
+  This is the measurement equation. The noise ε2t (transitory productivity) enters wt through equation (8) as ε2t/(1-β),
+  so its standard deviation is σε2/(1-β) — hence the division by (1-betat) in the with-capital case. For β=0 it reduces
+  to just se2[i].
+
+  Block 3 — Malthusian population supply, equation (9) (lines 338–341)
+
+  n[t] ~ log_mix(p[j],
+           N(omega + gamma*(w[t-1]+h[t-1]) + n[t-1] + xi1[t], sx2),  // plague year
+           N(omega + gamma*(w[t-1]+h[t-1]) + n[t-1],          sx2))  // normal year
+
+  Equation (9): nt − nt−1 = ω + γ(wt−1 + dt−1) + ξt. Plague occurs with probability p[j] and adds ξ1t ~ Beta(β1,β2) to
+  population growth. This block provides the Malthusian feedback and identifies γ.
+
+  ---
+  The full likelihood is a mixture over break dates
+
+  All three blocks are wrapped in a mixture model over the unknown first break date (lines 302–321):
+
+  vector[dim_b] lps = log(piv);          // log prior probabilities of each break date
+  for (j in 1:dim_b) {
+    lps[j] += log p(wages | mu_a[i], break j) + log p(mlq | mu_a[i], break j)
+  }
+  target += log_sum_exp(lps);            // marginalises over break dates
+
+  piv[j] is the posterior probability that the first break falls at date j (drawn from a Dirichlet). The log-sum-exp
+  marginalises over all possible break dates.
+
+  ---
+  Summary diagram
+
+                   state equation (eq. 7)
+    dmlq[t] sampled freely  →  mlq[t] = mlq[t-1] + dmlq[t-1]  =  atilde[t]
+                                            |
+                                            ↓ enters lbdm
+    lbdm[t] = f(atilde, alphat, betat, n, h, r, delta)
+                                            |
+                                            ↓ measurement eq. (eq. 8)
+    w[t]  ~  N(phi + lbdm[t],  se2/(1-beta))
+
+    n[t]  ~  mixture N(omega + gamma*(w[t-1]+h[t-1]) + n[t-1] ± plague,  sx2)
+                                          (eq. 9)
+
+  lbdm is the bridge between the latent productivity state atilde and the observed wage w. HMC jointly samples dmlq (all
+  T latent increments), beta0 (or alpha_smplx), mu_a, se1, se2, gamma, and all other parameters against this combined
+  likelihood.
+

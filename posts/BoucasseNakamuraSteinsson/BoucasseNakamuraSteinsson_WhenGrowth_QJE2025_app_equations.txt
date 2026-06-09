@@ -1,0 +1,575 @@
+% ============================================================
+% Equations from:
+% Boucasse, Nakamura & Steinsson (2025)
+% "When Did Growth Begin?" QJE — Online Appendix
+% Sections C–I (equations 23–51 plus unnumbered displays)
+% ============================================================
+% Notation
+%   w_t   log real wage W_t
+%   n_t   log population N_t
+%   d_t   log days worked;  \ell_t = n_t + d_t = log labor
+%   a_t   log TFP A_t  (permanent component: \tilde{a}_t)
+%   k_t   log capital K_t
+%   s_t   log land rents S_t
+%   z     log land endowment Z  (fixed)
+%   r_t   net return to capital;  \delta = depreciation rate
+%   \mu   mean productivity growth rate
+%   \alpha_t  land output elasticity
+%   \beta_t   capital output elasticity
+%   \varepsilon_{1t}, \varepsilon_{2t}  permanent / transitory productivity shocks
+%   \xi_{1t}, \xi_{2t}  plague / normal population shocks
+%   Hat: \hat{x}_t = x_t - x_{t-1}  (first difference)
+%   Bar: \bar{x}_t = (x_{t-1}+x_t)/2  (period average)
+% ============================================================
+
+
+%% ============================================================
+%% Section C: CES Production Function
+%% ============================================================
+
+% CES production function (two factors: land Z, labor L)
+$$
+Y_t = A_t \!\left[
+  {\alpha'}^{1/\sigma} Z^{(\sigma-1)/\sigma}
+  + (1-\alpha')^{1/\sigma} L_t^{(\sigma-1)/\sigma}
+\right]^{\!\sigma/(\sigma-1)}
+$$
+
+% Optimal labor demand (FOC w.r.t. L)
+$$
+W_t = (1-\alpha')^{1/\sigma} A_t
+  \!\left[
+    {\alpha'}^{1/\sigma}\!\left(\frac{Z}{L_t}\right)^{\!(\sigma-1)/\sigma}
+    + (1-\alpha')^{1/\sigma}
+  \right]^{\!1/(\sigma-1)}
+$$
+
+% Log-linear approximation of labor demand
+$$
+w_t = \varphi - \alpha\, \ell_t + a_t
+$$
+
+% alpha as function of sigma and L/Z (L = linearization point)
+$$
+\alpha = \sigma \!\left[
+  1 + \frac{1-\alpha'}{\alpha'}\!\left(\frac{L}{Z}\right)^{\!(\sigma-1)/\sigma}
+\right]^{\!-1}
+$$
+
+% Labor share of output
+$$
+\overline{LS} = 1 - \!\left[
+  1 + \frac{1-\alpha'}{\alpha'}\!\left(\frac{L}{Z}\right)^{\!(\sigma-1)/\sigma}
+\right]^{\!-1}
+$$
+
+% Relationship: alpha, labor share, sigma (land share = sigma*alpha)
+$$
+\alpha = \frac{1-\overline{LS}}{\sigma}
+$$
+
+
+%% ============================================================
+%% Section D: More General Production Function
+%% ============================================================
+
+% (23)
+$$
+Y_t = A_t F(Z,L_t,K_t) \tag{23}
+$$
+
+% First-order conditions
+\begin{align*}
+W_t       &= A_t F_L(Z,L_t,K_t) \\
+r_t+\delta &= A_t F_K(Z,L_t,K_t)
+\end{align*}
+
+% (24): log-linear approximation of wage FOC
+$$
+w_t = a_t + \log F_L(Z,L_t,K_t)
+    \approx \tilde{\varphi} + a_t
+      + \frac{LF_{LL}}{F_L}\,\ell_t
+      + \frac{KF_{LK}}{F_L}\,k_t
+\tag{24}
+$$
+
+% (25): log-linear approximation of capital-return FOC
+$$
+\log(r_t+\delta) = a_t + \log F_K(Z,L_t,K_t)
+    \approx \tilde{\varphi}'' + a_t
+      + \frac{LF_{LK}}{F_K}\,\ell_t
+      + \frac{KF_{KK}}{F_K}\,k_t
+\tag{25}
+$$
+
+% (26): solving (25) for k_t
+$$
+k_t = \tilde{\varphi}'''
+  + \frac{F_K}{KF_{KK}}\bigl(\log(r_t+\delta)-a_t\bigr)
+  - \frac{LF_{LK}}{KF_{KK}}\,\ell_t
+\tag{26}
+$$
+
+% Substituting (26) into (24)
+$$
+w_t \approx \tilde{\varphi}
+  + \!\left(1-\frac{F_KF_{LK}}{F_LF_{KK}}\right)\!a_t
+  + \frac{L}{F_LF_{KK}}\!\left(F_{LL}F_{KK}-F_{LK}^2\right)\!\ell_t
+  + \frac{F_KF_{LK}}{F_LF_{KK}}\log(r_t+\delta)
+$$
+
+% (27): rewritten in terms of alpha-tilde and beta-tilde
+$$
+w_t \approx \tilde{\varphi} + (1+\tilde{\beta})\,a_t
+           - \tilde{\alpha}\,\ell_t
+           - \tilde{\beta}\log(r_t+\delta)
+\tag{27}
+$$
+
+% Definitions of tilde parameters
+\begin{align*}
+\tilde{\alpha} &= -\frac{L}{F_LF_{KK}}\!\left(F_{LL}F_{KK}-F_{LK}^2\right) \\[4pt]
+\tilde{\beta}  &= -\frac{F_KF_{LK}}{F_LF_{KK}}
+\end{align*}
+
+
+%% ============================================================
+%% Section E: Identification of alpha_t and beta_t
+%% ============================================================
+
+% (28): labor demand (Cobb-Douglas Y = A Z^alpha K^beta L^{1-alpha-beta})
+$$
+W_t = (1-\alpha_t-\beta_t)\,A_t Z^{\alpha_t} K_t^{\beta_t} L_t^{-\alpha_t-\beta_t}
+\tag{28}
+$$
+
+% (29): land rent demand
+$$
+S_t = \alpha_t A_t Z^{\alpha_t-1} K_t^{\beta_t} L_t^{1-\alpha_t-\beta_t}
+\tag{29}
+$$
+
+% (30): capital return
+$$
+r_t+\delta = \beta_t A_t Z^{\alpha_t} K_t^{\beta_t-1} L_t^{1-\alpha_t-\beta_t}
+\tag{30}
+$$
+
+% (31): ratio of land rents to wages
+$$
+\frac{S_t}{W_t} = \frac{\alpha_t}{1-\alpha_t-\beta_t}\,\frac{L_t}{Z}
+\tag{31}
+$$
+
+% (32): ratio of capital return to wages
+$$
+\frac{r_t+\delta}{W_t} = \frac{\beta_t}{1-\alpha_t-\beta_t}\,\frac{L_t}{K_t}
+\tag{32}
+$$
+
+% (33): alpha_t from (31); definition of X_t
+$$
+\alpha_t = X_t - X_t\beta_t, \qquad
+X_t \equiv \frac{S_t/W_t}{(L_t/Z)+(S_t/W_t)}
+\tag{33}
+$$
+
+% (34): alpha_t from (32); definition of Y_t
+$$
+\alpha_t = Y_t - Y_t\beta_t, \qquad
+Y_t \equiv \frac{(r_t+\delta)/W_t}{(L_t/K_t)+((r_t+\delta)/W_t)}
+\tag{34}
+$$
+
+% (35)-(37): closed-form solutions for factor shares
+$$
+\alpha_t = X_t\,\frac{1-Y_t}{1-X_tY_t}
+\tag{35}
+$$
+
+$$
+\beta_t = Y_t\,\frac{1-X_t}{1-X_tY_t}
+\tag{36}
+$$
+
+$$
+1-\alpha_t-\beta_t = \frac{(1-X_t)(1-Y_t)}{1-X_tY_t}
+\tag{37}
+$$
+
+
+%% ============================================================
+%% Section F: The Malmquist Productivity Index
+%% ============================================================
+
+% Distance function: minimum scale-down for feasibility under technology S_t
+$$
+D_t(X_s,Y_s) = \inf\!\bigl\{\theta:(X_s,\,Y_s/\theta)\in\mathcal{S}_t\bigr\}
+             = \frac{Y_s}{F_t(X_s)}
+$$
+
+% Distance of (t+1) input-output vector from t-frontier
+$$
+D_t(X_{t+1},Y_{t+1})
+  = \frac{Y_{t+1}}{F_t(X_{t+1})}
+  = \frac{F_{t+1}(X_{t+1})}{F_t(X_{t+1})}
+$$
+
+% Malmquist index using period-t reference technology
+$$
+M^t_{t,t+1} \equiv
+  \frac{D_t(X_{t+1},Y_{t+1})}{D_t(X_t,Y_t)}
+  = \frac{F_{t+1}(X_{t+1})}{F_t(X_{t+1})}
+$$
+
+% Distance of (t) input-output vector from (t+1)-frontier
+$$
+D_{t+1}(X_t,Y_t)
+  = \frac{Y_t}{F_{t+1}(X_t)}
+  = \frac{F_t(X_t)}{F_{t+1}(X_t)}
+$$
+
+% Malmquist index using period-(t+1) reference technology
+$$
+M^{t+1}_{t,t+1} \equiv
+  \frac{D_{t+1}(X_{t+1},Y_{t+1})}{D_{t+1}(X_t,Y_t)}
+  = \frac{F_{t+1}(X_t)}{F_t(X_t)}
+$$
+
+% Malmquist index: geometric average (Caves, Christensen, Diewert 1982)
+$$
+M_{t,t+1} \equiv
+  \left(
+    \frac{D_t(X_{t+1},Y_{t+1})}{D_t(X_t,Y_t)}
+    \cdot
+    \frac{D_{t+1}(X_{t+1},Y_{t+1})}{D_{t+1}(X_t,Y_t)}
+  \right)^{\!1/2}
+  =
+  \left(
+    \frac{F_{t+1}(X_{t+1})}{F_t(X_{t+1})}
+    \cdot
+    \frac{F_{t+1}(X_t)}{F_t(X_t)}
+  \right)^{\!1/2}
+$$
+
+
+%% ============================================================
+%% Section F.1: Normalization and the Malmquist Index
+%% ============================================================
+
+% (38): relabeling labor units: L-ddot = psi L, so A-ddot = A / psi^{1-alpha-beta}
+$$
+F_t(Z,K_t,L_t)
+  \equiv A_t Z^{\alpha_t} K_t^{\beta_t} L_t^{1-\alpha_t-\beta_t}
+  = \ddot{A}_t Z^{\alpha_t} K_t^{\beta_t} \ddot{L}_t^{1-\alpha_t-\beta_t}
+  \equiv \ddot{F}_t(Z,K_t,\ddot{L}_t)
+\tag{38}
+$$
+
+% where ddot{L}_t = psi L_t  and
+$$
+\ddot{A}_t \equiv \frac{A_t}{\psi^{1-\alpha_t-\beta_t}}
+$$
+
+% Normalization invariance of m-hat (four-line derivation)
+\begin{align*}
+\hat{m}_t
+  &= \hat{a}_t + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+     - (\hat{\alpha}_t+\hat{\beta}_t)\bar{\ell}_t \\
+  &= \hat{a}_t + (\hat{\alpha}_t+\hat{\beta}_t)\log\psi
+     + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+     - (\hat{\alpha}_t+\hat{\beta}_t)(\bar{\ell}_t+\log\psi) \\
+  &= \hat{\ddot{a}}_t + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+     - (\hat{\alpha}_t+\hat{\beta}_t)\bar{\ddot{\ell}}_t \\
+  &= \hat{\ddot{m}}_t
+\end{align*}
+
+
+%% ============================================================
+%% Section G: Model Equations (full system)
+%% ============================================================
+
+% Structural equations
+\begin{align*}
+w_t       &= \varphi_t
+              + \frac{1}{1-\beta_t}\,a_t
+              - \frac{\alpha_t}{1-\beta_t}(d_t+n_t)
+              - \frac{\beta_t}{1-\beta_t}\log(r_t+\delta) \\[4pt]
+\varphi_t &= \log\beta_t + \log(1-\alpha_t-\beta_t)
+              + \frac{\alpha_t}{1-\beta_t}\,z
+              - (\alpha_t+\beta_t)\lambda \\[4pt]
+s_t       &= w_t + n_t + d_t - z
+              + \log\alpha_t - \log(1-\alpha_t-\beta_t) \\[4pt]
+k_t       &= w_t + n_t + d_t - \log(r_t+\delta)
+              + \log\beta_t - \log(1-\alpha_t-\beta_t) \\[4pt]
+n_t       &= n_{t-1} + \omega + \gamma(w_{t-1}+d_{t-1}) + \xi_{1t}+\xi_{2t} \\[4pt]
+\hat{m}_t &= \hat{a}_t + \hat{\alpha}_t z + \hat{\beta}_t\bar{k}_t
+              - (\hat{\alpha}_t+\hat{\beta}_t)(\bar{d}_t+\bar{n}_t) \\[4pt]
+m_t       &= \tilde{m}_t + \varepsilon_{2t} \\[4pt]
+\tilde{m}_t &= \mu + \tilde{m}_{t-1} + \varepsilon_{1t}
+\end{align*}
+
+% Plague shock (Beta-mixture)
+$$
+\exp(\xi_{1t}) \sim
+\begin{cases}
+  \mathrm{Beta}(\beta_1,\beta_2), & \text{with probability } \pi \\
+  1,                              & \text{with probability } 1-\pi
+\end{cases}
+$$
+
+% Innovation distributions
+$$
+\varepsilon_{1t} \sim \mathcal{N}(0,\sigma_1^2), \qquad
+\varepsilon_{2t} \sim \mathcal{N}(0,\sigma_2^2), \qquad
+\xi_{2t}         \sim \mathcal{N}(0,\sigma_{\xi_2}^2)
+$$
+
+% Measurement equations (tildes = observed; untilded = true)
+\begin{align*}
+w_t &= \varphi_w + \tilde{w}_t \\
+n_t &= \psi + \tilde{n}_t + \iota_t^n \\
+d_t &= \tilde{d}_t + \iota_t^d \\
+r_t &= \tilde{r}_{it} + \iota_t^{ri} \\
+s_t &= \varphi_s + \tilde{s}_t + \iota_t^s \\
+k_t &= \varphi_k + \tilde{k}_t + \iota_t^k
+\end{align*}
+
+% Normalization priors
+$$
+\varphi_w \sim \mathcal{N}(0,100^2), \qquad
+\varphi_s \sim \mathcal{N}(0,100^2), \qquad
+\varphi_k \sim \mathcal{N}(0,100^2)
+$$
+
+% Measurement error distributions (t_nu = Student-t with nu d.f.)
+\begin{align*}
+\iota_t^n    &\sim t_{\nu_n}(0,\sigma_n^2) \\
+\iota_t^d    &\sim t_{\nu_d}(0,\tilde{\sigma}_d^2) \\
+\iota_t^{ri} &\sim t_{\nu_{ir}}(0,\tilde{\sigma}_{ir}^2) \\
+\iota_t^s    &\sim t_{\nu_s}(0,\tilde{\sigma}_s^2) \\
+\iota_t^k    &\sim t_{\nu_k}(0,\tilde{\sigma}_k^2)
+\end{align*}
+
+
+%% ============================================================
+%% Section H.1: Clark's Dual Approach
+%% ============================================================
+
+% (39): Clark's dual index (lagged factor shares)
+%   E_t = dual productivity estimate
+%   lambda = risk premium; tau_t = indirect tax share of national income
+%   s_{Z,t}, s_{K,t}, s_{L,t} = output elasticities of land, capital, labor
+$$
+\frac{E_t}{E_{t-1}} =
+  \left(\frac{S_t}{S_{t-1}}\right)^{\!s_{Z,t-1}}
+  \left(\frac{r_t+\lambda}{r_{t-1}+\lambda}\right)^{\!s_{K,t-1}}
+  \left(\frac{W_t}{W_{t-1}}\right)^{\!s_{L,t-1}}
+  \frac{1-\tau_{t-1}}{1-\tau_t}
+\tag{39}
+$$
+
+% (40): modified dual index (average factor shares, as recommended by Barro-Sala-i-Martin)
+$$
+\frac{E_t}{E_{t-1}} =
+  \left(\frac{S_t}{S_{t-1}}\right)^{\!\bar{s}_{Z,t}}
+  \left(\frac{r_t+\lambda}{r_{t-1}+\lambda}\right)^{\!\bar{s}_{K,t}}
+  \left(\frac{W_t}{W_{t-1}}\right)^{\!\bar{s}_{L,t}}
+  \frac{1-\tau_{t-1}}{1-\tau_t}
+\tag{40}
+$$
+
+% where: bar = period average, e.g.
+$$
+\bar{s}_{Z,t} = \tfrac{1}{2}(s_{Z,t-1}+s_{Z,t}),\quad
+\bar{s}_{K,t} = \tfrac{1}{2}(s_{K,t-1}+s_{K,t}),\quad
+\bar{s}_{L,t} = \tfrac{1}{2}(s_{L,t-1}+s_{L,t})
+$$
+
+
+%% ============================================================
+%% Section H.2: Dual Approach vs. Malmquist Approach
+%% ============================================================
+
+% Reproduction of eq (18) from main text
+$$
+\hat{m}_t = \hat{a}_t + \hat{\alpha}_t\log Z + \hat{\beta}_t\bar{k}_t
+           - (\hat{\alpha}_t+\hat{\beta}_t)\bar{\ell}_t
+$$
+
+% (41): primal form = Solow residual with average factor shares
+$$
+\hat{m}_t = \hat{y}_t - \bar{\beta}_t\hat{k}_t
+           - (1-\bar{\alpha}_t-\bar{\beta}_t)\hat{\ell}_t
+\tag{41}
+$$
+
+% Log-linear approx. of income identity Y_t = S_t Z + (r_t+delta)K_t + W_t L_t
+$$
+\hat{y}_t = \bar{\alpha}_t\hat{s}_t
+  + \bar{\beta}_t\!\left[\log\frac{r_t+\delta}{r_{t-1}+\delta} + \hat{k}_t\right]
+  + (1-\bar{\alpha}_t-\bar{\beta}_t)(\hat{w}_t+\hat{\ell}_t)
+$$
+
+% (42): Malmquist = dual up to first order
+$$
+\hat{m}_t =
+  \bar{\alpha}_t\hat{s}_t
+  + \bar{\beta}_t\log\frac{r_t+\delta}{r_{t-1}+\delta}
+  + (1-\bar{\alpha}_t-\bar{\beta}_t)\hat{w}_t
+\tag{42}
+$$
+
+% (43): log of Clark's eq (40); compare with (42)
+$$
+\hat{e}_t =
+  \bar{s}_{Z,t}\hat{s}_t
+  + \bar{s}_{K,t}\log\frac{r_t+\lambda}{r_{t-1}+\lambda}
+  + \bar{s}_{L,t}\hat{w}_t
+  - \log\frac{1-\tau_t}{1-\tau_{t-1}}
+\tag{43}
+$$
+
+% Footnote 24: derivation of (41) from Malmquist formula
+\begin{align*}
+\hat{m}_t
+  &= a_t - a_{t-1}
+     + \tfrac{1}{2}\bigl[
+         \alpha_t\log Z + \beta_t k_t + (1-\alpha_t-\beta_t)\ell_t \\
+  &\phantom{{}= a_t-a_{t-1}+\tfrac{1}{2}\bigl[}
+         -\,\alpha_{t-1}\log Z - \beta_{t-1}k_{t-1} - (1-\alpha_{t-1}-\beta_{t-1})\ell_{t-1}
+       \bigr] \\
+  &\quad
+     - \tfrac{1}{2}\bigl[
+         \alpha_{t-1}\log Z + \beta_{t-1}k_t + (1-\alpha_{t-1}-\beta_{t-1})\ell_t \\
+  &\phantom{{}\quad-\tfrac{1}{2}\bigl[}
+         -\,\alpha_t\log Z - \beta_t k_{t-1} - (1-\alpha_t-\beta_t)\ell_{t-1}
+       \bigr] \\[4pt]
+  &= \bigl[a_t+\alpha_t\log Z+\beta_t k_t+(1-\alpha_t-\beta_t)\ell_t\bigr] \\
+  &\quad
+     -\bigl[a_{t-1}+\alpha_{t-1}\log Z+\beta_{t-1}k_{t-1}+(1-\alpha_{t-1}-\beta_{t-1})\ell_{t-1}\bigr] \\
+  &\quad
+     -\tfrac{1}{2}\bigl[
+         \alpha_t\log Z+\beta_t k_t+(1-\alpha_t-\beta_t)\ell_t
+        -\alpha_{t-1}\log Z-\beta_{t-1}k_{t-1}-(1-\alpha_{t-1}-\beta_{t-1})\ell_{t-1}
+       \bigr] \\
+  &\quad
+     -\tfrac{1}{2}\bigl[
+         \alpha_{t-1}\log Z+\beta_{t-1}k_t+(1-\alpha_{t-1}-\beta_{t-1})\ell_t
+        -\alpha_t\log Z-\beta_t k_{t-1}-(1-\alpha_t-\beta_t)\ell_{t-1}
+       \bigr] \\[4pt]
+  &= \hat{y}_t - \bar{\beta}_t\hat{k}_t - (1-\bar{\alpha}_t-\bar{\beta}_t)\hat{\ell}_t
+\end{align*}
+
+
+%% ============================================================
+%% Section I.1: Dynamics After a Change in Productivity Growth
+%% ============================================================
+
+% Simplified model: all shocks set to their means, d_t = d*, r_t = r*
+
+% (44): wage equation
+$$
+w_t = \varphi
+  + \frac{1}{1-\beta}\,\tilde{a}_t
+  - \frac{\alpha}{1-\beta}(n_t+d^*)
+  - \frac{\beta}{1-\beta}\log(r^*+\delta)
+\tag{44}
+$$
+
+% (45): population dynamics
+$$
+n_t - n_{t-1} = \omega + \gamma(w_{t-1}+d^*) + \mathbb{E}[\xi_{1t}]
+\tag{45}
+$$
+
+% (46): productivity growth (random walk)
+$$
+\tilde{a}_t = \mu + \tilde{a}_{t-1}
+\tag{46}
+$$
+
+% Substituting (44) into (45) to eliminate w_t
+$$
+n_t - n_{t-1} = \omega + \gamma\varphi
+  + \frac{\gamma}{1-\beta}\,\tilde{a}_{t-1}
+  - \frac{\alpha\gamma}{1-\beta}\,n_{t-1}
+  - \frac{\beta\gamma}{1-\beta}\log(r^*+\delta)
+  + \gamma\frac{1-\alpha-\beta}{1-\beta}\,d^*
+  + \mathbb{E}[\xi_{1t}]
+$$
+
+% (47): AR(1) for population
+$$
+n_{t+1} = \!\left(1-\frac{\alpha\gamma}{1-\beta}\right)\!n_t
+  + \frac{\gamma}{1-\beta}\,\tilde{a}_{t-1}
+  + \mathrm{const}
+\tag{47}
+$$
+
+% (48): AR(1) for (tilde{a}_t - alpha n_t); stable iff |(1-alpha*gamma-beta)/(1-beta)| < 1
+$$
+\tilde{a}_t - \alpha n_t
+  = \mu - \kappa
+  + \frac{1-\alpha\gamma-\beta}{1-\beta}\,(\tilde{a}_{t-1}-\alpha n_{t-1})
+\tag{48}
+$$
+
+% where
+$$
+\kappa = \alpha\!\left[
+  \omega + \gamma\varphi
+  + \gamma\frac{1-\alpha-\beta}{1-\beta}\,d^*
+  - \frac{\beta\gamma}{1-\beta}\log(r^*+\delta)
+  + \mathbb{E}[\xi_{1t}]
+\right]
+$$
+
+% (49): steady-state real wage (increasing in mu; Malthusian force summarized by alpha*gamma)
+$$
+w^* = \frac{\mu}{\alpha\gamma} - d^* - \frac{\omega}{\gamma} - \frac{\mathbb{E}[\xi_{1t}]}{\gamma}
+\tag{49}
+$$
+
+
+%% ============================================================
+%% Section I.2: Dynamics After a Change in alpha
+%% ============================================================
+
+% Experiment: alpha falls from alpha_H to alpha_L at t=0; beta constant; mu=0
+
+% (50): productivity law of motion (same as tilde{m} equation in G)
+$$
+\tilde{m}_t = \mu + \tilde{m}_{t-1}
+\tag{50}
+$$
+
+% Pre-change steady state (t < 0): wage
+$$
+w_t = \frac{\mu}{\alpha_H\gamma} - d^* - \frac{\omega}{\gamma} - \frac{\mathbb{E}[\xi_{1t}]}{\gamma}
+$$
+
+% Pre-change steady state (t < 0): tilde{a} - alpha_H n
+$$
+\tilde{a}_t - \alpha_H n_t = \frac{(\mu-\kappa_H)(1-\beta)}{\alpha_H\gamma}
+$$
+
+% Population at t = 0 (predetermined)
+$$
+n_0 = n_{-1} + \frac{\mu}{\alpha_H}
+$$
+
+% (51): jump in permanent productivity at t = 0
+$$
+\tilde{a}_0 = \tilde{a}_{-1} + \mu
+  + (\alpha_H-\alpha_L)\!\left(\log Z - d^* - \bar{n}_0 - \lambda\right)
+\tag{51}
+$$
+
+% Footnote 25: output does not change at t = 0
+\begin{align*}
+\hat{y}_0
+  &= \hat{\tilde{a}}_0 + \hat{\alpha}_0\!\left(\log Z-(n_{-1}+d^*+\lambda)\right) \\
+  &= \frac{1}{1-\beta}\,\hat{\tilde{a}}_0 + \hat{\alpha}_0\!\left(\log Z-(n_{-1}+d^*+\lambda)\right)
+   = 0
+\end{align*}

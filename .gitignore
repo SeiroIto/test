@@ -4,5 +4,15 @@
 /.quarto/
 /_freeze/
 /**/ABIDE/
-/posts/ethics/*_cache/
+/**/ABoutEditor/
+/posts/ethics/2025/*_cache/
+/**/*.zip
+/**/*ˆÉ“¡*
+/**/*1XX*
+/**/*0XX*
+/**/*10X*
+/**/*103*
+/**/*10*_*
 /**/REPLICATION_PACKAGE
+/**/dataverse_files
+**/*.quarto_ipynb

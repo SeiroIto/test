@@ -1,0 +1,158 @@
+---
+title: "International Trade and the Industrial Revolution"
+subtitle: "Outside England: France · Belgium · United States · Germany (c. 1790–1914)"
+date: 2026-06-04
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    toc-title: "Contents"
+    number-sections: true
+    reference-location: margin
+    citation-location: margin
+    link-citations: true
+    grid:
+      sidebar-width: 260px
+      body-width: 800px
+      margin-width: 360px
+    theme: cosmo
+    fontsize: 1.0rem
+bibliography: trade_refs.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+---
+
+A comparative note on how foreign trade — exports, imports, and trade **policy** —
+shaped industrialization in four follower economies. Citations appear as
+right-margin sidenotes.
+
+# Cross-country snapshot: tariffs on manufactures
+
+Average ad-valorem tariff on manufactured goods [@bairoch1989; @orourke1999]:
+
+| Year      | France            | Belgium | Germany     | United States |
+|-----------|-------------------|---------|-------------|---------------|
+| 1820s–30s | very high (prohib.)| low/open| fragmented  | 25–40%        |
+| 1875      | 12–15%            | 9–10%   | 4–6%        | 40–50%        |
+| 1913      | ~20%              | ~9%     | ~13%        | ~44%          |
+
+Pattern: continental Europe liberalized 1860–1880, then partly reverted; the US
+stayed protectionist throughout.
+
+# France
+
+*Role of trade: secondary to the domestic/luxury market; policy oscillated
+between protection and a brief free-trade window* [@trebilcock1981].
+
+* **Continental System (1806–1814):** Napoleon's blockade of British goods gave
+  French cotton/iron temporary shelter but cut off colonial inputs (raw cotton,
+  sugar) and export markets → mostly disruptive [@landes1969].
+* **Protectionist era (1814–1860):** high/prohibitive duties on iron, textiles,
+  coal protected established producers but kept costs high and slowed
+  mechanization [@bairoch1989].
+* **Cobden–Chevalier Treaty (1860):** with Britain — abolished import
+  prohibitions, capped duties on manufactures at ~30% (later ~10–15%); triggered
+  a most-favoured-nation treaty network across Europe. Free-trade peak
+  [@kindleberger1975].
+* **Méline Tariff (1892):** return to agricultural and industrial protection
+  [@bairoch1989].
+* **Export structure:** high-value goods — Lyon **silk**, wine, luxury textiles —
+  rather than mass-produced staples [@trebilcock1981].
+* **Outcome:** slower, gradual industrialization; per-capita industrialization
+  lagged Britain and Belgium through the 19th c. [@pollard1981].
+
+# Belgium
+
+*Role of trade: central and decisive — the first industrialized economy on the
+Continent, and export-dependent by necessity* [@pollard1981].
+
+* **Early lead (1820s–1830s):** first continental country to mechanize coal,
+  iron, textiles; **John Cockerill's** Seraing works (from 1817) became Europe's
+  largest integrated iron/engineering complex [@milward1973].
+* **Small home market → export orientation:** small population forced reliance on
+  foreign demand for coal, iron, machinery, glass, woollens/linens
+  [@trebilcock1981].
+* **United Kingdom of the Netherlands (1815–1830):** access to Dutch colonial
+  markets (esp. Java) boosted early textiles; **independence (1830)** forced a
+  search for new markets [@milward1973].
+* **Liberal trade policy:** generally low tariffs; an early, consistent
+  free-trader after 1830 [@bairoch1989].
+* **Trade infrastructure:** state-built **railway network from 1835** (Europe's
+  first state system) and the port of **Antwerp** linked production to exports
+  [@pollard1981].
+* **Outcome:** by mid-century the highest per-capita industrial capacity on the
+  Continent, second only to Britain [@bairoch1989].
+
+# United States
+
+*Role of trade: dual — raw-material exporter to Britain (South) and protected
+infant-industry importer of technology and capital (North)* [@beckert2014].
+
+* **Technology transfer (import side):** **Samuel Slater (1790)** reproduced
+  British spinning machinery in Rhode Island; British capital and skilled
+  migrants seeded New England textiles [@landes1969].
+* **Cotton exports (export side):** raw cotton ≈ **60% of total US export value
+  by 1860**; the US South supplied ~**75–80% of Britain's raw-cotton imports** by
+  1860 — Lancashire's industrialization was tied to American slave-grown cotton
+  [@beckert2014].
+* **Protective tariffs:**
+  * **Tariff of 1816** — first explicitly protective tariff.
+  * **Tariff of 1828** ("Tariff of Abominations") — duties ~45–50%; provoked the
+    Nullification Crisis.
+  * **Morrill Tariff (1861)** and successors — sustained ~40–50% protection for
+    Northern manufacturing [@bairoch1989].
+* **Internal market integration:** **Erie Canal (1825)** and railroads cut
+  internal transport costs, expanding the home market that tariffs reserved for
+  domestic producers [@orourke1999].
+* **Outcome:** trade financed and equipped early industry while protection
+  sheltered the North; rapid catch-up, overtaking Britain in manufacturing output
+  by the 1890s [@allen2009].
+
+# Germany
+
+*Role of trade: internal free trade first (customs union), external protection
+later; export-led catch-up in heavy and "new" industries* [@henderson1959].
+
+* **Zollverein (Customs Union, 1834):** abolished tariffs *among* German states;
+  began with **18 states and ~23 million people**, expanding thereafter. Created
+  a large internal free-trade market *before* unification (1871) — arguably the
+  single most important trade event for German industrialization
+  [@henderson1959].
+* **Friedrich List (1841, *National System of Political Economy*):** intellectual
+  case for **infant-industry protection** and railways; influenced follower
+  economies broadly [@trebilcock1981].
+* **Liberal interlude (1860s):** Prussia signed a Cobden–Chevalier-style treaty
+  with France (1862), lowering external tariffs [@kindleberger1975].
+* **Bismarck's tariff (1879):** the "marriage of **iron and rye**" — protection
+  for heavy industry *and* agriculture; ended the free-trade phase
+  [@bairoch1989].
+* **Export structure:** late but rapid rise in **steel, chemicals (dyes/pharma),
+  electrical engineering, machinery**; by 1900 Germany led world synthetic dyes
+  and challenged Britain in steel [@trebilcock1981].
+* **Outcome:** from fragmented and backward (1815) to the Continent's leading
+  industrial power by 1913, with manufactured exports central to growth
+  [@pollard1981].
+
+# Synthesis: how trade mattered
+
+* **Market size:** Belgium and Germany show two solutions to small/fragmented
+  markets — *export orientation* (Belgium) and *customs union* (Zollverein).
+* **Technology flows:** all four imported British techniques and skilled labour
+  early (esp. US via Slater, Belgium via Cockerill).
+* **Raw materials:** the US fed Britain's cotton industry while building its own
+  behind tariffs — trade as both dependence and ladder [@beckert2014].
+* **Policy spectrum:** free-trade Belgium ↔ protectionist US, with France and
+  Germany swinging between; protection was the *norm* for catch-up economies
+  (List's logic), free trade the exception (1860–1879) [@bairoch1989].
+
+::: {.callout-note}
+**On the numbers.** Tariff averages [@bairoch1989] are approximate ad-valorem
+equivalents and vary by source/method; US cotton-export shares are from standard
+trade series [@beckert2014]. Treat single-figure percentages as orders of
+magnitude, not precise point estimates.
+:::
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
