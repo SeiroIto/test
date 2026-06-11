@@ -3,13 +3,20 @@
 name: Deploy Quarto site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Run CI (continuous integration) when a PR targets main (this is what you want for branch protection)
+  pull_request:
+    branches: ["main"]
+  # Run CI + deploy when code is pushed to main
   push:
-    branches: ['main']
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ["main"]
+  # Allow manual run from the Actions tab
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Permissions:
+# - For PR builds, only read permissions are needed.
+# - For deployments to Pages, pages + id-token are needed.
+#   (GitHub is fine with having these set globally.)
 permissions:
   contents: read
   pages: write
@@ -53,13 +60,25 @@ jobs:
             any::treemap
             any::ggfittext
             any::RefManageR
+            any::ggrepel
 
+      # Render the site
+      # This will fail the workflow if rendering fails,
+      # which is exactly what you want for CI.
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Upload the rendered output as an artifact
+      # so the deploy job can reuse it.
+      #
+      # IMPORTANT:
+      # Your original workflow used:
+      #   path: 'posts'
+      #
+      # Keep it the same here to avoid breaking your deployment.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
