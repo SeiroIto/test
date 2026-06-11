@@ -35,7 +35,7 @@ title-block-banner-color: "black"
 doi-title: "doi.org/10.1086/734780"
 callout-appearance: simple
 callout-icon: false
-bibliography: ../../../seiro.bib
+bibliography: ../../seiro.bib
 link-citations: true
 reference-location: margin
 citation-location: margin
