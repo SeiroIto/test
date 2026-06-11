@@ -39,7 +39,7 @@ library(RefManageR)
 ```
 ```{r setting, eval = T, cache = T, warning = F, message = F, echo = F}
 library(RefManageR)
-myBib <- ReadBib("../seiro.bib")
+myBib <- ReadBib("../../seiro.bib")
 BibOptions(max.names = 3)
 ```
 ```{r flair_color, eval = F, echo=FALSE}

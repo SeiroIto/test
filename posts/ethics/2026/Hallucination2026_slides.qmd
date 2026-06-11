@@ -1,0 +1,323 @@
+---
+title: |
+  | LLM hallucination 対策
+subtitle: |
+  | 各手法は具体的に何をするか — 長短と実装例
+author: "伊藤成朗&larr;うそ、claudeが指示通りに書いた"
+engine: knitr
+format:
+  revealjs:
+    standalone: true
+    embed-resources: true
+    slide-number: true
+    width: 1600
+    height: 900
+    preview-links: auto
+    theme: sky
+execute:
+  freeze: auto
+#### quarto render Hallucination2026_slides.qmd
+---
+
+```{css echo=FALSE}
+/* method grid container: shrink font; push down from ## title */
+.reveal .slides .methodgrid { font-size: 0.76em; margin-top: 1.4em; }
+/* tighten paragraph spacing within each row */
+.reveal .slides .methodgrid p { margin-top: 0.08em !important; margin-bottom: 0.08em !important; }
+/* prevent column wrapping */
+.reveal .slides .methodgrid .columns { flex-wrap: nowrap !important; align-items: flex-start !important; }
+/* prevent flex items shrinking; allow overflow to be clipped */
+.reveal .slides .methodgrid .column { min-width: 0; overflow: hidden; }
+/* header row: dark blue bg, white text, border-box padding */
+.reveal .slides .methodgrid .header { background-color: #2e6f96; box-sizing: border-box; padding: 0.25em 0; margin-bottom: 0.3em; font-weight: 600; color: #fff; }
+/* center align header labels */
+.reveal .slides .methodgrid .header p { text-align: center !important; color: #fff; }
+/* name column: right-aligned, no wrap, shrink-proof */
+.reveal .slides .methodgrid .namecol { overflow: visible !important; flex-shrink: 0 !important; }
+.reveal .slides .methodgrid .namecol p { text-align: right !important; padding-right: 0.6em; white-space: nowrap; }
+/* examples line: slightly smaller, space below to separate items */
+.reveal .slides .methodgrid .examples { font-size: 0.87em; color: #444; margin-bottom: 0.9em; }
+/* method name label: bold, dark blue */
+.reveal .slides .methodgrid .name { font-weight: 700; color: #1a5276; }
+/* code blocks: remove height cap on every wrapper layer to eliminate scrollbar */
+.reveal .slides pre,
+.reveal .slides div.sourceCode,
+.reveal .slides pre.sourceCode,
+.reveal .slides code.hljs { max-height: none !important; height: auto !important; overflow: visible !important; }
+.reveal .slides pre code { font-size: .9em !important; line-height: 1.3 !important; }
+/* tighten blockquote line spacing */
+.reveal .slides blockquote { line-height: 1.35 !important; }
+.reveal .slides blockquote p { margin-top: 0 !important; margin-bottom: 0 !important; }
+```
+
+## 生成前に防ぐ（誤りを作らせない）
+
+::: {.methodgrid}
+
+:::::::: {.columns .header}
+::: {.column width="20%"}
+:::
+::: {.column width="27%"}
+説明
+:::
+::: {.column width="24%"}
+長所
+:::
+::: {.column width="24%"}
+短所
+:::
+::::::::
+
+:::::::: {.columns}
+::: {.column .namecol width="20%"}
+[外部ツール実行]{.name}
+:::
+::: {.column width="27%"}
+R/Python を書かせて *実行* し、生成ではなく計算結果から数値を得る
+:::
+::: {.column width="24%"}
+計算・集計系の誤りを根絶できる
+:::
+::: {.column width="24%"}
+文章・理論の解釈には無力
+:::
+::::::::
+:::::::: {.columns}
+::: {.column width="20%"}
+:::
+::: {.column .examples width="79%"}
+[ellmer (R)](https://ellmer.tidyverse.org/)、[ChatGPT Code Interpreter](https://platform.openai.com/docs/assistants/tools/code-interpreter)、[Claude Code](https://claude.ai/claude-code)、[Jupyter AI](https://jupyter-ai.readthedocs.io/)
+:::
+::::::::
+
+:::::::: {.columns}
+::: {.column .namecol width="20%"}
+[RAG]{.name}
+:::
+::: {.column width="27%"}
+自分の文献・データを先に検索し、ヒット文をプロンプトに注入してから回答
+:::
+::: {.column width="24%"}
+事実誤認を大幅に削減、出典を提示しやすい
+:::
+::: {.column width="24%"}
+検索源の偏り・取り違えに従属
+:::
+::::::::
+:::::::: {.columns}
+::: {.column width="20%"}
+:::
+::: {.column .examples width="79%"}
+[Google NotebookLM](https://notebooklm.google.com/)、[Elicit](https://elicit.com/)、[Scite](https://scite.ai/)、[LangChain + FAISS](https://python.langchain.com/docs/integrations/vectorstores/faiss/)
+:::
+::::::::
+
+:::::::: {.columns}
+::: {.column .namecol width="20%"}
+[出典強制]{.name}
+:::
+::: {.column width="27%"}
+「提供文のみに基づき各主張に引用文を対応づけよ」と指示する
+:::
+::: {.column width="24%"}
+検証可能性が高い
+:::
+::: {.column width="24%"}
+出典の *実在* は保証されない（別途確認要）
+:::
+::::::::
+:::::::: {.columns}
+::: {.column width="20%"}
+:::
+::: {.column .examples width="79%"}
+[Consensus](https://consensus.app/)、[Claude Citations API](https://docs.anthropic.com/en/docs/build-with-claude/citations)、[Elicit](https://elicit.com/)、[Microsoft Copilot](https://copilot.microsoft.com/)
+:::
+::::::::
+
+:::::::: {.columns}
+::: {.column .namecol width="20%"}
+[モデル横断照会]{.name}
+:::
+::: {.column width="27%"}
+同じ質問を *系統の異なる* 複数モデルに投げ、答えの一致/不一致を比較
+:::
+::: {.column width="24%"}
+単一モデルの系統的誤りを検出（self-consistency が見逃す型）
+:::
+::: {.column width="24%"}
+全モデルが同じ誤りを共有すれば無力
+:::
+::::::::
+:::::::: {.columns}
+::: {.column width="20%"}
+:::
+::: {.column .examples width="79%"}
+[Poe](https://poe.com/)、[OpenRouter](https://openrouter.ai/docs/overview)、ChatGPT + Claude + Gemini 手動比較、[lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
+:::
+::::::::
+
+:::
+
+## 生成後に捕まえる（誤りを発見する）
+
+::: {.methodgrid}
+
+:::::::: {.columns .header}
+::: {.column width="20%"}
+:::
+::: {.column width="27%"}
+説明
+:::
+::: {.column width="24%"}
+長所
+:::
+::: {.column width="24%"}
+短所
+:::
+::::::::
+
+:::::::: {.columns}
+::: {.column .namecol width="20%"}
+[Self-Verification]{.name}
+:::
+::: {.column width="27%"}
+回答後に検証質問を生成、個別に答え直し、矛盾を修正（Chain-of-Verification）
+:::
+::: {.column width="24%"}
+単純な論理・計算ミスを修正
+:::
+::: {.column width="24%"}
+知識不足には無力、自信満々の誤りを見逃す
+:::
+::::::::
+:::::::: {.columns}
+::: {.column width="20%"}
+:::
+::: {.column .examples width="79%"}
+CoVe プロンプト雛形（→ 次スライド）、[SelfCheckGPT](https://github.com/potsawee/selfcheckgpt)、[G-Eval](https://arxiv.org/abs/2303.16634)、[Sant'Anna /verify-claims](https://github.com/pedrohcgs/claude-code-my-workflow)
+:::
+::::::::
+
+:::::::: {.columns}
+::: {.column .namecol width="20%"}
+[不確実性開示 / 棄権]{.name}
+:::
+::: {.column width="27%"}
+確信度を出力させ、閾値未満は「分からない」と言わせる
+:::
+::: {.column width="24%"}
+高リスク用途で誤答率を下げる
+:::
+::: {.column width="24%"}
+有用性が低下、棄権が報酬されにくい
+:::
+::::::::
+:::::::: {.columns}
+::: {.column width="20%"}
+:::
+::: {.column .examples width="79%"}
+[Semantic Entropy (Nature 2024)](https://www.nature.com/articles/s41586-024-07421-0)、[OpenAI logprobs](https://cookbook.openai.com/examples/using_logprobs)、[LM-Polygraph](https://github.com/IINemo/lm-polygraph)、[Conformal Risk Control](https://arxiv.org/abs/2208.02814)
+:::
+::::::::
+
+:::::::: {.columns}
+::: {.column .namecol width="20%"}
+[出典実在確認]{.name}
+:::
+::: {.column width="27%"}
+提示された DOI/URL を *人間が* 開き、実在と内容を照合する
+:::
+::: {.column width="24%"}
+捏造引用を確実に排除
+:::
+::: {.column width="24%"}
+手間、流暢な出力ほど検証を省く（automation bias）
+:::
+::::::::
+:::::::: {.columns}
+::: {.column width="20%"}
+:::
+::: {.column .examples width="79%"}
+[rcrossref (R で DOI 一括照合)](https://docs.ropensci.org/rcrossref/)、[scite (支持・否定の文脈つき)](https://scite.ai/)、[DOI.org](https://doi.org/)、[Google Scholar](https://scholar.google.com/)
+:::
+::::::::
+
+:::
+
+## CoVe を経済学研究者が使う実例（1/2）
+
+**1. ChatGPT / Claude に論文 PDF を添付して、この雛形を貼る**
+
+> 以下の手順で答えよ。\
+> (1) まず草稿回答を書け。\
+> (2) その回答に含まれる *事実主張* を検証する質問を5つ列挙せよ。\
+> (3) 各質問に、論文テキストのみを根拠に独立に答えよ（記憶で補わない）。\
+> (4) 矛盾を洗い出し、根拠のない主張は削除して回答を改訂せよ。
+
+::: {style="font-size:0.8em; margin-top:0.3em"}
+「添付資料」= ここでは論文ファイルそのもの。ChatGPT/Claude では PDF をアップロードすればモデルがテキストを読む。R では自分で抽出してシステムプロンプトに渡す（→ 次スライド）。
+:::
+
+## CoVe を経済学研究者が使う実例（2/2）
+
+**2. R で論文テキストを読み込み、多段呼び出しに組む**（[ellmer](https://ellmer.tidyverse.org/)）
+
+```{.r}
+library(ellmer); library(pdftools)  # install.packages("pdftools")
+
+# 1. PDF テキスト抽出: 全ページを1つの文字列に結合
+paper <- paste(pdf_text("paper.pdf"), collapse = "\n")
+
+# 2. チャット初期化: 論文テキストをシステムプロンプトに渡す
+#    → モデルはこのテキストのみを情報源として扱う
+sysprompt <- paste0("以下の論文のみを根拠に回答せよ。\n\n", paper)
+chat <- chat_openai(model = "gpt-4o", system_prompt = sysprompt)
+
+# 3. Step 1: 草稿生成
+draft <- chat$chat("最低賃金引上げの雇用効果を論文に基づき草稿で答えよ。")
+
+# 4. Step 2: 草稿の事実主張から検証質問を生成
+checks <- chat$chat("上の回答の事実主張を検証する質問を5つ列挙せよ。")
+
+# 5. Step 3: 論文のみで答え直し、矛盾を除いて最終稿を作成
+#    (会話履歴に draft・checks が蓄積されているので照合が可能)
+final <- chat$chat(
+  "各質問に論文のみで答えよ（記憶不可）。矛盾を除いて回答を改訂せよ。")
+```
+
+::: {style="font-size:0.8em; margin-top:0.2em"}
+引用・係数・制度的事実の取り違えを自分で潰せる。モデルが *知らないこと* は CoVe でも直らない → RAG・出典実在確認と併用。
+:::
+
+## 参考文献
+
+::: {style="font-size: 0.72em; line-height: 1.6;"}
+
+1. Dhuliawala, S., Komeili, M., Xu, J., Raileanu, R., Li, X., Celikyilmaz, A., & Weston, J. (2023). Chain-of-Verification Reduces Hallucination in Large Language Models. *arXiv*:2309.11495. <https://arxiv.org/abs/2309.11495>
+
+2. Manakul, P., Liusie, A., & Gales, M. J. F. (2023). SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models. *EMNLP 2023*. <https://arxiv.org/abs/2303.08896>
+
+3. Farquhar, S., Kossen, J., Kuhn, L., & Gal, Y. (2024). Detecting hallucinations in large language models using semantic entropy. *Nature*, 630, 625–630. <https://doi.org/10.1038/s41586-024-07421-0>
+
+4. Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., & Zhu, C. (2023). G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment. *EMNLP 2023*. <https://arxiv.org/abs/2303.16634>
+
+:::
+
+```{=html}
+<script>
+function fixCodeBlocks() {
+  document.querySelectorAll(
+    '.reveal pre, .reveal pre code, .reveal div.sourceCode'
+  ).forEach(function(el) {
+    el.style.setProperty('max-height', 'none', 'important');
+    el.style.setProperty('overflow',   'visible', 'important');
+    el.style.setProperty('height',     'auto',    'important');
+  });
+}
+if (typeof Reveal !== 'undefined') {
+  Reveal.on('ready', fixCodeBlocks);
+  Reveal.on('slidechanged', fixCodeBlocks);
+}
+window.addEventListener('load', function() { setTimeout(fixCodeBlocks, 400); });
+</script>
+```

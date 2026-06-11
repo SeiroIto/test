@@ -1,0 +1,239 @@
+hallucination予防策として以下がある
+批判して
+
+研究公正（真実性）の観点から重要なのは、
+
+> 「hallucinationをゼロにする方法」
+
+ではなく、
+
+> 「どのような種類のhallucinationに、どの方法が効くか」
+
+です。
+
+以下、実務上重要な順に整理します。
+
+---
+
+1. Retrieval-Augmented Generation (RAG)
+
+* 外部文書・データベースを検索してから回答する
+* 現在最も広く使われる hallucination 対策 ([MDPI][1])
+
+長所
+
+* 最新情報を利用可能
+* 出典を提示しやすい
+* 事実誤認を大幅に減らせる ([MDPI][1])
+
+短所
+
+* 検索対象自体が偏っていると誤る
+* 関連文書を取り違えることがある
+* 「検索結果のhallucination」は防げない ([MDPI][1])
+
+批判的評価
+
+* 開発研究では最も有効
+* ただし「AIが正しい」のではなく「検索対象が正しい」に置き換わるだけ
+
+---
+
+2. 出典を強制する (Grounding)
+
+* 「必ず引用文に基づいて回答せよ」と指示する
+* 回答の各主張をソースと対応付ける
+
+長所
+
+* 検証可能性が高い
+* 研究公正との相性が良い
+
+短所
+
+* AIが引用を誤読することがある
+* 出典があっても解釈が誤ることがある
+
+批判的評価
+
+* 「真実性向上」よりも「検証可能性向上」の手法
+* 研究利用では非常に重要
+
+---
+
+3. Self-Consistency / Multiple Sampling
+
+* 同じ質問を何度も解かせる
+* 一致した答えを採用する
+
+長所
+
+* 計算ミスや推論ミスを減らせる
+* 数学・論理問題に有効
+
+短所
+
+* 全部同じ間違いをする場合は無力
+* 事実誤認にはあまり効かない
+
+批判的評価
+
+* 推論エラー対策
+* 知識不足対策ではない
+
+---
+
+4. Self-Verification / Reflection
+
+* 回答後に「この回答は本当に正しいか」を再検討させる
+* Chain-of-Verification (CoVe) 系列の手法 ([arXiv][2])
+
+長所
+
+* 単純な誤りを修正できる
+* 外部検索なしで実施可能
+
+短所
+
+* AIが自分の誤りを発見できるとは限らない
+* 自信満々に間違えることがある
+
+批判的評価
+
+* 「第二査読者」を付けるイメージ
+* 根本的知識不足には効かない
+
+---
+
+5. Fine-Tuning
+
+* 高品質データで追加学習する
+
+長所
+
+* 特定分野では効果が高い
+* 医学・法学などで利用される
+
+短所
+
+* 高コスト
+* 新しい誤りを導入する可能性
+* ドメイン外では効果が薄い ([スプリンガーリンク][3])
+
+批判的評価
+
+* 専門領域向け
+* 研究者個人が使う方法ではない
+
+---
+
+6. RLHF / RLAIF
+
+* 人間やAIのフィードバックで調整する
+
+長所
+
+* 明らかな誤情報を減らせる
+* 回答品質が向上する
+
+短所
+
+* 「もっともらしさ」を学習する危険がある
+* 真実より説得力を優先することがある ([スプリンガーリンク][3])
+
+批判的評価
+
+* 実務上不可欠
+* 研究公正の観点では万能ではない
+
+---
+
+7. Knowledge Graph
+
+* 構造化知識ベースを利用する
+
+長所
+
+* 人物・組織・関係性の誤りを減らせる
+* 一貫性が高い
+
+短所
+
+* 更新が難しい
+* 社会科学の曖昧な概念には弱い ([clawRxiv][4])
+
+批判的評価
+
+* 自然科学や医学向き
+* 開発研究では適用範囲が限定的
+
+---
+
+8. 「分からない」と言わせる
+
+* 不確実性推定
+* 信頼度閾値
+
+長所
+
+* 誤答を減らせる
+* 高リスク用途に向く
+
+短所
+
+* 回答拒否が増える
+* 有用性が下がる ([arXiv][5])
+
+批判的評価
+
+* 研究利用では極めて重要
+* 「正答率向上」ではなく「誤答率低下」
+
+---
+
+### 研究公正の観点からの順位
+
+私なら、
+
+1. 出典確認（人間）
+2. RAG
+3. 出典強制
+4. Self-Verification
+5. 不確実性開示
+
+を重視します。
+
+理由は単純で、
+
+研究公正（真実性）にとって重要なのは
+
+> AIが正しいこと
+
+ではなく
+
+> AIが間違ったときに研究者が発見できること
+
+だからです。
+
+したがって研究利用における最強のhallucination対策は、技術的にはRAGではなく、
+
+> 「出典を示させ、研究者が検証する」
+
+ことだと考えます。 ([Hugging Face][6])
+
+[1]: https://www.mdpi.com/2673-2688/6/10/260?utm_source=chatgpt.com "From Illusion to Insight: A Taxonomic Survey of Hallucination Mitigation Techniques in LLMs"
+[2]: https://arxiv.org/abs/2401.01313?utm_source=chatgpt.com "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models"
+[3]: https://link.springer.com/article/10.1007/s10462-024-10896-y?utm_source=chatgpt.com "Towards trustworthy LLMs: a review on debiasing and dehallucinating in large language models | Artificial Intelligence Review | Springer Nature Link"
+[4]: https://www.clawrxiv.io/abs/2604.00863?utm_source=chatgpt.com "A Taxonomy of Hallucination Mitigation Techniques in Large Language Models: An Empirical Analysis — clawRxiv"
+[5]: https://arxiv.org/abs/2507.22915?utm_source=chatgpt.com "Theoretical Foundations and Mitigation of Hallucination in Large Language Models"
+[6]: https://huggingface.co/papers/2401.01313?utm_source=chatgpt.com "Paper page - A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models"
+
+
+簡潔に望ましいhallucination対策とその長短をquarto list形式でスライド2枚で示せ
+
+モデル横断照会とは? 
+すべての手法を具体的に何をするのかを説明して、スライドを再作成せよ
+
+各手法で
+  長短を2行に分けよ
+  代表的implementation例を2個加えよ

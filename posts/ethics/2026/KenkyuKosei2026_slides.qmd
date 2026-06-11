@@ -20,7 +20,7 @@ format:
     theme: sky
 execute:
   freeze: auto  # re-render only when source changes
-lightbox: auto
+lightbox: true
 include-in-header:
   - text: |
       <style>
@@ -949,23 +949,56 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
     * 自信過剰
     * 知識範囲が恐ろしく広い、疲れを知らない
     * 普通に尋ねると、安易な一般化が激しく要所を外しがち
-    
-      :::::{.fragment}
-      ::: {style="font-size: 50%;"}
-      > microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
-      
-      「ヤギを4頭あげるともっと貧しくなる理由.mp4」
-    
-      > 「極貧層向けのマイクロファイナンスでは資産(ヤギ4頭)、ノウハウ(コーチング)、セーフティネット(生活費支援)を組み合わせる以外の近道はありませんでした」「バンドウィドス・タックスという言葉を聞いたことがあるでしょうか」「おおきはば(???)への課税ですか」「明日のご飯をどうしようという強烈な不安に直面しているとき、脳の認知的余裕、つまり、おおきはばの殆どを奪われてしまうのです」「分かります、私も仕事で追い詰められているときは一年後の長期プランなんて考えられませんもの」
-        
-      >「ヤギを4頭あげた方が全部載せのGUP参加者よりも貧しくなったのですね」
-        
-      さまざまな支援を与えられたアームと比較して部分的支援の方が低いのは当たり前
-      :::
-      :::::
-
-    * ただし、出力に責任を負う存在ではない
+    * ただし、人格がないので出力に責任を負う存在ではない
 ::::
+
+----
+
+## {background-color="#010638"}
+
+研究過程での新要素: AI
+
+* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
+
+::: {style="font-size: 50%;"}
+> microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
+
+<Red>[ヤギを4頭あげるともっと貧しくなる理由.m4a](ヤギを4頭あげるともっと貧しくなる理由.m4a)</Red> [(台本)](Transcript_yagi4tou.html)
+
+
+> (00:00)「あの、もし私がですよ、極度の貧困状態にある人にヤギを4頭無料でプレゼントするとしますよね」「はい」「そしたら、3年後には、なんと<Red>何も支援しなかった場合よりもさらに貧困になってしまう</Red>と言ったら、これ信じられますか」「いやあ、直感的には信じがたいですよね」「ですよね...今日私たちが深掘りしていくのは、まさにこの直感を根底から崩す、非常に興味深い、そしてちょっと考えさせられるテーマなんです」
+
+> (11:48) 「<Red>資産を無料で与えられたことで、却って全体的な家畜の価値を下げてしまった</Red>という、完全に直感に反するショッキングな結果でした」
+
+<Red>[Escape_Velocity_and_the_Poverty_Trap.m4a](あEscape_Velocity_and_the_Poverty_Trap.m4a)</Red> [(台本)](Transcript_EscapeVelocity.html)
+
+> (18:50) The households that received just the goats actually saw <Red>their overall wealth decrease compared to the control group.</Red>
+
+Hallucination: 誤解。全種類の支援を受けたアームと比較すると低かった。家畜の合計価値は不変。
+
+:::
+
+----
+
+## {background-color="#010638"}
+
+研究過程での新要素: AI
+
+* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
+
+::: {style="font-size: 50%;"}
+> microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
+
+<Red>[ヤギを4頭あげるともっと貧しくなる理由.m4a](ヤギを4頭あげるともっと貧しくなる理由.m4a)</Red> [台本](Transcript_yagi4tou.html)
+
+> (14:00) そこから抜け出すための安上がりな近道とか、特効薬は存在しませんでした。<Red>資産、ノウハウ、そしてセーフティーネット。この三位一体の多角的アプローチが人間の本来持っている可能性を引き出して、行動を変容させるためには不可欠だった</Red>ということが、この研究から導き出された最も重要な結論なんですよ。
+
+* 過度の一般化: 組み合わせると上手くいく事例&rarr;「特効薬は存在しませんでした」「三位一体の多角的アプローチが...不可欠だった」
+
+> (15:33) 「バンドウィドス・タックスという言葉を聞いたことがあるかもしれません」「おびいきはば(帯域幅?)への課税ですか」「人は明日のご飯をどうしようという強烈な不安に直面しているとき、脳の認知的余裕、つまり、おびいきはばの殆どをその短期的な問題に奪われてしまうのです」「あー」「長期的な計画を立てたり、新しいスキルを学んだりする余裕が完全にゼロになってしまうのです」「分かります、私も仕事でもう極限まで追い詰められている時は、1年後のキャリアプランなんて絶対に考えられませんもん。」
+
+* Hallucination: 「介入&rArr;cognition&uarr;」という結果は出なかったのに、現金補助を組み合わせて効果が高くなったことを説明するために「scarcity&uarr;&rArr;cognition&darr;」で説明
+:::
 
 ----
 
@@ -979,7 +1012,11 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 * 制御の技量が試される
     * RA: 指導、共著者として責任を共有
     * AI: [`feedback rules`](https://code.claude.com/docs/en/memory#organize-rules-with-claude/rules/)と[`skills`](https://claude.com/docs/skills/overview)で誘導、人間による検証(一次資料+専門知識)で責任を持つ
+* 人間が検証するならAI使う必要あり?
 ::::
+
+<!-- 900802018885 -->
+
 
 ----
 
@@ -1130,11 +1167,56 @@ AIはユーザを喜ばせようと賛同する傾向が強い
 
 AIにどうやって情報源の偏りを認識させるか
 
+* 情報源を固定(source-grounded)しても要約に不可解な偏りが出る(ことを予期すべき)
 * NotebookLMで極貧層向けマイクロファイナンスについて50論文pdfから文献サーベイさせた
-    * 通常のMFは全く駄目で、大型家畜移転+トレーニングをスケールアップする方法ばかりを論じた
-    * 影響力のある研究者(Abijit Banerjee)の特定論文の主張
+  * スライド・デックを作成させると視覚的な完成度は高い、しかし
+    * 断定調、論文では慎重な表現&rarr;原典参照は必須
+    * 印象操作に似たdata visualisationあり
+
+
+
+---
+
+## {background-color="#010638"}
+
+AIにどうやって情報源の偏りを認識させるか
+
+* NotebookLM
+* 似たプロンプト2つでほぼ正反対の要約を提示
+
+:::::::::: {.columns}
+::::: {.column width = "50%"}
+[Deck 1](Deck1_TheGraduationModelBlueprint.pdf)![](NotebookLM_SlideDeck1.jpg){width=200}
+
+:::: {.incremental}
+* 通常のMFは全く駄目と断定
+* 大型家畜移転+トレーニング+現金補助こそがsilver bullet
+* 貧困の罠を克服するための高額な介入をスケールアップすることの可否ばかりを論じる(podcastも)
+* 影響力のある研究者の特定論文[@BanerjeeKarlanetal2022]の主張
+::::
+::::: 
+
+::::: {.column width = "50%"}
+[Deck 2](Deck2_MicrocreditAndPovertyRealities.pdf)![](NotebookLM_SlideDeck2.jpg){width=200}
+
+:::: {.incremental}
+* 貧困の罠は存在しないと断定
+* 高金利によるデフォルトは頻発しない(メディアが騒いでいるだけ)
+* 通常のMFで長期に支援することを主張
+* 2論文[@Antman2007; @Angelucci2015]のみに依拠
+::::
+::::: 
+::::::::::
+
+---
+
+## {background-color="#010638"}
+
+AIにどうやって情報源の偏りを認識させるか
+
 * 研究者がウェイトやバランス指針を与える必要あり
 * Pedro Sant'Annaのclaude codeを使った[lit-reviwのSKILL.md](https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.claude/skills/lit-review/SKILL.md)
+
 
 
 
