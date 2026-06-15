@@ -367,7 +367,7 @@ blockquote {
 ----
 
 
-{background-color="#010638"}
+## {background-color="#010638"}
 
 
 研究公正（Research Integrity）
@@ -527,7 +527,7 @@ blockquote {
 ## <Yellow>信用失墜</Yellow> <Orange>Questionable research practices (QRPs)</Orange>{background-color="#010638"}
 
 :::::::::: {.columns}
-::::: {.column width = "40%"}
+::::: {.column width = "30%"}
 ::: {.incremental}
 ::: {style="font-size:130%"}
 * データの未保存や再現性の欠如  
@@ -542,10 +542,11 @@ blockquote {
 ::::: {.column width = "2%"}
 :::::
 
-::::: {.column width = "58%"}
+::::: {.column width = "68%"}
 ::: {.incremental}
 * 識者によって内容が異なるので幾つか列記  
-* $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること  
+* $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
+* HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
 * GAは贈賄双方に便益あり、[なくなりにくい、でも、著者責任も付いてくる](https://www.bmj.com/content/309/6967/1456#:~:text=Perhaps%20this%20scandal%20will%20finally%20undermine%20gift%20authorship.%20At%20the%20very%20least%20it%20should%20make%20researchers%20think%20hard%20about%20the%20responsibilities%20that%20come%20with%20putting%20their%20names%20on%20papers.)&larr; Asad IsamのFF疑惑   
 * 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))、翻訳であることを明示しても危ういので、翻訳論文はワーキング・ペーパーに留めましょう  
 :::
@@ -819,24 +820,41 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 <White>Githubで研究過程を公開=ピア・レビューを活用  </White>
 ::::
 
+<!--
 :::: {.fragment}
 <White>[こんな感じ](https://github.com/SeiroIto)です</White>
 ::::
+-->
 
 ----
 
 ## なぜQRPをするのか{background-color="#010638"}
 
- <White>
+<br>
 成果を出したい、でも、今のままだと成果にならないと考えている
- </White>
 
 :::: {.fragment}
- <White>
- 内容が不十分
- </White>
+1. 内容が不十分
+1. 自信、発信力が無い
+1. 時間がない
+1. 利益相反
 ::::
 
+
+----
+
+## なぜQRPをするのか{background-color="#010638"}
+
+<br>
+成果を出したい、でも、今のままだと成果にならないと考えている
+
+:::::::::: {.columns}
+::::: {.column width = "50%"}
+:::: {.fragment}
+1. 内容が不十分
+::::
+::::: 
+:::::::::: 
 :::::::::: {.columns}
 ::::: {.column width = "50%"}
 :::: {.incremental}
@@ -849,36 +867,45 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 ::::: {.column width = "50%"}
 :::: {.incremental}
 * 不適切な統計手法  
-* データの未保存や再現性の欠如  
-* 曖昧な記述と結論...QRP?  
-   * 結論は曖昧です、と明確に書けばok  
-   * 単に記述を不明瞭にするのはごまかし=QRP  
+  * 隠すためにデータや手順を未保存&rarr;再現性の欠如
+* 曖昧な記述と結論=ごまかし=QRP  
 ::::
 ::::: 
 :::::::::: 
-
 :::: {.fragment}
+対策
+
+:::: {.incremental}
 * 過程(データとコード)を公開  
 * Pre analysis planを公開・登録  
+* <Red>結論は曖昧です、と明確に書く</Red>  
 ::::
+::::
+
 
 ----
 
 ## なぜQRPをするのか{background-color="#010638"}
 
+<br>
+成果を出したい、でも、今のままだと成果にならないと考えている
+
 :::::::::: {.columns}
 ::::: {.column width = "50%"}
 :::: {.fragment}
  <White>
-自信、発信力が無い
+2. 自信、発信力が無い
  </White>
 ::::
-:::: {.incremental}
+::::: 
+::::::::::
+
+:::::::::: {.columns}
+::::: {.column width = "50%"}
+:::: {.fragment}
 * ビッグ・ネームの推薦を利用したい  
 ::::
-
 ::::: 
-
 ::::: {.column width = "50%"}
 :::: {.incremental}
 * ギフト・オーサーシップ  
@@ -889,7 +916,7 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 
 :::: {.fragment}
-時間がない
+3. 時間がない
 ::::
 :::::::::: {.columns}
 ::::: {.column width = "50%"}
@@ -909,11 +936,20 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 :::::::::: 
 
 
+
+----
+
+## なぜQRPをするのか{background-color="#010638"}
+
+<br>
+成果を出したい、でも、今のままだと成果にならないと考えている
+
 :::: {.fragment}
  <White>
-利益相反
+4. 利益相反
  </White>
 ::::
+
 :::::::::: {.columns}
 ::::: {.column width = "50%"}
 :::: {.incremental}
@@ -942,81 +978,93 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 ## {background-color="#010638"}
 
-研究過程での新要素: AI
-
-::::{.incremental}
-* AI$<$RA
-    * 自信過剰
-    * 知識範囲が恐ろしく広い、疲れを知らない
-    * 普通に尋ねると、安易な一般化が激しく要所を外しがち
-    * ただし、人格がないので出力に責任を負う存在ではない
-::::
-
-----
-
-## {background-color="#010638"}
-
-研究過程での新要素: AI
-
-* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
-
-::: {style="font-size: 50%;"}
-> microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
-
-<Red>[ヤギを4頭あげるともっと貧しくなる理由.m4a](ヤギを4頭あげるともっと貧しくなる理由.m4a)</Red> [(台本)](Transcript_yagi4tou.html)
-
-
-> (00:00)「あの、もし私がですよ、極度の貧困状態にある人にヤギを4頭無料でプレゼントするとしますよね」「はい」「そしたら、3年後には、なんと<Red>何も支援しなかった場合よりもさらに貧困になってしまう</Red>と言ったら、これ信じられますか」「いやあ、直感的には信じがたいですよね」「ですよね...今日私たちが深掘りしていくのは、まさにこの直感を根底から崩す、非常に興味深い、そしてちょっと考えさせられるテーマなんです」
-
-> (11:48) 「<Red>資産を無料で与えられたことで、却って全体的な家畜の価値を下げてしまった</Red>という、完全に直感に反するショッキングな結果でした」
-
-<Red>[Escape_Velocity_and_the_Poverty_Trap.m4a](あEscape_Velocity_and_the_Poverty_Trap.m4a)</Red> [(台本)](Transcript_EscapeVelocity.html)
-
-> (18:50) The households that received just the goats actually saw <Red>their overall wealth decrease compared to the control group.</Red>
-
-Hallucination: 誤解。全種類の支援を受けたアームと比較すると低かった。家畜の合計価値は不変。
-
-:::
-
-----
-
-## {background-color="#010638"}
-
-研究過程での新要素: AI
-
-* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
-
-::: {style="font-size: 50%;"}
-> microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
-
-<Red>[ヤギを4頭あげるともっと貧しくなる理由.m4a](ヤギを4頭あげるともっと貧しくなる理由.m4a)</Red> [台本](Transcript_yagi4tou.html)
-
-> (14:00) そこから抜け出すための安上がりな近道とか、特効薬は存在しませんでした。<Red>資産、ノウハウ、そしてセーフティーネット。この三位一体の多角的アプローチが人間の本来持っている可能性を引き出して、行動を変容させるためには不可欠だった</Red>ということが、この研究から導き出された最も重要な結論なんですよ。
-
-* 過度の一般化: 組み合わせると上手くいく事例&rarr;「特効薬は存在しませんでした」「三位一体の多角的アプローチが...不可欠だった」
-
-> (15:33) 「バンドウィドス・タックスという言葉を聞いたことがあるかもしれません」「おびいきはば(帯域幅?)への課税ですか」「人は明日のご飯をどうしようという強烈な不安に直面しているとき、脳の認知的余裕、つまり、おびいきはばの殆どをその短期的な問題に奪われてしまうのです」「あー」「長期的な計画を立てたり、新しいスキルを学んだりする余裕が完全にゼロになってしまうのです」「分かります、私も仕事でもう極限まで追い詰められている時は、1年後のキャリアプランなんて絶対に考えられませんもん。」
-
-* Hallucination: 「介入&rArr;cognition&uarr;」という結果は出なかったのに、現金補助を組み合わせて効果が高くなったことを説明するために「scarcity&uarr;&rArr;cognition&darr;」で説明
-:::
-
-----
-
-## {background-color="#010638"}
-
-研究過程での新要素: AI
+研究過程での新要素: AI$<$RA
 
 ::::{.incremental}
 * 力業をこなすので量的な生産性は高まる&rarr;質の制御
+  * 知識範囲が恐ろしく広く、疲れを知らない
+  * 仕事が早い
 * 母集団に比べると歪んだ内容を説得的に、かつ、ユーザに同調しながら示す
+  * 知らないことも自信たっぷり(過剰)に回答&larr;知っていると誤解しやすい
+      * そういうトーン(分からないと言わない、同意調)が[学習過程で推奨されている	](https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf)
+      * [Hallucination](https://github.com/vectara/hallucination-leaderboard/)&larr;開発者の設計志向「予測せよ」
+  * 安易な一般化が激しい&larr;学習コーパス(「知識」)の偏り、特定見解へのウェイトの偏り
+* 機械=人格がない、だから、出力に責任を負う存在ではない
 * 制御の技量が試される
-    * RA: 指導、共著者として責任を共有
-    * AI: [`feedback rules`](https://code.claude.com/docs/en/memory#organize-rules-with-claude/rules/)と[`skills`](https://claude.com/docs/skills/overview)で誘導、人間による検証(一次資料+専門知識)で責任を持つ
-* 人間が検証するならAI使う必要あり?
+  * RA: 指導、共著者として責任を共有
+  * AI: [`feedback rules`](https://code.claude.com/docs/en/memory#organize-rules-with-claude/rules/)と[`skills`](https://claude.com/docs/skills/overview)で誘導、人間が検証(一次資料+専門知識)して責任を持つ
 ::::
+
+----
+
+## {background-color="#010638"}
+
+研究過程での新要素: AI<RA
+
+::::{.incremental}
+* 人間が検証するならAI使う必要あり?
+* 何に使うか: 最終成果に近い作業まで使う人もいる
+  * 異分野・新規課題の展望
+  * コード(debugging, refactoring)
+  * 数式の展開、[証明の論理検証](www.refine.ink)
+  * 模擬査読 [(claesbackman)](https://github.com/claesbackman/AI-research-feedback)、[(IsItCredible)](https://isitcredible.com/)、[(Davidvandijcke)](https://github.com/Davidvandijcke/coarse)
+  * 新規論文のお知らせ ![](NBERDigestWorkflow_GPT5mini.jpg){height=30 .lightbox}
+* 欠けているもの: 各ツールの人間による評価&rarr;いずれ揃う
+* カタログ: [Claude for economists](https://achenzion.github.io/2026/04/04/Claude-for-Economists/)、[Awesome AI for economists](https://github.com/hanlulong/awesome-ai-for-economists#contents)、[Mini series on claude code for applied economists](https://bcf.princeton.edu/events/paul-goldsmith-pinkham-mini-series-on-claude-code-for-applied-economists/) 
+[(コンパクト版)](https://paulgp.com/2024/06/24/llm_talk.html)
+::::
+
+----
+
+## {background-color="#010638"}
+
+研究過程での新要素: AI<RA
+
+
+* 「検証費用<作成費用ならば使うべき」とAIは回答(下記も回答)
+  * 一次資料の検証
+  * 専門(現地)知識による検証&rarr;難易度高い: AIの学習コーパスに入りにくく、自分の専門分野以外だと検証が難しいから
 
 <!-- 900802018885 -->
 
+
+
+| Agent | Focus |
+|---|---|
+| 1 | Spelling, grammar, and academic style |
+| 2 | Internal consistency and cross-reference verification |
+| 3 | Unsupported claims and identification integrity |
+| 4 | Mathematics, equations, and notation |
+| 5 | Tables, figures, and their documentation |
+| 6 | Contribution evaluation (adversarial journal-specific referee) |
+
+----
+
+paper.pdf (or .txt, .md, .tex, .docx, .html, .epub)
+  -> Mistral OCR (Docling fallback)      Extract text as markdown
+  -> Vision LLM spot-check               Optional QA (auto-triggers on garbled text)
+  -> Structure analysis                   Parse sections, detect math content, classify domain
+  -> Domain calibration + lit search      Parallel: domain-specific criteria + Perplexity Sonar Pro
+  -> Overview agent                       Single macro-level review pass
+  -> Completeness agent                   Structural-gap pass merged into overview
+  -> Section agents + proof verification  Parallel: 15-25 detailed comments; math sections get adversarial proof check
+  -> Cross-section synthesis              Results vs discussion consistency check
+  -> Editorial filter                     Primary deduplication, contradiction, and quality pass
+  -> Legacy crossref/critique fallback    Only used if the editorial pass fails
+  -> Quote verification                   Fuzzy-match quotes against paper text (stricter for math)
+  -> Synthesis                            Render final paper_review.md
+
+## {background-color="#010638"}
+
+研究過程での新要素: AI
+
+:::: {.fragment}
+研究公正への影響
+
+* 剽窃
+* 過大解釈、誤解釈
+* コードの不当表示(Aをやると言いつつBをやる)
+::::
 
 ----
 
@@ -1219,8 +1267,56 @@ AIにどうやって情報源の偏りを認識させるか
 
 
 
+----
 
----
+## {background-color="#010638"}
+
+研究過程での新要素: AI
+
+* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
+
+::: {style="font-size: 50%;"}
+> microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
+
+<Red>[ヤギを4頭あげるともっと貧しくなる理由.m4a](ヤギを4頭あげるともっと貧しくなる理由.m4a)</Red> [(台本)](Transcript_yagi4tou.html)
+
+
+> (00:00)「あの、もし私がですよ、極度の貧困状態にある人にヤギを4頭無料でプレゼントするとしますよね」「はい」「そしたら、3年後には、なんと<Red>何も支援しなかった場合よりもさらに貧困になってしまう</Red>と言ったら、これ信じられますか」「いやあ、直感的には信じがたいですよね」「ですよね...今日私たちが深掘りしていくのは、まさにこの直感を根底から崩す、非常に興味深い、そしてちょっと考えさせられるテーマなんです」
+
+> (11:48) 「<Red>資産を無料で与えられたことで、却って全体的な家畜の価値を下げてしまった</Red>という、完全に直感に反するショッキングな結果でした」
+
+<Red>[Escape_Velocity_and_the_Poverty_Trap.m4a](あEscape_Velocity_and_the_Poverty_Trap.m4a)</Red> [(台本)](Transcript_EscapeVelocity.html)
+
+> (18:50) The households that received just the goats actually saw <Red>their overall wealth decrease compared to the control group.</Red>
+
+Hallucination: 誤解。全種類の支援を受けたアームと比較すると低かった。家畜の合計価値は不変。
+
+:::
+
+----
+
+## {background-color="#010638"}
+
+研究過程での新要素: AI
+
+* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
+
+::: {style="font-size: 50%;"}
+> microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
+
+<Red>[ヤギを4頭あげるともっと貧しくなる理由.m4a](ヤギを4頭あげるともっと貧しくなる理由.m4a)</Red> [台本](Transcript_yagi4tou.html)
+
+> (14:00) そこから抜け出すための安上がりな近道とか、特効薬は存在しませんでした。<Red>資産、ノウハウ、そしてセーフティーネット。この三位一体の多角的アプローチが人間の本来持っている可能性を引き出して、行動を変容させるためには不可欠だった</Red>ということが、この研究から導き出された最も重要な結論なんですよ。
+
+* 過度の一般化: 組み合わせると上手くいく事例、資産+現金給付、資産+ノウハウでも上手くいく可能性あり、現金給付=セーフティネットではなく経常投入費支援かも&rarr;「特効薬は存在しませんでした」「三位一体の多角的アプローチが...不可欠だった」
+
+> (15:33) 「バンドウィドス・タックスという言葉を聞いたことがあるかもしれません」「おびいきはば(帯域幅?)への課税ですか」「人は明日のご飯をどうしようという強烈な不安に直面しているとき、脳の認知的余裕、つまり、おびいきはばの殆どをその短期的な問題に奪われてしまうのです」「あー」「長期的な計画を立てたり、新しいスキルを学んだりする余裕が完全にゼロになってしまうのです」「分かります、私も仕事でもう極限まで追い詰められている時は、1年後のキャリアプランなんて絶対に考えられませんもん。」
+
+* Hallucination: 「介入&rArr;cognition&uarr;」という結果は出なかったのに、現金補助を組み合わせて効果が高くなったことを説明するために「scarcity&uarr;&rArr;cognition&darr;」で説明
+:::
+
+----
+
 
 ## {background-color="#010638"}
 
