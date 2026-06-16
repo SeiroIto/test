@@ -78,21 +78,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v6
 
-      # Upload the rendered output as an artifact
-      # so the deploy job can reuse it.
-      #
-      # IMPORTANT:
-      # Your original workflow used:
-      #   path: 'posts'
-      #
-      # Keep it the same here to avoid breaking your deployment.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          # Upload quarto render output directory
-          #path: '_site'
-          target: gh-pages
-          path: 'posts'
+          # path: 'posts' ==> Github Pages: root = posts/
+          # path: '.'     ==> Github Pages: root = repo root, posts/ stays in URL
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
