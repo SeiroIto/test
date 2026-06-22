@@ -38,7 +38,7 @@ jobs:
     steps:
       # Get repository code
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # Install Quarto
       - name: Set up Quarto
