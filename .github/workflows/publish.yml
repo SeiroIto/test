@@ -1,59 +1,56 @@
-# Workflow for rendering and deploying quarto site to GitHub Pages
-# Based on the GitHub example static content deploy action
 name: Deploy Quarto site to Pages
 
 on:
-  # Run CI (continuous integration) when a PR targets main (this is what you want for branch protection)
+  # Run CI for PRs targeting main
   pull_request:
-    branches: ["main"]
-  # Run CI + deploy when code is pushed to main
+    branches: [main]
+
+  # Build + deploy on pushes to main
   push:
-    branches: ["main"]
-  # Allow manual run from the Actions tab
+    branches: [main]
+
+  # Manual trigger (optional rebuild)
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-# Permissions:
-# - For PR builds, only read permissions are needed.
-# - For deployments to Pages, pages + id-token are needed.
-#   (GitHub is fine with having these set globally.)
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Prevent overlapping deployments
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
+
 jobs:
-  # Single deploy job since we're just deploying
-  render-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
+  render:
+    name: Render Quarto site
     runs-on: ubuntu-latest
+
     steps:
+      # Get repository code
       - name: Checkout
         uses: actions/checkout@v6
-      
+
+      # Install Quarto
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
-          # uncomment below and fill to pin a version
-          # version: SPECIFIC-QUARTO-VERSION-HERE
+          tinytex: true  # optional PDF support
 
-      - name: Install R
+      # Install R with fast binary packages (RSPM)
+      - name: Set up R (RSPM)
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: '4.4.1'
+          use-public-rspm: true
 
-      - name: Install R Dependencies
+      # Install required R packages
+      - name: Install R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
@@ -69,25 +66,36 @@ jobs:
             any::RefManageR
             any::ggrepel
 
-      # Render the site
-      # This will fail the workflow if rendering fails,
-      # which is exactly what you want for CI.
-      - name: Render
+      # Render Quarto site
+      - name: Render site
         uses: quarto-dev/quarto-actions/render@v2
 
+      # Save build output for deploy job
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: render
+
+    # Only deploy from main branch pushes
+    if: github.event_name == 'push'
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # Configure Pages environment
       - name: Setup Pages
         uses: actions/configure-pages@v6
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          # path: 'posts' ==> Github Pages: root = posts/
-          # path: '.'     ==> Github Pages: root = repo root, posts/ stays in URL
-          path: '.'
-
-      - name: Deploy to GitHub Pages
+      # Publish site
+      - name: Deploy
         id: deployment
-        if: |
-          (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
-          (github.event_name == 'pull_request' && startsWith(github.head_ref, 'dependabot/'))
         uses: actions/deploy-pages@v5

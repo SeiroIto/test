@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../github-markdown.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body {
+  display: flex;
+  margin: 0;
+}
+nav#TOC {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  width: 220px;
+  min-width: 220px;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px 12px;
+  border-right: 1px solid #d0d7de;
+  background: #f6f8fa;
+  font-size: 13px;
+  line-height: 1.4;
+}
+nav#TOC ul {
+  list-style: none;
+  padding-left: 12px;
+  margin: 0;
+}
+nav#TOC > ul {
+  padding-left: 0;
+}
+nav#TOC a {
+  color: #1F2328;
+  text-decoration: none;
+  display: block;
+  padding: 3px 0;
+}
+nav#TOC a:hover {
+  color: #0969da;
+}
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  flex: 1;
+}
+</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#world-bank-income-group-definitions"
+id="toc-world-bank-income-group-definitions">World Bank Income Group
+Definitions</a></li>
+<li><a href="#data" id="toc-data">Data</a></li>
+<li><a href="#income-thresholds-definition-and-deflation"
+id="toc-income-thresholds-definition-and-deflation">Income Thresholds —
+definition and deflation</a>
+<ul>
+<li><a href="#threshold-deflation-methods"
+id="toc-threshold-deflation-methods">Threshold deflation
+methods</a></li>
+</ul></li>
+<li><a href="#figure-1-count-of-countries-by-income-group-19872023"
+id="toc-figure-1-count-of-countries-by-income-group-19872023">Figure 1 —
+Count of countries by income group, 1987–2023</a></li>
+<li><a href="#figure-2-income-trajectories-19872023-four-variants"
+id="toc-figure-2-income-trajectories-19872023-four-variants">Figure 2 —
+Income trajectories, 1987–2023 (four variants)</a>
+<ul>
+<li><a href="#construction" id="toc-construction">Construction</a></li>
+<li><a href="#shared-elements" id="toc-shared-elements">Shared
+elements</a></li>
+<li><a href="#atlas-variants-current-us-deflator-sdr-deflator"
+id="toc-atlas-variants-current-us-deflator-sdr-deflator">Atlas variants
+(current · US deflator · SDR deflator)</a></li>
+<li><a href="#ppp-variant" id="toc-ppp-variant">PPP variant</a></li>
+</ul></li>
+<li><a href="#key-references" id="toc-key-references">Key
+References</a></li>
+<li><a href="#citation-guidance-for-journal-papers"
+id="toc-citation-guidance-for-journal-papers">Citation guidance for
+journal papers</a></li>
+</ul>
+</nav>
+<article class="markdown-body">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<h2 id="world-bank-income-group-definitions">World Bank Income Group
+Definitions</h2>
+<p>The World Bank classifies countries annually by GNI per capita using
+the <a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/378832-the-world-bank-atlas-method-detailed-methodology">Atlas
+method</a> (current USD):</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>GNI per capita (<a
+href="https://blogs.worldbank.org/en/opendata/world-bank-country-classifications-by-income-level-for-2024-2025">FY2025
+thresholds</a>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low income</td>
+<td>≤ $1,135</td>
+</tr>
+<tr class="even">
+<td>Lower-middle income</td>
+<td>$1,136 – $4,495</td>
+</tr>
+<tr class="odd">
+<td>Upper-middle income</td>
+<td>$4,496 – $13,935</td>
+</tr>
+<tr class="even">
+<td>High income</td>
+<td>&gt; $13,935</td>
+</tr>
+</tbody>
+</table>
+<p>Thresholds are updated each July 1 using the previous calendar year’s
+data. The historical classification series (<a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519">OGHIST</a>)
+runs from 1987 to the present.</p>
+<hr />
+<h2 id="data">Data</h2>
+<p><strong>Income group history:</strong></p>
+<blockquote>
+<p>World Bank. <em>Historical Classification by Income (OGHIST).</em>
+Updated annually. <a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519"
+class="uri">https://datahelpdesk.worldbank.org/knowledgebase/articles/906519</a></p>
+</blockquote>
+<p><strong>Income level (y-axis):</strong></p>
+<blockquote>
+<p>World Bank WDI indicator <a
+href="https://data.worldbank.org/indicator/NY.GNP.PCAP.CD"><code>NY.GNP.PCAP.CD</code></a>:
+GNI per capita, Atlas method, current US$. Downloaded via the <a
+href="https://cran.r-project.org/package=wbstats"><code>wbstats</code></a>
+R package. This is the same series the World Bank uses to assign income
+groups.</p>
+</blockquote>
+<p><strong>Coverage:</strong> 1987–2023.</p>
+<p><strong>Panel dataset:</strong>
+<code>source/wb_income_panel.csv</code> — columns <code>iso3c</code>,
+<code>country</code>, <code>year</code>, <code>income_group</code>,
+<code>ig_ord</code>, <code>gni_atlas</code>, <code>gni_atlas_US</code>,
+<code>gni_atlas_SDR</code>, <code>gni_ppp</code>.</p>
+<hr />
+<h2 id="income-thresholds-definition-and-deflation">Income Thresholds —
+definition and deflation</h2>
+<p>The green step lines in Figure 2 are the <strong>official World Bank
+Atlas-method income thresholds, copied per year</strong> from the OGHIST
+<em>Thresholds</em> sheet (current US$). Three deflation variants are
+produced, one per figure.</p>
+<h3 id="threshold-deflation-methods">Threshold deflation methods</h3>
+<p>The World Bank adjusts its thresholds annually using the <strong>SDR
+deflator</strong>: a weighted average of the GDP deflators of China,
+Japan, the United Kingdom, the United States, and the Euro area (weights
+= amount of each currency in one SDR unit). Source: <a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/378832-the-world-bank-atlas-method-detailed-methodology">Atlas
+method methodology</a>.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Figure</th>
+<th>Method</th>
+<th>Formula</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_current</code></td>
+<td>No deflation</td>
+<td><span class="math inline">\(y_b(t) = T_b(t)\)</span></td>
+<td>Current US$; axis and lines identical units, no approximation</td>
+</tr>
+<tr class="even">
+<td><code>_US</code></td>
+<td>US GDP deflator</td>
+<td><span class="math inline">\(y_b(t) = T_b(t) \times
+D_{US}(2017)/D_{US}(t)\)</span></td>
+<td>WDI <a
+href="https://data.worldbank.org/indicator/NY.GDP.DEFL.ZS"><code>NY.GDP.DEFL.ZS</code></a>
+(USA); simple but approximates SDR with one country</td>
+</tr>
+<tr class="odd">
+<td><code>_SDR</code></td>
+<td>SDR basket deflator</td>
+<td><span class="math inline">\(y_b(t) = T_b(t) \times
+D_{SDR}(2017)/D_{SDR}(t)\)</span></td>
+<td>Matches WB methodology; <span class="math inline">\(D_{SDR}\)</span>
+= weighted avg of 5 GDP deflators</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SDR basket weights used</strong> (<a
+href="https://www.imf.org/en/Topics/special-drawing-right/SDR-Valuation">2022
+IMF review</a>, fixed for full 1987–2023 period): USD 43.38% · EUR
+29.31% · CNY 12.28% · JPY 7.59% · GBP 7.44%</p>
+<p><strong>Worked rows (selected), L/LM boundary:</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>GNI year</th>
+<th>Nominal US$</th>
+<th>US conv factor</th>
+<th>L/LM (US-deflated)</th>
+<th>SDR conv factor</th>
+<th>L/LM (SDR-deflated)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1990</td>
+<td>610</td>
+<td>1.675</td>
+<td>1,022</td>
+<td>≈1.67</td>
+<td>≈1,018</td>
+</tr>
+<tr class="even">
+<td>2000</td>
+<td>755</td>
+<td>1.366</td>
+<td>1,031</td>
+<td>≈1.35</td>
+<td>≈1,019</td>
+</tr>
+<tr class="odd">
+<td>2010</td>
+<td>1,005</td>
+<td>1.108</td>
+<td>1,114</td>
+<td>≈1.10</td>
+<td>≈1,107</td>
+</tr>
+<tr class="even">
+<td>2017</td>
+<td>995</td>
+<td>1.000</td>
+<td>995</td>
+<td>1.000</td>
+<td>995</td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td>1,145</td>
+<td>0.825</td>
+<td>945</td>
+<td>≈0.83</td>
+<td>≈950</td>
+</tr>
+</tbody>
+</table>
+<p>In constant prices the L/LM line is near-flat at ≈ $1,000; the two
+deflated variants track closely. See comparison section below for
+divergence.</p>
+<hr />
+<h2 id="figure-1-count-of-countries-by-income-group-19872023">Figure 1 —
+Count of countries by income group, 1987–2023</h2>
+<p><code>fig1_income_groups_count.png</code> — stacked bar chart; High
+on top, Low on bottom.</p>
+<p><code>fig1Facet_income_groups_count.png</code> — same data, one panel
+per income group (1 × 4 column), free y-axis scale so each group’s trend
+is readable on its own baseline.</p>
+<hr />
+<h2 id="figure-2-income-trajectories-19872023-four-variants">Figure 2 —
+Income trajectories, 1987–2023 (four variants)</h2>
+<h3 id="construction">Construction</h3>
+<p><strong>Data sources:</strong> * Y-axis: <a
+href="https://data.worldbank.org/indicator/NY.GNP.PCAP.CD"><code>NY.GNP.PCAP.CD</code></a>
+— GNI per capita, Atlas method, current US$. * Green step lines:
+official WB thresholds parsed from <a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519">OGHIST</a>
+<em>Thresholds</em> sheet (current US$ each year).</p>
+<p><strong>Issue:</strong> Both series are nominal. Over 1987–2023,
+inflation drifts the entire distribution upward, compressing early-year
+observations and making inter-temporal comparison of countries’ distance
+from boundaries difficult.</p>
+<p><strong>Four variants — what changes between them:</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variant</th>
+<th>Y-axis</th>
+<th>Threshold lines</th>
+<th>Deviation from WB definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_current</code></td>
+<td><a
+href="https://data.worldbank.org/indicator/NY.GNP.PCAP.CD"><code>NY.GNP.PCAP.CD</code></a>
+as published</td>
+<td>OGHIST as published</td>
+<td><strong>Zero</strong> — WB classifies using current US$</td>
+</tr>
+<tr class="even">
+<td><code>_US</code></td>
+<td>GNI × <span
+class="math inline">\(D_{US}(2017)/D_{US}(t)\)</span></td>
+<td>OGHIST × same factor</td>
+<td>Approximation (single-country proxy for SDR)</td>
+</tr>
+<tr class="odd">
+<td><code>_SDR</code></td>
+<td>GNI × <span
+class="math inline">\(D_{SDR}(2017)/D_{SDR}(t)\)</span></td>
+<td>OGHIST × same factor</td>
+<td>Closest to WB methodology</td>
+</tr>
+<tr class="even">
+<td><code>_PPP</code></td>
+<td><a
+href="https://data.worldbank.org/indicator/NY.GNP.PCAP.PP.CD"><code>NY.GNP.PCAP.PP.CD</code></a>
+(PPP, current intl $)</td>
+<td>OGHIST current US$ (US prices)</td>
+<td>Crossings <strong>do not</strong> match per-country (see below)</td>
+</tr>
+</tbody>
+</table>
+<p>For <code>_current</code>/<code>_US</code>/<code>_SDR</code>, both
+GNI and thresholds are multiplied by the <strong>same</strong> per-year
+scalar, so a country’s line crosses a threshold in year <span
+class="math inline">\(t\)</span> if and only if the WB reclassified it
+that year — the classification is unchanged by deflation.</p>
+<p><strong><code>_PPP</code> is different.</strong> The Atlas→PPP ratio
+is country- <em>and</em> time-specific, so no single scalar maps both
+GNI and thresholds. We draw the Atlas current-US$ cutoffs as the
+reference line, valid because PPP international $ ≡ US$ at the US (the
+PPP numeraire). A country’s PPP line therefore sits
+<strong>above</strong> the Atlas threshold to the extent its domestic
+prices are below US levels — the vertical gap between a country’s PPP
+line and where its Atlas line would be <em>is</em> the price-level
+effect. Per-country crossings consequently do not coincide with OGHIST
+reclassifications; only the Atlas variants reproduce ground truth
+exactly.</p>
+<p>The SDR deflator <span class="math inline">\(D_{SDR}\)</span> is
+computed as the weighted average of five GDP deflators (<a
+href="https://data.worldbank.org/indicator/NY.GDP.DEFL.ZS"><code>NY.GDP.DEFL.ZS</code></a>)
+using fixed 2022 IMF basket weights: USD 43.38% · EUR 29.31% · CNY
+12.28% · JPY 7.59% · GBP 7.44%.</p>
+<p><strong><code>_US</code> vs <code>_SDR</code> diverge</strong> when
+US inflation deviates from the basket: notably 2021–2023 (US inflation
+above basket average, so <code>_US</code> lines sit slightly lower) and
+1987–1995 (modest divergence in the other direction).</p>
+<hr />
+<h3 id="shared-elements">Shared elements</h3>
+<ul>
+<li>One line per country; colour = net change in official <a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519">OGHIST</a>
+income group, first to last year of data.</li>
+<li>Green step lines = WB thresholds (deflated as per variant). Labels:
+<strong>n</strong> = number of unique <em>countries</em> (not crossing
+events) that cross that boundary upward.</li>
+<li><strong>Bold viridis lines with name labels:</strong> the three
+countries that started in Low income, rose 2+ groups, <em>and</em> were
+genuinely below the L/LM line in their first year — <strong>China,
+Equatorial Guinea, Guyana</strong>. Each has a distinct viridis colour
+(colour-blind safe) with a matching label.</li>
+</ul>
+<blockquote>
+<p><strong>Indonesia and Maldives are excluded</strong> from this set.
+OGHIST classifies both as Low in 1987, so a naïve
+<code>ig_first == "L"</code> rule would include them — but their
+<em>revised</em> WDI Atlas GNI for 1987 already exceeds that year’s L/LM
+cutoff (<strong>Indonesia</strong> $500 vs $480 — marginal, 1987 only;
+<strong>Maldives</strong> $670–990 vs $480–675 — above the cutoff every
+year 1987–92). The Low classification was assigned at the time using
+lower contemporaneous estimates that have since been revised upward, so
+by today’s data neither truly began as a Low-income economy. Both remain
+in the figure as ordinary dark-red “2+ up” lines — just not
+annotated.</p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th>Colour</th>
+<th>Category</th>
+<th>N countries</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dark red</td>
+<td>2+ groups up</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>Yellow</td>
+<td>1 group up</td>
+<td>84</td>
+</tr>
+<tr class="odd">
+<td>Gray</td>
+<td>No change</td>
+<td>107</td>
+</tr>
+<tr class="even">
+<td>Light blue</td>
+<td>1 group down</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Deep blue</td>
+<td>2+ groups down</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Boundary crossings (upward, unique countries): L→LM 53 · LM→UM 69 ·
+UM→H 40.</p>
+<hr />
+<h3 id="atlas-variants-current-us-deflator-sdr-deflator">Atlas variants
+(current · US deflator · SDR deflator)</h3>
+<p>Click any figure to enlarge; arrows navigate across all four.</p>
+<div style="display:flex; gap:6px;">
+<p><a href="fig2_income_trajectories_current.png" class="glightbox" data-gallery="fig2" style="width:33%;"><img src="fig2_income_trajectories_current.png" style="width:100%;"></a>
+<a href="fig2_income_trajectories_US.png" class="glightbox" data-gallery="fig2" style="width:33%;"><img src="fig2_income_trajectories_US.png" style="width:100%;"></a>
+<a href="fig2_income_trajectories_SDR.png" class="glightbox" data-gallery="fig2" style="width:33%;"><img src="fig2_income_trajectories_SDR.png" style="width:100%;"></a></p>
+</div>
+<ul>
+<li><strong>Left (<code>_current</code>):</strong> Thresholds rise
+nominally (L/LM: $610 in 1990 → $1,145 in 2023). Distribution drifts
+upward with inflation; 1987 observations sit low on the scale.
+<strong>Zero deviation from the WB definition</strong> — both axis and
+lines are current US$, exactly how the WB classifies each year.</li>
+<li><strong>Centre (<code>_US</code>):</strong> Inflation removed via US
+deflator. Threshold near-flat in real terms (~$995 ± 10%). Slight
+over-correction 2021–2023 vs SDR.</li>
+<li><strong>Right (<code>_SDR</code>):</strong> Same pattern as
+<code>_US</code> but using the basket deflator WB actually applies.
+Threshold flat at ~$1,000 constant 2017 US$ throughout. Preferred for
+publication.</li>
+</ul>
+<h3 id="ppp-variant">PPP variant</h3>
+<div style="display:flex; justify-content:center;">
+<p><a href="fig2_income_trajectories_PPP.png" class="glightbox" data-gallery="fig2" style="width:66%;"><img src="fig2_income_trajectories_PPP.png" style="width:100%;"></a></p>
+</div>
+<ul>
+<li><strong>Y-axis:</strong> GNI per capita, PPP, current international
+$ (<a
+href="https://data.worldbank.org/indicator/NY.GNP.PCAP.PP.CD"><code>NY.GNP.PCAP.PP.CD</code></a>)
+— purchasing-power-real income expressed in US dollars.</li>
+<li><strong>Green line:</strong> WB Atlas cutoffs at US prices (PPP
+numeraire). Country lines sit <strong>above</strong> the threshold by
+their price-level gap, so crossings here are <em>not</em> OGHIST
+reclassifications — read colour, not line-crossings, for the official
+class. The PPP↔︎Atlas gap is the figure’s substantive content.</li>
+</ul>
+<hr />
+<h2 id="key-references">Key References</h2>
+<p><strong>Classification methodology:</strong></p>
+<blockquote>
+<p>Fantom, N. and Serajuddin, U. (2016). <em>The World Bank’s
+Classification of Countries by Income.</em> World Bank Policy Research
+Working Paper No. 7528. <a
+href="https://documents1.worldbank.org/curated/en/408581467988942234/pdf/WPS7528.pdf"
+class="uri">https://documents1.worldbank.org/curated/en/408581467988942234/pdf/WPS7528.pdf</a></p>
+</blockquote>
+<p><strong>Atlas method deflator:</strong></p>
+<blockquote>
+<p>World Bank Data Help Desk. <em>The World Bank Atlas Method — Detailed
+Methodology.</em> <a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/378832-the-world-bank-atlas-method-detailed-methodology"
+class="uri">https://datahelpdesk.worldbank.org/knowledgebase/articles/378832-the-world-bank-atlas-method-detailed-methodology</a></p>
+</blockquote>
+<p><strong>Compiled graduation dates:</strong></p>
+<blockquote>
+<p>Juden, M. (2016, March 23; updated April 21). “Which Countries Have
+Graduated from Each Income Group, and When?” CGD Blog, Center for Global
+Development. <a
+href="https://www.cgdev.org/blog/which-countries-have-graduated-each-income-group-and-when"
+class="uri">https://www.cgdev.org/blog/which-countries-have-graduated-each-income-group-and-when</a></p>
+</blockquote>
+<p><strong>FY2015 press release (Bangladesh, Kenya, Myanmar,
+Tajikistan):</strong></p>
+<blockquote>
+<p>World Bank (2015, July 1). Press release. <a
+href="https://www.worldbank.org/en/news/press-release/2015/07/01/new-world-bank-update-shows-bangladesh-kenya-myanmar-and-tajikistan-as-middle-income-while-south-sudan-falls-back-to-low-income.print"
+class="uri">https://www.worldbank.org/en/news/press-release/2015/07/01/new-world-bank-update-shows-bangladesh-kenya-myanmar-and-tajikistan-as-middle-income-while-south-sudan-falls-back-to-low-income.print</a></p>
+</blockquote>
+<hr />
+<h2 id="citation-guidance-for-journal-papers">Citation guidance for
+journal papers</h2>
+<ol type="1">
+<li>Cite <strong>Fantom &amp; Serajuddin (2016, WPS7528)</strong> for
+the classification methodology.</li>
+<li>Download <strong>OGHIST</strong> from the World Bank Help Desk link
+above and cite it as the data source for income group assignments,
+including download date.</li>
+<li>Cite <strong>WDI indicator <code>NY.GNP.PCAP.CD</code></strong> for
+the income level series, with download date.</li>
+<li>For the SDR deflator, cite the <a
+href="https://datahelpdesk.worldbank.org/knowledgebase/articles/378832-the-world-bank-atlas-method-detailed-methodology">Atlas
+method methodology page</a> and state the basket weights and base year
+used.</li>
+</ol>
+<script>window.addEventListener('load', function () { GLightbox({ selector: '.glightbox' }); });</script>
+</article>
+</body>
+</html>

@@ -1,0 +1,160 @@
+---
+title: "tinytable in reveal.js: width fix"
+subtitle: "Symptom → root cause → fix → recipe"
+author: "記録: 伊藤成朗"
+date: "2026-06-18"
+format:
+  revealjs:
+    standalone: true
+    embed-resources: true
+    slide-number: true
+    width: 1600
+    height: 900
+    theme: simple
+    code-line-numbers: false
+execute:
+  echo: true
+  eval: true
+  warning: false
+  message: false
+---
+
+```{r setup, echo=FALSE}
+library(data.table); library(tinytable)
+dt <- data.table(
+  工程 = c("デザイン・仮説", "データ収集・整理", "推敲"),
+  人間 = c("作り出す", "指示を出す", "監修、編集"),
+  AI   = c("理論枠組み、仮説、データの整合性チェック",
+           "指示通りに作業",
+           "推計結果を表にして簡単な文章にする")
+)
+```
+
+## Symptom
+
+Table renders **full-width** — `tt(dt, width = 1)` (scalar `1`):
+
+```{r symptom-table}
+tb <- tt(dt, width = 1)   # scalar 1 → inline: table-layout:fixed; width:100% !important
+tb <- style_tt(tb, j = 1:3, align = "l", fontsize = .8)
+tb <- style_tt(tb, i = 0, align = "c")
+tb <- theme_html(tb, class = "tinytable tinytable-hover")
+tb
+```
+
+---
+
+## Root cause
+
+`tt()` injects table width directly into an **inline style** on `<table>`.
+What each `width` arg produces:
+
+```html
+<!-- width = 1 (scalar): full-width, unkillable -->
+<table style="table-layout: fixed; width: 100% !important; ...">
+
+<!-- width = c(.2, .15, .4) (vector, sum=0.75): controllable -->
+<table style="table-layout: fixed; width: 75%; ...">
+
+<!-- width = NULL (no arg): shrinks to content -->
+<table style="width: auto; ...">
+```
+
+. . .
+
+The scalar `1` case writes **`!important` in the inline style** — the highest possible CSS priority.
+No stylesheet rule can override it.
+
+---
+
+## What was tried and why each failed
+
+| Attempt | Why it failed |
+|---------|--------------|
+| `.reveal table.tinytable { width: auto !important; }` | inline `!important` wins; CSS `!important` cannot beat inline `!important` |
+| `.reveal table.tinytable { width: fit-content !important; }` | same — inline `!important` wins |
+| `theme_revealjs()` | does not change the inline style; same `100% !important` |
+| `as_raw_html()` + `gsub` | `as_raw_html()` is a **{gt}** function — not in tinytable |
+
+The inline `width: 100% !important` set by tinytable is the highest-priority CSS value possible.
+CSS overrides from any stylesheet cannot beat it.
+
+---
+
+## The fix
+
+Supply a **column-width vector** — tinytable writes `width: XX%` (no `!important`):
+
+```r
+# Before: scalar width = 1 → inline width: 100% !important  (unkillable)
+tb <- tt(dt, width = 1)
+
+# After: vector summing to 0.70 → inline width: 70%  (70% of slide)
+tb <- tt(dt, width = c(.175, .175, .35))
+#                     ↑     ↑     ↑
+#                     sum = 0.70
+```
+
+. . .
+
+Column **proportions preserved** (example — original code used `c(.2, .15, .4)`):
+
+| Column | Original | Fixed | Share of table |
+|--------|----------|-------|----------------|
+| 工程 | 0.200 | 0.187 | 26.7% |
+| 人間 | 0.150 | 0.140 | 20.0% |
+| AI   | 0.400 | 0.373 | 53.3% |
+| **sum** | **0.750** | **0.700** | |
+
+---
+
+## Result: 70% width
+
+```{r fix-table, echo=FALSE}
+tb2 <- tt(dt, width = c(.187, .140, .373))
+tb2 <- style_tt(tb2, j = 1:3, align = "l", fontsize = .8)
+tb2 <- style_tt(tb2, i = 0, align = "c")
+tb2 <- theme_html(tb2, class = "tinytable tinytable-hover")
+tb2
+```
+
+No CSS file needed. `tinytable.css` should be **empty**.
+
+---
+
+## Why the fix works
+
+```
+tt(dt, width = c(.175, .175, .35))
+    ↓  sum = 0.70
+    ↓  tinytable writes: style="table-layout: fixed; width: 70%; ..."
+    ↓  no !important → theme CSS can still override if needed
+    ✓  table renders at 70% of slide width
+
+tt(dt, width = 1)   ← DON'T USE
+    ↓  tinytable writes: style="table-layout: fixed; width: 100% !important; ..."
+    ↓  inline !important = highest CSS priority; nothing can override
+    ✗  table locked at 100% width
+```
+
+**Key rule:** always supply a column-width vector; `sum = desired fraction of slide width`.
+Leave `tinytable.css` empty — no CSS overrides needed.
+
+---
+
+## Recipe
+
+```r
+T <- 0.70   # target width as fraction of slide width
+
+# column proportions (any values — will be rescaled)
+col_w <- c(.25, .25, .50)
+col_w <- col_w / sum(col_w) * T   # rescale to sum to T
+
+tb <- tt(dt, width = col_w)
+tb <- style_tt(tb, j = seq_along(col_w), align = "l", fontsize = .8)
+tb <- style_tt(tb, i = 0, align = "c")
+tb <- theme_html(tb, class = "tinytable tinytable-hover")
+tb
+# Leave tinytable.css empty.
+```

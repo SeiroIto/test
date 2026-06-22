@@ -16,8 +16,9 @@ format:
     background-color: "#010638"
     preview-links: auto
     logo: images/quarto.png
-    footer: <http://seiroito.github.io/test/ethics/2026/KenkyuRinri2026_slides.html>
+    footer: <http://seiroito.github.io/test/posts/ethics/2026/KenkyuRinri2026_slides.html>
     theme: sky
+####    css: tinytable.css
 execute:
   freeze: auto  # re-render only when source changes
 lightbox: true
@@ -54,6 +55,9 @@ Green {color: #00FF00;}
 .blue {color: #0000FF;}
 White {
   color: white;
+}
+Blue {
+  color: blue;
 }
 LightBlue {
   color: #33E7FF;
@@ -240,12 +244,16 @@ blockquote {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.reveal table tbody tr:hover td {
+  background-color: lightblue !important;
+  color: black !important;
+}
 ```
 
 ## {background-color="#010638"}
 
 ::: {.center2}
-[http://seiroito.github.io/test/ethics/KenkyuRinri2026_slides.html](http://seiroito.github.io/test/ethics/KenkyuRinri2026_slides.html)
+[http://seiroito.github.io/test/posts/ethics/2026/KenkyuRinri2026_slides.html](http://seiroito.github.io/test/posts/ethics/2026/KenkyuRinri2026_slides.html)
 :::
 
 ----
@@ -376,6 +384,7 @@ blockquote {
 - ごまかし・隠蔽・虚偽表示を避けること
 - 第三者が検証可能な形で研究を実施・報告すること
 
+<!--
 具体例
 
 - データ捏造・改ざんをしない
@@ -384,6 +393,7 @@ blockquote {
 - サンプルフレームや分析手順を明示する
 - 査読者は研究内容を忠実に評価する
 - 編集者は評価基準を透明化し、一貫して適用する
+-->
 
 研究公正が問うもの
 
@@ -400,6 +410,7 @@ blockquote {
 - autonomy・justice・beneficence は利害配分の制約条件として理解する
 - 個人・集団・社会への影響を考慮する
 
+<!--
 具体例
 
 - インフォームド・コンセント
@@ -408,6 +419,7 @@ blockquote {
 - 個人情報保護
 - 研究成果の還元
 - AI利用による不利益の偏在防止
+-->
 
 研究倫理が問うもの
 
@@ -419,10 +431,10 @@ blockquote {
 
 ### 補足
 
-学術ガバナンス（Academic Governance）
+学術ガバナンス(academic governance)
 
-- 研究公正・研究倫理・出版制度を統合して設計する枠組み
-- 研究者、査読者、編集者、出版社それぞれの責任と権限を整理する
+- 研究公正・研究倫理・成果還元を統合して設計する枠組み
+- 研究者、査読者、編集者、出版社、研究機関それぞれの責任と権限を整理する
 - publication bias や学術誌の運営方針などは主としてこの領域の課題
 
 ----
@@ -485,7 +497,7 @@ blockquote {
 :::
 ::::
 
-# 科学的根拠をもとに研究し、得た知識を歪めずに発表すること。{background-color="#010638"}
+# 学術的根拠をもとに研究し、作業内容と得た成果を歪めずに発表すること。{background-color="#010638"}
 
 
 # 研究公正は、やってはいけないことで定義されます。{background-color="#010638"}
@@ -547,8 +559,8 @@ blockquote {
 * 識者によって内容が異なるので幾つか列記  
 * $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
 * HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
-* GAは贈賄双方に便益あり、[なくなりにくい、でも、著者責任も付いてくる](https://www.bmj.com/content/309/6967/1456#:~:text=Perhaps%20this%20scandal%20will%20finally%20undermine%20gift%20authorship.%20At%20the%20very%20least%20it%20should%20make%20researchers%20think%20hard%20about%20the%20responsibilities%20that%20come%20with%20putting%20their%20names%20on%20papers.)&larr; Asad IsamのFF疑惑   
-* 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))、翻訳であることを明示しても危ういので、翻訳論文はワーキング・ペーパーに留めましょう  
+* GAは贈収(賄)双方に便益あり、[なくなりにくい、でも、著者責任も付いてくる](https://www.bmj.com/content/309/6967/1456#:~:text=Perhaps%20this%20scandal%20will%20finally%20undermine%20gift%20authorship.%20At%20the%20very%20least%20it%20should%20make%20researchers%20think%20hard%20about%20the%20responsibilities%20that%20come%20with%20putting%20their%20names%20on%20papers.)&larr; Asad IsamのFF疑惑   
+* 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))、翻訳であることを明示しても危ういので、翻訳論文は~~ワーキング・ペーパーに留めましょう~~意義がマイナスです  
 :::
 :::::
 ::::::::::
@@ -645,7 +657,7 @@ irLW <- reshape(irL, direction = "wide", idvar = c("region", "variable"),
   v.names = "value")
 irLW[, group := "field"]
 irLW[grepl("Aca|Oth", variable), group := "institution"]
-irLW[grepl("	Per|Tem", variable), group := "tenure"]
+irLW[grepl("Per|Tem", variable), group := "tenure"]
 irLW[grepl("Ea|Mid|La", variable), group := "career period"]
 irLW[grepl("Ma|Fe", variable), group := "gender"]
 irLW[, group := factor(group, levels = c("field", "institution", "tenure", "career period", "gender"))]
@@ -836,8 +848,8 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 :::: {.fragment}
 1. 内容が不十分
 1. 自信、発信力が無い
+1. 利益相反がある
 1. 時間がない
-1. 利益相反
 ::::
 
 
@@ -861,6 +873,7 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 * 結果がはっきりしない  
 * 2つの結果が矛盾する  
 * 何を議論すべきかもよく分からない  
+* 論文掲載に至らない
 ::::
 ::::: 
 
@@ -869,18 +882,31 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 * 不適切な統計手法  
   * 隠すためにデータや手順を未保存&rarr;再現性の欠如
 * 曖昧な記述と結論=ごまかし=QRP  
+* 一部の推計結果のみ報告
 ::::
 ::::: 
 :::::::::: 
+
 :::: {.fragment}
 対策
+::::
 
+:::::::::: {.columns}
+::::: {.column width = "50%"}
 :::: {.incremental}
 * 過程(データとコード)を公開  
 * Pre analysis planを公開・登録  
-* <Red>結論は曖昧です、と明確に書く</Red>  
+* <Red>結論は曖昧です、と明確に書く</Red> 
 ::::
+::::: 
+
+::::: {.column width = "50%"}
+:::: {.incremental}
+* デザイン不十分によるstatiscal power不足を認め、<Red>short paperにする</Red>
 ::::
+::::: 
+:::::::::: 
+
 
 
 ----
@@ -898,43 +924,66 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
  </White>
 ::::
 ::::: 
+::::: {.column width = "50%"}
+::::: 
 ::::::::::
 
 :::::::::: {.columns}
-::::: {.column width = "50%"}
+::::: {.column width = "45%"}
 :::: {.fragment}
 * ビッグ・ネームの推薦を利用したい  
 ::::
 ::::: 
+
+::::: {.column width = "4%"}
+ 
+::::: 
+
 ::::: {.column width = "50%"}
 :::: {.incremental}
 * ギフト・オーサーシップ  
-* 反例: ネットワーク理論: Erdős-Rényiモデル. [Erdős](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s)は1525論文掲載  
+* GAの反対例: ネットワーク理論: Erdős-Rényiモデル. [Erdős](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s)は1525論文掲載  
 ::::
 ::::: 
-:::::::::: 
+::::::::::
 
-
-:::: {.fragment}
-3. 時間がない
-::::
 :::::::::: {.columns}
-::::: {.column width = "50%"}
-:::: {.incremental}
-* 今までの研究に手を加えるだけ  
-* 他者の成果・アイディアを取り込む
+::::: {.column width = "48%"}
+:::: {.fragment}
+ <White>
+3. 利益相反がある
+ </White>
 ::::
+::::: 
+
+::::: {.column width = "2%"}
+ 
+::::: 
+
+::::: {.column width = "50%"}
+::::: 
+::::::::::
+
+:::::::::: {.columns}
+::::: {.column width = "45%"}
+:::: {.incremental}
+* スポンサー・雇用者・研究協力者・研究対象の利益を害したくない
+* 余計な詮索をされたくない
+::::
+::::: 
+
+::::: {.column width = "4%"}
+ 
 ::::: 
 
 ::::: {.column width = "50%"}
 :::: {.incremental}
-* 多重投稿、多重出版  
-   * 機械学習で簡単に判明  
-* 剽窃
+* 結果を部分的に隠蔽、論旨を変更
+* 利益相反を表明しない
+  * 簡単に判明
 ::::
 ::::: 
 :::::::::: 
-
 
 
 ----
@@ -945,27 +994,103 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 成果を出したい、でも、今のままだと成果にならないと考えている
 
 :::: {.fragment}
- <White>
-4. 利益相反
- </White>
+4. 時間がない
 ::::
-
 :::::::::: {.columns}
+<p style="margin-top: -40px;"></p>
 ::::: {.column width = "50%"}
-:::: {.incremental}
-* スポンサーの利益と研究結果が一致
-* 余計な詮索をされたくない
-::::
+::: {.incremental}
+* <Red>Capacity < Tasks</Red>
+  * 業務過多
+  * Capacityへの想定外のショック
+:::
 ::::: 
 
 ::::: {.column width = "50%"}
-:::: {.incremental}
-* 利益相反があることを表明しない  
-   * 簡単に判明  
-* 研究が健全ならば、利益相反表明しない理由がない
-::::
+::: {.incremental}
+* 今までの研究に手を加えるだけ  
+  * 多重投稿、多重出版&larr;AIが判定可
+* 他者の成果・アイディアを言及なしに利用
+  * 剽窃
+:::
 ::::: 
 :::::::::: 
+
+:::::::::: {.columns}
+<p style="margin-top: -40px;"></p>
+::::: {.column width = "50%"}
+:::: {.fragment}
+<p style="margin-top: -10px;">対策</p>
+::: {.incremental}
+* <Red>上長に相談する</Red>
+* 上長が状況を見守る&larr;人事面談
+:::
+::::
+::::: 
+
+<!--
+::::: {.column width = "50%"}
+:::: {.fragment}
+<p style="margin-top: -10px;">他団体の不正事例</p>
+::: {.incremental}
+* 検査不正: [日野自動車](https://www.hino.co.jp/corp/news/2023/ninshohusei_tokusetsu.html)(2005-2022、副社長圧力)、[ダイハツ工業](https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E5%B7%A5%E6%A5%AD%E8%AA%8D%E8%A8%BC%E8%A9%A6%E9%A8%93%E4%B8%8D%E6%AD%A3%E5%95%8F%E9%A1%8C)(1989-2023、技術・人員に見合わない時短開発)、[日産](https://www.mlit.go.jp/report/press/jidosha08_hh_003039.html)(2014-2017、人員不足)、[スバル](https://www.subaru.co.jp/quality/quality_01.html)(2017、業務過多+事後検証なし)、[豊田自動織機](https://global.toyota/jp/newsroom/corporate/40376176.html)(2017-2024、現場任せ「何とかしろ」)、[三菱自動車工業](https://www.mitsubishi-motors.com/jp/newsroom/notice/nenpi/problem/index.html)(1991-2016、人員と開発費削減)、[ビッグモーター](https://www.mlit.go.jp/report/press/content/001734258.pdf)(2016-2023、営業ノルマ)
+* その他: [三菱自動車工業](https://ja.wikipedia.org/wiki/%E4%B8%89%E8%8F%B1%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%E9%9A%A0%E3%81%97)(リコール隠し、1996-2005)、
+* JAXA研究倫理・研究公正違反(2016-17)
+:::
+::::
+::::: 
+-->
+:::::::::: 
+
+
+----
+
+## なぜQRPをするのか{background-color="#010638"}
+
+<br>
+成果を出したい、でも、今のままだと成果にならないと考えている
+
+:::: {.fragment}
+4. 時間がない
+::::
+
+:::: {.fragment}
+<p style="margin-top: -10px;">他団体の不正事例</p>
+::::
+
+::: {.incremental}
+* 検査不正: [日野自動車](https://www.hino.co.jp/corp/news/2023/ninshohusei_tokusetsu.html)(2005-2022、副社長圧力)、[ダイハツ工業](https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E5%B7%A5%E6%A5%AD%E8%AA%8D%E8%A8%BC%E8%A9%A6%E9%A8%93%E4%B8%8D%E6%AD%A3%E5%95%8F%E9%A1%8C)(1989-2023、技術・人員に見合わない時短開発)、[日産](https://www.mlit.go.jp/report/press/jidosha08_hh_003039.html)(2014-2017、人員不足)、[スバル](https://www.subaru.co.jp/quality/quality_01.html)(2017、業務過多+事後検証なし)、[豊田自動織機](https://global.toyota/jp/newsroom/corporate/40376176.html)(2017-2024、現場任せ「何とかしろ」)、[三菱自動車工業](https://www.mitsubishi-motors.com/jp/newsroom/notice/nenpi/problem/index.html)(1991-2016、人員と開発費削減、[リコール隠し、1996-2005](https://ja.wikipedia.org/wiki/%E4%B8%89%E8%8F%B1%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%E9%9A%A0%E3%81%97))、[ビッグモーター](https://www.mlit.go.jp/report/press/content/001734258.pdf)(2016-2023、営業ノルマ)
+* JAXA研究倫理・研究公正違反(2016-17、組織が成果を必要+非研究者による研究)
+
+:::: {.fragment}
+:::::: {style="font-size: 70%;"}
+> _2014年に、<LightBlue>分科会の意見に耳を傾けず</LightBlue>有人部門のみの判断で、審査迅速化を目的に、評価要領が改訂され、<LightBlue>分科会の進捗評価は(引用者追記: 不承認が削除され)継続妥当・見直し必要の2択となっていた。</LightBlue>継続妥当となった場合でも多くの重要な指摘事項があったが、それらの指摘事項を担保する仕組みが無かった。_
+> 
+> ::::: {style="text-align: right; margin-top: -10px;"}
+> [JAXA調査報告書脚注3](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=3)
+> :::::
+::::::
+::::
+:::
+
+
+----
+
+## なぜQRPをするのか{background-color="#010638"}
+
+<br>
+成果を出したい、でも、今のままだと成果にならないと考えている
+
+:::: {.fragment}
+1. 内容が不十分
+1. 自信、発信力が無い
+1. 利益相反がある
+1. 時間がない
+::::
+
+* QRPの責めは個人に向かう
+* 真実発信ができる研究環境を雇用者が保障すべき
+
 
 ----
 
@@ -976,9 +1101,18 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 ----
 
-## {background-color="#010638"}
+## {background-color="#010638"  background-image="./JAXASumimasen.jpg" background-size="100%"}
 
-研究過程での新要素: AI$<$RA
+::: {.center2}
+::: {style="font-size:160%; color:#33E7FF;"}
+<span style="color:LightBlue;">研究公正とAI research integrity and AI</span> 
+:::
+:::
+
+----
+
+## 研究過程での新要素: AI $<$ RA {background-color="#010638"}
+
 
 ::::{.incremental}
 * 力業をこなすので量的な生産性は高まる&rarr;質の制御
@@ -986,7 +1120,7 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
   * 仕事が早い
 * 母集団に比べると歪んだ内容を説得的に、かつ、ユーザに同調しながら示す
   * 知らないことも自信たっぷり(過剰)に回答&larr;知っていると誤解しやすい
-      * そういうトーン(分からないと言わない、同意調)が[学習過程で推奨されている	](https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf)
+      * そういうトーン(分からないと言わない、同意調)が[学習過程で推奨されている    ](https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf)
       * [Hallucination](https://github.com/vectara/hallucination-leaderboard/)&larr;開発者の設計志向「予測せよ」
   * 安易な一般化が激しい&larr;学習コーパス(「知識」)の偏り、特定見解へのウェイトの偏り
 * 機械=人格がない、だから、出力に責任を負う存在ではない
@@ -997,49 +1131,127 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 ----
 
-## {background-color="#010638"}
+## 研究過程での新要素: AI $<$ RA... {background-color="#010638"}
 
-研究過程での新要素: AI<RA
 
 ::::{.incremental}
-* 人間が検証するならAI使う必要あり?
-* 何に使うか: 最終成果に近い作業まで使う人もいる
+* 最終成果に近い作業まで使う人もいる
   * 異分野・新規課題の展望
-  * コード(debugging, refactoring)
-  * 数式の展開、[証明の論理検証](www.refine.ink)
+  * データ作成(web scraping, image text processing)
+  * コード作成・修正(debugging, refactoring)
+  * 数式の展開、[証明の論理検証](https://www.refine.ink/)
+  * 下書き
   * 模擬査読 [(claesbackman)](https://github.com/claesbackman/AI-research-feedback)、[(IsItCredible)](https://isitcredible.com/)、[(Davidvandijcke)](https://github.com/Davidvandijcke/coarse)
   * 新規論文のお知らせ ![](NBERDigestWorkflow_GPT5mini.jpg){height=30 .lightbox}
+* カタログ: [Claude for economists](https://achenzion.github.io/2026/04/04/Claude-for-Economists/)、[Awesome AI for economists](https://github.com/hanlulong/awesome-ai-for-economists#contents)、[Mini series on claude code for applied economists](https://bcf.princeton.edu/events/paul-goldsmith-pinkham-mini-series-on-claude-code-for-applied-economists/) [(コンパクト版)](https://paulgp.com/2024/06/24/llm_talk.html)
 * 欠けているもの: 各ツールの人間による評価&rarr;いずれ揃う
-* カタログ: [Claude for economists](https://achenzion.github.io/2026/04/04/Claude-for-Economists/)、[Awesome AI for economists](https://github.com/hanlulong/awesome-ai-for-economists#contents)、[Mini series on claude code for applied economists](https://bcf.princeton.edu/events/paul-goldsmith-pinkham-mini-series-on-claude-code-for-applied-economists/) 
-[(コンパクト版)](https://paulgp.com/2024/06/24/llm_talk.html)
 ::::
 
 ----
 
-## {background-color="#010638"}
+## 研究過程での新要素: AI $<$ RA+アドバイザ+共著者{background-color="#010638"}
 
-研究過程での新要素: AI<RA
+<!--
+:::::: {.center style="font-size: 70%;"}
+  | 工程 | 人間 | AI |{tbl-colwidths="[20,16,35]"}|
+  |--------|----|---------------------------|
+  | デザイン・仮説 | 作り出す | 理論枠組み、仮説、データの整合性チェック、既存研究との対比 |
+  | データ収集・整理、コード記述、出力 | 指示を出す | 指示通りに作業 |
+  | 推敲 | 監修、編集 | 推計結果を表にして簡単な文章にする |
+:::::: 
+-->
 
+```{r table with tinytable, eval = T, cache = F}
+library(data.table)
+dt <- data.table(read.table(textConnection("
+工程 人間 AI 役割
+デザイン・仮説 作り出す 理論枠組み・仮説・データの整合性チェック、既存研究との対比 アドバイザ
+データ収集・整理 指示を出す 指示通りに作業 RA
+コード記述 指示を出す 指示通りに作業 RA
+出力 指示を出す 指示通りに作業 RA
+推敲 監修、編集 推計結果を表にして簡単な文章にする 'junior coauthor'"), header = T))
+library(tinytable)
+tb <- tt(dt, width = c(.187, .1, .3, .2), theme = "empty")
+tb <- style_tt(tb, j = 1:3, align = "l", fontsize = .8)
+tb <- style_tt(tb, i = 0, align = "c")
+tb <- style_tt(tb, j = 4, align = "c")
+tb <- style_tt(tb, i = 2, j = 2, 
+  rowspan = 3, align = "l", alignv = "m")
+tb <- style_tt(tb, i = 2, j = 3, 
+  rowspan = 3, align = "l", alignv = "m")
+tb <- style_tt(tb, i = 2, j = 4, 
+  rowspan = 3, align = "l", alignv = "m")
+tb <- style_tt(tb, i = 2:3, line = "tb", 
+  line_color = "darkblue", line_width = 0.01)
+tb <- style_tt(tb, j = 4, fontsize = .8)
+#### tb <- theme_html(tb, class = "tinytable tinytable-hover")
+#### tb <- theme_revealjs(tb, class = "dark")
+```
 
-* 「検証費用<作成費用ならば使うべき」とAIは回答(下記も回答)
-  * 一次資料の検証
-  * 専門(現地)知識による検証&rarr;難易度高い: AIの学習コーパスに入りにくく、自分の専門分野以外だと検証が難しいから
+```{r table with tinytable2, eval = T, cache = F}
+library(data.table)
+dt <- data.table(read.table(textConnection("
+工程 作業 人間 AI 役割
+デザイン 理論作成<br>仮説決定<br>データ要件検討<br>推計方法決定 考え出す 理論枠組み・仮説・データ・推計方法の整合性チェック<br>既存研究との対比 アドバイザ
+作業 データ収集・整理<br>コード記述<br>出力 指示を出す 指示通りに作業 RA
+執筆 推敲 監修、編集 推計結果を表にして簡単な文章にする 'junior coauthor'"), header = T))
+library(tinytable)
+tb <- tt(dt, width = c(.08, .15, .1, .31, .15), theme = "empty")
+tb <- style_tt(tb, j = 3:4, align = "l", fontsize = .8)
+tb <- style_tt(tb, j = 2, align = "r")
+tb <- style_tt(tb, i = 0, align = "c", background = "#053270")
+tb <- style_tt(tb, i = 1:3, alignv = "m")
+tb <- style_tt(tb, j = c(1, 5), align = "c")
+#### tb <- style_tt(tb, i = 1:3, j = 1, alignv = "t")
+tb <- style_tt(tb, i = 3:4, line = "tb", 
+  line_color = "darkblue", line_width = 0.01)
+tb <- style_tt(tb, j = c(1:2, 5), fontsize = .8)
+#### tb <- theme_html(tb, class = "tinytable tinytable-hover")
+#### tb <- theme_revealjs(tb, class = "dark")
+```
 
-<!-- 900802018885 -->
+::::{.incremental}
+* 使い方: 各作業で純粋に作業的な部分をAIに委託する(ようになるのでは)
 
+::::{.fragment}
+:::::: {style="font-size: 80%;"}
+```{r}
+tb
+```
+:::::: 
+::::
 
-
-| Agent | Focus |
-|---|---|
-| 1 | Spelling, grammar, and academic style |
-| 2 | Internal consistency and cross-reference verification |
-| 3 | Unsupported claims and identification integrity |
-| 4 | Mathematics, equations, and notation |
-| 5 | Tables, figures, and their documentation |
-| 6 | Contribution evaluation (adversarial journal-specific referee) |
+* デザインでしか差別化できなさそう
+  * 「あまり考えてないけど、こんな感じのデザインで何か論文書けない?」「伊藤さん、このデータ[url]と推計方法[url]を使えば...」
+::::
 
 ----
 
+## 研究過程での新要素: AI $<$ RA... {background-color="#010638"}
+
+::::{.incremental}
+* デザインが素晴らしくない、誰もが思いつく凡庸な論文が大量生産される
+* ジャーナル側も凡庸論文大量投稿に悩む
+  * AI-assisted peer review vs. AI-assisted manuscript
+* 心配
+  * 凡庸な知識量&uarr; &rArr; 学習コーパスの賢さ&darr; &rArr; AIの賢さ&darr;
+  * Get my hands dirtyなしに監修だけで十分な考察ができるか、研究者の演繹能力が低下するのでは
+    * 人間が演繹(証明、問題を解く)を手書きし、AIに清書させる、くらいが良いかも
+
+:::::: {style="font-size: 70%;"}
+* 人間が検証するならAI使う必要あり?
+* 「検証費用<作成費用ならば使うべき」とAIは回答(下記も回答)
+  * 一次資料の検証
+  * 専門(現地)知識による検証&rarr;難易度高い: AIの学習コーパスに入りにくく、自分の専門分野以外だと検証が難しいから
+::::::
+::::
+
+<!--
+* 定型化できる作業に向くが、ad hocな/新規の作業は時間がかかる
+  * 定型: AIは粛々と指示を実行、試行錯誤で人間の指示がより的確になる
+  * ad hoc: 人間の指示が曖昧で意図と異なる作業をしがちなので、試行錯誤が多い
+:::: {.fragment}
+::::
 paper.pdf (or .txt, .md, .tex, .docx, .html, .epub)
   -> Mistral OCR (Docling fallback)      Extract text as markdown
   -> Vision LLM spot-check               Optional QA (auto-triggers on garbled text)
@@ -1053,17 +1265,31 @@ paper.pdf (or .txt, .md, .tex, .docx, .html, .epub)
   -> Legacy crossref/critique fallback    Only used if the editorial pass fails
   -> Quote verification                   Fuzzy-match quotes against paper text (stricter for math)
   -> Synthesis                            Render final paper_review.md
+-->
 
-## {background-color="#010638"}
 
-研究過程での新要素: AI
+<!-- 900802018885 -->
 
-:::: {.fragment}
+
+----
+
+
+## 研究過程での新要素: AI{background-color="#010638"}
+
+
+:::: {.incremental}
 研究公正への影響
 
-* 剽窃
-* 過大解釈、誤解釈
-* コードの不当表示(Aをやると言いつつBをやる)
+* デザイン=アドバイザ
+    * 剽窃、「半剽窃」(原典言及なしの似通ったデザイン)
+    * AIアドバイザによる改善
+       * 脚注:「このアイディアを示唆したClaude Fable5に感謝する。」
+       * Conflicts of interest: I have benefited from an AI during the concepturization stage, but the original idea is my own.
+* 作業=RA
+    * コードの不当表示(Aをやると言いつつBをやる)
+* 執筆=共著者
+    * 過大解釈、誤解釈
+    * 剽窃、「半剽窃」(文章表現は違うが、原典言及なしの似通った論旨)
 ::::
 
 ----
@@ -1142,17 +1368,23 @@ Chat GPT
 
 AIによる回答の(人間による)まとめ
 
-::::{.incremental}
-1. <Blue>情報のサンプリング</Blue>
+::::{.fragments}
+:::{.incremental}
+1. <LightBlue>情報のサンプリング</LightBlue>
     * 誤情報、hallucination懸念: 一次ソースで検証すべき
     * 学習データのバイアス懸念: 途上国の文脈を考慮すべき
-1. <Blue>透明性確保</Blue>
+1. <LightBlue>透明性確保</LightBlue>
     * 作業の入出力を記録し、再現可能性に努めるべき
     * 説明責任を負う人格を持たないので、RA未満と扱うべき
 1. 研究対象への成果還元
     * データ調達だけではなく、その成果を途上国に還元すべき
 1. 個人情報
     * 第三者サービスへのデータ移転・保存・再利用リスクを管理すべき
+:::
+::::
+
+::::{.fragments}
+剽窃を挙げたAIはいなかった
 ::::
 
 ----
@@ -1168,13 +1400,18 @@ AIによる回答の(人間による)まとめ
 
 禁じる
 
+::::{.fragments}
 3. Hallucinationを減らす
-1. 
+1. 少しでも関係すれば、過剰なほどattributionを付記せよ
+::::
 
 予防する
 
+::::{.fragments}
 5. 設定と入出力を記録
+1. AI作成コードにconsistency checkを入れる
 1. 機微情報にアクセスさせない
+::::
 
 
 ----
@@ -1216,6 +1453,9 @@ AIはユーザを喜ばせようと賛同する傾向が強い
 AIにどうやって情報源の偏りを認識させるか
 
 * 情報源を固定(source-grounded)しても要約に不可解な偏りが出る(ことを予期すべき)
+  * 回答の偏りが発生する過程
+    * 情報収集作業&larr;source groundingで対応
+    * 要約作業&larr;promptで対応するしかない
 * NotebookLMで極貧層向けマイクロファイナンスについて50論文pdfから文献サーベイさせた
   * スライド・デックを作成させると視覚的な完成度は高い、しかし
     * 断定調、論文では慎重な表現&rarr;原典参照は必須
@@ -1273,7 +1513,7 @@ AIにどうやって情報源の偏りを認識させるか
 
 研究過程での新要素: AI
 
-* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
+* RAG (retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
 
 ::: {style="font-size: 50%;"}
 > microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
@@ -1299,7 +1539,7 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
 
 研究過程での新要素: AI
 
-* RAG(retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
+* RAG (retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
 
 ::: {style="font-size: 50%;"}
 > microfinance貧困削減プログラムの各要素が持つメカニズムを学術的に深く掘り下げてください。下記に特に焦点があると尚良い 1. 融資額サイズ、資産移転、最貧困層 2. 金融論で融資額サイズについて論じていれば各論文の参考文献から探してください 3. poverty trapの実証研究
@@ -1327,156 +1567,30 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
     a) verification questionを作成
     a) AI返答を見せないforkをし、そのセッションで一次資料に当たってVQに答える
         * `claim-verifier via Task` with `subagent_type=claim-verifier` and `context=fork`
-
-
-----
-
-## {background-color="#010638"}
-
-1. AI出力を検証する
-    - 一次資料・現地知見で確認する
-
-2. AI利用を開示する
-    - 第三者が検証可能な形で記録する
-
-3. 最終判断は研究者が行う
-    - AIに研究上の責任はない
-
-> Verify, Disclose, Take Responsibility
+    * RAGでのhallucination予防には有効
+* 推測しづらいことを推測させない「分かりません」
+    * すぐに「知りません」「分かりません」と答えるので調節が難しい
 
 ----
 
 ## {background-color="#010638"}
 
-2.と3.簡単に実践可能
+設定と入出力の記録
 
-1. 偏りのある回答になるのがデフォルトのとき、どのように使うか
+* AIを使うほど記録は自動化される
 
-* 問いかけを周到に用意する: 現在の業界標準
-    * 依拠した部分母集団を表示させ、抜け落ちている部分を提示させる
-* 手動で専門知識を動員する
+コードのConsistency check
 
+* 監修費用を下げるので制御に役立つ
+* AIに相談せずに人間が考えるべき
 
-----
+機微情報の管理
 
-##  大規模言語モデル(LLM)時代のリスク{background-color="#010638"}
-
-Fabrication, falsification、plagerism回避のルール
-
-:::::::::: {.columns}
-::::: {.column width = "50%"}
-:::: {.fragment}
-1. 文章出力をそのまま使ってはいけない
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.incremental}
-* FFP
-* Authorship
-* [「Certainly! Here is a more detailed version of...」と本文に書いてある論文](https://pubpeer.com/publications/01593D32DC9AD348EA64D7BF9ABE0C)  
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.fragment}
-2. 図表や推計は与えたデータのみから出力する
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.incremental}
-* FF
-* 自分でコードを書く、自分でexcelを操作する方が安心できます
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.fragment}
-3. 与えた以外の外部情報を用いるかは必ず指定する
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.incremental}
-* FFP
-* [ICMJE推奨事項](https://www.icmje.org/news-and-editorials/icmje-recommendations_annotated_jan24.pdf#page=3)ではどのように使ったかを具体的に明示するように要求  
-::::
-::::: 
-:::::::::: 
-
-----
-
-##  大規模言語モデル(LLM)時代のリスク{background-color="#010638"}
-
-<White>作業委託を効率的にするための方針</White>
+* AIがアクセスできるものとそれ以外をruleで明確に分ける
+    * フォルダ
+    * 変数名
 
 
-:::::::::: {.columns}
-::::: {.column width = "50%"}
-:::: {.fragment}
-<White>真偽を確かめやすい単純労働を担わせる</White>
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.incremental}
-* 「以下の出来事を時系列順に並べ替えて、日付と出来事の2列からなるtab separated text形式で出力して」  
-* 「この論文の数式を全部抜き出して」
-* 「変数と定義をmdの表にして出力して」
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.fragment}
-<White>真偽を確かめにくいが、作業の一部を担わせ、自分がその内容を確認する</White>
-::::
-::::: 
-
-::::: {.column width = "50%"}
-:::: {.incremental}
-* 「この論文の内容をこういうふうに要約して」
-* 「(3)式から(5)式までの導出過程を詳細に説明して」
-* 「この文章をもう少し簡単に言い換えて」
-::::
-::::: 
-:::::::::: 
-
-
-----
-
-##  大規模言語モデル(LLM)時代のリスク{background-color="#010638"}
-
-ある程度の理解があれば、データさえ与えると実証論文は書ける
-
-::: {.incremental}
-1. [OpenAI's DeepResearch](https://openai.com/ja-JP/index/introducing-deep-research/): 研究課題を与える&rarr;分析手法を書かせる&rarr;その手法をRで実施するための指示書を書かせる
-   * 使える出力を得るためには、研究をある程度は理解して課題を書かねばならない
-1. [Cursor](https://www.cursor.com/ja): 指示書を読み込ませてRで(サンプル・データ作成コードもしくはデータ整形コードと)推計コードを書かせる&rarr;結果をquartoで出力させる
-   * [その例](https://ai-biostat.com/2025/02/21/%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%82%92ai%e5%85%a8%e4%bb%bb%e3%81%9b%e3%81%97%e3%81%9f%e3%83%95%e3%83%ad%e3%83%bc%e3%81%be%e3%81%a8%e3%82%81%ef%bc%88%e8%a7%a3%e6%9e%90%e6%89%8b%e6%b3%95%e6%8f%90/#toc24)
-   * 間違えも少しはあるようです
-   * cursorを繰り返し使うことで、データに関する作業や推計コードをミニマルで直感的に理解しやすい内容に修正可能、という声も
-::::
-
-----
-
-##  大規模言語モデル(LLM)時代のリスク{background-color="#010638"}
-
-ある程度の理解があれば、データさえ与えると実証論文は書ける
-
-1. [DeepResearch](https://openai.com/ja-JP/index/introducing-deep-research/): 研究課題&rarr;分析手法&rarr;指示書
-1. [Cursor](https://www.cursor.com/ja): 指示書&rarr;推計コード&rarr;quartoで出力
-
-::: {.incremental}
-* 方法が適している理由を自分が理解する前に論文が書ける
-   * コメントや疑問に自分は答えられない(が、LLMは答えられるかも)
-   * しかし、(何をやったかの)透明性はあるので、結果の解釈はできる
-* 課題も機械に考えてもらい、こうした成果を量産するのが最適
-   * 新しい方法が出てきたら、既存の量産成果を批判し、量産成果修正
-* 人間研究者: 量産型研究成果を扱っているとLLMに代替される
-   * Fill the gap in research...アルゴリズムで想定できるgapだと危うい
-   * データに新規性があれば代替されないが、常にデータを作るのは困難
-::::
 
 ----
 
@@ -1484,458 +1598,25 @@ Fabrication, falsification、plagerism回避のルール
 
 ::: {.center2}
 ::: {style="font-size:160%; color:#33E7FF;"}
-<span style="color:LightBlue;">研究倫理 research ethics</span> 
+<span style="color:LightBlue;">まとめ: 研究公正 research integrity</span> 
 :::
 :::
 
-# 研究対象(者の人権)保護、研究コミュニティの評判維持{background-color="#010638"}
-
-# 研究倫理は、守るべきことで定義されます{background-color="#010638"}
-
-# {background-color="#010638"}
-
-:::::::::: {.columns}
-::::: {.column width = "50%"}
-:::{style="text-align: center;"}
-![](the-constant-gardener-original.jpg){height="23cm"}
-:::
-::::: 
-
-::::: {.column width = "50%"}
-:::{style="text-align: center;"}
-![](TheExperiment.jpg){height="23cm"}
-:::
-::::: 
-:::::::::: 
-
 ----
 
-## {background-color="#010638"}
-
-### 3つのレイヤー `r Citep(myBib, "Mustajoki2017", after = ", p.37")`
-
-:::::::::: {.columns}
-::::: {.column width = "30%"}
- 1. 法的義務  
-::::: 
-
-::::: {.column width = "70%"}
-:::: {.fragment}
-個人情報保護、人権・動物の権利保護など
-::::
-::::: 
-:::::::::: 
-
-:::::::::: {.columns}
-::::: {.column width = "30%"}
-:::: {.fragment}
-2. ガイドライン  
-::::
-::::: 
-
-::::: {.column width = "70%"}
-:::: {.fragment}
-インフォームド・コンセント、研究の正確さ、貢献の正確さ、研究協力者の表示、など
-::::
-::::: 
-:::::::::: 
-
-:::::::::: {.columns}
-::::: {.column width = "30%"}
-:::: {.fragment}
-3. 暗黙の了解  
-   * ? (分野や組織ごとにあるルールなど、らしい)  
-::::
-::::: 
-
-::::: {.column width = "70%"}
-:::: {.incremental}
-* 論文への質問に著者は真摯に答える  
-* 内容を批判しても著者の人格まで批判しない  
-* 読む前後で自分の知識がどう変わったか書く  
-* 研究をより良くするため、読者がより正確に理解するためにコメント・批判をする  
-* 問題の指摘で終わらず結論にどう影響するかまで書く
-::::
-::::: 
-:::::::::: 
-
-:::: {.fragment}
-最後の3つはMacartan Humphreysの[How to critique](https://macartan.github.io/teaching/how-to-critique)から抜粋  
-::::
-
-----
-
-## {background-color="#010638"}
-
-途上国研究における研究倫理8ポイント `r Citep(myBib, "Emanuel2004")`
-
-:::::::::: {.columns}
-::::: {.column width = "60%"}
-:::: {.incremental}
-1. <Orange>Collaborative partnership</Orange>	対象個人や社会が便益を受ける研究か。 
-1. <Orange>Social value</Orange>	社会的に価値のある研究か。 
-1. <Orange>Scientific validity</Orange>	<LightBlue>科学的裏付け</LightBlue>(知見を得る方法論)はあるか。 
-1. <Orange>Fair subject selection</Orange>	 参加者は公平に選ばれたか。 
-1. <Orange>Favorable risk-benefit ratio</Orange>	リスク相応の便益はあるか。個人リスク、社会便益。 
-1. <Orange>Independent review</Orange>	<LightBlue>独立機関が審査</LightBlue>したか。 
-1. <Orange>Informed consent</Orange>	<LightBlue>インフォームド・コンセント</LightBlue>を得たか。 
-1. <Orange>Respects for recruited participants and study, communities</Orange> 個人や対象社会の<LightBlue>意思を尊重</LightBlue>し<LightBlue>経過・結果を伝達</LightBlue>したか。 
-::::
-::::: 
-
-::::: {.column width = "40%"}
-:::: {.fragment}
-殆どの社会科学研究(=観察研究)  
-::::
+## 研究公正: まとめ{background-color="#010638"}
 
 :::: {.incremental}
-* 便益は無く、リスクも個人情報漏洩以外は僅少、社会的価値もよく分からないので、参加者を公平に選ぶべき理由は倫理に照らしてあまりない。  
-* 審査の独立性、インフォームド・コンセント、個人情報保護、意思の尊重は手続きに関する考慮。科学的裏付けは研究をする動機。 
-* あらゆる調査・研究で満たすべき項目であり、研究倫理審査が特別なことをしているわけではない。 
+* 社会から託された信頼を裏切らない
+* 研究者は真実をすべて公表したか
+* 研究者は厳密に研究を実施したか
+* 研究機関は研究公正を保つよう支援したか
+* FFPは一発アウト
+* 知識を歪めるQRPは誤ったメッセージを社会に発し、研究者の評判を落とす
+* 罰則のあるFFPは割に合わないが、罰則がほぼないQRPは自分が気をつけるしかない
+* 「時間がない」なら、早めに上長に相談を
+* AIは生産性が高いが、剽窃、誤りをなくすよう制御に細心の注意を
 ::::
-::::: 
-:::::::::: 
-
-----
-
-## {background-color="#010638"}
-
-::: {.panel-tabset}
-
-## 研究倫理チェックリスト(あらすじ)
-
-:::::::::: {.columns}
-::::: {.column width = "15%"}
-:::: {.fragment}
-企画段階:  
-::::
-::::: 
-
-::::: {.column width = "85%"}
-:::: {.incremental}
-* やる科学的価値=社会的価値はあるか...既存研究と違いはあるか?  
-* 対象選定、標本サイズ、質問票などの研究デザインは十分か=知見が得られる見込みがあるか?  
-* 個人情報保護の手段は考えたか?  
-::::
-::::: 
-
-::::: {.column width = "15%"}
-:::: {.fragment}
-実施段階:  
-::::
-::::: 
-
-::::: {.column width = "85%"}
-:::: {.incremental}
-* 研究説明書(research information sheet): 研究の概要と連絡先を説明   
-* 研究同意書(informed consent): 参加者の権利+何に同意したのか+署名   
-   * いつでも参加拒否できる、いかなる質問にも回答拒否できるなど  
-* 必要に応じて研究倫理審査委員会の推薦状、現地IRB (institutional review board)の推薦状・許可状  
-::::
-::::: 
-
-::::: {.column width = "15%"}
-:::: {.fragment}
-分析段階:  
-::::
-::::: 
-
-::::: {.column width = "85%"}
-:::: {.incremental}
-* ハードコピーは鍵付き書庫に保存したか  
-* 分析用データは個人識別子と分離したか  
-::::
-::::: 
-:::::::::: 
-
-
-## アジ研の研究倫理審査
-
-* おもに介入研究が対象: 本審査  
-* 雑誌によっては観察研究でも要求する場合がある: 迅速審査  
-* 判断に迷う場合は研究倫理審査委員会事務局(研究企画課)へ相談を  
-* 研究倫理審査委員会は研究倫理に適合しながら研究実施できる方法を共に考える場所です。  
-   * 例: COVID-19下で感染リスクを日常生活以上に高めずに調査する方法などを検討  
-
-:::
-
-----
-
-## 経営者が研究倫理審査や研究能力を軽視すると、配下の研究者が研究倫理・研究公正から逸脱するのを防げない{background-color="#010638"}
-
-----
-
-## {background-color="#010638"}
-
-:::::::::: {.columns}
-::::: {.column width = "70%"}
-JAXAの研究倫理・研究公正違反 (2016-2017)  
-::::: 
-
-::::: {.column width = "30%"}
-![](JAXAlogo.jpg){height="50px"}![](JAXA_pic.jpg){height="50px"}
-::::: 
-
-::::: {.column width = "30%"}
-:::: {.incremental}
-* 閉鎖環境負荷試験: 2週間×5組、計42人の研究対象者  ... [宇宙兄弟(3)](https://www.amazon.co.jp/%E5%AE%87%E5%AE%99%E5%85%84%E5%BC%9F%EF%BC%88%EF%BC%93%EF%BC%89-%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E5%B0%8F%E5%B1%B1%E5%AE%99%E5%93%89-ebook/dp/B009KWUFRC?ref_=saga_dp_ss_dsk_dp&qid=1750266783&sr=1-290)
-* ストレス反応を測定、ストレスマーカー候補の絞込  
-* 1.9億円
-::::
-::::: 
-
-::::: {.column width = "5%"}
-::::: 
-
-::::: {.column width = "65%"}
-:::: {.incremental}
-1. Fabrication (nonexisting data)  
-1. Falsification (edited data)  
-1. Insufficient scientific validity  
-1. Lack of saved data and research notes (for reproducibility)  
-1. Lack of informed consent after a protocol change  
-::::
-::::: 
-
-:::::::::: 
-
-:::: {.incremental}
-* この実験で新たなストレス・マーカーが得られるのか? 得てどうするのか?  
-* 被験者負担、多額の資源に見合う新規の科学的価値があるか (NY Times記事)?  
-::::
-
-::: {style="font-size:60%; color:#33E7FF;"}
-:::::::::: {.columns}
-::::: {.column width = "70%"}
-:::: {.incremental}
-* [HI-SEAS](https://www.hi-seas.org/about-hi-seas) (Hawaii Space Exploration Analog and Simulation, 2013-17, NASA)、最大12ヶ月  
-* [MARS500](https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Mars500/Mars500_quick_facts) (Russian Institute for Biomedical Problems, 2010-11, ロシア)、5名を520日間  
-* [HERA](https://www.nasa.gov/mission/hera/) (Human Exploration Research Analog, 2024-, NASA)、45日  
-* [CHAPEA](https://www.nasa.gov/humans-in-space/chapea/about-chapea/) (Crew Health and Performance Exploration Analog, 2023-), 宇宙船模倣空間で3名を378日  
-::::
-::::: 
-
-::::: {.column width = "30%"}
-:::: {.incremental}
-* CHAPEAにも「今更やる価値は」批判
-* NASA宇宙システム部門副部長(Rachel MacCauley):  「精神安定のためにどれくらいスナックを載せる必要があるのかも技術計算に重要」
-::::
-::::: 
-:::::::::: 
-
-:::
-
-----
-
-## {background-color="#010638"}
-
-[JAXA調査報告書 (2022年11月25日脚注3)](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=3):
-
-> _2014年に、<LightBlue>分科会の意見に耳を傾けず</LightBlue>有人部門のみの判断で、審査迅速化を目的に、評価要領が改訂され、<LightBlue>分科会の進捗評価は(引用者追記: 不承認が削除され)継続妥当・見直し必要の2択となっていた。</LightBlue>継続妥当となった場合でも多くの重要な指摘事項があったが、それらの指摘事項を担保する仕組みが無かった。_
-
-
-:::: {.incremental}
-* 有人技術宇宙部門 &xlarr; 研究開発「倫理審査委員会」+有人サポート委員会宇宙医学研究推進「分科会」が審査  
-* 有人技術宇宙部門 &xrarr; 分科会の評価要領を改訂、<LightBlue>不承認できなくさせる</LightBlue>  
-* 評価要領の改訂理由は「審査迅速化」、誰が承認したか報告書に記載なし  
-::::
-
-
-:::: {.fragment}
-### JAXA事件の特徴: 組織的な研究倫理審査の軽視   
-::::
-
-:::: {.incremental}
-* 理事長、副理事長、担当理事は[厳重注意と訓告(非懲戒)と1ヶ月役員報酬10%自主返納](https://www.jaxa.jp/press/2023/01/20230111-2_j.html#:~:text=%E7%B5%8C%E5%96%B6%E8%B2%AC%E4%BB%BB%E3%82%92%E6%98%8E%E7%A2%BA%E3%81%AB%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%80%81%E5%B1%B1%E5%B7%9D%E7%90%86%E4%BA%8B%E9%95%B7%E3%80%81%E9%88%B4%E6%9C%A8%E5%89%AF%E7%90%86%E4%BA%8B%E9%95%B7%E5%8F%8A%E3%81%B3%E4%BD%90%E3%80%85%E6%9C%A8%E7%90%86%E4%BA%8B%E3%81%AF%E3%80%812023%E5%B9%B41%E6%9C%88%E3%81%AE1%E7%AE%87%E6%9C%88%E9%96%93%E3%80%81%E7%B5%A6%E4%B8%8E%E6%9C%88%E9%A1%8D%E3%81%AE10%25%E3%81%AE%E5%8F%97%E5%8F%96%E3%82%92%E8%BE%9E%E9%80%80%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99)([非懲戒](https://www.jaxa.jp/about/disclosure/data/disciplinary_fy2022.pdf))、[研究不正を実施した職員の14日停職](https://www.jaxa.jp/about/disclosure/data/disciplinary_20230110.pdf)(懲戒)、研究実施責任者への戒告(懲戒)  
-* 末端が一番厳罰  
-::::
-
-----
-
-## {background-color="#010638"}
-
-::: {style="font-size:60%;"}
-* (2015年1月9日: 分科会不承認)  
-* (2015年3月6日: 分科会不承認)  
-* (2016年2月5日: 研究開始)  
-* 2017年11月27日: <Green>データ取り違え事案</Green>
-   * 同時期に<Green>利害相反不適切処理事案</Green>  
-   * 公表前成果を組織内手続きを経ずにスポンサー企業の[商品と合わせて学会で公表・共同プレスリリース(p.16)](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=16)、[その調整を利益相反マネジメント委員長である事業部長が実施(p.26)](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=26)  
-* 研究倫理審査委員会+分科会: <Orange>「研究の適正性の検討が必要」</Orange>と報告  
-* 2018年10月: 研究実施主体の有人部門が調査開始  
-   * 2019年6月: JAXA職員Hに実験参加者Aから<Green>実験プロトコルからの逸脱者</Green>の連絡 
-* 2019年7月: 有人部門が研究活動改善に向けたアクション・プラン作成  
-* 2019年11月: 理事長が<Yellow>研究中止決定</Yellow>、有人部門長に成果とりまとめ、分科会評価と倫理審査委員会報告を指示  
-* 2020年9月23日: 分科会+倫理審査委員会が理事長に対し「多数の研究倫理違反、研究遂行上不適切な事実、研究計画/手法上の問題に加え、データの改ざんが強く疑われる事実が判明」したため<Orange>「調査の実施の検討が必要」</Orange>と報告
-* 2021年3月-4月: 委託業者による調査  
-   * 2021年9月29日: 有人部門長決定による対策検討チームの聞き取りで職員Hが「外部通報を共有しなかった」と報告、有人部門が通報に関して調査開始  
-* 倫理審査委員会が委託業者調査報告を審議、理事長に対し厚労相と文科相に<Orange>報告、公表を提言</Orange>
-* 2022年11月25日: 厚労相と文科相に報告書提出、<Yellow>報告書公開</Yellow>
-   * 2022年11月25日: 実験参加者AがJAXAへメール通報「2019年にJAXA職員Hに連絡した」
-   * 2023年4月28日: 「研究対象者からの連絡に基づく調査報告書」<Yellow>公表</Yellow>
-:::
-
-----
-
-## {background-color="#010638"}
-
-### 最初の事案発生から研究中止まで2年、報告書公開まで5年 
-
-* 報告書執筆者は第三者委員会ではありません  
-
-### 研究倫理審査委員会+分科会は繰り返し調査を要請  
-### 外部通報者への連絡も1年以上放置
-
-----
-
-## 経営者と管理職の弁 {background-color="#010638"}
-
-佐々木理事  
-
-> _JAXAが<LightBlue>しっかり認識し、ルールを作ったことは間違いない</LightBlue>。一方、研究者一人一人が理解すべきだったが、末端まで伝わっていなかった。教育、指導を働きかけねばならなかった。_
-
-:::: {.fragment}
-* 分科会評価要領で不承認判断を許さなかったのに「しっかり認識し、ルールを作ったことは間違いない」?  
-::::
-
-----
-
-## 経営者と管理職の弁 {background-color="#010638"}
-
-:::: {.fragment}
-有人宇宙技術部門小川事業推進部長(当該研究の研究実施責任者(古川宇宙飛行士)の上司)  
-
->_JAXAとして、人の安全を守るという<LightBlue>医学研究の理解度、練度が本当に低かった</LightBlue>のでは。STAP問題があった時、（研究者は）自分のこととして納得しなければならなかったが、果たして医学研究ではどうだったか。深堀りして確認していなかったからこそ、この状態になった。<LightBlue>今こそ振り返り、是正すべきだ</LightBlue>。_
-::::
-
-:::: {.incremental}
-* 有人部門が反対を無視して評価要領を変更したのは「医学研究の理解度、練度が本当に低かった」から?  
-* 「今こそ振り返り、是正すべきだ」...他人事のような...  
-::::
-
-:::: {.fragment}
-### 「JAXA事件の特徴: 組織的な研究倫理審査の軽視」という認識は当事者にない   
-::::
-
-
-----
-
-## 経営者と管理職の弁 {background-color="#010638"}
-
-
-[JAXA経営陣の説明](https://scienceportal.jst.go.jp/newsflash/20221128_n02/)  
-
-> _研究費は文科省科学研究費補助金（科研費）とJAXA予算を合わせ、約1億9000万円。佐々木理事はこの研究は<LightBlue>成果として発表しておらず、特定不正行為には当たらない</LightBlue>とした。その上で「<LightBlue>研究計画が稚拙で、十分な科学的合理性がなかった。</LightBlue>JAXAに医学研究の難しさの知見がなく、研究チームの人数が少なく体制を整えず、無理になってしまった。実験データが個人情報のためアクセスできる人を限ってしまい、周りが十分にチェックできなかった。国民の負託に応えられず、実験協力者の善意も裏切り深くお詫びする。一丸となって再発防止に取り組む」とした。_
-
-:::: {.fragment}
-* 成果公表しなければFFPではない、は誤解です。学会でも報告済み。  
-::::
-
-:::: {.fragment}
-> _この指針は、我が国の研究者等 により実施され、又は日本国内において実施される人を対象とする生命科学・医学系研究 を対象とする。_ [厚労省「指針」第3「適用範囲」1「適用される研究」](https://www.mhlw.go.jp/content/001077424.pdf#page=10)
-::::
-
-----
-
-## 経営者と管理職の弁 {background-color="#010638"}
-
-:::: {.fragment}
-* 科学的意義の低い研究と分科会が判断  
-::::
-
-:::: {.fragment}
-> _最も問題なのは、科学的合理性のある研究計画が検討されておらず、かつ科学的に適切な方法で遂行されなかったことであり、またそのように努めなかったこと_ ([調査報告書](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=7))
-::::
-
-:::: {.fragment}
-### 意義の低い研究の実施=研究倫理(Emanuel et al. 2, 3, 6)の逸脱
-
-### そう指摘をする分科会を沈黙させた組織運営
-::::
-
-
-----
-
-## JAXA事件の組織的背景([報告書, p.30](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=30)){background-color="#010638"}
-
-
-### 組織として閉鎖環境実験成果を出すことを目指す 
-
-:::: {.fragment}
-* 1985年から莫大な国費を用いてISS計画を推進  
-* ISSでの成果の創出が有人部門にとっての優先事項となっていた  
-* 2015年時点で、5年後の目指す成果の出口は「地上の閉鎖環境等における実証とISSにおける一部の検証を終え、火星に向けた研究を開始」すること  
-* 2015年1月の第45回分科会(不承認)、第46回分科会(不承認)、同年9月第47回分科会(承認)、倫理審査委員会同年12月の第75回倫理審査委員会、2016年1月第76回倫理審査委員会(承認)  
-::::
-
-:::: {.fragment}
-### その担当者に非研究職(医師、宇宙飛行士)を任命、研究の実施と成果を求める
-
-* トップダウンのプロジェクト
-* 無理な業務命令なので末端が無理をしている
-::::
-
-----
-
-## JAXA事件の組織的背景 {background-color="#010638"}
-
-
-### 2回も科学的意義で落第点  
-
-### なのに無理やり実施: 経営者が無理解、提案者は忖度?恭順?  
-
->_倫理審査委員会や分科会での<Orange>指摘事項に十分応えることなく研究を進めようとした研究チームの不誠実な態度</Orange>、それを容認してしまう倫理意識の欠如も背後要因となった。_ [調査報告書(p.19)](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=19)  
-
-
-> _倫理審査委員会に提出した研究等実施計画書（第 3 回閉鎖試験）に「分科会において、妥当な計画であるとの評価を受けた」と<Orange>虚偽の事実が記載</Orange>されていた_ [同(p.22)](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=22)
-
-----
-
-## JAXA事件の組織的背景 {background-color="#010638"}
-
-:::: {.fragment}
-### FFについて:「[専門家に任せる信頼の気持ちが勝ってしまった](https://scienceportal.jst.go.jp/newsflash/20230113_n01/#:~:text=%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%AB%E4%BB%BB%E3%81%9B%E3%82%8B%E4%BF%A1%E9%A0%BC%E3%81%AE%E6%B0%97%E6%8C%81%E3%81%A1%E3%81%8C%E5%8B%9D%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E3%80%82)」ギフト・オーサーシップではないが、共著者なのに分担を超えて確認せず  
-::::
-
-:::: {.fragment}
-### 研究体制の不備: 能力不足ならシニア研究者とペアにすべき
-
-> _研究者としての<Orange>適性を見極めず医師であることを理由に研究計画の策定から実行まで</Orange>を実施させた_ [同(p.24)](https://www.jaxa.jp/press/2022/11/20221125-2.pdf#page=24)
-::::
-
-----
-
-## JAXA当事者はなぜFF(P)やRE違反をしたのか?{background-color="#010638"}
-
-:::: {.incremental}
-* 非研究者なので研究倫理について考えていなかった
-* 経営者が非研究者(研究能力の乏しい人)に多額予算の研究を実施させ、成果を出させようとした(トップダウン)
-* 分科会審査という安全装置が外された(邪魔者扱い)
-* 人の配置、権限配分、予算、期間を経営者が考えていなかった
-* 経営者が研究の見識を(経営者に相応しいほど)持っていなかった
-::::
-
-----
-
-## JAXA当事者はなぜFF(P)やRE違反をしたのか?{background-color="#010638"}
-
-:::: {.incremental}
-* Gino事件とは違い、個人的な金銭利得はほぼゼロ  
-* [組織の目標(成果を出す)と手段(人員配置、チェック機能、予算や期間)が整合的ではなかったために、末端の人員が帳尻あわせに研究不正をしたのでは?](https://scienceportal.jst.go.jp/newsflash/20230113_n01/#:~:text=%E9%99%90%E3%82%89%E3%82%8C%E3%81%9F%E4%BA%BA%E5%93%A1%E3%81%A8%E5%8E%B3%E3%81%97%E3%81%84%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E4%B8%AD%E3%81%A7%E3%81%84%E3%81%8B%E3%81%AB%E7%A0%94%E7%A9%B6%E3%82%92%E9%80%B2%E3%82%81%E3%82%8B%E3%81%8B%E3%80%81%E5%BF%85%E6%AD%BB%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E3%80%82%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E9%81%A9%E5%88%87%E3%81%AB%E5%AE%9F%E6%83%85%E3%82%92%E4%BC%9D%E3%81%88%E3%81%A6%E8%AA%BF%E6%95%B4%E3%81%99%E3%81%B9%E3%81%8D%E3%81%A0%E3%81%A3%E3%81%9F%E3%80%82)
-* サラリーマン研究者解釈=日本ぽい
-   * ダイハツ工業、豊田自動織機、三菱自動車工業、ビッグモーターの検査不正  
-   * 研究生産性を高めるのは良いことですが、資源投入を減らし過ぎると弊害があります  
-   * 研究予算などの入り口で搾り、人事評価などの出口で圧迫すると、研究倫理を逸脱する可能性を高めます
-::::
-
-
-# アジ研には研究倫理を尊重する文化があります{background-color="#010638"}
-
-# 今年の研究成果に不安・不透明感を持つならば、早めに上長に相談しましょう{background-color="#010638"}
-
-# 適度な競争や批判の圧力の下、若手を育てます{background-color="#010638"}
-
-# まとめ: 社会から託された信任を裏切らない  {background-color="#010638"}
 
 ----
 

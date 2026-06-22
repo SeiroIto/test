@@ -1,0 +1,75 @@
+---
+title: "tinytable width test"
+format:
+  revealjs:
+    standalone: true
+    embed-resources: true
+    width: 1600
+    height: 900
+    background-color: "#010638"
+    theme: sky
+execute:
+  echo: true
+  eval: true
+  warning: false
+  message: false
+---
+
+```{r setup, echo=FALSE}
+library(data.table); library(tinytable)
+dt <- data.table(
+  工程 = c("デザイン・仮説", "データ収集・整理", "推敲"),
+  人間 = c("作り出す", "指示を出す", "監修、編集"),
+  AI   = c("理論枠組み、仮説、データの整合性チェック", "指示通りに作業", "推計結果を表にして簡単な文章にする")
+)
+make_tt <- function(w) {
+  tb <- tt(dt, width = w)
+  tb <- style_tt(tb, j = 1:3, align = "l", fontsize = .8)
+  tb <- style_tt(tb, i = 0, align = "c")
+  theme_html(tb, class = "tinytable tinytable-hover")
+}
+```
+
+## Test A: sum=0.75 (original), no CSS
+
+```{r testA}
+make_tt(c(.2, .15, .4))   # sum = 0.75 — original code
+```
+
+---
+
+## Test B: sum=0.70 (fix), no CSS
+
+```{r testB}
+make_tt(c(.187, .14, .373))   # sum = 0.70 — our fix
+```
+
+---
+
+## Test C: sum=0.75 + CSS override (width:auto !important)
+
+```{=html}
+<style>
+.reveal section.testC table.tinytable { width: auto !important; }
+</style>
+```
+
+```{r testC}
+make_tt(c(.2, .15, .4))   # sum = 0.75 + CSS override
+```
+
+---
+
+## Test D: no width arg (CSS variable drives width)
+
+```{r testD}
+make_tt(NULL)   # no width arg — CSS variable --tt-table-width: 100%
+```
+
+---
+
+## Test E: sum=1.0 (explicit full width)
+
+```{r testE}
+make_tt(1)   # explicit width=1 → inline width:100%
+```
