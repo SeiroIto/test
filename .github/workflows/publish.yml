@@ -8,6 +8,12 @@ on:
   # Build + deploy on pushes to main
   push:
     branches: [main]
+    # Ignore changes to workflow files themselves (e.g. bot commits that update
+    # actions/checkout). Without this, a bot push cancels any in-progress deploy
+    # via the concurrency group above. Trade-off: to test a workflow-only change,
+    # use "Run workflow" manually from the Actions tab instead of pushing.
+    paths-ignore:
+      - '.github/**'
 
   # Manual trigger (optional rebuild)
   workflow_dispatch:
