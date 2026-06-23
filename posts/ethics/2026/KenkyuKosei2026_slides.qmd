@@ -2,7 +2,7 @@
 title: |
   | 研究公正
 subtitle: |
-  | 2026年6月19日(木)
+  | 2026年6月26日(木)
   | 開発研究センター
 author: "伊藤成朗"
 engine: knitr
@@ -16,7 +16,7 @@ format:
     background-color: "#010638"
     preview-links: auto
     logo: images/quarto.png
-    footer: <http://seiroito.github.io/test/posts/ethics/2026/KenkyuRinri2026_slides.html>
+    footer: <http://seiroito.github.io/test/posts/ethics/2026/KenkyuKosei2026_slides.html>
     theme: sky
 ####    css: tinytable.css
 execute:
@@ -32,8 +32,8 @@ include-in-header:
       </style>
 bibliography: ../../seiro.bib
 resources:
-  - KenkyuRinri2026_slides.pdf
-#### quarto render KenkyuRinri2026_slides.qmd
+  - KenkyuKosei2026_slides.pdf
+#### quarto render KenkyuKosei2026_slides.qmd
 ---
 ```{r read RefManageR library, echo=FALSE, warning = F}
 library(RefManageR)
@@ -76,6 +76,9 @@ Orange {
 }
 Yellow {
   color: yellow;
+}
+DarkGray {
+  color: #525252;
 }
 #### @font-face {
 ####   font-family: "hiragino";
@@ -253,7 +256,7 @@ blockquote {
 ## {background-color="#010638"}
 
 ::: {.center2}
-[http://seiroito.github.io/test/posts/ethics/2026/KenkyuRinri2026_slides.html](http://seiroito.github.io/test/posts/ethics/2026/KenkyuRinri2026_slides.html)
+[http://seiroito.github.io/test/posts/ethics/2026/KenkyuKosei2026_slides.html](http://seiroito.github.io/test/posts/ethics/2026/KenkyuKosei2026_slides.html)
 :::
 
 ----
@@ -499,6 +502,8 @@ blockquote {
 
 # 学術的根拠をもとに研究し、作業内容と得た成果を歪めずに発表すること。{background-color="#010638"}
 
+# 「誰が」「何をやって」「何が分かった」=知識、を歪めてはいけない{background-color="#010638"}
+
 
 # 研究公正は、やってはいけないことで定義されます。{background-color="#010638"}
 
@@ -525,6 +530,28 @@ blockquote {
 ::::: {.column width = "40%"}
 ::: {style="font-size:90%"}
 ::: {.incremental}
+:::
+:::
+:::::
+::::::::::
+
+
+## <Red>一発退場 Research misconducts</Red> (<LightBlue>FFP</LightBlue>, [厚労省研究不正ガイドライン「特定不正行為」](https://www.mhlw.go.jp/file/06-Seisakujouhou-10600000-Daijinkanboukouseikagakuka/0000152685.pdf#page=8)){background-color="#010638"}
+
+:::::::::: {.columns}
+::::: {.column width = "60%"}
+::: {style="font-size:130%"}
+<DarkGray> <LightBlue>F</LightBlue><Orange>abrication ねつ造</Orange>「存在しないデータや研究成果を作成すること。」</DarkGray>
+
+<DarkGray><LightBlue>F</LightBlue><Orange>alsification 改ざん</Orange>「操作」によって「データ」や「成果などを真正でないものに加工すること」。</DarkGray>
+
+<DarkGray><LightBlue>P</LightBlue><Orange>lagerism 剽窃、盗用</Orange> 他の研究者の「アイディア」「方法」「データ」「結果」を「了解または適切な表示なく流用すること」。</DarkGray>
+:::
+:::::
+
+::::: {.column width = "40%"}
+::: {style="font-size:90%"}
+::: {.incremental}
 * やると研究者人生がほぼ終わります。  
 * 理由: 研究者社会は相互信頼で成立しています。ウソをつかないことを前提に評価がされて、知識が共有されます。裏切ると、研究者社会全体が資源を浪費するので、厳罰処分されます。不正が露見するまで、他の研究者は存在しない現象を追求して苦しみます。  
    * STAP論文: 追試資源や継続研究資源の浪費、周辺研究まで疑いの目
@@ -544,7 +571,7 @@ blockquote {
 ::: {style="font-size:130%"}
 * データの未保存や再現性の欠如  
 * 不適切な統計手法  
-* ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))  
+* ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  
 * 論文の多重投稿  
 * 利益相反によるバイアス  
 :::
@@ -559,7 +586,7 @@ blockquote {
 * 識者によって内容が異なるので幾つか列記  
 * $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
 * HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
-* GAは贈収(賄)双方に便益あり、[なくなりにくい、でも、著者責任も付いてくる](https://www.bmj.com/content/309/6967/1456#:~:text=Perhaps%20this%20scandal%20will%20finally%20undermine%20gift%20authorship.%20At%20the%20very%20least%20it%20should%20make%20researchers%20think%20hard%20about%20the%20responsibilities%20that%20come%20with%20putting%20their%20names%20on%20papers.)&larr; Asad IsamのFF疑惑   
+* GAは贈収(賄)双方に便益あり、なくなりにくい、でも、パワハラによる盗用ならばFFP、[著者責任も付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IsamのFF疑惑   
 * 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))、翻訳であることを明示しても危ういので、翻訳論文は~~ワーキング・ペーパーに留めましょう~~意義がマイナスです  
 :::
 :::::
@@ -728,7 +755,7 @@ ggsave(
 
 ### 蔓延度は不明ですが、結構深刻では?
 
-<Orange>例5:</Orange> ミクロ開発経済学研究者[Asad Islam](https://users.monash.edu.au/~asaduli/index.html)の複数論文で[データ不正(FF)の疑い](https://a-ortmann.medium.com/the-asad-islam-gdri-saga-f96b567c93d6)  
+<Orange>例5:</Orange> ミクロ開発経済学研究者[Asad Islam](https://research.monash.edu/en/persons/asadul-islam/)の複数論文で[データ不正(FF)の疑い](https://a-ortmann.medium.com/the-asad-islam-gdri-saga-f96b567c93d6)  
 
 [Institute For Replicationによる再現性分析](https://i4replication.org/gdri.html)で指摘
 
@@ -740,7 +767,8 @@ ggsave(
 :::
 :::::
 
-::::: {.column width = "60%"}
+::::: {.column width = "30%"}
+:::::: {style="font-size: 50%;"}
 Retracted
 
 * Journal of European Economics Association
@@ -748,9 +776,35 @@ Retracted
 * European Economic Review
 * Economic Journal
 * Journal of Public Economics (under review)
-* (American Economic Journl: Micro)
 * (Review of Economics and Statistics)
+
+Corrections
+
+* Journal of Risks and Uncertainty
+
+Concerns expressed
+
+* Demography
+* American Economic Journal: Micro
+
+Author (Islam) removed
+
+* Quarterly Journal of Economics
+:::::: 
 :::::
+
+::::: {.column width = "30%"}
+:::::: {style="font-size: 70%;"}
+* List on left may be imprecise. (Hard to follow...descriptions are scattered across sites.)
+* [大学の調査結果](https://www.theaustralian.com.au/subscribe/news/1/?sourceCode=TAWEB_WRE170_a_DDG&dest=https%3A%2F%2Fwww.theaustralian.com.au%2Fhigher-education%2Fmonash-professor-asad-islam-cleared-of-data-fabrication-allegations-after-investigation%2Fnews-story%2F4017ef7bff53ad9364dd33a5dc1fb340)
+    * [研究不正(fabrication)なし](https://a-ortmann.medium.com/the-asad-islam-gdri-saga-f96b567c93d6#:~:text=it%20could%20not%20find%20evidence%20of%20data%20fabrication.)
+    * QRPあり
+* 大学での処分なし
+* Fundingは途中終了curtailed
+* Field operatorなので、予算なしに研究は困難
+::::::
+::::: 
+
 :::::::::: 
 :::: 
 
@@ -808,9 +862,6 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 :::::::::: {.columns}
 ::::: {.column width = "40%"}
-:::: {.fragment}
-<White>公正な研究? QRP? <White>
-::::
 :::: {.fragment}
  <White>和文単行書の成果検討では...</White>
 ::::
@@ -902,7 +953,8 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 ::::: {.column width = "50%"}
 :::: {.incremental}
-* デザイン不十分(によるstatiscal power不足)を認め、<Red>short paperやウェブ論考にする</Red>
+* デザイン不十分(によるstatiscal power不足)を認め、<Red>short paperやウェブ論考に</Red>
+* <Red>共著者を厳選する</Red>
 ::::
 ::::: 
 :::::::::: 
@@ -1081,15 +1133,43 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 <br>
 成果を出したい、でも、今のままだと成果にならないと考えている
 
-:::: {.fragment}
+<!--
+:::::::::: {.columns}
+<p style="margin-top: 40px;"></p>
+::::: {.column width = "20%"}
+  
+::::: 
+
+::::: {.column width = "30%"}
 1. 内容が不十分
 1. 自信、発信力が無い
-1. 利益相反がある
+::::: 
+
+::::: {.column width = "30%"}
+3. 利益相反がある
 1. 時間がない
+::::: 
+::::::::::
+-->
+
+:::: {.fragment}
+<p style="margin-top: 40px;"></p>
+
+アジ研研究者にとって可能性が高そうなQRP
+
+::::: {.incremental}
+* 共著者が怪しいことをしている(かも)
+    * QRPの責めはcorresponding authorおよび全共著者に向かう
+    * <Red>研究者が共著者を厳選</Red>すべき
+* 研究関係者から研究公正を貫くことを妨害される
+    * 例: 執筆者順などでパワハラ・強弁・忖度を受ける・する
+    * 例: 研究対象や監督官庁(に忖度した誰か)から論旨変更を迫られる
+    * <Red>研究者が再現可能性に留意</Red>すべき
+    * <Red>研究者は自らの安全を最優先</Red>すべき
+    * <Red>雇用者が真実発信ができる研究環境を保障</Red>すべき
+:::::
 ::::
 
-* QRPの責めは個人に向かう
-* 真実発信ができる研究環境を雇用者が保障すべき
 
 
 ----
@@ -1140,7 +1220,7 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
   * データ作成(web scraping, image text processing)
   * コード作成・修正(debugging, refactoring)
   * 数式の展開、[証明の論理検証](https://www.refine.ink/)
-  * 下書き
+  * 下書き[(自分ぽく)](https://claudeblattman.com/essentials/voice/#teaching-ai-your-voice)
   * 模擬査読 [(claesbackman)](https://github.com/claesbackman/AI-research-feedback)、[(IsItCredible)](https://isitcredible.com/)、[(Davidvandijcke)](https://github.com/Davidvandijcke/coarse)
   * 新規論文のお知らせ ![](NBERDigestWorkflow_GPT5mini.jpg){height=30 .lightbox}
 * カタログ: [Claude for economists](https://achenzion.github.io/2026/04/04/Claude-for-Economists/)、[Awesome AI for economists](https://github.com/hanlulong/awesome-ai-for-economists#contents)、[Mini series on claude code for applied economists](https://bcf.princeton.edu/events/paul-goldsmith-pinkham-mini-series-on-claude-code-for-applied-economists/) [(コンパクト版)](https://paulgp.com/2024/06/24/llm_talk.html)
@@ -1284,12 +1364,16 @@ paper.pdf (or .txt, .md, .tex, .docx, .html, .epub)
     * 剽窃、「半剽窃」(原典言及なしの似通ったデザイン)
     * AIアドバイザによる改善
        * 脚注:「このアイディアを示唆したClaude Fable5に感謝する。」
-       * Conflicts of interest: I have benefited from an AI during the concepturization stage, but the original idea is my own.
+<!--       * Conflicts of interest: I have benefited from an AI during the concepturization stage, but the original idea is my own. -->
 * 作業=RA
     * コードの不当表示(Aをやると言いつつBをやる)
 * 執筆=共著者
     * 過大解釈、誤解釈
     * 剽窃、「半剽窃」(文章表現は違うが、原典言及なしの似通った論旨)
+::::
+
+:::: {.fragment}
+違うモデルやエージェントにcross checkさせる
 ::::
 
 ----
@@ -1615,6 +1699,8 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
 * 知識を歪めるQRPは誤ったメッセージを社会に発し、研究者の評判を落とす
 * 罰則のあるFFPは割に合わないが、罰則がほぼないQRPは自分が気をつけるしかない
 * 「時間がない」なら、早めに上長に相談を
+* 共著者は正直者を選ぶ
+* 研究者は研究公正よりも(自らの)安全を最優先すべき
 * AIは生産性が高いが、剽窃、誤りをなくすよう制御に細心の注意を
 ::::
 
