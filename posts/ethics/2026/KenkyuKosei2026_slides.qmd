@@ -584,10 +584,11 @@ blockquote {
 ::::: {.column width = "68%"}
 ::: {.incremental}
 * 識者によって内容が異なるので幾つか列記  
+* 再現性がないと発見が知識として蓄積できない
 * $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
 * HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
 * GAは贈収(賄)双方に便益あり、なくなりにくい、でも、パワハラによる盗用ならばFFP、[著者責任も付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IsamのFF疑惑   
-* 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))、翻訳であることを明示しても危ういので、翻訳論文は~~ワーキング・ペーパーに留めましょう~~意義がマイナスです  
+* 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))
 :::
 :::::
 ::::::::::
