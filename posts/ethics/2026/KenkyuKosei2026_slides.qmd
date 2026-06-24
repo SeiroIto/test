@@ -500,14 +500,20 @@ blockquote {
 :::
 ::::
 
-# 学術的根拠をもとに研究し、作業内容と得た成果を歪めずに発表すること。{background-color="#010638"}
+# 社会が研究する目的=既存の知識を修正しながら新知識を蓄積すること。{background-color="#010638"}
 
-# 「誰が」「何をやって」「何が分かった」=知識、を検証可能な状態で蓄積する。{background-color="#010638"}
+# 研究公正のルール=目的を実現する手段。{background-color="#010638"}
+
+<!--
+# 学術的根拠をもとに研究し、作業内容と得た成果を歪めずに発表すること。{background-color="#010638"}
+-->
+
+# 「誰が」「何をやって」「何が分かった」=知識、を検証可能な状態で蓄積。{background-color="#010638"}
 
 
 ----
 
-## なぜ知識を検証可能な状態にしておくか...研究者目線で{background-color="#010638"}
+## なぜ知識を検証可能な状態にしておくか{background-color="#010638"}
 
 :::: {.fragment}
 * 分野全体でやり直し: 再現性危機replication crisis(2010年代以降)
@@ -689,9 +695,6 @@ blockquote {
 ::: {style="font-size:130%"}
 * <DarkGray>ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  </DarkGray>
 * <DarkGray>利益相反によるバイアス  </DarkGray>
-* データの未保存や再現性の欠如  
-* 不適切な統計手法  
-* <DarkGray>論文の多重投稿  </DarkGray>
 :::
 :::
 :::::
@@ -701,15 +704,33 @@ blockquote {
 
 ::::: {.column width = "68%"}
 ::: {.incremental}
-* <DarkGray>識者によって内容が異なるので幾つか列記  </DarkGray>
-* <DarkGray>GAは贈収(賄)双方に便益あり、なくなりにくい、でも、パワハラによる盗用ならばFFP、[著者責任も付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IsamのFF疑惑   </DarkGray>
-* 再現性がない &rArr; 成果が疑問視 &rArr; 発見が知識にならない
-* $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
-* HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
-* <DarkGray>刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))</DarkGray>
 :::
 :::::
 ::::::::::
+
+:::::::::: {.columns}
+::::: {.column width = "30%"}
+::: {.incremental}
+::: {style="font-size:130%"}
+* データの未保存や再現性の欠如  
+* 不適切な統計手法  
+:::
+:::
+:::::
+
+::::: {.column width = "2%"}
+:::::
+
+::::: {.column width = "68%"}
+::: {.incremental}
+* 再現性がない &rArr; 成果が疑問視 &rArr; 発見が知識にならない
+* $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
+* HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
+:::
+:::::
+::::::::::
+
+
 
 :::: {.fragment}
 See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)
