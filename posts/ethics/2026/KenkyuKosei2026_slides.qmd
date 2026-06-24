@@ -30,7 +30,7 @@ include-in-header:
         font-size: 2.0em;
       }
       </style>
-bibliography: ../../seiro.bib
+bibliography: ../../../seiro.bib
 resources:
   - KenkyuKosei2026_slides.pdf
 #### quarto render KenkyuKosei2026_slides.qmd
@@ -502,7 +502,29 @@ blockquote {
 
 # 学術的根拠をもとに研究し、作業内容と得た成果を歪めずに発表すること。{background-color="#010638"}
 
-# 「誰が」「何をやって」「何が分かった」=知識、を歪めてはいけない{background-color="#010638"}
+# 「誰が」「何をやって」「何が分かった」=知識、を検証可能な状態で蓄積する。{background-color="#010638"}
+
+
+----
+
+## なぜ知識を検証可能な状態にしておくか...研究者目線で{background-color="#010638"}
+
+:::: {.fragment}
+* 分野全体でやり直し: 再現性危機replication crisis(2010年代以降)
+    * 心理学: 2008年掲載のトップ3誌100論文で36%[@OSC2015]
+    * 癌研究: 2010-2012掲載のトップ53論文で`r round((23/53)*100, 0)`%
+* 心理学では1960年代から指摘: 小標本(検定力statistical powerの低い)研究が50年以上続く
+::::
+
+:::: {.fragment}
+行動経済学に再現性危機がなかった理由
+
+* 実験経済学の伝統を受け継いだため [[video](https://youtu.be/YUtNAYvxfRI?si=BAcHgyWPl-guCr8f&t=2881)]
+    * 論文=文章+実験指示書+データ+コード
+    * 掲載条件: 過去の実験結果を研究対象で再現+新規実験
+* 研究(作業)の透明性 &rArr; 知識を修正しながら積み上げ
+* 行動経済学に限られない
+::::
 
 
 # 研究公正は、やってはいけないことで定義されます。{background-color="#010638"}
@@ -566,6 +588,8 @@ blockquote {
 ## <Yellow>信用失墜</Yellow> <Orange>Questionable research practices (QRPs)</Orange>{background-color="#010638"}
 
 :::::::::: {.columns}
+ 「誰が」「何をやって」「何が分かった」を検証可能な状態で蓄積する
+ 
 ::::: {.column width = "30%"}
 ::: {.incremental}
 ::: {style="font-size:130%"}
@@ -584,7 +608,140 @@ blockquote {
 ::::: {.column width = "68%"}
 ::: {.incremental}
 * 識者によって内容が異なるので幾つか列記  
-* 再現性がないと発見が知識として蓄積できない
+<!--
+* 再現性がない &rArr; 成果が疑問視 &rArr; 発見が知識にならない
+* $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
+* HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
+* GAは贈収(賄)双方に便益あり、なくなりにくい、でも、パワハラによる盗用ならばFFP、[著者責任も付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IsamのFF疑惑   
+* 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))
+-->
+:::
+:::: {.fragment}
+* See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)
+::::
+:::::
+::::::::::
+
+
+----
+
+## <Yellow>信用失墜</Yellow> <Orange>Questionable research practices (QRPs)</Orange>{background-color="#010638"}
+
+:::::::::: {.columns}
+「誰が」<DarkGray>「何をやって」「何が分かったか」を検証可能な状態で蓄積する</DarkGray>
+
+::::: {.column width = "30%"}
+::: {.incremental}
+::: {style="font-size:130%"}
+* ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  
+:::
+:::
+:::::
+
+::::: {.column width = "2%"}
+:::::
+
+::::: {.column width = "68%"}
+::: {.incremental}
+* GAは贈収(賄)双方に便益あり、なくなりにくい
+* でも、[共著者リスクも付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IslamのFF疑惑
+* パワハラ・圧力による盗用ならFFP...利益配分&larr;研究倫理
+:::
+:::::
+::::::::::
+
+:::::::::: {.columns}
+
+::::: {.column width = "30%"}
+::: {.incremental}
+::: {style="font-size:130%"}
+* 利益相反によるバイアス  
+:::
+:::
+:::::
+
+::::: {.column width = "2%"}
+:::::
+
+::::: {.column width = "68%"}
+::: {.incremental}
+* 研究公正を損ねる条件下の共著者はいるか
+    * 特定方向の成果に利益を見出す関係者と縁が深い
+       * 雇用者・METI、資金・便宜提供者、研究者(自身も)
+    * 顕著な成果、強い(矛盾のない)成果を求めている
+* 大物追従志向はないか
+    * 例: 早期児童発達介入は非認知能力を高める、プライミング、最貧層貸付にはトレーニングが必須
+    * 反証すると大物がエディタの雑誌には投稿できない
+:::
+:::::
+::::::::::
+
+
+----
+
+## <Yellow>信用失墜</Yellow> <Orange>Questionable research practices (QRPs)</Orange>{background-color="#010638"}
+
+:::::::::: {.columns}
+<DarkGray>「誰が」</DarkGray><span style="color:white;">「何をやって」</span><DarkGray>「何が分かったか」を検証可能な状態で蓄積する</DarkGray>
+
+::::: {.column width = "30%"}
+::: {.incremental}
+::: {style="font-size:130%"}
+* <DarkGray>ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  </DarkGray>
+* <DarkGray>利益相反によるバイアス  </DarkGray>
+* データの未保存や再現性の欠如  
+* 不適切な統計手法  
+* <DarkGray>論文の多重投稿  </DarkGray>
+:::
+:::
+:::::
+
+::::: {.column width = "2%"}
+:::::
+
+::::: {.column width = "68%"}
+::: {.incremental}
+* <DarkGray>識者によって内容が異なるので幾つか列記  </DarkGray>
+* <DarkGray>GAは贈収(賄)双方に便益あり、なくなりにくい、でも、パワハラによる盗用ならばFFP、[著者責任も付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IsamのFF疑惑   </DarkGray>
+* 再現性がない &rArr; 成果が疑問視 &rArr; 発見が知識にならない
+* $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
+* HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
+* <DarkGray>刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))</DarkGray>
+:::
+:::::
+::::::::::
+
+:::: {.fragment}
+See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)
+::::
+
+----
+
+## <Yellow>信用失墜</Yellow> <Orange>Questionable research practices (QRPs)</Orange>{background-color="#010638"}
+
+:::::::::: {.columns}
+<DarkGray>「誰が」「何をやって」</DarkGray>「何が分かったか」を検証可能な状態で蓄積する
+
+::::: {.column width = "30%"}
+::: {.incremental}
+::: {style="font-size:130%"}
+* <DarkGray>ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  </DarkGray>
+* <DarkGray>利益相反によるバイアス  </DarkGray>
+* <DarkGray>データの未保存や再現性の欠如  </DarkGray>
+* <DarkGray>不適切な統計手法  </DarkGray>
+* 論文の多重投稿 
+:::
+:::
+:::::
+
+::::: {.column width = "2%"}
+  
+:::::
+
+::::: {.column width = "68%"}
+::: {.incremental}
+* 識者によって内容が異なるので幾つか列記  
+* 再現性がない &rArr; 成果が疑問視 &rArr; 発見が知識にならない
 * $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
 * HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
 * GAは贈収(賄)双方に便益あり、なくなりにくい、でも、パワハラによる盗用ならばFFP、[著者責任も付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IsamのFF疑惑   
