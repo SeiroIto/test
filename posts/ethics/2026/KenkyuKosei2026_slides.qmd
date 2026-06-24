@@ -621,6 +621,7 @@ blockquote {
 ::::: {.column width = "68%"}
 ::: {.incremental}
 * 識者によって内容が異なるので幾つか列記  
+
 <!--
 * 再現性がない &rArr; 成果が疑問視 &rArr; 発見が知識にならない
 * $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
