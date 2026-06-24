@@ -251,6 +251,13 @@ blockquote {
   background-color: lightblue !important;
   color: black !important;
 }
+.fancy-quote {
+  margin: 1em 0;
+}
+.fancy-quote .quote-attribution {
+  text-align: right;
+  margin-top: -0.5em;
+}
 ```
 
 ## {background-color="#010638"}
@@ -599,11 +606,11 @@ blockquote {
 ::::: {.column width = "30%"}
 ::: {.incremental}
 ::: {style="font-size:130%"}
+* ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  
+* 利益相反によるバイアス  
 * データの未保存や再現性の欠如  
 * 不適切な統計手法  
-* ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  
 * 論文の多重投稿  
-* 利益相反によるバイアス  
 :::
 :::
 :::::
@@ -650,8 +657,8 @@ blockquote {
 ::::: {.column width = "68%"}
 ::: {.incremental}
 * GAは贈収(賄)双方に便益あり、なくなりにくい
-* でも、[共著者リスクも付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IslamのFF疑惑
-* パワハラ・圧力による盗用ならFFP...利益配分&larr;研究倫理
+* でも、[共著者リスク](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)も[付いてくる](https://www.icmje.org/news-and-editorials/new_rec_aug2013.html#:~:text=The%20addition%20of%20a%20fourth%20criterion%20was,part%20of%20the%20paper%3B%20ask%20someone%20else%E2%80%9D)&larr; Asad IslamのFF疑惑
+* パワハラ・圧力による盗用なら(FF)P...利益配分&larr;研究倫理
 :::
 :::::
 ::::::::::
@@ -676,7 +683,7 @@ blockquote {
        * 雇用者・METI、資金・便宜提供者、研究者(自身も)
     * 顕著な成果、強い(矛盾のない)成果を求めている
 * 大物追従志向はないか
-    * 例: 早期児童発達介入は非認知能力を高める、プライミング、最貧層貸付にはトレーニングが必須
+    * 例: 早期児童発達介入は非認知能力を高める、プライミング、最貧困層貸付にはトレーニングが必須
     * 反証すると大物がエディタの雑誌には投稿できない
 :::
 :::::
@@ -688,13 +695,12 @@ blockquote {
 ## <Yellow>信用失墜</Yellow> <Orange>Questionable research practices (QRPs)</Orange>{background-color="#010638"}
 
 :::::::::: {.columns}
-<DarkGray>「誰が」</DarkGray><span style="color:white;">「何をやって」</span><DarkGray>「何が分かったか」を検証可能な状態で蓄積する</DarkGray>
+<DarkGray>「誰が」</DarkGray><span style="color:white;">「何をやって」「何が分かったか」を検証可能な状態で蓄積する</span>
 
 ::::: {.column width = "30%"}
 ::: {.incremental}
 ::: {style="font-size:130%"}
-* <DarkGray>ギフト・オーサーシップ ([CRediT](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement))([Vancouver](https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html#two))  </DarkGray>
-* <DarkGray>利益相反によるバイアス  </DarkGray>
+* データの未保存や再現性の欠如  
 :::
 :::
 :::::
@@ -704,6 +710,10 @@ blockquote {
 
 ::::: {.column width = "68%"}
 ::: {.incremental}
+* 再現性がない &rArr; 発見が知識にならない
+    * 追試検証ができない
+    * 成果が疑問視
+* 論文掲載が困難: 多くの雑誌で再現パッケージも投稿必須
 :::
 :::::
 ::::::::::
@@ -712,7 +722,6 @@ blockquote {
 ::::: {.column width = "30%"}
 ::: {.incremental}
 ::: {style="font-size:130%"}
-* データの未保存や再現性の欠如  
 * 不適切な統計手法  
 :::
 :::
@@ -723,20 +732,34 @@ blockquote {
 
 ::::: {.column width = "68%"}
 ::: {.incremental}
-* 再現性がない &rArr; 成果が疑問視 &rArr; 発見が知識にならない
 * $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
 * HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
 :::
 :::::
 ::::::::::
 
+:::::::::: {.columns}
+::::: {.column width = "30%"}
+::: {.incremental}
+::: {style="font-size:130%"}
+* 論文の多重投稿 
+:::
+:::
+:::::
+
+::::: {.column width = "2%"}
+:::::
+
+::::: {.column width = "68%"}
+::: {.incremental}
+* 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))
+:::
+:::::
+::::::::::
 
 
-:::: {.fragment}
-See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)
-::::
 
-----
+<!--
 
 ## <Yellow>信用失墜</Yellow> <Orange>Questionable research practices (QRPs)</Orange>{background-color="#010638"}
 
@@ -750,7 +773,6 @@ See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https
 * <DarkGray>利益相反によるバイアス  </DarkGray>
 * <DarkGray>データの未保存や再現性の欠如  </DarkGray>
 * <DarkGray>不適切な統計手法  </DarkGray>
-* 論文の多重投稿 
 :::
 :::
 :::::
@@ -766,7 +788,6 @@ See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https
 * $P$-hacking: E.g.,  望んだ結果が出るまで推計を試行し、その結果のみ提示すること ![https://xkcd.com/882/](AcneJellybeans.jpg){height=30 .lightbox} 
 * HARKing: 結果を見て仮説を決めること[hypothesizing after the results are known](https://brokenscience.org/harking-hypothesizing-after-the-results-are-known/) ![Dirk-Jan Hoek, CC-BY](Harking.jpg){height=30 .lightbox} ([paper](https://dl.acm.org/doi/10.1145/3360311)) ([video](https://www.youtube.com/watch?v=mzU_Fq1wQ6k))
 * GAは贈収(賄)双方に便益あり、なくなりにくい、でも、パワハラによる盗用ならばFFP、[著者責任も付いてくる](https://pmc.ncbi.nlm.nih.gov/articles/PMC2541639/)&larr; Asad IsamのFF疑惑   
-* 刊行された論文を翻訳して投稿してはいけません ([International Committee of Medical Journal Editors](https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/overlapping-publications.html#:~:text=Authors%20should%20not%20submit%20the%20same%20manuscript%2C%20in%20the%20same%20or%20different%20languages%2C%20simultaneously%20to%20more%20than%20one%20journal.))
 :::
 :::::
 ::::::::::
@@ -774,6 +795,7 @@ See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https
 :::: {.fragment}
 See a list of QRPs used in Dutch national survey (DNSRI) summarised [here](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)
 ::::
+-->
 
 ----
 
@@ -1048,12 +1070,12 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 ::::: {.column width = "60%"}
 :::: {.incremental}
- * 成果を冗長に書く  
- * 要約が不正確  
- * どのような過程を踏んだか明記しない  
- * 図表の脚注に留意事項を説明するが本文は無記載  
+ * 成果を冗長に書く 
+ * 要約が不正確 ([DNSRI](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)07) 
+ * どのような過程を踏んだか明記しない ([DNSRI](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)10) 
+ * 図表の脚注に留意事項を説明するが本文は無記載 ([DNSRI](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)11) 
  * 研究なのにダークパタン  
- * 過去著作の数段落を明示せずコピー、ただし、参考文献には掲載  
+ * 過去著作の数段落を明示せずコピー、ただし、参考文献には掲載 ([DNSRI](https://htmlpreview.github.io/?https://github.com/SeiroIto/PaperNotes/blob/main/QRPsInDutchNationalSurvey_Tufte.html)02)  
 ::::
 ::::: 
 :::::::::: 
@@ -1110,7 +1132,6 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 ::::: {.column width = "50%"}
 :::: {.incremental}
 * 不適切な統計手法  
-  * 隠すためにデータや手順を未保存&rarr;再現性の欠如
 * 曖昧な記述と結論=ごまかし=QRP  
 * 一部の(推計)結果のみ報告
 ::::
@@ -1350,6 +1371,38 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 ::::
 
 
+----
+
+## なぜQRPをするのか{background-color="#010638"}
+
+<br>
+成果を出したい、でも、今のままだと成果にならないと考えている
+
+<p style="margin-top: 40px;"></p>
+
+アジ研研究者にとって可能性が高そうなQRP
+
+::::: {.incremental}
+* 時間がないのでAIに論文執筆の枢要部分を委ねる
+    * 研究公正: 著者は研究のすべてに責任を負う&rarr;AIに枢要部分を任せて負えるか?
+    
+      :::::: {style="font-size: 70%;"}
+      ::: {.fancy-quote}
+      > Agreement to be accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.
+      
+      <div style="text-align:right">
+      — <a href="https://www.icmje.org/news-and-editorials/new_rec_aug2013.html">The New ICMJE Recommendations (August 2013)</a>
+      </div>
+      :::
+      ::::::
+
+    * <Red>研究者が枢要部分を指示</Red>すべき
+    * <Red>Hallucination, overconfidence, lack of attributionなど原稿を人間がチェック</Red>すべき
+    * <Red>かつ、AI利用を明記し、入力と出力を開示</Red>すべき
+    * <Red>そして、作業や解釈に関する詳細な質問に対して準備</Red>すべき
+:::::
+
+
 
 ----
 
@@ -1375,17 +1428,17 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 ::::{.incremental}
 * 力業をこなすので量的な生産性は高まる&rarr;質の制御
-  * 知識範囲が恐ろしく広く、疲れを知らない
-  * 仕事が早い
+  * 仕事が早く、検索能力が恐ろしく優れていて、疲れを知らない
 * 母集団に比べると歪んだ内容を説得的に、かつ、ユーザに同調しながら示す
   * 知らないことも自信たっぷり(過剰)に回答&larr;知っていると誤解しやすい
       * そういうトーン(分からないと言わない、同意調)が[学習過程で推奨されている    ](https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf)
       * [Hallucination](https://github.com/vectara/hallucination-leaderboard/)&larr;開発者の設計志向「予測せよ」
   * 安易な一般化が激しい&larr;学習コーパス(「知識」)の偏り、特定見解へのウェイトの偏り
+  * 文脈を全く理解しない
 * 機械=人格がない、だから、出力に責任を負う存在ではない
 * 制御の技量が試される
   * RA: 指導、共著者として責任を共有
-  * AI: [`feedback rules`](https://code.claude.com/docs/en/memory#organize-rules-with-claude/rules/)と[`skills`](https://claude.com/docs/skills/overview)で誘導、人間が検証(一次資料+専門知識)して責任を持つ
+  * AI: [`feedback rules`](https://code.claude.com/docs/en/memory#organize-rules-with-claude/rules/)と[`skills`](https://claude.com/docs/skills/overview)で誘導、人間が検証(一次資料+専門知識)し全責任を持つ
 ::::
 
 ----
@@ -1501,7 +1554,7 @@ tb
 * 人間が検証するならAI使う必要あり?
 * 「検証費用<作成費用ならば使うべき」とAIは回答(下記も回答)
   * 一次資料の検証
-  * 専門(現地)知識による検証&rarr;難易度高い: AIの学習コーパスに入りにくく、自分の専門分野以外だと検証が難しいから
+  * 専門(現地)知識による検証&rarr;<Red>難易度高い</Red>: AIの学習コーパスに入りにくく、自分の専門分野以外だと検証が難しいから
 ::::::
 ::::
 
@@ -1552,7 +1605,7 @@ paper.pdf (or .txt, .md, .tex, .docx, .html, .epub)
 ::::
 
 :::: {.fragment}
-違うモデルやエージェントにcross checkさせる
+違うモデルやエージェントにcross checkさせる&rarr;<Red>最後は人間がチェック</Red>
 ::::
 
 ----
@@ -1631,7 +1684,7 @@ Chat GPT
 
 AIによる回答の(人間による)まとめ
 
-::::{.fragments}
+::::{.fragment}
 :::{.incremental}
 1. <LightBlue>情報のサンプリング</LightBlue>
     * 誤情報、hallucination懸念: 一次ソースで検証すべき
@@ -1646,31 +1699,33 @@ AIによる回答の(人間による)まとめ
 :::
 ::::
 
-::::{.fragments}
+::::{.fragment}
 剽窃を挙げたAIはいなかった
 ::::
 
 ----
 
-## {background-color="#010638"}
+## AI利用の心構え{background-color="#010638"}
+
+<br>
 
 伸ばす
 
-::::{.fragments}
+::::{.fragment}
 1. 批判せよ
 1. 情報源の偏りを提示せよ
 ::::
 
 禁じる
 
-::::{.fragments}
+::::{.fragment}
 3. Hallucinationを減らす
 1. 少しでも関係すれば、過剰なほどattributionを付記せよ
 ::::
 
 予防する
 
-::::{.fragments}
+::::{.fragment}
 5. 設定と入出力を記録
 1. AI作成コードにconsistency checkを入れる
 1. 機微情報にアクセスさせない
@@ -1679,7 +1734,7 @@ AIによる回答の(人間による)まとめ
 
 ----
 
-## {background-color="#010638"}
+## 伸ばす{background-color="#010638"}
 
 AIはユーザを喜ばせようと賛同する傾向が強い
 
@@ -1711,7 +1766,7 @@ AIはユーザを喜ばせようと賛同する傾向が強い
 
 ---
 
-## {background-color="#010638"}
+## 伸ばす{background-color="#010638"}
 
 AIにどうやって情報源の偏りを認識させるか
 
@@ -1728,7 +1783,7 @@ AIにどうやって情報源の偏りを認識させるか
 
 ---
 
-## {background-color="#010638"}
+## 伸ばす{background-color="#010638"}
 
 AIにどうやって情報源の偏りを認識させるか
 
@@ -1737,7 +1792,7 @@ AIにどうやって情報源の偏りを認識させるか
 
 :::::::::: {.columns}
 ::::: {.column width = "50%"}
-[Deck 1](Deck1_TheGraduationModelBlueprint.pdf)![](NotebookLM_SlideDeck1.jpg){width=200}
+[Deck 1](Deck1_TheGraduationModelBlueprint.pdf)![](NotebookLM_SlideDeck1.jpg){height=80}
 
 :::: {.incremental}
 * 通常のMFは全く駄目と断定
@@ -1748,7 +1803,7 @@ AIにどうやって情報源の偏りを認識させるか
 ::::: 
 
 ::::: {.column width = "50%"}
-[Deck 2](Deck2_MicrocreditAndPovertyRealities.pdf)![](NotebookLM_SlideDeck2.jpg){width=200}
+[Deck 2](Deck2_MicrocreditAndPovertyRealities.pdf)![](NotebookLM_SlideDeck2.jpg){height=80}
 
 :::: {.incremental}
 * 貧困の罠は存在しないと断定
@@ -1761,7 +1816,7 @@ AIにどうやって情報源の偏りを認識させるか
 
 ---
 
-## {background-color="#010638"}
+## 伸ばす{background-color="#010638"}
 
 AIにどうやって情報源の偏りを認識させるか
 
@@ -1772,9 +1827,9 @@ AIにどうやって情報源の偏りを認識させるか
 
 ----
 
-## {background-color="#010638"}
+## 伸ばす{background-color="#010638"}
 
-研究過程での新要素: AI
+要約作業での偏り・誤り
 
 * RAG (retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
 
@@ -1798,9 +1853,9 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
 
 ----
 
-## {background-color="#010638"}
+## 伸ばす{background-color="#010638"}
 
-研究過程での新要素: AI
+要約作業での偏り・誤り
 
 * RAG (retrieval-augmented generation)で情報源を固定(source-grounded)しても、[やはりhallucinateする](https://www.youtube.com/watch?v=tmf8Ew9Z87Q)([13%](https://arxiv.org/html/2509.25498v1))
 
@@ -1821,10 +1876,11 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
 ----
 
 
-## {background-color="#010638"}
+## 禁じる{background-color="#010638"}
 
 どのようにしてHallucinationを減らすか
 
+:::{.incrmental}
 * [Post-flight Verification rule](https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.claude/rules/post-flight-verification.md)&larr; Adapted from [Dhuliawala et al. 2023](https://arxiv.org/abs/2309.11495)
     a) AIの返答を要約
     a) verification questionを作成
@@ -1833,10 +1889,11 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
     * RAGでのhallucination予防には有効
 * 推測しづらいことを推測させない「分かりません」
     * すぐに「知りません」「分かりません」と答えるので調節が難しい
+:::
 
 ----
 
-## {background-color="#010638"}
+## 予防する{background-color="#010638"}
 
 設定と入出力の記録
 
@@ -1849,7 +1906,7 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
 
 機微情報の管理
 
-* AIがアクセスできるものとそれ以外をruleで明確に分ける
+* AIがアクセスできるものとそれ以外をpermissions (in AI or at OS filesystem), rulesで明確に分ける
     * フォルダ
     * 変数名
 
@@ -1876,7 +1933,7 @@ Hallucination: 誤解。全種類の支援を受けたアームと比較する�
 * 研究機関は研究公正を保つよう支援したか
 * FFPは一発アウト
 * 知識を歪めるQRPは誤ったメッセージを社会に発し、研究者の評判を落とす
-* 罰則のあるFFPは割に合わないが、罰則がほぼないQRPは自分が気をつけるしかない
+* 厳罰のあるFFPは割に合わないが、罰則が弱いQRPは自分が気をつけるしかない
 * 「時間がない」なら、早めに上長に相談を
 * 共著者は正直者を選ぶ
 * 研究者は研究公正よりも(自らの)安全を最優先すべき
