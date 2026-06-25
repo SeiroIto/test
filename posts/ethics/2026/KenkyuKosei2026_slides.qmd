@@ -15,7 +15,7 @@ format:
     height: 900
     background-color: "#010638"
     preview-links: auto
-    logo: images/quarto.png
+    logo: RI.png
     footer: <http://seiroito.github.io/test/posts/ethics/2026/KenkyuKosei2026_slides.html>
     theme: sky
 ####    css: tinytable.css
@@ -1360,14 +1360,19 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 
 ::::: {.incremental}
 * 共著者が怪しいことをしている(かも)
-    * QRPの責めはcorresponding authorおよび全共著者に向かう
+    * QRPの責めはcorresponding authorおよび[全共著者に向かう](https://www.icmje.org/news-and-editorials/new_rec_aug2013.html#:~:text=The%20addition%20of%20a%20fourth%20criterion%20was,part%20of%20the%20paper%3B%20ask%20someone%20else%E2%80%9D)
+
+      :::::: {style="font-size: 70%;"}
+      ::: {.fancy-quote}
+      > Agreement to be accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.
+      
+      <div style="text-align:right">
+      — <a href="https://www.icmje.org/news-and-editorials/new_rec_aug2013.html">The New ICMJE Recommendations (August 2013)</a>
+      </div>
+      :::
+      ::::::
+      
     * <Red>研究者が共著者を厳選</Red>すべき
-* 研究関係者から研究公正を貫くことを妨害される
-    * 例: 執筆者順などでパワハラ・強弁・忖度を受ける・する
-    * 例: 研究対象や監督官庁(に忖度した誰か)から論旨変更を迫られる
-    * <Red>研究者が再現可能性に留意</Red>すべき
-    * <Red>研究者は自らの安全を最優先</Red>すべき
-    * <Red>雇用者が真実発信ができる研究環境を保障</Red>すべき
 :::::
 ::::
 
@@ -1384,19 +1389,29 @@ Gino: HBS給与は1.4億円+印税+講演料、ばれなければ大金
 アジ研研究者にとって可能性が高そうなQRP
 
 ::::: {.incremental}
+* 研究関係者から研究公正を貫くことを妨害される
+    * 例: 執筆者順などでパワハラ・強弁・忖度を受ける・する
+    * 例: 研究対象や監督官庁(に忖度した誰か)から論旨変更を迫られる
+    * <Red>研究者が再現可能性に留意</Red>すべき
+    * <Red>研究者は自らの安全を最優先</Red>すべき
+    * <Red>雇用者が真実発信ができる研究環境を保障</Red>すべき
+:::::
+
+
+----
+
+## なぜQRPをするのか{background-color="#010638"}
+
+<br>
+成果を出したい、でも、今のままだと成果にならないと考えている
+
+<p style="margin-top: 40px;"></p>
+
+アジ研研究者にとって可能性が高そうなQRP
+
+::::: {.incremental}
 * 時間がないのでAIに論文執筆の枢要部分を委ねる
     * 研究公正: 著者は研究のすべてに責任を負う&rarr;AIに枢要部分を任せて負えるか?
-    
-      :::::: {style="font-size: 70%;"}
-      ::: {.fancy-quote}
-      > Agreement to be accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.
-      
-      <div style="text-align:right">
-      — <a href="https://www.icmje.org/news-and-editorials/new_rec_aug2013.html">The New ICMJE Recommendations (August 2013)</a>
-      </div>
-      :::
-      ::::::
-
     * <Red>研究者が枢要部分を指示</Red>すべき
     * <Red>Hallucination, overconfidence, lack of attributionなど原稿を人間がチェック</Red>すべき
     * <Red>かつ、AI利用を明記し、入力と出力を開示</Red>すべき
